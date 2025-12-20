@@ -21,4 +21,4 @@ openai
 markdown
 python-dotenv
 reportlab
-markdownify
+django-markdownify

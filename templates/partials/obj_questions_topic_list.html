@@ -1,0 +1,33 @@
+{% if obj_questions %}
+<div class="questions-list">
+    {% for q in obj_questions %}
+    <div class="question-item d-flex align-items-center justify-content-between p-3 border-bottom">
+        <div class="question-info flex-grow-1">
+            <h6 class="question-title mb-1">
+                <a href="{% url 'obj_question_detail' q.id %}" class="text-decoration-none">
+                    {{ q.question_text|striptags|truncatechars:70 }}
+                </a>
+            </h6>
+            <div class="question-meta">
+                <small class="text-muted">
+                    {% if q.difficulty %}
+                    <span class="badge bg-light text-dark me-2">{{ q.difficulty }}</span>
+                    {% endif %}
+                    <i class="fas fa-clock me-1"></i>Multiple Choice
+                </small>
+            </div>
+        </div>
+        <div class="question-actions">
+            <a href="{% url 'obj_question_detail' q.id %}" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-eye"></i>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="text-center py-4">
+    <i class="fas fa-check-circle fa-2x text-muted mb-3"></i>
+    <p class="text-muted mb-0">No objective questions available for this topic.</p>
+</div>
+{% endif %}

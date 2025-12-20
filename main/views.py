@@ -26,171 +26,135 @@ class CBTForm(forms.Form):
 
 import random, time
 
+import random, time, json
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import Course, PastQuestionsObj
+
+
 def start_cbt(request, course_id):
     if request.method == 'POST':
         course = get_object_or_404(Course, id=course_id)
         questions = list(course.objective_questions.all())
-        selected_questions = random.sample(questions, min(15, len(questions)))
-        request.session['cbt_course_id'] = course_id
-        request.session['cbt_answers'] = {}
-        request.session['cbt_question_index'] = 0
-        request.session['cbt_selected_questions'] = [q.id for q in selected_questions]
+        selected = random.sample(questions, min(15, len(questions)))
+
+        request.session['cbt_course_id'] = course.id
+        request.session['cbt_selected_questions'] = [q.id for q in selected]
         request.session['cbt_learn_mode'] = request.POST.get('learn_mode') == 'on'
-        # Timer: 7min 30sec from now
-        request.session['cbt_end_time'] = time.time() + 7*60 + 30
-        return redirect('cbt_question')
-    else:
-        # Show modal to select mode
-        course = get_object_or_404(Course, id=course_id)
-        return render(request, 'cbt_mode_select.html', {'course': course})
+        request.session['cbt_end_time'] = time.time() + (7 * 60 + 30)
 
+        return redirect('cbt_exam')
 
-def cbt_question(request):
-    import time
-    course_id = request.session.get('cbt_course_id')
-    answers = request.session.get('cbt_answers', {})
-    index = request.session.get('cbt_question_index', 0)
-    selected_ids = request.session.get('cbt_selected_questions', [])
-    end_time = request.session.get('cbt_end_time')
-    learn_mode = request.session.get('cbt_learn_mode', False)
-    if course_id is None or not selected_ids:
-        return redirect('home')
     course = get_object_or_404(Course, id=course_id)
-    questions = list(PastQuestionsObj.objects.filter(id__in=selected_ids))
-    questions.sort(key=lambda q: selected_ids.index(q.id))
-    if index < 0 or index >= len(questions):
-        return redirect('cbt_submit')
-    question = questions[index]
-    # Timer logic
-    remaining = int(end_time - time.time()) if end_time else None
-    if remaining is not None and remaining <= 0:
-        return redirect('cbt_submit')
-    # Get all topics for this course
-    topics = course.topics.all()
-    
-    # Check for feedback in learn mode
-    feedback = None
-    user_answer = answers.get(str(question.id))
-    if user_answer:
-        is_correct = user_answer == question.correct_option
-        if not is_correct and learn_mode:
-            # In learn mode, show feedback immediately
-            def get_option_text(opt):
-                if opt == 'A': return question.option_a
-                if opt == 'B': return question.option_b
-                if opt == 'C': return question.option_c
-                if opt == 'D': return question.option_d
-                return None
-            feedback = {
-                'is_correct': is_correct,
-                'user_answer': get_option_text(user_answer),
-                'correct_answer': get_option_text(question.correct_option),
-                'explanation': question.explanation if question.explanation else "No explanation provided."
-            }
-    
-    if request.method == 'POST':
-        form = CBTForm(request.POST, question=question)
-        if form.is_valid():
-            selected = form.cleaned_data['selected_option']
-            answers[str(question.id)] = selected
-            request.session['cbt_answers'] = answers
-            
-            # In learn mode, don't allow progression until correct answer is selected
-            if learn_mode and selected != question.correct_option:
-                # Stay on same question and show feedback
-                is_correct = selected == question.correct_option
-                def get_option_text(opt):
-                    if opt == 'A': return question.option_a
-                    if opt == 'B': return question.option_b
-                    if opt == 'C': return question.option_c
-                    if opt == 'D': return question.option_d
-                    return None
-                feedback = {
-                    'is_correct': is_correct,
-                    'user_answer': get_option_text(selected),
-                    'correct_answer': get_option_text(question.correct_option),
-                    'explanation': question.explanation if question.explanation else "No explanation provided."
-                }
-                form = CBTForm(question=question, initial={'selected_option': selected})
-                return render(request, 'cbt_question.html', {
-                    'question': question,
-                    'form': form,
-                    'index': index,
-                    'total': len(questions),
-                    'course': course,
-                    'remaining': remaining,
-                    'topics': topics,
-                    'learn_mode': learn_mode,
-                    'feedback': feedback
-                })
-            
-            # Normal mode or correct answer in learn mode - allow progression
-            if 'next' in request.POST:
-                request.session['cbt_question_index'] = index + 1
-            elif 'prev' in request.POST:
-                request.session['cbt_question_index'] = max(index - 1, 0)
-            elif 'submit' in request.POST:
-                return redirect('cbt_submit')
-            return redirect('cbt_question')
-    else:
-        form = CBTForm(question=question, initial={
-            'selected_option': answers.get(str(question.id), None)
+    return render(request, 'cbt_mode_select.html', {'course': course})
+
+
+def cbt_exam(request):
+    """Serves the CBT page (HTML only)"""
+    course_id = request.session.get('cbt_course_id')
+    if not course_id:
+        return redirect('home')
+
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'cbt_exam.html', {'course': course})
+
+
+def cbt_data(request):
+    """Returns ALL questions ONCE"""
+    course_id = request.session.get('cbt_course_id')
+    ids = request.session.get('cbt_selected_questions', [])
+    learn_mode = request.session.get('cbt_learn_mode', False)
+    end_time = request.session.get('cbt_end_time')
+
+    if not course_id or not ids:
+        return JsonResponse({'error': 'Session expired'}, status=400)
+
+    questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+    questions.sort(key=lambda q: ids.index(q.id))
+
+    payload = []
+    for q in questions:
+        payload.append({
+            'id': q.id,
+            'question': q.question_text,
+            'options': {
+                'A': q.option_a,
+                'B': q.option_b,
+                'C': q.option_c,
+                'D': q.option_d,
+            },
+            'correct': q.correct_option,
+            'explanation': q.explanation or "No explanation provided",
+            'hint': q.hint or "",
         })
-    return render(request, 'cbt_question.html', {
-        'question': question,
-        'form': form,
-        'index': index,
-        'total': len(questions),
-        'course': course,
-        'remaining': remaining,
-        'topics': topics,
+
+    remaining = int(end_time - time.time()) if end_time else None
+
+    return JsonResponse({
+        'questions': payload,
         'learn_mode': learn_mode,
-        'feedback': feedback
+        'remaining': remaining,
     })
+
+
+@csrf_exempt
+def cbt_submit_answers(request):
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid'}, status=400)
+
+    data = json.loads(request.body)
+    request.session['cbt_answers'] = data.get('answers', {})
+
+    return JsonResponse({'status': 'ok'})
 
 
 def cbt_submit(request):
     course_id = request.session.get('cbt_course_id')
     answers = request.session.get('cbt_answers', {})
-    selected_ids = request.session.get('cbt_selected_questions', [])
-    if course_id is None:
+    ids = request.session.get('cbt_selected_questions', [])
+
+    if not course_id:
         return redirect('home')
+
     course = get_object_or_404(Course, id=course_id)
-    # Only get the selected questions from the CBT, not all questions in the course
-    questions = list(PastQuestionsObj.objects.filter(id__in=selected_ids))
-    questions.sort(key=lambda q: selected_ids.index(q.id))
+    questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+    questions.sort(key=lambda q: ids.index(q.id))
+
     score = 0
-    failed_questions = []
+    failed = []
+
     for q in questions:
         ans = answers.get(str(q.id))
-        if ans and ans == q.correct_option:
+        if ans == q.correct_option:
             score += 1
         else:
-            def get_option_text(q, opt):
-                if opt == 'A': return q.option_a
-                if opt == 'B': return q.option_b
-                if opt == 'C': return q.option_c
-                if opt == 'D': return q.option_d
-                return None
-            failed_questions.append({
+            failed.append({
                 'question': q,
-                'your_answer': get_option_text(q, ans),
-                'correct_answer': get_option_text(q, q.correct_option),
-                'explanation': q.explanation if q.explanation else "No explanation provided."
+                'your_answer': ans,
+                'correct_answer': q.correct_option,
+                'explanation': q.explanation
             })
+
     total = len(questions)
-    percent = (score / total) * 100 if total > 0 else 0
-    # Clear session
-    request.session.pop('cbt_course_id', None)
-    request.session.pop('cbt_answers', None)
-    request.session.pop('cbt_question_index', None)
-    request.session.pop('cbt_selected_questions', None)
+    percent = (score / total) * 100 if total else 0
+
+    # clear session
+    for key in [
+        'cbt_course_id',
+        'cbt_selected_questions',
+        'cbt_learn_mode',
+        'cbt_answers',
+        'cbt_end_time'
+    ]:
+        request.session.pop(key, None)
+
     return render(request, 'cbt_submit.html', {
         'course': course,
         'score': score,
         'total': total,
         'percent': percent,
-        'failed_questions': failed_questions
+        'failed_questions': failed
     })
 
 def home(request):
@@ -204,10 +168,47 @@ def course_list(request):
 def course_detail(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     topics = course.topics.all()
-    obj_questions = course.objective_questions.all()
+    obj_questions_count = course.objective_questions.count()
     return render(request, "course_detail.html", {
         "course": course,
         "topics": topics,
+        "obj_questions_count": obj_questions_count,
+    })
+
+
+def get_obj_questions(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    obj_questions = course.objective_questions.all()
+    return render(request, "partials/obj_questions_list.html", {
+        "obj_questions": obj_questions,
+    })
+
+
+def course_obj_questions(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    obj_questions = course.objective_questions.all()
+    return render(request, "obj_questions_course.html", {
+        "course": course,
+        "obj_questions": obj_questions,
+    })
+
+
+def get_topic_obj_questions(request, topic_id):
+    topic = get_object_or_404(Topic, id=topic_id)
+    obj_questions = topic.course.objective_questions.all()
+    return render(request, "partials/obj_questions_topic_list.html", {
+        "obj_questions": obj_questions,
+    })
+
+
+def topic_obj_questions(request, topic_id):
+    topic = get_object_or_404(Topic, id=topic_id)
+    course = topic.course
+    # get the objective questions for this topic
+    obj_questions = topic.questions.all()
+    return render(request, "obj_questions_topic.html", {
+        "topic": topic,
+        "course": course,
         "obj_questions": obj_questions,
     })
 
@@ -215,11 +216,11 @@ def course_detail(request, course_id):
 def topic_detail(request, topic_id):
     topic = get_object_or_404(Topic, id=topic_id)
     course = topic.course
-    obj_questions = course.objective_questions.all()
+    obj_questions_count = course.objective_questions.count()
     return render(request, "topic_detail.html", {
         "topic": topic,
         "course": course,
-        "obj_questions": obj_questions,
+        "obj_questions_count": obj_questions_count,
     })
 
 
@@ -247,170 +248,137 @@ def obj_question_detail(request, question_id):
     })
 
 
+import time, json
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from .models import Topic, PastQuestionsObj
+
+
 def start_topic_cbt(request, topic_id):
     if request.method == 'POST':
         topic = get_object_or_404(Topic, id=topic_id)
         questions = list(topic.questions.all())
-        if len(questions) < 1:
+
+        if not questions:
             messages.error(request, 'No CBT questions available for this topic.')
             return redirect('topic_detail', topic_id=topic_id)
-        request.session['cbt_topic_id'] = topic_id
-        request.session['cbt_topic_answers'] = {}
-        request.session['cbt_topic_question_index'] = 0
+
+        request.session['cbt_topic_id'] = topic.id
         request.session['cbt_topic_selected_questions'] = [q.id for q in questions]
         request.session['cbt_topic_learn_mode'] = request.POST.get('learn_mode') == 'on'
-        # Timer: 1 min per question (or adjust as needed)
-        import time
         request.session['cbt_topic_end_time'] = time.time() + len(questions) * 60
-        return redirect('topic_cbt_question')
-    else:
-        # Show modal to select mode
-        topic = get_object_or_404(Topic, id=topic_id)
-        return render(request, 'topic_cbt_mode_select.html', {'topic': topic})
 
+        return redirect('topic_cbt_exam')
 
-def topic_cbt_question(request):
-    import time
-    topic_id = request.session.get('cbt_topic_id')
-    answers = request.session.get('cbt_topic_answers', {})
-    index = request.session.get('cbt_topic_question_index', 0)
-    selected_ids = request.session.get('cbt_topic_selected_questions', [])
-    end_time = request.session.get('cbt_topic_end_time')
-    learn_mode = request.session.get('cbt_topic_learn_mode', False)
-    if topic_id is None or not selected_ids:
-        return redirect('home')
     topic = get_object_or_404(Topic, id=topic_id)
-    questions = list(PastQuestionsObj.objects.filter(id__in=selected_ids))
-    questions.sort(key=lambda q: selected_ids.index(q.id))
-    if index < 0 or index >= len(questions):
-        return redirect('topic_cbt_submit')
-    question = questions[index]
-    remaining = int(end_time - time.time()) if end_time else None
-    if remaining is not None and remaining <= 0:
-        return redirect('topic_cbt_submit')
-    
-    # Check for feedback in learn mode
-    feedback = None
-    user_answer = answers.get(str(question.id))
-    if user_answer:
-        is_correct = user_answer == question.correct_option
-        if not is_correct and learn_mode:
-            # In learn mode, show feedback immediately
-            def get_option_text(opt):
-                if opt == 'A': return question.option_a
-                if opt == 'B': return question.option_b
-                if opt == 'C': return question.option_c
-                if opt == 'D': return question.option_d
-                return None
-            feedback = {
-                'is_correct': is_correct,
-                'user_answer': get_option_text(user_answer),
-                'correct_answer': get_option_text(question.correct_option),
-                'explanation': question.explanation if question.explanation else "No explanation provided."
-            }
-    
-    if request.method == 'POST':
-        form = CBTForm(request.POST, question=question)
-        if form.is_valid():
-            selected = form.cleaned_data['selected_option']
-            answers[str(question.id)] = selected
-            request.session['cbt_topic_answers'] = answers
-            
-            # In learn mode, don't allow progression until correct answer is selected
-            if learn_mode and selected != question.correct_option:
-                # Stay on same question and show feedback
-                is_correct = selected == question.correct_option
-                def get_option_text(opt):
-                    if opt == 'A': return question.option_a
-                    if opt == 'B': return question.option_b
-                    if opt == 'C': return question.option_c
-                    if opt == 'D': return question.option_d
-                    return None
-                feedback = {
-                    'is_correct': is_correct,
-                    'user_answer': get_option_text(selected),
-                    'correct_answer': get_option_text(question.correct_option),
-                    'explanation': question.explanation if question.explanation else "No explanation provided."
-                }
-                form = CBTForm(question=question, initial={'selected_option': selected})
-                return render(request, 'topic_cbt_question.html', {
-                    'question': question,
-                    'form': form,
-                    'index': index,
-                    'total': len(questions),
-                    'topic': topic,
-                    'remaining': remaining,
-                    'learn_mode': learn_mode,
-                    'feedback': feedback
-                })
-            
-            # Normal mode or correct answer in learn mode - allow progression
-            if 'next' in request.POST:
-                request.session['cbt_topic_question_index'] = index + 1
-            elif 'prev' in request.POST:
-                request.session['cbt_topic_question_index'] = max(index - 1, 0)
-            elif 'submit' in request.POST:
-                return redirect('topic_cbt_submit')
-            return redirect('topic_cbt_question')
-    else:
-        form = CBTForm(question=question, initial={
-            'selected_option': answers.get(str(question.id), None)
+    return render(request, 'topic_cbt_mode_select.html', {'topic': topic})
+
+
+def topic_cbt_exam(request):
+    topic_id = request.session.get('cbt_topic_id')
+    if not topic_id:
+        return redirect('home')
+
+    topic = get_object_or_404(Topic, id=topic_id)
+    return render(request, 'topic_cbt_exam.html', {'topic': topic})
+
+
+def topic_cbt_data(request):
+    topic_id = request.session.get('cbt_topic_id')
+    ids = request.session.get('cbt_topic_selected_questions', [])
+    learn_mode = request.session.get('cbt_topic_learn_mode', False)
+    end_time = request.session.get('cbt_topic_end_time')
+
+    if not topic_id or not ids:
+        return JsonResponse({'error': 'Session expired'}, status=400)
+
+    questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+    questions.sort(key=lambda q: ids.index(q.id))
+
+    payload = []
+    for q in questions:
+        payload.append({
+            'id': q.id,
+            'question': q.question_text,
+            'options': {
+                'A': q.option_a,
+                'B': q.option_b,
+                'C': q.option_c,
+                'D': q.option_d,
+            },
+            'correct': q.correct_option,
+            'explanation': q.explanation or "No explanation provided",
+            'hint': q.hint or "",
         })
-    return render(request, 'topic_cbt_question.html', {
-        'question': question,
-        'form': form,
-        'index': index,
-        'total': len(questions),
-        'topic': topic,
-        'remaining': remaining,
+
+    remaining = int(end_time - time.time()) if end_time else None
+
+    return JsonResponse({
+        'questions': payload,
         'learn_mode': learn_mode,
-        'feedback': feedback
+        'remaining': remaining,
     })
+
+
+@csrf_exempt
+def topic_cbt_submit_answers(request):
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid request'}, status=400)
+
+    data = json.loads(request.body)
+    request.session['cbt_topic_answers'] = data.get('answers', {})
+
+    return JsonResponse({'status': 'ok'})
 
 
 def topic_cbt_submit(request):
     topic_id = request.session.get('cbt_topic_id')
     answers = request.session.get('cbt_topic_answers', {})
-    if topic_id is None:
+    ids = request.session.get('cbt_topic_selected_questions', [])
+
+    if not topic_id:
         return redirect('home')
+
     topic = get_object_or_404(Topic, id=topic_id)
-    questions = list(topic.questions.all())
+    questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+    questions.sort(key=lambda q: ids.index(q.id))
+
     score = 0
-    failed_questions = []
+    failed = []
+
     for q in questions:
         ans = answers.get(str(q.id))
-        if ans and ans == q.correct_option:
+        if ans == q.correct_option:
             score += 1
         else:
-            def get_option_text(q, opt):
-                if opt == 'A': return q.option_a
-                if opt == 'B': return q.option_b
-                if opt == 'C': return q.option_c
-                if opt == 'D': return q.option_d
-                return None
-            failed_questions.append({
+            failed.append({
                 'question': q,
-                'your_answer': get_option_text(q, ans),
-                'correct_answer': get_option_text(q, q.correct_option),
-                'explanation': q.explanation if q.explanation else "No explanation provided."
+                'your_answer': ans,
+                'correct_answer': q.correct_option,
+                'explanation': q.explanation
             })
+
     percent = (score / len(questions)) * 100 if questions else 0
-    # No grade model update for topic-based practice (optional)
-    request.session.pop('cbt_topic_id', None)
-    request.session.pop('cbt_topic_answers', None)
-    request.session.pop('cbt_topic_question_index', None)
-    request.session.pop('cbt_topic_selected_questions', None)
-    request.session.pop('cbt_topic_end_time', None)
+
+    # clear session
+    for key in [
+        'cbt_topic_id',
+        'cbt_topic_answers',
+        'cbt_topic_selected_questions',
+        'cbt_topic_learn_mode',
+        'cbt_topic_end_time'
+    ]:
+        request.session.pop(key, None)
+
     return render(request, 'topic_cbt_submit.html', {
         'topic': topic,
         'score': score,
         'total': len(questions),
         'percent': percent,
-        'failed_questions': failed_questions
+        'failed_questions': failed
     })
-
-
-
 
 def custom_logout(request):
     """

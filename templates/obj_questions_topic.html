@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="cbt-question-page">
+    <!-- Header with progress -->
+    <div class="page-header mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'course_detail' topic.course.id %}">{{ topic.course.name }}</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'topic_detail' topic.id %}">{{ topic.name }}</a></li>
+                <li class="breadcrumb-item active">CBT Practice</li>
+            </ol>
+        </nav>
+        
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="h3 fw-bold text-primary mb-2">{{ topic.name }} - CBT Practice</h1>
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-success" role="progressbar" 
+                         style="width: {% widthratio index|add:1 total 100 %}%;"
+                         aria-valuenow="{{ index|add:1 }}" 
+                         aria-valuemin="1" 
+                         aria-valuemax="{{ total }}">
+                    </div>
+                </div>
+                <p class="text-muted mt-2 mb-0">
+                    Question {{ index|add:1 }} of {{ total }}
+                    {% if remaining %}
+                    | Time remaining: <span id="timer">{{ remaining }}</span> seconds
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <form method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" name="submit_all" class="btn btn-danger">
+                        <i class="fas fa-paper-plane me-1"></i>Submit All
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Card -->
+    <div class="card card-custom mb-4">
+        <div class="card-header card-header-custom">
+            <h3 class="card-title mb-0">Question {{ index|add:1 }}</h3>
+        </div>
+        <div class="card-body">
+            {% if question %}
+            <div class="question-content mb-4">
+                {{ question.question_text|safe }}
+            </div>
+            
+            <!-- Answer Form -->
+            <form method="post" id="answerForm">
+                {% csrf_token %}
+                <input type="hidden" name="answer" id="selectedAnswer">
+                <input type="hidden" name="answers_json" id="answersJson" value="{{ answers|json_script|safe }}">
+                
+                <div class="options-list">
+                    {% if question.option_a %}
+                    <div class="form-check mb-3 option-item" data-option="A">
+                        <input class="form-check-input" type="radio" name="option" id="optionA" 
+                               value="A" {% if current_answer == 'A' %}checked{% endif %}>
+                        <label class="form-check-label" for="optionA">
+                            <strong>A.</strong> {{ question.option_a }}
+                        </label>
+                    </div>
+                    {% endif %}
+                    
+                    {% if question.option_b %}
+                    <div class="form-check mb-3 option-item" data-option="B">
+                        <input class="form-check-input" type="radio" name="option" id="optionB" 
+                               value="B" {% if current_answer == 'B' %}checked{% endif %}>
+                        <label class="form-check-label" for="optionB">
+                            <strong>B.</strong> {{ question.option_b }}
+                        </label>
+                    </div>
+                    {% endif %}
+                    
+                    {% if question.option_c %}
+                    <div class="form-check mb-3 option-item" data-option="C">
+                        <input class="form-check-input" type="radio" name="option" id="optionC" 
+                               value="C" {% if current_answer == 'C' %}checked{% endif %}>
+                        <label class="form-check-label" for="optionC">
+                            <strong>C.</strong> {{ question.option_c }}
+                        </label>
+                    </div>
+                    {% endif %}
+                    
+                    {% if question.option_d %}
+                    <div class="form-check mb-3 option-item" data-option="D">
+                        <input class="form-check-input" type="radio" name="option" id="optionD" 
+                               value="D" {% if current_answer == 'D' %}checked{% endif %}>
+                        <label class="form-check-label" for="optionD">
+                            <strong>D.</strong> {{ question.option_d }}
+                        </label>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                    <div>
+                        {% if index > 0 %}
+                        <a href="?prev=1" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i> Previous
+                        </a>
+                        {% else %}
+                        <button type="button" class="btn btn-outline-secondary" disabled>
+                            <i class="fas fa-arrow-left me-1"></i> Previous
+                        </button>
+                        {% endif %}
+                    </div>
+                    
+                    <div>
+                        <button type="submit" name="next_after_answer" class="btn btn-primary">
+                            {% if index < total|add:"-1" %}
+                            Next <i class="fas fa-arrow-right ms-1"></i>
+                            {% else %}
+                            Finish <i class="fas fa-check ms-1"></i>
+                            {% endif %}
+                        </button>
+                    </div>
+                </div>
+            </form>
+            {% else %}
+            <div class="text-center py-4">
+                <p class="text-muted">No question found.</p>
+                <a href="{% url 'topic_cbt_submit' %}" class="btn btn-primary">
+                    Go to Results
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Question List (Quick Navigation) -->
+    {% if total > 1 %}
+    <div class="card">
+        <div class="card-header">
+            <h6 class="mb-0">Question Navigation</h6>
+        </div>
+        <div class="card-body">
+            <div class="d-flex flex-wrap gap-2">
+                {% for i in ""|ljust:total %}
+                <a href="?goto={{ forloop.counter0 }}" 
+                   class="btn btn-sm {% if forloop.counter0 == index %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                    {{ forloop.counter }}
+                    {% if answers|get_item:questions.forloop.counter0.id %}
+                    <i class="fas fa-check ms-1" style="font-size: 0.7em;"></i>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set selected answer when option is clicked
+    const optionItems = document.querySelectorAll('.option-item');
+    optionItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const radio = this.querySelector('input[type="radio"]');
+            radio.checked = true;
+            document.getElementById('selectedAnswer').value = this.dataset.option;
+        });
+    });
+    
+    // Initialize selected answer from current selection
+    const checkedRadio = document.querySelector('input[name="option"]:checked');
+    if (checkedRadio) {
+        document.getElementById('selectedAnswer').value = checkedRadio.value;
+    }
+    
+    // Timer countdown
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+        let remaining = parseInt(timerElement.textContent);
+        const timerInterval = setInterval(() => {
+            remaining--;
+            timerElement.textContent = remaining;
+            
+            if (remaining <= 0) {
+                clearInterval(timerInterval);
+                // Auto-submit when time is up
+                document.querySelector('button[name="submit_all"]').click();
+            }
+        }, 1000);
+    }
+    
+    // Update answers JSON when form changes
+    const form = document.getElementById('answerForm');
+    form.addEventListener('change', function() {
+        const checkedOption = document.querySelector('input[name="option"]:checked');
+        if (checkedOption) {
+            // Update the hidden answers JSON
+            // This would require more complex logic to update the JSON
+        }
+    });
+});
+</script>
+{% endblock %}
