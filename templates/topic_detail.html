@@ -1,0 +1,349 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="topic-detail-container">
+    <!-- Topic Header -->
+    <div class="topic-header mb-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'course_detail' topic.course.id %}">{{ topic.course.name }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ topic.name }}</li>
+            </ol>
+        </nav>
+        
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold text-primary mb-3">{{ topic.name }}</h1>
+                {% if topic.description %}
+                <p class="lead text-muted">{{ topic.description|safe }}</p>
+                {% endif %}
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="{% url 'start_topic_cbt' topic.id %}" class="btn btn-success btn-lg">
+                    <i class="fas fa-play-circle me-2"></i>Practice CBT
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topic Content -->
+    {% if topic.content %}
+    <div class="card card-custom mb-5">
+        <div class="card-header card-header-custom">
+            <h3 class="card-title mb-0">
+                <i class="fas fa-book me-2"></i>
+                Topic Content
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="topic-content">
+                {{ topic.content|safe }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Quick Stats -->
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="stat-card text-center">
+                <div class="stat-icon objective">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="stat-value">{{ obj_questions.count }}</h3>
+                <p class="stat-label">Objective Questions</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Questions Sections -->
+    <div class="row">
+        <!-- Objective Questions -->
+        <div class="col-lg-12 mb-12">
+            <div class="card card-custom h-100">
+                <div class="card-header card-header-custom d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-check-circle me-2"></i>
+                        Objective Questions
+                    </h3>
+                    <span class="badge bg-success">{{ obj_questions.count }}</span>
+                </div>
+                <div class="card-body">
+                    {% if obj_questions %}
+                    <div class="questions-list">
+                        {% for q in obj_questions %}
+                        <div class="question-item d-flex align-items-center justify-content-between p-3 border-bottom">
+                            <div class="question-info flex-grow-1">
+                                <h6 class="question-title mb-1">
+                                    <a href="{% url 'obj_question_detail' q.id %}" class="text-decoration-none">
+                                        {{ q.question_text|striptags|truncatechars:70 }}
+                                    </a>
+                                </h6>
+                                <div class="question-meta">
+                                    <small class="text-muted">
+                                        {% if q.difficulty %}
+                                        <span class="badge bg-light text-dark me-2">{{ q.difficulty }}</span>
+                                        {% endif %}
+                                        <i class="fas fa-clock me-1"></i>Multiple Choice
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="question-actions">
+                                <a href="{% url 'obj_question_detail' q.id %}" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-check-circle fa-2x text-muted mb-3"></i>
+                        <p class="text-muted mb-0">No objective questions available for this topic.</p>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if obj_questions %}
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'start_topic_cbt' topic.id %}?type=objective" class="btn btn-success w-100">
+                        <i class="fas fa-play me-2"></i>Practice Objective Questions
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Practice Options -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom text-center">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-rocket me-2"></i>
+                        Practice Options
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-6 mb-6">
+                            <div class="practice-option-card">
+                                <div class="practice-icon mixed">
+                                    <i class="fas fa-random"></i>
+                                </div>
+                                <h5>Mixed Practice</h5>
+                                <p class="text-muted small">Combine objective and theory questions</p>
+                                <a href="{% url 'start_topic_cbt' topic.id %}" class="btn btn-primary w-100">
+                                    Start Mixed CBT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-6">
+                            <div class="practice-option-card">
+                                <div class="practice-icon objective-only">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h5>Objective Only</h5>
+                                <p class="text-muted small">Focus on multiple choice questions</p>
+                                <a href="{% url 'start_topic_cbt' topic.id %}?type=objective" class="btn btn-success w-100">
+                                    Objective Only
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation-buttons mt-5">
+        <div class="row">
+            <div class="col-6">
+                <a href="{% url 'course_detail' topic.course.id %}" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Course
+                </a>
+            </div>
+            <div class="col-6 text-end">
+                <a href="{% url 'home' %}" class="btn btn-outline-primary btn-lg">
+                    <i class="fas fa-home me-2"></i>Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .topic-detail-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .topic-header {
+        border-bottom: 1px solid var(--light);
+        padding-bottom: 2rem;
+    }
+    
+    .topic-content {
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+    
+    .topic-content p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .stat-card {
+        padding: 2rem 1rem;
+    }
+    
+    .stat-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 2rem;
+    }
+    
+    .stat-icon.objective {
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        color: white;
+    }
+    
+    .stat-icon.theory {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+    }
+    
+    .stat-icon.practice {
+        background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        color: white;
+    }
+    
+    .stat-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
+    
+    .stat-label {
+        color: var(--gray);
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    
+    .question-item {
+        transition: background-color 0.3s ease;
+    }
+    
+    .question-item:hover {
+        background-color: rgba(52, 152, 219, 0.05);
+    }
+    
+    .question-title {
+        line-height: 1.4;
+    }
+    
+    .question-meta {
+        font-size: 0.875rem;
+    }
+    
+    .practice-option-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .practice-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.8rem;
+    }
+    
+    .practice-icon.mixed {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+    }
+    
+    .practice-icon.objective-only {
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        color: white;
+    }
+    
+    .practice-icon.theory-only {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+    }
+    
+    .practice-option-card h5 {
+        margin-bottom: 0.5rem;
+    }
+    
+    .navigation-buttons .btn {
+        min-width: 200px;
+    }
+    
+    @media (max-width: 768px) {
+        .stat-value {
+            font-size: 2rem;
+        }
+        
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+        
+        .practice-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+        
+        .navigation-buttons .btn {
+            min-width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .navigation-buttons .col-6 {
+            width: 100%;
+            text-align: center !important;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add animation to stat cards
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 0.5s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+        
+        // Add click tracking for practice options
+        const practiceButtons = document.querySelectorAll('.practice-option-card .btn');
+        practiceButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const practiceType = this.textContent.trim();
+                // You can add analytics tracking here
+                console.log(`Starting ${practiceType} practice for topic: {{ topic.name }}`);
+            });
+        });
+    });
+</script>
+{% endblock %}

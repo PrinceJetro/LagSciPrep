@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Theory Question Detail</h2>
+<p>{{ question.question_text }}</p>
+<p>Year: {{ question.year }}</p>
+<p>Course: {{ question.course.name }}</p>
+{% endblock %}

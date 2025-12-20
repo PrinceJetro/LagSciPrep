@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mode-select-container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card card-custom shadow-lg">
+                <div class="card-body p-5">
+                    <!-- Header -->
+                    <div class="text-center mb-5">
+                        <h1 class="h2 fw-bold text-primary mb-2">Select CBT Mode</h1>
+                        <p class="text-muted">{{ topic.name }}</p>
+                        <p class="text-muted">Choose how you want to practice</p>
+                    </div>
+
+                    <form method="post" action="{% url 'start_topic_cbt' topic.id %}">
+                        {% csrf_token %}
+                        
+                        <div class="row g-4">
+                            <!-- Practice Mode Card -->
+                            <div class="col-md-6">
+                                <div class="mode-card practice-mode">
+                                    <input type="radio" name="learn_mode" value="off" id="practiceMode" class="mode-radio" checked>
+                                    <label for="practiceMode" class="mode-label">
+                                        <div class="mode-icon">
+                                            <i class="fas fa-graduation-cap fa-3x text-info"></i>
+                                        </div>
+                                        <div class="mode-info">
+                                            <h4 class="mode-title">Practice Mode</h4>
+                                            <p class="mode-description">
+                                                Complete all questions first, then review answers at the end
+                                            </p>
+                                            <ul class="mode-features list-unstyled">
+                                                <li><i class="fas fa-check text-success me-2"></i>Exam-like experience</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Time-based challenge</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Review all results together</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Learn Mode Card -->
+                            <div class="col-md-6">
+                                <div class="mode-card learn-mode">
+                                    <input type="radio" name="learn_mode" value="on" id="learnMode" class="mode-radio">
+                                    <label for="learnMode" class="mode-label">
+                                        <div class="mode-icon">
+                                            <i class="fas fa-book fa-3x text-success"></i>
+                                        </div>
+                                        <div class="mode-info">
+                                            <h4 class="mode-title">Learn Mode</h4>
+                                            <p class="mode-description">
+                                                Get instant feedback on each question to learn as you go
+                                            </p>
+                                            <ul class="mode-features list-unstyled">
+                                                <li><i class="fas fa-check text-success me-2"></i>Instant feedback</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Explanations after each answer</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Must correct wrong answers</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="d-grid gap-2 mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-play me-2"></i>Start CBT
+                            </button>
+                            <a href="{% url 'topic_detail' topic.id %}" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Topic
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .mode-select-container {
+        padding: 40px 20px;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card-custom {
+        border-radius: 12px;
+        border: none;
+    }
+
+    .mode-card {
+        position: relative;
+    }
+
+    .mode-radio {
+        display: none;
+    }
+
+    .mode-label {
+        display: block;
+        padding: 30px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        height: 100%;
+    }
+
+    .mode-radio:checked + .mode-label {
+        border-color: #667eea;
+        background-color: rgba(102, 126, 234, 0.05);
+        transform: scale(1.02);
+    }
+
+    .learn-mode .mode-radio:checked + .mode-label {
+        border-color: #28a745;
+        background-color: rgba(40, 167, 69, 0.05);
+    }
+
+    .mode-label:hover {
+        border-color: #667eea;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    }
+
+    .mode-icon {
+        margin-bottom: 20px;
+        color: #667eea;
+    }
+
+    .learn-mode .mode-icon {
+        color: #28a745;
+    }
+
+    .mode-title {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    .mode-description {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .mode-features {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+
+    .mode-features li {
+        color: #555;
+        margin-bottom: 8px;
+    }
+
+    .btn-lg {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+        .mode-select-container {
+            padding: 20px 15px;
+        }
+
+        .mode-label {
+            padding: 20px;
+        }
+
+        .mode-icon {
+            font-size: 2rem;
+        }
+    }
+</style>
+{% endblock %}

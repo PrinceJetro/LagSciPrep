@@ -1,0 +1,487 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grades-container">
+    <!-- Header Section -->
+    <div class="grades-header mb-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Objective Grades</li>
+            </ol>
+        </nav>
+        
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold text-primary mb-2">Objective Grades</h1>
+                <p class="lead text-muted">Track your performance across all objective assessments</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <div class="header-stats">
+                    <div class="stat-badge">
+                        <span class="stat-number">{{ grades.count }}</span>
+                        <span class="stat-label">Total Attempts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Summary -->
+    {% if grades %}
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Performance Overview
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon high-score">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3 class="metric-value">{{ high_score.score|default:"0" }}</h3>
+                                <p class="metric-label">Highest Score</p>
+                                <small class="metric-subtext">{{ high_score.course.name|default:"N/A" }}</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon avg-score">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h3 class="metric-value">{{ average_score|floatformat:1|default:"0" }}</h3>
+                                <p class="metric-label">Average Score</p>
+                                <small class="metric-subtext">Across all attempts</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon recent-score">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3 class="metric-value">{{ recent_score.score|default:"0" }}</h3>
+                                <p class="metric-label">Latest Score</p>
+                                <small class="metric-subtext">{{ recent_score.course.name|default:"N/A" }}</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon improvement">
+                                    <i class="fas fa-trend-up"></i>
+                                </div>
+                                <h3 class="metric-value">{{ improvement|floatformat:1|default:"0" }}%</h3>
+                                <p class="metric-label">Improvement</p>
+                                <small class="metric-subtext">Last 5 attempts</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grades Table -->
+    <div class="card card-custom mb-4">
+        <div class="card-header card-header-custom d-flex justify-content-between align-items-center">
+            <h3 class="card-title mb-0">
+                <i class="fas fa-list-alt me-2"></i>
+                Grade History
+            </h3>
+            <div class="header-actions">
+                <button class="btn btn-sm btn-outline-primary" onclick="window.print()">
+                    <i class="fas fa-print me-1"></i>Print
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Score</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Date Taken</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for grade in grades %}
+                        <tr>
+                            <td>
+                                <div class="course-info">
+                                    <h6 class="mb-0">{{ grade.course.name }}</h6>
+                                    {% if grade.course.code %}
+                                    <small class="text-muted">{{ grade.course.code }}</small>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td>
+                                <span class="score-display">{{ grade.score }}</span>
+                            </td>
+                            <td>
+                                <div class="progress-wrapper" style="width: 80px;">
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar 
+                                            {% if grade.percentage >= 80 %}bg-success
+                                            {% elif grade.percentage >= 60 %}bg-warning
+                                            {% else %}bg-danger
+                                            {% endif %}" 
+                                            style="width: {{ grade.percentage }}%">
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">{{ grade.percentage|floatformat:1 }}%</small>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge 
+                                    {% if grade.percentage >= 80 %}bg-success
+                                    {% elif grade.percentage >= 70 %}bg-primary
+                                    {% elif grade.percentage >= 60 %}bg-warning
+                                    {% elif grade.percentage >= 50 %}bg-info
+                                    {% else %}bg-danger
+                                    {% endif %} grade-badge">
+                                    {% if grade.percentage >= 90 %}A+
+                                    {% elif grade.percentage >= 80 %}A
+                                    {% elif grade.percentage >= 70 %}B
+                                    {% elif grade.percentage >= 60 %}C
+                                    {% elif grade.percentage >= 50 %}D
+                                    {% else %}F
+                                    {% endif %}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="date-info">
+                                    <div class="fw-bold">{{ grade.submitted_at|date:"M d, Y" }}</div>
+                                    <small class="text-muted">{{ grade.submitted_at|date:"g:i A" }}</small>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge 
+                                    {% if grade.percentage >= 60 %}bg-success
+                                    {% else %}bg-danger
+                                    {% endif %}">
+                                    {% if grade.percentage >= 60 %}Passed
+                                    {% else %}Failed
+                                    {% endif %}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="{% url 'course_detail' grade.course.id %}" class="btn btn-sm btn-outline-primary" title="View Course">
+                                        <i class="fas fa-book"></i>
+                                    </a>
+                                    <a href="{% url 'start_cbt' grade.course.id %}" class="btn btn-sm btn-success" title="Retry Exam">
+                                        <i class="fas fa-redo"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Performance Breakdown -->
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>
+                        Performance by Course
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {% for course in course_performance %}
+                    <div class="course-performance-item mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0">{{ course.name }}</h6>
+                            <span class="badge bg-primary">{{ course.average_score|floatformat:1 }}% Avg</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar 
+                                {% if course.average_score >= 80 %}bg-success
+                                {% elif course.average_score >= 60 %}bg-warning
+                                {% else %}bg-danger
+                                {% endif %}" 
+                                style="width: {{ course.average_score }}%">
+                            </div>
+                        </div>
+                        <div class="performance-details mt-2">
+                            <small class="text-muted">
+                                {{ course.attempt_count }} attempt{{ course.attempt_count|pluralize }} • 
+                                Best: {{ course.high_score }} • 
+                                Latest: {{ course.recent_score }}
+                            </small>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom">
+                    <h3 class="card-title mb-0">
+                        <i class="fasfa-award me-2"></i>
+                        Quick Actions
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'home' %}" class="btn btn-primary">
+                            <i class="fas fa-home me-2"></i>Back to Dashboard
+                        </a>
+                        <a href="{% url 'theory_grade_list' %}" class="btn btn-outline-primary">
+                            <i class="fas fa-pencil-alt me-2"></i>View Theory Grades
+                        </a>
+                        <button class="btn btn-outline-secondary" onclick="exportGrades()">
+                            <i class="fas fa-download me-2"></i>Export Grades
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <!-- Empty State -->
+    <div class="card card-custom text-center">
+        <div class="card-body py-5">
+            <i class="fas fa-clipboard-list fa-4x text-muted mb-4"></i>
+            <h3 class="text-muted">No Grades Yet</h3>
+            <p class="text-muted mb-4">You haven't completed any objective assessments yet.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-play me-2"></i>Start Your First CBT
+            </a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    .grades-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .grades-header {
+        border-bottom: 1px solid var(--light);
+        padding-bottom: 2rem;
+    }
+    
+    .header-stats {
+        display: inline-block;
+    }
+    
+    .stat-badge {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: var(--shadow);
+    }
+    
+    .stat-number {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+    
+    .stat-label {
+        font-size: 0.875rem;
+        opacity: 0.9;
+    }
+    
+    .performance-metric {
+        padding: 1rem;
+    }
+    
+    .metric-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .metric-icon.high-score {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        color: white;
+    }
+    
+    .metric-icon.avg-score {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+    }
+    
+    .metric-icon.recent-score {
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        color: white;
+    }
+    
+    .metric-icon.improvement {
+        background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        color: white;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
+    
+    .metric-label {
+        color: var(--gray);
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+    
+    .metric-subtext {
+        color: var(--gray);
+        font-size: 0.875rem;
+    }
+    
+    .course-info h6 {
+        color: var(--dark);
+    }
+    
+    .score-display {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--dark);
+    }
+    
+    .progress-wrapper {
+        display: inline-block;
+    }
+    
+    .grade-badge {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+    }
+    
+    .date-info {
+        line-height: 1.2;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .action-buttons .btn {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .course-performance-item:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    @media (max-width: 768px) {
+        .header-stats {
+            margin-top: 1rem;
+        }
+        
+        .performance-metric {
+            padding: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+        }
+        
+        .metric-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 1.25rem;
+        }
+        
+        .table-responsive {
+            font-size: 0.875rem;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+    }
+</style>
+
+<script>
+    function exportGrades() {
+        // Simple CSV export functionality
+        const grades = {{ grades_json|safe }};
+        let csvContent = "data:text/csv;charset=utf-8,";
+        csvContent += "Course,Score,Percentage,Grade,Date,Status\n";
+        
+        grades.forEach(grade => {
+            const row = [
+                grade.course.name,
+                grade.score,
+                grade.percentage + '%',
+                getGradeLetter(grade.percentage),
+                grade.submitted_at,
+                grade.percentage >= 60 ? 'Passed' : 'Failed'
+            ].join(',');
+            csvContent += row + "\n";
+        });
+        
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "objective_grades.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    
+    function getGradeLetter(percentage) {
+        if (percentage >= 90) return 'A+';
+        if (percentage >= 80) return 'A';
+        if (percentage >= 70) return 'B';
+        if (percentage >= 60) return 'C';
+        if (percentage >= 50) return 'D';
+        return 'F';
+    }
+    
+    // Add some interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add hover effects to table rows
+        const tableRows = document.querySelectorAll('tbody tr');
+        tableRows.forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'rgba(52, 152, 219, 0.05)';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+            });
+        });
+        
+        // Sort functionality could be added here
+        console.log('Grades page loaded. Total attempts:', {{ grades.count }});
+    });
+</script>
+{% endblock %}

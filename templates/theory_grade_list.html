@@ -1,0 +1,636 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="theory-grades-container">
+    <!-- Header Section -->
+    <div class="grades-header mb-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'obj_grade_list' %}">Objective Grades</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Theory Grades</li>
+            </ol>
+        </nav>
+        
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold text-primary mb-2">Theory Assessments</h1>
+                <p class="lead text-muted">Track your written assessment performance and feedback</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <div class="header-stats">
+                    <div class="stat-badge">
+                        <span class="stat-number">{{ grades.count }}</span>
+                        <span class="stat-label">Total Submissions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Overview -->
+    {% if grades %}
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Writing Performance Overview
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon high-score">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3 class="metric-value">{{ high_score.score|default:"0" }}</h3>
+                                <p class="metric-label">Highest Score</p>
+                                <small class="metric-subtext">{{ high_score.course.name|default:"N/A" }}</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon avg-score">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h3 class="metric-value">{{ average_score|floatformat:1|default:"0" }}</h3>
+                                <p class="metric-label">Average Score</p>
+                                <small class="metric-subtext">Across all submissions</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon graded">
+                                    <i class="fas fa-check-double"></i>
+                                </div>
+                                <h3 class="metric-value">{{ graded_count }}</h3>
+                                <p class="metric-label">Graded</p>
+                                <small class="metric-subtext">Of {{ grades.count }} total</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="performance-metric">
+                                <div class="metric-icon pending">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3 class="metric-value">{{ pending_count }}</h3>
+                                <p class="metric-label">Pending Review</p>
+                                <small class="metric-subtext">Awaiting grading</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grades Table -->
+    <div class="card card-custom mb-4">
+        <div class="card-header card-header-custom d-flex justify-content-between align-items-center">
+            <h3 class="card-title mb-0">
+                <i class="fas fa-file-alt me-2"></i>
+                Assessment History
+            </h3>
+            <div class="header-actions">
+                <div class="btn-group">
+                    <button class="btn btn-sm btn-outline-primary" onclick="window.print()">
+                        <i class="fas fa-print me-1"></i>Print
+                    </button>
+                    <button class="btn btn-sm btn-outline-success" onclick="exportGrades()">
+                        <i class="fas fa-download me-1"></i>Export
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="gradesTable">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Assessment</th>
+                            <th>Score</th>
+                            <th>Max Score</th>
+                            <th>Percentage</th>
+                            <th>Status</th>
+                            <th>Submitted</th>
+                            <th>Graded By</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for grade in grades %}
+                        <tr class="{% if not grade.is_graded %}table-warning{% endif %}">
+                            <td>
+                                <div class="course-info">
+                                    <h6 class="mb-0">{{ grade.course.name }}</h6>
+                                    {% if grade.course.code %}
+                                    <small class="text-muted">{{ grade.course.code }}</small>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="assessment-info">
+                                    <strong>{{ grade.assessment_title|default:"Theory Assessment" }}</strong>
+                                    {% if grade.question_count %}
+                                    <small class="text-muted d-block">{{ grade.question_count }} question{{ grade.question_count|pluralize }}</small>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td>
+                                <span class="score-display {% if grade.is_graded %}fw-bold{% else %}text-muted{% endif %}">
+                                    {{ grade.score|default:"--" }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-muted">{{ grade.max_score|default:"--" }}</span>
+                            </td>
+                            <td>
+                                {% if grade.is_graded and grade.percentage %}
+                                <div class="progress-wrapper">
+                                    <div class="progress" style="height: 6px; width: 80px;">
+                                        <div class="progress-bar 
+                                            {% if grade.percentage >= 80 %}bg-success
+                                            {% elif grade.percentage >= 60 %}bg-warning
+                                            {% else %}bg-danger
+                                            {% endif %}" 
+                                            style="width: {{ grade.percentage }}%">
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">{{ grade.percentage|floatformat:1 }}%</small>
+                                </div>
+                                {% else %}
+                                <span class="badge bg-secondary">Pending</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if grade.is_graded %}
+                                <span class="badge 
+                                    {% if grade.percentage >= 60 %}bg-success
+                                    {% else %}bg-danger
+                                    {% endif %}">
+                                    {% if grade.percentage >= 60 %}Passed
+                                    {% else %}Failed
+                                    {% endif %}
+                                </span>
+                                {% else %}
+                                <span class="badge bg-warning">Awaiting Grade</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="date-info">
+                                    <div class="fw-bold">{{ grade.submitted_at|date:"M d, Y" }}</div>
+                                    <small class="text-muted">{{ grade.submitted_at|date:"g:i A" }}</small>
+                                </div>
+                            </td>
+                            <td>
+                                {% if grade.graded_by %}
+                                <div class="grader-info">
+                                    <small class="fw-bold">{{ grade.graded_by.get_full_name|default:grade.graded_by.username }}</small>
+                                    {% if grade.graded_at %}
+                                    <small class="text-muted d-block">{{ grade.graded_at|date:"M d" }}</small>
+                                    {% endif %}
+                                </div>
+                                {% else %}
+                                <span class="text-muted">--</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    {% if grade.is_graded %}
+                                    <button class="btn btn-sm btn-outline-primary view-feedback" 
+                                            data-grade-id="{{ grade.id }}"
+                                            title="View Feedback">
+                                        <i class="fas fa-comment"></i>
+                                    </button>
+                                    {% endif %}
+                                    <a href="{% url 'course_detail' grade.course.id %}" class="btn btn-sm btn-outline-secondary" title="View Course">
+                                        <i class="fas fa-book"></i>
+                                    </a>
+                                    {% if grade.can_retry %}
+                                    <a href="{% url 'start_cbt' grade.course.id %}?type=theory" class="btn btn-sm btn-success" title="Retry Assessment">
+                                        <i class="fas fa-redo"></i>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Assessment Feedback</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="feedbackContent">
+                    <!-- Feedback content will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Insights -->
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>
+                        Performance Trends
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {% for course in course_performance %}
+                    <div class="course-performance-item mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0">{{ course.name }}</h6>
+                            <span class="badge bg-primary">
+                                {% if course.average_score %}
+                                {{ course.average_score|floatformat:1 }}% Avg
+                                {% else %}
+                                No grades
+                                {% endif %}
+                            </span>
+                        </div>
+                        {% if course.average_score %}
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar 
+                                {% if course.average_score >= 80 %}bg-success
+                                {% elif course.average_score >= 60 %}bg-warning
+                                {% else %}bg-danger
+                                {% endif %}" 
+                                style="width: {{ course.average_score }}%">
+                            </div>
+                        </div>
+                        <div class="performance-details mt-2">
+                            <small class="text-muted">
+                                {{ course.graded_count }} graded submission{{ course.graded_count|pluralize }} • 
+                                {{ course.pending_count }} pending • 
+                                Best: {{ course.high_score }}%
+                            </small>
+                        </div>
+                        {% else %}
+                        <div class="text-center py-3">
+                            <small class="text-muted">No graded submissions yet</small>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card card-custom">
+                <div class="card-header card-header-custom">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        Writing Tips
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="tips-list">
+                        <div class="tip-item mb-3">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <small>Structure your answers with clear paragraphs</small>
+                        </div>
+                        <div class="tip-item mb-3">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <small>Support arguments with evidence and examples</small>
+                        </div>
+                        <div class="tip-item mb-3">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <small>Review and proofread before submitting</small>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <small>Address all parts of the question prompt</small>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'home' %}" class="btn btn-primary">
+                            <i class="fas fa-home me-2"></i>Back to Dashboard
+                        </a>
+                        <a href="{% url 'obj_grade_list' %}" class="btn btn-outline-primary">
+                            <i class="fas fa-check-circle me-2"></i>View Objective Grades
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <!-- Empty State -->
+    <div class="card card-custom text-center">
+        <div class="card-body py-5">
+            <i class="fas fa-file-alt fa-4x text-muted mb-4"></i>
+            <h3 class="text-muted">No Theory Submissions Yet</h3>
+            <p class="text-muted mb-4">You haven't completed any theory assessments yet.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-play me-2"></i>Start Your First Assessment
+            </a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    .theory-grades-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .grades-header {
+        border-bottom: 1px solid var(--light);
+        padding-bottom: 2rem;
+    }
+    
+    .header-stats {
+        display: inline-block;
+    }
+    
+    .stat-badge {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: var(--shadow);
+    }
+    
+    .stat-number {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+    
+    .stat-label {
+        font-size: 0.875rem;
+        opacity: 0.9;
+    }
+    
+    .performance-metric {
+        padding: 1rem;
+    }
+    
+    .metric-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .metric-icon.high-score {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        color: white;
+    }
+    
+    .metric-icon.avg-score {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+    }
+    
+    .metric-icon.graded {
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        color: white;
+    }
+    
+    .metric-icon.pending {
+        background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        color: white;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
+    
+    .metric-label {
+        color: var(--gray);
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+    
+    .metric-subtext {
+        color: var(--gray);
+        font-size: 0.875rem;
+    }
+    
+    .course-info h6 {
+        color: var(--dark);
+    }
+    
+    .assessment-info strong {
+        color: var(--dark);
+    }
+    
+    .score-display {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .progress-wrapper {
+        display: inline-block;
+    }
+    
+    .date-info {
+        line-height: 1.2;
+    }
+    
+    .grader-info {
+        line-height: 1.2;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+    
+    .action-buttons .btn {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .tips-list .tip-item {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .course-performance-item:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .table-warning {
+        background-color: rgba(255, 193, 7, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+        .header-stats {
+            margin-top: 1rem;
+        }
+        
+        .performance-metric {
+            padding: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+        }
+        
+        .metric-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 1.25rem;
+        }
+        
+        .table-responsive {
+            font-size: 0.875rem;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .action-buttons .btn {
+            width: 28px;
+            height: 28px;
+        }
+    }
+</style>
+
+<script>
+    function exportGrades() {
+        // Simple CSV export functionality for theory grades
+        let csvContent = "data:text/csv;charset=utf-8,";
+        csvContent += "Course,Assessment,Score,Max Score,Percentage,Status,Submitted,Graded By\n";
+        
+        {% for grade in grades %}
+        const row{{ forloop.counter }} = [
+            "{{ grade.course.name }}",
+            "{{ grade.assessment_title|default:'Theory Assessment' }}",
+            "{{ grade.score|default:'--' }}",
+            "{{ grade.max_score|default:'--' }}",
+            "{{ grade.percentage|default:'0' }}%",
+            "{% if grade.is_graded %}{% if grade.percentage >= 60 %}Passed{% else %}Failed{% endif %}{% else %}Pending{% endif %}",
+            "{{ grade.submitted_at|date:'Y-m-d H:i' }}",
+            "{{ grade.graded_by.get_full_name|default:grade.graded_by.username|default:'--' }}"
+        ].join(',');
+        csvContent += row{{ forloop.counter }} + "\n";
+        {% endfor %}
+        
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "theory_grades.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    
+    // Feedback modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const feedbackButtons = document.querySelectorAll('.view-feedback');
+        const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+        const feedbackContent = document.getElementById('feedbackContent');
+        
+        feedbackButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const gradeId = this.getAttribute('data-grade-id');
+                loadFeedback(gradeId);
+            });
+        });
+        
+        function loadFeedback(gradeId) {
+            // Simulate loading feedback - in real implementation, this would be an AJAX call
+            feedbackContent.innerHTML = `
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading feedback...</span>
+                    </div>
+                    <p class="mt-2">Loading feedback...</p>
+                </div>
+            `;
+            
+            feedbackModal.show();
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                feedbackContent.innerHTML = `
+                    <div class="feedback-section">
+                        <h6>Overall Comments</h6>
+                        <div class="alert alert-info">
+                            <p class="mb-0">Good effort on this assessment. Your answers show understanding of the core concepts, but could benefit from more detailed examples and clearer structure.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-section mt-4">
+                        <h6>Strengths</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Clear understanding of key concepts</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Good use of technical terminology</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Answers address the question prompts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feedback-section mt-4">
+                        <h6>Areas for Improvement</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i>Provide more specific examples to support arguments</li>
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i>Work on structuring answers with clear paragraphs</li>
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i>Proofread for grammar and spelling errors</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feedback-section mt-4">
+                        <h6>Next Steps</h6>
+                        <div class="alert alert-success">
+                            <p class="mb-0">Focus on practicing structured writing and reviewing the course materials on topic elaboration techniques.</p>
+                        </div>
+                    </div>
+                `;
+            }, 1000);
+        }
+        
+        // Add hover effects to table rows
+        const tableRows = document.querySelectorAll('tbody tr');
+        tableRows.forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(4px)';
+                this.style.transition = 'transform 0.2s ease';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    });
+</script>
+{% endblock %}

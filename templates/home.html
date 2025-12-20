@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="dashboard-header mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold text-primary">CBT Dashboard</h1>
+            <p class="lead">Welcome back, {{ user.get_full_name|default:user.username }}! Ready for your next assessment?</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <div class="card card-custom">
+                <div class="card-body text-center py-3">
+                    <h5 class="card-title mb-1">Today's Date</h5>
+                    <p class="card-text fs-5 fw-bold text-secondary">{% now "F j, Y" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% for message in messages %}
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+    <i class="fas fa-info-circle me-2"></i>{{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+{% endfor %}
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card card-custom mb-4">
+            <div class="card-header card-header-custom">
+                <h3 class="card-title mb-0"><i class="fas fa-book me-2"></i>Your Courses</h3>
+            </div>
+            <div class="card-body">
+                {% if courses %}
+                <div class="row">
+                    {% for course in courses %}
+                    <div class="col-md-6 mb-3">
+                        <div class="card course-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ course.name }}</h5>
+                                <p class="card-text text-muted small">
+                                    {% if course.code %}{{ course.code }} | {% endif %}
+                                    {% if course.instructor %}Instructor: {{ course.instructor }}{% endif %}
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="d-flex justify-content-between">
+                                    <a href="{% url 'course_detail' course.id %}" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-info-circle me-1"></i> Details
+                                    </a>
+                                    <a href="{% url 'start_cbt' course.id %}" class="btn btn-sm btn-custom">
+                                        <i class="fas fa-play me-1"></i> Take CBT
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center py-4">
+                    <i class="fas fa-book-open fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">No courses available</h5>
+                    <p class="text-muted">Contact your administrator if you believe this is an error.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card card-custom mb-4">
+            <div class="card-header card-header-custom">
+                <h3 class="card-title mb-0"><i class="fas fa-rocket me-2"></i>Quick Actions</h3>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <a href="{% url 'course_list' %}" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="fas fa-list text-primary me-3"></i>
+                        <div>
+                            <h6 class="mb-0">All Courses</h6>
+                            <small class="text-muted">Browse all available courses</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card card-custom">
+            <div class="card-header card-header-custom">
+                <h3 class="card-title mb-0"><i class="fas fa-chart-line me-2"></i>Recent Activity</h3>
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-3">
+                            <i class="fas fa-clock text-primary"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-0">Last Login</h6>
+                        <small class="text-muted">{{ user.last_login|date:"M j, g:i A"|default:"First time login" }}</small>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-success bg-opacity-10 rounded-circle p-3">
+                            <i class="fas fa-check text-success"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h6 class="mb-0">Completed Tests</h6>
+                        <small class="text-muted">View your test history in Results</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .dashboard-header {
+        border-bottom: 1px solid var(--light);
+        padding-bottom: 1.5rem;
+    }
+    
+    .course-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid #e9ecef;
+    }
+    
+    .course-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .list-group-item {
+        border: none;
+        padding: 1rem 0.5rem;
+        transition: background-color 0.2s ease;
+    }
+    
+    .list-group-item:hover {
+        background-color: rgba(52, 152, 219, 0.05);
+    }
+</style>
+{% endblock %}

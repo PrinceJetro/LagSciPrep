@@ -1,0 +1,4 @@
+env\scripts\activate
+cd personalprojects/cbt_app
+python manage.py runserver
+

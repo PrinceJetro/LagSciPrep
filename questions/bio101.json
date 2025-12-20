@@ -1,0 +1,184 @@
+{
+    "BIO 101": [
+        {
+            "question": "What is the core, unifying theme of biology that explains both the similarities and differences among living organisms?",
+            "options": {
+                "A": "Homeostasis",
+                "B": "Cellular Organization",
+                "C": "Evolution",
+                "D": "Metabolism"
+            },
+            "correct_option": "C",
+            "explanation": "Evolution is the foundational concept that accounts for the unity of life (shared ancestry) and the diversity of life (adaptation to different environments) through genetic change over generations.",
+            "hint": "It's the overarching theory that connects all biological disciplines."
+        },
+        {
+            "question": "Which of the following is the most accurate definition of biological evolution?",
+            "options": {
+                "A": "An individual organism adapting to its environment during its lifetime.",
+                "B": "The change in the genetic makeup of a population over generations.",
+                "C": "The sudden appearance of new, complex traits in an organism.",
+                "D": "The movement of organisms from one habitat to another."
+            },
+            "correct_option": "B",
+            "explanation": "Evolution is a population-level process involving changes in allele frequencies across generations. It is not about changes an individual acquires during its life.",
+            "hint": "Think about changes in genes within a group over time."
+        },
+        {
+            "question": "What is the primary mechanism driving evolution as proposed by Charles Darwin?",
+            "options": {
+                "A": "Genetic Mutation",
+                "B": "Natural Selection",
+                "C": "Artificial Selection",
+                "D": "Gene Flow"
+            },
+            "correct_option": "B",
+            "explanation": "Natural selection is the process where individuals with heritable traits that are better suited to their environment tend to survive and reproduce more successfully, leading to an increase in those traits in the population.",
+            "hint": "Nature 'selects' the fittest."
+        },
+        {
+            "question": "In the scenario of an insect that camouflages as a thorn, what does its survival advantage demonstrate?",
+            "options": {
+                "A": "Acquired characteristics",
+                "B": "An adaptive trait favored by natural selection",
+                "C": "Intentional mimicry by the insect",
+                "D": "A random event with no genetic basis"
+            },
+            "correct_option": "B",
+            "explanation": "Camouflage is an adaptive trait. Insects with better camouflage are less likely to be eaten, survive longer, and pass on their genes more than those without it. This differential survival and reproduction drives evolutionary change.",
+            "hint": "It's a trait that increases survival and is heritable."
+        },
+        {
+            "question": "How does evolution explain the 'unity' observed in all living things?",
+            "options": {
+                "A": "All organisms face the same environmental challenges.",
+                "B": "All organisms share a common ancestor and fundamental cellular processes.",
+                "C": "All organisms have the same physical appearance.",
+                "D": "Evolution only explains diversity, not unity."
+            },
+            "correct_option": "B",
+            "explanation": "The unity of life—such as the universal genetic code, shared metabolic pathways, and similar cellular structures—is evidence of descent from a common ancestral population.",
+            "hint": "Think about shared fundamental features at the molecular level."
+        },
+        {
+            "question": "The vast variety of beak shapes among finch species on different islands is best explained by:",
+            "options": {
+                "A": "Individual birds changing their beak shape when needed.",
+                "B": "Evolution through natural selection acting on heritable variation.",
+                "C": "All birds trying to have the same beak shape.",
+                "D": "Random chance with no pattern."
+            },
+            "correct_option": "B",
+            "explanation": "Different islands presented different food sources (e.g., seeds, insects). Finches with beak shapes better suited to the local food survived and reproduced more, leading to the evolution of distinct beak forms in different populations.",
+            "hint": "Different environments favored different traits."
+        },
+        {
+            "question": "How are advantageous physical traits transmitted to offspring during evolution?",
+            "options": {
+                "A": "Through learned behavior taught by parents.",
+                "B": "Through the inheritance of genes (DNA) from parents.",
+                "C": "By the offspring directly observing and copying the trait.",
+                "D": "Through the use and disuse of organs during the parent's lifetime."
+            },
+            "correct_option": "B",
+            "explanation": "For natural selection to work, the advantageous trait must have a genetic basis. Only heritable traits (coded in DNA) can be passed from parents to offspring and thus increase in frequency in a population.",
+            "hint": "It's about the transmission of genetic information."
+        },
+        {
+            "question": "Which of the following is NOT a unifying concept in biology?",
+            "options": {
+                "A": "The flow of energy",
+                "B": "The transmission of genetic information",
+                "C": "Astrological influences on growth",
+                "D": "Homeostasis and regulation"
+            },
+            "correct_option": "C",
+            "explanation": "Unifying themes in biology are grounded in scientific evidence and include concepts like cellular organization, inheritance, energy processing, interactions, and evolution. Astrology is not a scientific biological concept.",
+            "hint": "Look for the non-scientific option."
+        },
+        {
+            "question": "A new function, such as the ability to pump blood, that appears when heart cells organize into tissues and organs is an example of:",
+            "options": {
+                "A": "Natural Selection",
+                "B": "An Emergent Property",
+                "C": "Genetic Drift",
+                "D": "A Metabolic Pathway"
+            },
+            "correct_option": "B",
+            "explanation": "Emergent properties are novel characteristics that arise at a higher level of biological organization due to the interactions of component parts. The pumping function emerges from the specific organization of heart tissues, not from individual cells.",
+            "hint": "A new capability arising from complexity."
+        },
+        {
+            "question": "In the Central Dogma (DNA → RNA → Protein), what is the primary role of RNA?",
+            "options": {
+                "A": "To permanently store genetic information.",
+                "B": "To act as an intermediary, carrying instructions from DNA for protein synthesis.",
+                "C": "To provide structural support to the cell.",
+                "D": "To directly catalyze all metabolic reactions."
+            },
+            "correct_option": "B",
+            "explanation": "RNA serves as a messenger (mRNA) and functional molecule (tRNA, rRNA) that interprets the genetic code in DNA and directs the assembly of amino acids into proteins during translation.",
+            "hint": "It's the link or 'interpreter' between DNA and protein."
+        },
+        {
+            "question": "The extinction of dinosaurs and the subsequent rise of mammals is a large-scale example of:",
+            "options": {
+                "A": "Homeostasis within a population.",
+                "B": "Evolutionary change over time.",
+                "C": "A single organism's life cycle.",
+                "D": "The process of cellular respiration."
+            },
+            "correct_option": "B",
+            "explanation": "This illustrates macroevolution—major evolutionary changes over vast geological time, including species extinction and the adaptive radiation of new groups (mammals) into vacated ecological niches.",
+            "hint": "It involves change in life forms across deep time."
+        },
+        {
+            "question": "Which statement best describes the relationship between variation and natural selection?",
+            "options": {
+                "A": "Natural selection creates new variations in a population.",
+                "B": "Natural selection acts on the existing variation in a population.",
+                "C": "Variation only occurs after natural selection has taken place.",
+                "D": "Variation and natural selection are unrelated concepts."
+            },
+            "correct_option": "B",
+            "explanation": "Natural selection is a filtering process. It requires pre-existing genetic variation within a population. It then differentially favors variants that confer a survival or reproductive advantage in a given environment.",
+            "hint": "Selection works with the raw material it is given."
+        },
+        {
+            "question": "What is the ultimate source of new genetic variation upon which evolution depends?",
+            "options": {
+                "A": "Natural Selection",
+                "B": "Mutation",
+                "C": "Genetic Drift",
+                "D": "Gene Flow"
+            },
+            "correct_option": "B",
+            "explanation": "Mutations are random changes in the DNA sequence. They create new alleles, which are the raw material for genetic variation. Other evolutionary processes (selection, drift) act on this variation.",
+            "hint": "Think of the original cause of new genetic differences."
+        },
+        {
+            "question": "The principle that 'nature selects for traits that increase survival and reproduction' is the essence of:",
+            "options": {
+                "A": "Genetic Engineering",
+                "B": "The Cell Theory",
+                "C": "Natural Selection",
+                "D": "Homeostasis"
+            },
+            "correct_option": "C",
+            "explanation": "This is the core idea of Darwinian natural selection: individuals with advantageous traits are more likely to survive and pass those traits to the next generation, shaping the population over time.",
+            "hint": "It's about differential survival based on traits."
+        },
+        {
+            "question": "Which level of biological organization is primarily affected by the process of evolution?",
+            "options": {
+                "A": "The Organ",
+                "B": "The Cell",
+                "C": "The Population",
+                "D": "The Organelle"
+            },
+            "correct_option": "C",
+            "explanation": "Evolution is defined as a change in allele frequencies in a population over generations. While it manifests in changes to individuals' traits, the process occurs at the population level.",
+            "hint": "It's about groups of interbreeding individuals."
+        }
+    ]
+}
