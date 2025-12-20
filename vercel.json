@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "potenia/wsgi.py",
+      "src": "cbt_app/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }
@@ -14,7 +14,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "potenia/wsgi.py"
+      "dest": "cbt_app/wsgi.py"
     }
   ]
 }
