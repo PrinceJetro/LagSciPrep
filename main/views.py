@@ -591,27 +591,37 @@ PastQuestionsTheory.objects.create(
 
 
 
-# import json
-# from main.models import Course, Topic, PastQuestionsObj
+import json
+from main.models import Course, Topic, PastQuestionsObj
 
-# with open('questions/bio101.json', 'r', encoding='utf-8') as f:
-#     data = json.load(f)
+with open('random_questions.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
 
-# for course_name, questions in data.items():
-#     course, _ = Course.objects.get_or_create(name=course_name)
-#     # Use a generic topic if not specified
-#     topic, _ = Topic.objects.get_or_create(name="Evolution: The Core Theme of Biology", course=course)
-#     for q in questions:
-#         options = q.get("options", {})
-#         PastQuestionsObj.objects.create(
-#             course=course,
-#             topic=topic,
-#             question_text=q.get("question", ""),
-#             option_a=options.get("A", ""),
-#             option_b=options.get("B", ""),
-#             option_c=options.get("C", ""),
-#             option_d=options.get("D", ""),
-#             correct_option=q.get("correct_option", ""),
-#             explanation=q.get("explanation", ""),
-#             hint=q.get("hint", ""),
-#         )
+for course_name, questions in data.items():
+    course, _ = Course.objects.get_or_create(name=course_name)
+    for q in questions:
+        topic_name = q.get("topic", "")
+        if topic_name:
+            topic, _ = Topic.objects.get_or_create(name=topic_name, course=course)
+        else:
+            topic = None
+        options = q.get("options", {})
+        # Use get_or_create to avoid duplicates based on course and question_text
+        obj, created = PastQuestionsObj.objects.get_or_create(
+            course=course,
+            question_text=q.get("question", ""),
+            defaults={
+                'topic': topic,
+                'option_a': options.get("A", ""),
+                'option_b': options.get("B", ""),
+                'option_c': options.get("C", ""),
+                'option_d': options.get("D", ""),
+                'correct_option': q.get("correct_option", ""),
+                'explanation': q.get("explanation", ""),
+                'hint': q.get("hint", ""),
+            }
+        )
+        if not created:
+            # Optionally update existing if needed
+            print("Question already exists:", obj.question_text)
+            pass
