@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block title %}CBT Question - {{ course.name }} - LagSciPrep{% endblock %}
+{% block og_title %}CBT Question - {{ course.name }} - LagSciPrep{% endblock %}
+{% block og_description %}Answer CBT questions for {{ course.name }} on LagSciPrep{% endblock %}
 {% block content %}
 <div class="container mt-4">
     <h3>{{ course.name }} CBT</h3>

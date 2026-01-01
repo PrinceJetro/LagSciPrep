@@ -591,37 +591,56 @@ PastQuestionsTheory.objects.create(
 
 
 
-import json
-from main.models import Course, Topic, PastQuestionsObj
+# import json
+# from main.models import Course, Topic, PastQuestionsObj
 
-with open('random_questions.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
+# with open('random_questions.json', 'r', encoding='utf-8') as f:
+#     data = json.load(f)
 
-for course_name, questions in data.items():
-    course, _ = Course.objects.get_or_create(name=course_name)
-    for q in questions:
-        topic_name = q.get("topic", "")
-        if topic_name:
-            topic, _ = Topic.objects.get_or_create(name=topic_name, course=course)
-        else:
-            topic = None
-        options = q.get("options", {})
-        # Use get_or_create to avoid duplicates based on course and question_text
-        obj, created = PastQuestionsObj.objects.get_or_create(
-            course=course,
-            question_text=q.get("question", ""),
-            defaults={
-                'topic': topic,
-                'option_a': options.get("A", ""),
-                'option_b': options.get("B", ""),
-                'option_c': options.get("C", ""),
-                'option_d': options.get("D", ""),
-                'correct_option': q.get("correct_option", ""),
-                'explanation': q.get("explanation", ""),
-                'hint': q.get("hint", ""),
-            }
-        )
-        if not created:
-            # Optionally update existing if needed
-            print("Question already exists:", obj.question_text)
-            pass
+# for course_name, questions in data.items():
+#     course, _ = Course.objects.get_or_create(name=course_name)
+#     for q in questions:
+#         topic_name = q.get("topic", "")
+#         if topic_name:
+#             topic, _ = Topic.objects.get_or_create(name=topic_name, course=course)
+#         else:
+#             topic = None
+#         options = q.get("options", {})
+#         # Use get_or_create to avoid duplicates based on course and question_text
+#         obj, created = PastQuestionsObj.objects.get_or_create(
+#             course=course,
+#             question_text=q.get("question", ""),
+#             defaults={
+#                 'topic': topic,
+#                 'option_a': options.get("A", ""),
+#                 'option_b': options.get("B", ""),
+#                 'option_c': options.get("C", ""),
+#                 'option_d': options.get("D", ""),
+#                 'correct_option': q.get("correct_option", ""),
+#                 'explanation': q.get("explanation", ""),
+#                 'hint': q.get("hint", ""),
+#             }
+#         )
+#         print("Created" + " " + obj.question_text) if created else print("Exists" + " " + obj.question_text)
+#         if not created:
+#             # Optionally update existing if needed
+#             print("Question already exists:", obj.question_text)
+#             pass
+
+
+
+
+# Act as an expert educator and instructional designer. I am going to provide you with lecture notes from a PowerPoint presentation. Your task is to generate as many multiple-choice questions as possible (aiming for 100) based strictly and exclusively on the content of the provided text.
+
+# Requirements:
+
+# Source Material: Do not use outside knowledge. Use only the provided notes.
+
+# Output Format: You must output the response as a JSON array of objects following this exact schema: { "question": "string", "topic": "string", "options": { "A": "string", "B": "string", "C": "string", "D": "string" }, "correct_option": "char", "explanation": "string", "hint": "string" },
+
+# Tone & Style: In the explanation and hint fields, do not use phrases like 'according to the text,' 'as mentioned in the notes,' or 'the text states.' Write the explanations and hints as objective facts.
+
+# Volume: Generate as many unique questions as the text allows, up to 100. If the text is exhausted before 100, provide as many as are logically possible.
+
+# Here is the lecture text: 
+

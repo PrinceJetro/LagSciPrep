@@ -1,2116 +1,381 @@
 {
-    "CHM 101": [
-        {
-            "question": "What is the defining characteristic of a chemical element?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "It can be broken down by chemical reactions.",
-                "B": "It consists of only one type of atom.",
-                "C": "It always exists as a diatomic molecule.",
-                "D": "It has a variable composition."
-            },
-            "correct_option": "B",
-            "explanation": "An element is a pure substance composed entirely of atoms that all share the same number of protons in their nuclei. It is the simplest form of matter and cannot be decomposed into simpler substances by ordinary chemical means."
-        },
-        {
-            "question": "Which of the following is TRUE about compounds?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "They consist of atoms of the same element.",
-                "B": "They have properties identical to their constituent elements.",
-                "C": "They are chemically combined in variable proportions.",
-                "D": "They are substances made of two or more different elements in fixed proportions."
-            },
-            "correct_option": "D",
-            "explanation": "A compound is a distinct substance formed when atoms of two or more different elements are chemically bonded together in a fixed, definite ratio. Compounds have unique properties that differ from those of the elements that compose them."
-        },
-        {
-            "question": "Why is O₂ (oxygen gas) classified as a molecule but NOT as a compound?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "Because it is a gas at room temperature.",
-                "B": "Because it contains only one type of element (oxygen).",
-                "C": "Because its atoms are not chemically bonded.",
-                "D": "Because it can be broken down physically."
-            },
-            "correct_option": "B",
-            "explanation": "A molecule is defined as two or more atoms chemically bonded together. O₂ fits this definition. However, a compound specifically requires that the bonded atoms be from *different* elements. Since O₂ contains only oxygen atoms, it is a molecule but not a compound."
-        },
-        {
-            "question": "Which of the following statements is CORRECT?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "All molecules are compounds.",
-                "B": "All compounds are molecules.",
-                "C": "No compounds are molecules.",
-                "D": "Molecules and compounds are the same thing."
-            },
-            "correct_option": "B",
-            "explanation": "The relationship is hierarchical. A compound is a subset of molecules. All compounds are molecules because they consist of two or more atoms chemically bonded. However, not all molecules are compounds, as some (like O₂, N₂) consist of atoms of the same element."
-        },
-        {
-            "question": "How would you classify Carbon Dioxide (CO₂)?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "Element only",
-                "B": "Molecule only",
-                "C": "Compound only",
-                "D": "Both a molecule and a compound"
-            },
-            "correct_option": "D",
-            "explanation": "CO₂ is a molecule because it consists of atoms (one carbon and two oxygen) chemically bonded together. It is also a compound because those bonded atoms are from different elements (carbon and oxygen). Therefore, it is correctly classified as both."
-        },
-        {
-            "question": "What is the correct classification for Iodine (I₂)?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "A compound",
-                "B": "An element",
-                "C": "A molecule but not a compound",
-                "D": "Both an element and a compound"
-            },
-            "correct_option": "C",
-            "explanation": "Iodine (I) is the element. I₂ is the molecular form in which two iodine atoms are chemically bonded together. Since it contains only one type of element, it is a molecule but does not meet the criteria to be called a compound."
-        },
-        {
-            "question": "Water (H₂O) and Carbon Monoxide (CO) are similar in that they are both:",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "Elements.",
-                "B": "Molecules of the same element.",
-                "C": "Compounds.",
-                "D": "Unable to be broken down chemically."
-            },
-            "correct_option": "C",
-            "explanation": "Both H₂O and CO are substances formed by the chemical combination of two different elements (H and O; C and O) in fixed proportions. This makes them chemical compounds. They are also molecules, but the most specific shared classification is 'compounds.'"
-        },
-        {
-            "question": "Which of the following is an example of a substance that is BOTH a molecule and a compound?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "Ozone (O₃)",
-                "B": "Nitrogen gas (N₂)",
-                "C": "Gold (Au)",
-                "D": "Ammonia (NH₃)"
-            },
-            "correct_option": "D",
-            "explanation": "Ammonia (NH₃) consists of nitrogen and hydrogen atoms chemically bonded, making it a molecule. Because it contains atoms of different elements, it is also a compound. O₃ and N₂ are molecules of a single element, and Au is an elemental solid, not a molecular substance."
-        },
-        {
-            "question": "According to the checkpoint, the statement 'All molecules are not compounds, but all compounds are molecules' is:",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "False",
-                "B": "True",
-                "C": "Only true for gases",
-                "D": "Only true for solids"
-            },
-            "correct_option": "B",
-            "explanation": "This statement is logically true. The category 'molecule' is broader. Some molecules (diatomics like O₂) are not compounds. However, any substance that qualifies as a compound (different elements bonded) inherently fits the definition of a molecule. Therefore, all compounds fall within the set of molecules."
-        },
-        {
-            "question": "What determines the unique identity of an element?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-                "A": "The number of neutrons",
-                "B": "The number of electrons",
-                "C": "The number of protons (atomic number)",
-                "D": "The total mass of the atom"
-            },
-            "correct_option": "C",
-            "explanation": "The atomic number, which is the count of protons in the nucleus of an atom, is the fundamental property that defines an element. Each element has a unique atomic number. Changing the proton count changes the element itself."
-        },
-        {
-            "question": "What defines an ion?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "An atom with an equal number of protons and neutrons.",
-                "B": "An atom or group of atoms that carries an electric charge.",
-                "C": "An atom that has gained or lost neutrons.",
-                "D": "A molecule formed from two different elements."
-            },
-            "correct_option": "B",
-            "explanation": "An ion is any chemical species, typically an atom or molecule, that has a net electrical charge. This charge results from an imbalance between the number of protons (positive) and electrons (negative)."
-        },
-        {
-            "question": "How is a cation formed?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "By gaining one or more electrons.",
-                "B": "By gaining one or more protons.",
-                "C": "By losing one or more electrons.",
-                "D": "By losing one or more neutrons."
-            },
-            "correct_option": "C",
-            "explanation": "A cation is a positively charged ion. It forms when a neutral atom loses one or more of its valence electrons. This leaves the atom with more protons than electrons, resulting in a net positive charge."
-        },
-        {
-            "question": "A negatively charged ion, such as Cl⁻, is called a/an:",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "Cation",
-                "B": "Proton",
-                "C": "Anion",
-                "D": "Isotope"
-            },
-            "correct_option": "C",
-            "explanation": "Anions are negatively charged ions. They are formed when a neutral atom gains one or more electrons, giving it more electrons than protons and thus a net negative charge. Non-metals commonly form anions."
-        },
-        {
-            "question": "Which of the following elements is MOST LIKELY to form a cation with a +2 charge?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "Fluorine (F)",
-                "B": "Magnesium (Mg)",
-                "C": "Oxygen (O)",
-                "D": "Chlorine (Cl)"
-            },
-            "correct_option": "B",
-            "explanation": "Magnesium is a metal in Group 2 of the periodic table. It has two valence electrons, which it readily loses to achieve a stable noble gas electron configuration, forming the Mg²⁺ cation."
-        },
-        {
-            "question": "What is the primary reason metals tend to form cations?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "They have a high electron affinity.",
-                "B": "They have low ionization energies and easily lose valence electrons.",
-                "C": "They need to gain electrons to fill their valence shell.",
-                "D": "They have more neutrons than protons."
-            },
-            "correct_option": "B",
-            "explanation": "Metals have relatively low ionization energies, meaning it requires little energy to remove their loosely held valence electrons. By losing these electrons, they achieve a stable electron configuration, becoming positively charged cations."
-        },
-        {
-            "question": "The ionic compound MgCl₂ forms because:",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "One Mg atom gains two electrons from two Cl atoms.",
-                "B": "One Mg atom loses two electrons, which are gained by two Cl atoms.",
-                "C": "Mg and Cl atoms share electrons equally.",
-                "D": "One Cl atom loses an electron to a Mg atom."
-            },
-            "correct_option": "B",
-            "explanation": "Magnesium (Mg), a Group 2 metal, loses its two valence electrons to become Mg²⁺. Two chlorine (Cl) atoms, each needing one electron, each gain one of these electrons to become Cl⁻. The resulting ions attract electrostatically to form MgCl₂."
-        },
-        {
-            "question": "Based on composition, which of the following compounds is classified as IONIC?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "H₂O₂ (Hydrogen Peroxide)",
-                "B": "CHCl₃ (Chloroform)",
-                "C": "KI (Potassium Iodide)",
-                "D": "CO₂ (Carbon Dioxide)"
-            },
-            "correct_option": "C",
-            "explanation": "KI is composed of potassium (K), a metal, and iodine (I), a non-metal. This metal + non-metal combination is characteristic of ionic compounds, which form via the transfer of electrons from the metal to the non-metal."
-        },
-        {
-            "question": "Why is H₂O₂ (Hydrogen Peroxide) classified as a molecular compound?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "It contains a metal ion.",
-                "B": "It is composed of ions held together by ionic bonds.",
-                "C": "It is composed only of non-metal atoms bonded covalently.",
-                "D": "It conducts electricity when dissolved in water."
-            },
-            "correct_option": "C",
-            "explanation": "Hydrogen Peroxide consists solely of hydrogen and oxygen, both non-metals. Compounds formed between non-metals typically involve the sharing of electrons (covalent bonding) to form discrete molecules, not the transfer of electrons to form ions."
-        },
-        {
-            "question": "Lithium Carbonate (Li₂CO₃) is ionic because it contains:",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "Only non-metal atoms.",
-                "B": "A metal cation (Li⁺) and a polyatomic anion (CO₃²⁻).",
-                "C": "Shared electrons between lithium and carbon.",
-                "D": "Atoms of the same element."
-            },
-            "correct_option": "B",
-            "explanation": "Li₂CO₃ is an ionic compound. It is formed from lithium ions (Li⁺), derived from the metal lithium, and carbonate ions (CO₃²⁻), which is a polyatomic ion (a charged group of covalently bonded non-metal atoms). Their electrostatic attraction forms the ionic bond."
-        },
-        {
-            "question": "What is the fundamental process behind the formation of an ionic compound like NaCl?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-                "A": "The mutual sharing of electron pairs between atoms.",
-                "B": "The random mixing of neutral atoms.",
-                "C": "The transfer of electrons from a metal atom to a non-metal atom.",
-                "D": "The fusion of atomic nuclei."
-            },
-            "correct_option": "C",
-            "explanation": "Ionic bonding is characterized by the complete transfer of one or more electrons from a metal atom (which becomes a cation) to a non-metal atom (which becomes an anion). The resulting oppositely charged ions are held together by strong electrostatic forces of attraction."
-        },
-        {
-            "question": "What is the definition of atomicity?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "The mass of one atom of an element.",
-                "B": "The number of atoms present in one molecule of a substance.",
-                "C": "The charge carried by an ion.",
-                "D": "The combining power of an element."
-            },
-            "correct_option": "B",
-            "explanation": "Atomicity is a molecular property that refers to the total count of atoms that are chemically bonded together within a single, discrete molecule of a substance."
-        },
-        {
-            "question": "Which of the following elements exists naturally with an atomicity of 1?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "Oxygen (O₂)",
-                "B": "Hydrogen (H₂)",
-                "C": "Helium (He)",
-                "D": "Phosphorus (P₄)"
-            },
-            "correct_option": "C",
-            "explanation": "Noble gases like helium (He) are monoatomic. They exist as single, uncombined atoms because they have a stable, full valence electron shell, making them chemically inert and unlikely to form molecules."
-        },
-        {
-            "question": "The atomicity of an ozone (O₃) molecule is:",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "1",
-                "B": "2",
-                "C": "3",
-                "D": "4"
-            },
-            "correct_option": "C",
-            "explanation": "The chemical formula for ozone is O₃. The subscript '3' indicates that one molecule of ozone consists of three oxygen atoms chemically bonded together."
-        },
-        {
-            "question": "Which of the following is a polyatomic ion (radical)?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "Na⁺",
-                "B": "Cl⁻",
-                "C": "OH⁻",
-                "D": "Mg²⁺"
-            },
-            "correct_option": "C",
-            "explanation": "A polyatomic ion (or radical) is a charged species composed of two or more atoms covalently bonded together. OH⁻ (hydroxide) consists of one oxygen and one hydrogen atom with a net charge of -1."
-        },
-        {
-            "question": "What is the valency of the sulfate radical (SO₄²⁻)?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "1",
-                "B": "2",
-                "C": "3",
-                "D": "4"
-            },
-            "correct_option": "B",
-            "explanation": "The valency of an ion is equal to the magnitude of its charge. The sulfate ion carries a charge of 2-, meaning it has a combining power or valency of 2."
-        },
-        {
-            "question": "The atomicity of a phosphorus (P₄) molecule is determined to be 4. What method can be used to confirm this?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "Divide the molecular mass by the atomic mass of phosphorus.",
-                "B": "Multiply the atomic number by the number of protons.",
-                "C": "Count the number of electrons in the molecule.",
-                "D": "Measure the density of phosphorus gas."
-            },
-            "correct_option": "A",
-            "explanation": "For molecules composed of a single element (like P₄), atomicity can be calculated by dividing the molecular mass of the substance by the atomic mass of the element. Molecular Mass of P₄ / Atomic Mass of P = (4*31) / 31 = 4."
-        },
-        {
-            "question": "Which of the following molecules has the highest atomicity based on its common molecular formula?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "S₈",
-                "B": "C₆H₁₂O₆",
-                "C": "P₄",
-                "D": "O₃"
-            },
-            "correct_option": "B",
-            "explanation": "Atomicity is the total number of atoms. C₆H₁₂O₆ (glucose) has 6 + 12 + 6 = 24 atoms. S₈ has 8 atoms, P₄ has 4, and O₃ has 3. Therefore, glucose has the highest atomicity among the options."
-        },
-        {
-            "question": "If the molecular mass of a gaseous element is 64 g/mol and its atomic mass is 32 g/mol, what is its atomicity?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "1",
-                "B": "2",
-                "C": "3",
-                "D": "4"
-            },
-            "correct_option": "B",
-            "explanation": "Atomicity = Molecular Mass / Atomic Mass. In this case, 64 g/mol ÷ 32 g/mol = 2. This indicates the element exists as a diatomic molecule (e.g., O₂ or S₂, though S₂ is less common at room temperature than S₈)."
-        },
-        {
-            "question": "What is the atomicity of Calcium Carbonate (CaCO₃)?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "3",
-                "B": "4",
-                "C": "5",
-                "D": "6"
-            },
-            "correct_option": "C",
-            "explanation": "The formula CaCO₃ indicates one molecule contains: 1 Ca atom + 1 C atom + 3 O atoms. The total number of atoms is 1 + 1 + 3 = 5."
-        },
-        {
-            "question": "Which statement about radicals is FALSE?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "They carry an electric charge.",
-                "B": "They are groups of atoms that behave as a single unit.",
-                "C": "They can exist freely and stably in isolation.",
-                "D": "They have a specific valency."
-            },
-            "correct_option": "C",
-            "explanation": "Radicals (polyatomic ions) are charged groups of atoms. Due to their charge, they are not typically found as free, stable entities in nature; they are almost always combined with ions of opposite charge to form neutral ionic compounds."
-        },
-        {
-            "question": "The ammonium ion (NH₄⁺) has a valency of:",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "+1",
-                "B": "-1",
-                "C": "+2",
-                "D": "-2"
-            },
-            "correct_option": "A",
-            "explanation": "Valency is indicated by the magnitude and sign of the charge. The ammonium ion carries a charge of +1, therefore its valency is +1."
-        },
-        {
-            "question": "What is the atomicity of Magnesium Hydroxide, Mg(OH)₂?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "3",
-                "B": "4",
-                "C": "5",
-                "D": "6"
-            },
-            "correct_option": "C",
-            "explanation": "In Mg(OH)₂, there is 1 Mg atom. The (OH)₂ unit contributes 2 O atoms and 2 H atoms. Total atoms = 1 (Mg) + 2 (O) + 2 (H) = 5."
-        },
-        {
-            "question": "Which of the following is a triatomic molecule?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "N₂",
-                "B": "H₂O",
-                "C": "CH₄",
-                "D": "Ne"
-            },
-            "correct_option": "B",
-            "explanation": "A triatomic molecule contains three atoms. H₂O has two hydrogen atoms and one oxygen atom, totaling three atoms. N₂ is diatomic (2), CH₄ is pentatomic (5), and Ne is monoatomic (1)."
-        },
-        {
-            "question": "Element X has an atomic mass of 16. In its natural state, it exists as molecules with a molecular mass of 32. What is the atomicity of element X?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "1",
-                "B": "2",
-                "C": "3",
-                "D": "4"
-            },
-            "correct_option": "B",
-            "explanation": "Atomicity = Molecular Mass / Atomic Mass = 32 / 16 = 2. This describes a diatomic element like oxygen (O₂), which has an atomic mass of ~16 and a molecular mass of ~32."
-        },
-        {
-            "question": "The atomicity of TNT (C₇H₅(NO₂)₃) is:",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "15",
-                "B": "18",
-                "C": "21",
-                "D": "24"
-            },
-            "correct_option": "C",
-            "explanation": "Breaking down the formula: C₇ gives 7 C atoms. H₅ gives 5 H atoms. (NO₂)₃ means 3 N atoms and 6 O atoms (3 * 2). Total atomicity = 7 + 5 + 3 + 6 = 21."
-        },
-        {
-            "question": "What is the primary difference between the atomicity of metals and noble gases?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "Metals are polyatomic, noble gases are diatomic.",
-                "B": "Both are monoatomic.",
-                "C": "Metals exist in lattices but are considered monoatomic particles; noble gases are monoatomic molecules.",
-                "D": "Noble gases form ionic bonds, so their atomicity is 0."
-            },
-            "correct_option": "C",
-            "explanation": "While both are often referred to as having an atomicity of 1, the context differs. Metals form giant metallic lattices, but for chemical counting purposes, we refer to individual atoms (e.g., Na). Noble gases exist as discrete, non-bonded single atoms (e.g., He)."
-        },
-        {
-            "question": "A radical with a charge of -2, such as CO₃²⁻, has a valency of:",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "1",
-                "B": "2",
-                "C": "3",
-                "D": "4"
-            },
-            "correct_option": "B",
-            "explanation": "The valency of an ion is numerically equal to the magnitude of its charge, ignoring the sign. A charge of -2 corresponds to a valency of 2."
-        },
-        {
-            "question": "What is the atomicity of Sulphuric Acid (H₂SO₄)?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "5",
-                "B": "6",
-                "C": "7",
-                "D": "8"
-            },
-            "correct_option": "C",
-            "explanation": "The formula H₂SO₄ shows it contains: 2 H atoms, 1 S atom, and 4 O atoms. The total number of atoms is 2 + 1 + 4 = 7."
-        },
-        {
-            "question": "Which of the following best describes 'valency'?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "The mass of one mole of a substance.",
-                "B": "The number of protons in an atom.",
-                "C": "The combining capacity of an element or radical.",
-                "D": "The total number of atoms in a molecule."
-            },
-            "correct_option": "C",
-            "explanation": "Valency is a measure of an atom's or radical's ability to combine with other atoms. It indicates how many bonds it can form, often based on the number of electrons it needs to gain, lose, or share to achieve stability."
-        },
-        {
-            "question": "If element Y forms a molecule Y₈ and has an atomic mass of 40, what is its molecular mass?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "40",
-                "B": "80",
-                "C": "240",
-                "D": "320"
-            },
-            "correct_option": "D",
-            "explanation": "The atomicity is given as 8 (Y₈). Molecular Mass = Atomicity × Atomic Mass = 8 × 40 = 320 g/mol."
-        },
-        {
-            "question": "Which of these substances has an atomicity of 3?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-                "A": "Pyrite (FeS₂)",
-                "B": "Ozone (O₃)",
-                "C": "Carbon Dioxide (CO₂)",
-                "D": "Both B and C"
-            },
-            "correct_option": "D",
-            "explanation": "Both O₃ and CO₂ have an atomicity of 3. O₃ has three oxygen atoms. CO₂ has one carbon and two oxygen atoms, also totaling three atoms. FeS₂ has an atomicity of 3 (1 Fe + 2 S)."
-        },
-        {
-            "question": "Which of the following elements is monoatomic?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Oxygen (O₂)",
-                "B": "Hydrogen (H₂)",
-                "C": "Sodium (Na)",
-                "D": "Phosphorus (P₄)"
-            },
-            "correct_option": "C",
-            "explanation": "Monoatomic elements exist as single, uncombined atoms. Sodium, a metal, exists as individual atoms in a metallic lattice. O₂, H₂, and P₄ are molecular forms consisting of multiple atoms."
-        },
-        {
-            "question": "What is the atomicity of a sulfur (S₈) molecule?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "2",
-                "B": "4",
-                "C": "8",
-                "D": "1"
-            },
-            "correct_option": "C",
-            "explanation": "Atomicity is the number of atoms in one molecule. The formula S₈ indicates that one molecule of sulfur consists of eight sulfur atoms bonded together."
-        },
-        {
-            "question": "Which of the following is a polyatomic ion (radical)?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Na⁺",
-                "B": "Cl⁻",
-                "C": "NH₄⁺",
-                "D": "Al³⁺"
-            },
-            "correct_option": "C",
-            "explanation": "A polyatomic ion is a charged species composed of two or more atoms covalently bonded. NH₄⁺ (ammonium) consists of one nitrogen and four hydrogen atoms. Na⁺, Cl⁻, and Al³⁺ are monatomic ions."
-        },
-        {
-            "question": "The hydroxide ion (OH⁻) has a valency of:",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "+1",
-                "B": "-1",
-                "C": "+2",
-                "D": "-2"
-            },
-            "correct_option": "B",
-            "explanation": "The valency of an ion is numerically equal to its charge. The hydroxide ion carries a charge of -1, so its valency is -1."
-        },
-        {
-            "question": "Which of the following pairs is correctly matched?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Argon (Ar) - Diatomic",
-                "B": "Phosphorus (P) - Monoatomic",
-                "C": "Chlorine (Cl₂) - Diatomic",
-                "D": "Sulfur (S) - Tetraatomic"
-            },
-            "correct_option": "C",
-            "explanation": "Chlorine exists as a diatomic molecule (Cl₂). Argon is monoatomic, phosphorus commonly exists as P₄ (tetraatomic), and sulfur as S₈ (octaatomic)."
-        },
-        {
-            "question": "What is the oxidation number of oxygen in most of its compounds?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "+1",
-                "B": "+2",
-                "C": "-1",
-                "D": "-2"
-            },
-            "correct_option": "D",
-            "explanation": "Oxygen typically has an oxidation number of -2 in compounds, as it tends to gain two electrons to achieve a stable octet. Exceptions include peroxides (like H₂O₂) where it is -1."
-        },
-        {
-            "question": "Using valency rules, what is the correct formula for the compound formed from Ca²⁺ and OH⁻ ions?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "CaOH",
-                "B": "Ca(OH)₂",
-                "C": "CaOH₂",
-                "D": "Ca₂OH"
-            },
-            "correct_option": "B",
-            "explanation": "Calcium has a valency of +2, and hydroxide has a valency of -1. To create a neutral compound, one Ca²⁺ ion combines with two OH⁻ ions. The formula is written as Ca(OH)₂, with parentheses indicating the two hydroxide units."
-        },
-        {
-            "question": "The phosphate ion (PO₄³⁻) has a valency of:",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "-1",
-                "B": "-2",
-                "C": "-3",
-                "D": "-4"
-            },
-            "correct_option": "C",
-            "explanation": "The valency of an ion corresponds to the magnitude of its charge. The phosphate ion carries a charge of 3-, so its valency is -3."
-        },
-        {
-            "question": "What is the atomicity of nitrogen gas?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "1",
-                "B": "2",
-                "C": "3",
-                "D": "4"
-            },
-            "correct_option": "B",
-            "explanation": "Nitrogen gas exists as diatomic molecules, with the chemical formula N₂. Therefore, one molecule contains two nitrogen atoms."
-        },
-        {
-            "question": "Which of the following is NOT a property of a polyatomic ion?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "It carries a net electric charge.",
-                "B": "It is a group of atoms bonded covalently.",
-                "C": "It acts as a single unit in chemical reactions.",
-                "D": "It always contains a metal atom."
-            },
-            "correct_option": "D",
-            "explanation": "Polyatomic ions are charged groups of atoms, often covalently bonded, that behave as one particle. They do not necessarily contain a metal; examples include NH₄⁺, SO₄²⁻, and NO₃⁻."
-        },
-        {
-            "question": "According to valency rules, what is the formula for aluminum oxide?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "AlO",
-                "B": "AlO₂",
-                "C": "Al₂O₃",
-                "D": "Al₃O₂"
-            },
-            "correct_option": "C",
-            "explanation": "Aluminum has a valency of +3 (Al³⁺) and oxygen has a valency of -2 (O²⁻). To balance the charges, two Al³⁺ ions (total +6) combine with three O²⁻ ions (total -6), giving Al₂O₃."
-        },
-        {
-            "question": "An element 'X' exists as X₄ molecules. What is its atomicity?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "2",
-                "B": "4",
-                "C": "8",
-                "D": "1"
-            },
-            "correct_option": "B",
-            "explanation": "Atomicity is defined as the number of atoms in one molecule. The formula X₄ indicates that each molecule consists of four atoms of element X."
-        },
-        {
-            "question": "What is the primary difference between valency and oxidation number?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Valency is always positive, oxidation number can be negative.",
-                "B": "Valency is the bonding capacity, oxidation number is the assigned charge in a compound.",
-                "C": "They are the same thing.",
-                "D": "Valency applies to ions, oxidation number applies to elements."
-            },
-            "correct_option": "B",
-            "explanation": "Valency refers to the combining power of an element (how many bonds it can form), often without a sign. Oxidation number is a theoretical charge assigned to an atom in a compound, indicating electron gain or loss, and carries a +/- sign."
-        },
-        {
-            "question": "Which of the following polyatomic ions carries a charge of -2?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Ammonium (NH₄⁺)",
-                "B": "Nitrate (NO₃⁻)",
-                "C": "Carbonate (CO₃²⁻)",
-                "D": "Phosphate (PO₄³⁻)"
-            },
-            "correct_option": "C",
-            "explanation": "Carbonate is a common polyatomic ion with the formula CO₃²⁻ and a charge of -2. Ammonium is +1, nitrate is -1, and phosphate is -3."
-        },
-        {
-            "question": "What is the correct formula for ammonium sulfate?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "NH₄SO₄",
-                "B": "(NH₄)₂SO₄",
-                "C": "NH₄(SO₄)₂",
-                "D": "N₂H₈SO₄"
-            },
-            "correct_option": "B",
-            "explanation": "Ammonium (NH₄⁺) has a valency of +1. Sulfate (SO₄²⁻) has a valency of -2. To balance the charges, two ammonium ions are needed for every sulfate ion, giving (NH₄)₂SO₄."
-        },
-        {
-            "question": "Which noble gas is diatomic?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Helium (He)",
-                "B": "Neon (Ne)",
-                "C": "Argon (Ar)",
-                "D": "None of the above"
-            },
-            "correct_option": "D",
-            "explanation": "Noble gases are all monoatomic. They have complete valence electron shells, making them chemically inert and stable as single atoms (He, Ne, Ar, Kr, Xe, Rn)."
-        },
-        {
-            "question": "If an atom loses electrons during bonding, its oxidation number will be:",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Negative",
-                "B": "Positive",
-                "C": "Zero",
-                "D": "It depends on the element."
-            },
-            "correct_option": "B",
-            "explanation": "Losing electrons results in a net positive charge because the number of protons exceeds the number of electrons. Therefore, the oxidation number becomes positive."
-        },
-        {
-            "question": "The nitrate ion (NO₃⁻) and the nitrite ion (NO₂⁻) are examples of:",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "Isotopes",
-                "B": "Allotropes",
-                "C": "Polyatomic ions with different formulas and charges",
-                "D": "Polyatomic ions with the same charge but different compositions"
-            },
-            "correct_option": "D",
-            "explanation": "Both nitrate (NO₃⁻) and nitrite (NO₂⁻) are polyatomic ions with a charge of -1. They are different ions because they contain different numbers of oxygen atoms bonded to nitrogen."
-        },
-        {
-            "question": "What is the atomicity of phosphorus in its most common stable form?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "1 (P)",
-                "B": "2 (P₂)",
-                "C": "4 (P₄)",
-                "D": "8 (P₈)"
-            },
-            "correct_option": "C",
-            "explanation": "White phosphorus, the most common and reactive allotrope, exists as tetrahedral P₄ molecules. Therefore, its atomicity is 4."
-        },
-        {
-            "question": "Using the crossover method for valency, what is the formula for magnesium nitride?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-                "A": "MgN",
-                "B": "Mg₂N₃",
-                "C": "Mg₃N₂",
-                "D": "MgN₂"
-            },
-            "correct_option": "C",
-            "explanation": "Magnesium has a valency of +2 (Mg²⁺). Nitrogen has a valency of -3 (N³⁻). To balance, three Mg²⁺ ions (+6 total) combine with two N³⁻ ions (-6 total), giving Mg₃N₂."
-        },
-        {
-            "question": "Which of the following is defined as the basic, indivisible unit of a chemical element?",
-            "topic": "Atoms, Elements, and Their Properties",
-            "options": {
-            "A": "Molecule",
-            "B": "Atom",
-            "C": "Ion",
-            "D": "Compound"
-            },
-            "correct_option": "B",
-            "explanation": "An atom is defined as the fundamental, indivisible unit of a chemical element, retaining its chemical properties.",
-            "hint": "It is the smallest building block of an element."
-            },
-            {
-            "question": "Which of these is a pure substance consisting of only one type of atom?",
-            "topic": "Atoms, Elements, and Their Properties",
-            "options": {
-            "A": "Compound",
-            "B": "Mixture",
-            "C": "Molecule",
-            "D": "Element"
-            },
-            "correct_option": "D",
-            "explanation": "An element is a pure substance made up of only one kind of atom, defined by its unique atomic number.",
-            "hint": "Found on the Periodic Table."
-            },
-            {
-            "question": "What is the primary difference between a homoatomic and a heteroatomic molecule?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-            "A": "Homoatomic molecules have ionic bonds, heteroatomic have covalent.",
-            "B": "Homoatomic molecules are from the same element, heteroatomic from different elements.",
-            "C": "Homoatomic molecules are always gases, heteroatomic are always solids.",
-            "D": "There is no difference; the terms are interchangeable."
-            },
-            "correct_option": "B",
-            "explanation": "Homoatomic molecules (like O₂ or N₂) consist of atoms of the same element. Heteroatomic molecules (like H₂O or CO₂) consist of atoms of two or more different elements.",
-            "hint": "Think about the prefixes: 'homo-' means same, 'hetero-' means different."
-            },
-            {
-            "question": "Which of the following statements about compounds is TRUE?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-            "A": "All compounds are molecules.",
-            "B": "All molecules are compounds.",
-            "C": "Compounds have properties identical to their constituent elements.",
-            "D": "Compounds are pure substances with elements in fixed proportions."
-            },
-            "correct_option": "D",
-            "explanation": "A compound is a pure substance formed when two or more different elements chemically combine in a fixed, definite proportion by mass. Its properties are distinct from its constituent elements.",
-            "hint": "Recall the example of table salt (NaCl) being very different from sodium metal and chlorine gas."
-            },
-            {
-            "question": "A positively charged ion formed by losing electrons is called a:",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-            "A": "Anion",
-            "B": "Cation",
-            "C": "Radical",
-            "D": "Molecule"
-            },
-            "correct_option": "B",
-            "explanation": "A cation is a positively charged ion formed when an atom loses one or more electrons, resulting in more protons than electrons.",
-            "hint": "Metals typically form these."
-            },
-            {
-            "question": "Which of the following ions is a polyatomic anion?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-            "A": "Na⁺",
-            "B": "Mg²⁺",
-            "C": "Cl⁻",
-            "D": "SO₄²⁻"
-            },
-            "correct_option": "D",
-            "explanation": "A polyatomic ion is a charged group of atoms. SO₄²⁻ (sulfate) is a polyatomic anion. Na⁺, Mg²⁺, and Cl⁻ are monatomic ions (single atoms).",
-            "hint": "Look for a group of atoms with a net charge."
-            },
-            {
-            "question": "What is the valency of the oxide ion (O²⁻)?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-            "A": "+1",
-            "B": "+2",
-            "C": "-1",
-            "D": "-2"
-            },
-            "correct_option": "D",
-            "explanation": "Valency is indicated by the magnitude and sign of the charge. The oxide ion has a charge of 2-, so its valency is -2.",
-            "hint": "The charge tells you the valency for simple ions."
-            },
-            {
-            "question": "Using the criss-cross method, what is the correct formula for aluminum oxide?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-            "A": "AlO",
-            "B": "Al₂O",
-            "C": "AlO₂",
-            "D": "Al₂O₃"
-            },
-            "correct_option": "D",
-            "explanation": "Aluminum has a valency of +3 (Al³⁺). Oxygen has a valency of -2 (O²⁻). Criss-crossing gives Al₂O₃.",
-            "hint": "Swap the valency numbers to become subscripts."
-            },
-            {
-            "question": "The total number of atoms in one molecule of ozone (O₃) is called its:",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-            "A": "Valency",
-            "B": "Atomicity",
-            "C": "Oxidation State",
-            "D": "Ionic Charge"
-            },
-            "correct_option": "B",
-            "explanation": "Atomicity is defined as the total number of atoms present in one molecule of a substance. Ozone (O₃) has an atomicity of 3.",
-            "hint": "It's a simple count of atoms in the molecule."
-            },
-            {
-            "question": "Which of these compounds is classified as ionic?",
-            "topic": "Ions: Formation, Types & Ionic Compounds",
-            "options": {
-            "A": "CO₂",
-            "B": "H₂O",
-            "C": "CH₄",
-            "D": "Li₂CO₃"
-            },
-            "correct_option": "D",
-            "explanation": "Li₂CO₃ contains a metal (Lithium) and a polyatomic ion (carbonate, CO₃²⁻). The metal + non-metal/polyatomic ion combination indicates an ionic compound.",
-            "hint": "Look for the presence of a metal combined with a non-metal or polyatomic ion."
-            },
-            {
-            "question": "In the chemical reaction: Zn + CuSO₄ → ZnSO₄ + Cu, what type of reaction is this?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-            "A": "Combination",
-            "B": "Decomposition",
-            "C": "Single Displacement",
-            "D": "Double Displacement"
-            },
-            "correct_option": "C",
-            "explanation": "This is a single displacement reaction. A more reactive element (Zn) displaces a less reactive element (Cu) from its compound (CuSO₄).",
-            "hint": "One element trades places with another in a compound."
-            },
-            {
-            "question": "Which of the following is BOTH a molecule and a compound?",
-            "topic": "Elements, Molecules & Compounds — Key Concepts",
-            "options": {
-            "A": "O₂",
-            "B": "He",
-            "C": "H₂",
-            "D": "NH₃"
-            },
-            "correct_option": "D",
-            "explanation": "NH₃ (ammonia) is a discrete group of atoms bonded together (a molecule) and is made of two different elements, Nitrogen and Hydrogen (a compound). O₂ and H₂ are molecules but not compounds. He is an atomic element.",
-            "hint": "It must satisfy both definitions: bonded atoms & different elements."
-            },
-            {
-            "question": "What is the oxidation number of oxygen in most of its compounds?",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-            "A": "+1",
-            "B": "-1",
-            "C": "+2",
-            "D": "-2"
-            },
-            "correct_option": "D",
-            "explanation": "Oxygen typically gains two electrons to achieve a stable octet. Therefore, its oxidation number in most compounds is -2. Exceptions include peroxides like H₂O₂ where it is -1.",
-            "hint": "Think about the electrons it gains to become stable."
-            },
-            {
-            "question": "The carbonate ion (CO₃²⁻) has a valency of:",
-            "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-            "options": {
-            "A": "+1",
-            "B": "-1",
-            "C": "+2",
-            "D": "-2"
-            },
-            "correct_option": "D",
-            "explanation": "The valency of an ion is equal to the magnitude and sign of its charge. The carbonate ion carries a 2- charge, so its valency is -2.",
-            "hint": "Treat the entire polyatomic ion as a single unit with a charge."
-            },
-            {
-            "question": "What is the correct formula for ammonium sulfate?",
-            "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-            "options": {
-            "A": "NH₄SO₄",
-            "B": "(NH₄)₂SO₄",
-            "C": "NH₄(SO₄)₂",
-            "D": "N₂H₈SO₄"
-            },
-            "correct_option": "B",
-            "explanation": "Ammonium (NH₄⁺) has a valency of +1. Sulfate (SO₄²⁻) has a valency of -2. To balance the charges, two ammonium ions are needed for every sulfate ion. Parentheses are used to show two of the polyatomic ammonium ions: (NH₄)₂SO₄.",
-            "hint": "Use the criss-cross method and remember parentheses for polyatomic ions when the subscript is >1."
-            },
+    "BIO 101": [
     {
-        "question": "What is the smallest particle that retains the chemical properties of an element?",
-        "topic": "Atoms, Elements, and Their Properties",
+        "question": "What is the cell cycle?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Molecule",
-            "B": "Atom",
-            "C": "Electron",
-            "D": "Compound"
+            "A": "The process of cell death.",
+            "B": "The ordered sequence of events that occur in a cell in preparation for cell division.",
+            "C": "The process of energy production in mitochondria.",
+            "D": "The random division of cellular components."
         },
         "correct_option": "B",
-        "explanation": "An atom is defined as the basic, indivisible unit of a chemical element that retains all the chemical properties of that element.",
-        "hint": "It's the fundamental building block."
+        "explanation": "The cell cycle is the ordered sequence of events that occur in a cell in preparation for cell division.",
+        "hint": "It is a regulated process leading to division."
     },
     {
-        "question": "Which instrument is typically required to visualize individual atoms?",
-        "topic": "Atoms, Elements, and Their Properties",
+        "question": "What are the four main stages of the cell cycle?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Light microscope",
-            "B": "Telescope",
-            "C": "Electron microscope",
-            "D": "Magnifying glass"
+            "A": "G1, G0, S, M",
+            "B": "Prophase, Metaphase, Anaphase, Telophase",
+            "C": "G1, S, G2, M",
+            "D": "Interphase, Mitosis, Cytokinesis, Meiosis"
         },
         "correct_option": "C",
-        "explanation": "Atoms are too small to be seen with the naked eye or conventional light microscopes. Powerful instruments like electron microscopes are needed to visualize them.",
-        "hint": "Think about very high magnification."
+        "explanation": "The cell cycle is a four-stage process: Gap 1 (G1), Synthesis (S), Gap 2 (G2), and Mitosis (M).",
+        "hint": "These are the sequential phases before and during division."
     },
     {
-        "question": "According to the lecture analogy, if the University of Lagos represents matter, what do the faculties represent?",
-        "topic": "Atoms, Elements, and Their Properties",
+        "question": "Which stages of the cell cycle make up interphase?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Subatomic particles",
-            "B": "Atoms",
-            "C": "Molecules",
-            "D": "Compounds"
-        },
-        "correct_option": "B",
-        "explanation": "In the analogy, the University represents matter, the faculties represent atoms (the building blocks), and departments represent subatomic particles.",
-        "hint": "Think about the hierarchy: whole → building blocks → smaller units within."
-    },
-    {
-        "question": "What are atoms themselves composed of?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Molecules",
-            "B": "Elements",
-            "C": "Subatomic particles",
-            "D": "Compounds"
-        },
-        "correct_option": "C",
-        "explanation": "While atoms are the smallest unit of an element with its chemical properties, they are themselves made up of even smaller particles called subatomic particles (protons, neutrons, electrons).",
-        "hint": "These are particles smaller than atoms."
-    },
-    {
-        "question": "Which of the following elements commonly exists as individual atoms?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Copper",
-            "B": "Oxygen",
-            "C": "Helium",
-            "D": "Carbon"
-        },
-        "correct_option": "C",
-        "explanation": "Noble gases like helium exist as individual, unbonded atoms in their natural state. Metals like copper exist as clusters of identical atoms.",
-        "hint": "Think about the gases that don't readily form bonds."
-    },
-    {
-        "question": "What defines an element?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Number of neutrons",
-            "B": "Number of protons",
-            "C": "Number of electrons",
-            "D": "Atomic mass"
-        },
-        "correct_option": "B",
-        "explanation": "An element is a pure substance consisting of only one type of atom, defined uniquely by its atomic number, which is the number of protons in its nucleus.",
-        "hint": "This number determines the element's identity and position on the Periodic Table."
-    },
-    {
-        "question": "Where are all elements organized?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Element Table",
-            "B": "Chemical Index",
-            "C": "Periodic Table",
-            "D": "Atomic Chart"
-        },
-        "correct_option": "C",
-        "explanation": "Elements are the fundamental substances listed and organized on the Periodic Table, arranged by increasing atomic number and grouped by similar chemical properties.",
-        "hint": "It's the chart every chemist uses."
-    },
-    {
-        "question": "What is the symbol for Sodium derived from?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Its English name",
-            "B": "Its Greek name",
-            "C": "Its Latin name",
-            "D": "The name of its discoverer"
-        },
-        "correct_option": "C",
-        "explanation": "Some element symbols come from their Latin names. Sodium's symbol 'Na' comes from the Latin 'Natrium'.",
-        "hint": "Historical names often influence symbols."
-    },
-    {
-        "question": "What is a molecule?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "A charged particle",
-            "B": "A mixture of different elements",
-            "C": "A neutral group of atoms held by chemical bonds",
-            "D": "The smallest unit of an element"
-        },
-        "correct_option": "C",
-        "explanation": "A molecule is defined as a neutral group of two or more atoms held together by strong chemical bonds, typically covalent bonds.",
-        "hint": "Think of it as a team of atoms."
-    },
-    {
-        "question": "Which of these is a homoatomic molecule?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "H₂O",
-            "B": "CO₂",
-            "C": "O₃",
-            "D": "NH₃"
-        },
-        "correct_option": "C",
-        "explanation": "A homoatomic molecule is composed of the same type of atom. Ozone (O₃) consists only of oxygen atoms. The others contain different elements.",
-        "hint": "'Homo' means same."
-    },
-    {
-        "question": "Which of these is a heteroatomic molecule?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "N₂",
-            "B": "P₄",
-            "C": "H₂",
-            "D": "H₂O"
-        },
-        "correct_option": "D",
-        "explanation": "A heteroatomic molecule is composed of two or more different types of atoms. Water (H₂O) contains hydrogen and oxygen atoms.",
-        "hint": "'Hetero' means different."
-    },
-    {
-        "question": "What does the molecular formula show?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "The simplest ratio of atoms",
-            "B": "The structural arrangement",
-            "C": "The actual number of atoms",
-            "D": "The type of bonds"
-        },
-        "correct_option": "C",
-        "explanation": "The molecular formula shows the actual number of each type of atom present in a single molecule of the substance (e.g., H₂O₂ for hydrogen peroxide).",
-        "hint": "It gives the exact count."
-    },
-    {
-        "question": "What is the empirical formula for hydrogen peroxide (H₂O₂)?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "H₂O₂",
-            "B": "HO",
-            "C": "H₂O",
-            "D": "OH"
-        },
-        "correct_option": "B",
-        "explanation": "The empirical formula shows the simplest whole-number ratio of atoms. For H₂O₂, the ratio of H to O is 2:2, which simplifies to 1:1, giving HO.",
-        "hint": "Simplify the ratio."
-    },
-    {
-        "question": "Is nitrogen gas (N₂) a compound?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Yes, because it is a molecule",
-            "B": "No, because it contains only one type of element",
-            "C": "Yes, because it has a chemical bond",
-            "D": "No, because it is a gas"
-        },
-        "correct_option": "B",
-        "explanation": "A compound must consist of two or more different elements chemically combined. N₂ is a molecule but not a compound because it contains only nitrogen atoms.",
-        "hint": "A compound requires different elements."
-    },
-    {
-        "question": "What is the correct hierarchy of matter from simplest to more complex?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Elements → Atoms → Molecules → Compounds",
-            "B": "Atoms → Elements → Molecules → Compounds",
-            "C": "Atoms → Molecules → Elements → Compounds",
-            "D": "Elements → Molecules → Atoms → Compounds"
-        },
-        "correct_option": "B",
-        "explanation": "The foundational ladder is: Atoms (building blocks) → Elements (one type of atom) → Molecules (bonded atoms) → Compounds (molecules of different elements).",
-        "hint": "Start with the smallest independent unit."
-    },
-    {
-        "question": "What fundamental law states that atoms are not created or destroyed in chemical reactions?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Law of Constant Composition",
-            "B": "Law of Conservation of Mass",
-            "C": "Law of Multiple Proportions",
-            "D": "Avogadro's Law"
-        },
-        "correct_option": "B",
-        "explanation": "The Law of Conservation of Mass states that mass is neither created nor destroyed in a chemical reaction. Atoms are simply rearranged.",
-        "hint": "It's about mass staying constant."
-    },
-    {
-        "question": "What is a compound?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "A mixture of elements",
-            "B": "A pure substance of two+ elements in fixed proportion",
-            "C": "Any substance with a chemical bond",
-            "D": "A group of identical atoms"
-        },
-        "correct_option": "B",
-        "explanation": "A compound is a pure substance composed of two or more different elements chemically combined in a fixed, definite proportion by mass.",
-        "hint": "Think of it as a marriage of different elements with strict rules."
-    },
-    {
-        "question": "Why is sodium chloride (NaCl) very different from sodium metal and chlorine gas?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Because it has a different color",
-            "B": "Because the elements combine in a fixed ratio",
-            "C": "Because chemical bonding creates new properties",
-            "D": "Because it is a mixture"
-        },
-        "correct_option": "C",
-        "explanation": "When elements chemically bond to form a compound, they create a new substance with properties entirely distinct from the original elements. NaCl is stable and edible, unlike its reactive components.",
-        "hint": "Bonding transforms substances."
-    },
-    {
-        "question": "Which statement best captures the relationship between compounds and molecules?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "All molecules are compounds.",
-            "B": "All compounds are molecules.",
-            "C": "All covalent compounds are molecules.",
-            "D": "All ionic compounds are molecules."
-        },
-        "correct_option": "C",
-        "explanation": "The cardinal rule is: All covalent compounds exist as discrete molecules, so they are molecules. Ionic compounds (like NaCl) exist as lattices, not discrete molecules.",
-        "hint": "The type of bond matters."
-    },
-    {
-        "question": "Which of these is a compound but is typically not referred to as a molecule?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "H₂O",
-            "B": "CO₂",
-            "C": "NH₃",
-            "D": "NaCl"
-        },
-        "correct_option": "D",
-        "explanation": "Sodium chloride (NaCl) is an ionic compound. It exists as an extended crystal lattice of Na⁺ and Cl⁻ ions, not as discrete molecules. Its smallest unit is a formula unit.",
-        "hint": "Think about salts that form crystals."
-    },
-    {
-        "question": "In the student analogy, what does a team formed by students from different departments represent?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "A homoatomic molecule",
-            "B": "An element",
-            "C": "A compound molecule",
-            "D": "An ion"
-        },
-        "correct_option": "C",
-        "explanation": "Students from different departments (different elements) bonding represents a 'compound molecule' like H₂O. Students from the same department represent a homoatomic molecule like O₂.",
-        "hint": "Different origins define a compound."
-    },
-    {
-        "question": "What does a chemical formula primarily show?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "The physical state",
-            "B": "The elements and their ratios",
-            "C": "The reaction conditions",
-            "D": "The bond energies"
-        },
-        "correct_option": "B",
-        "explanation": "A chemical formula is a shorthand notation that shows which elements are present in a compound and the ratio in which their atoms combine.",
-        "hint": "It's about identity and proportion."
-    },
-    {
-        "question": "What is an ion?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "A neutral atom",
-            "B": "A charged atom or molecule",
-            "C": "A type of bond",
-            "D": "A pure element"
-        },
-        "correct_option": "B",
-        "explanation": "An ion is an atom or molecule that has gained or lost one or more electrons, resulting in a net positive or negative electric charge.",
-        "hint": "It has an electrical charge."
-    },
-    {
-        "question": "What is the process of forming an ion called?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Bonding",
-            "B": "Neutralization",
-            "C": "Ionization",
-            "D": "Reduction"
-        },
-        "correct_option": "C",
-        "explanation": "The process by which an atom or molecule gains or loses electrons to become an ion is called ionization.",
-        "hint": "The name comes from the product."
-    },
-    {
-        "question": "What drives atoms to undergo ionization?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "To increase mass",
-            "B": "To achieve a stable electron configuration",
-            "C": "To become radioactive",
-            "D": "To change elements"
-        },
-        "correct_option": "B",
-        "explanation": "Atoms ionize to achieve a more stable electron configuration, often a full valence shell (like the octet rule for many elements).",
-        "hint": "It's about electron stability."
-    },
-    {
-        "question": "A positively charged ion is called a:",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Anion",
-            "B": "Cation",
-            "C": "Radical",
-            "D": "Neutron"
-        },
-        "correct_option": "B",
-        "explanation": "A cation is a positively charged ion formed when an atom loses one or more negatively charged electrons.",
-        "hint": "Think 'cat-ions' are 'paws-itive'."
-    },
-    {
-        "question": "How is a cation typically formed?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "By gaining protons",
-            "B": "By losing electrons",
-            "C": "By gaining neutrons",
-            "D": "By losing protons"
-        },
-        "correct_option": "B",
-        "explanation": "A cation forms when an atom loses one or more electrons. The loss of negative charge leaves the atom with a net positive charge.",
-        "hint": "Loss of negatives leads to a positive."
-    },
-    {
-        "question": "What is the name for the Cl⁻ ion?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Chlorine ion",
-            "B": "Chlorate ion",
-            "C": "Chloride ion",
-            "D": "Chlorous ion"
-        },
-        "correct_option": "C",
-        "explanation": "The naming convention for simple anions is to take the stem of the element's name and add the suffix '-ide'. Chlorine becomes chloride.",
-        "hint": "Non-metal ions often end in '-ide'."
-    },
-    {
-        "question": "Which groups on the periodic table typically form cations?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Groups 15, 16, 17",
-            "B": "Groups 1, 2, 3",
-            "C": "Group 18",
-            "D": "Groups 14 and 15"
-        },
-        "correct_option": "B",
-        "explanation": "Metals in Groups 1 (Alkali Metals), 2 (Alkaline Earth Metals), and 3 typically lose electrons to form cations (e.g., Na⁺, Mg²⁺, Al³⁺).",
-        "hint": "Metals lose electrons."
-    },
-    {
-        "question": "What charge will a Group 2 metal ion likely have?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "+1",
-            "B": "+2",
-            "C": "-1",
-            "D": "-2"
-        },
-        "correct_option": "B",
-        "explanation": "Group 2 metals (like Mg, Ca) have 2 valence electrons. They lose both to achieve stability, forming ions with a +2 charge.",
-        "hint": "The group number often indicates the charge for these metals."
-    },
-    {
-        "question": "Which of the following is an anion?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Na⁺",
-            "B": "Ca²⁺",
-            "C": "O²⁻",
-            "D": "Al³⁺"
-        },
-        "correct_option": "C",
-        "explanation": "An anion is a negatively charged ion. O²⁻ (oxide) has gained two electrons, giving it a net negative charge. The others are positively charged cations.",
-        "hint": "Look for the negative sign."
-    },
-    {
-        "question": "What is a polyatomic ion?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "An ion with multiple charges",
-            "B": "A group of atoms with a net charge",
-            "C": "An ion that can be positive or negative",
-            "D": "An ion of a radioactive element"
-        },
-        "correct_option": "B",
-        "explanation": "A polyatomic ion is a tightly bound group of two or more atoms that collectively carry a net electric charge and behave as a single unit in chemical reactions.",
-        "hint": "Think of it as a charged molecule."
-    },
-    {
-        "question": "Which of these is a polyatomic cation?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "NO₃⁻",
-            "B": "SO₄²⁻",
-            "C": "NH₄⁺",
-            "D": "OH⁻"
-        },
-        "correct_option": "C",
-        "explanation": "Ammonium (NH₄⁺) is a polyatomic ion with a positive charge, making it a cation. The others are polyatomic anions.",
-        "hint": "Look for the plus sign on a group of atoms."
-    },
-    {
-        "question": "How do ions form ionic compounds?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "By sharing electrons",
-            "B": "By electrostatic attraction",
-            "C": "By breaking into atoms",
-            "D": "By releasing protons"
-        },
-        "correct_option": "B",
-        "explanation": "Ionic compounds are formed when cations and anions are held together by strong electrostatic forces of attraction, known as ionic bonds.",
-        "hint": "Opposite charges attract."
-    },
-    {
-        "question": "Why can a solution of sodium chloride conduct electricity?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Because it contains molecules",
-            "B": "Because it contains free-moving ions",
-            "C": "Because water is conductive",
-            "D": "Because it is a solid when dry"
-        },
-        "correct_option": "B",
-        "explanation": "When dissolved, ionic compounds like NaCl dissociate into free-moving Na⁺ and Cl⁻ ions. These mobile charged particles can carry an electric current.",
-        "hint": "Conduction requires mobile charges."
-    },
-    {
-        "question": "What is the combining power of an element called?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "Atomicity",
-            "B": "Oxidation",
-            "C": "Valency",
-            "D": "Ionization"
-        },
-        "correct_option": "C",
-        "explanation": "Valency is defined as the combining power of an element. It indicates how many bonds an atom can form, based on the electrons available for bonding.",
-        "hint": "It determines how atoms hook up."
-    },
-    {
-        "question": "How is the valency of an element related to its electrons?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "It equals the total number of electrons.",
-            "B": "It equals the number of electrons in the innermost shell.",
-            "C": "It equals the number of electrons in the outermost shell.",
-            "D": "It equals the number of neutrons."
-        },
-        "correct_option": "C",
-        "explanation": "Valency is related to the number of electrons in the outermost shell (valence shell) available for bonding, or the number needed to achieve stability.",
-        "hint": "It's about the outer electrons."
-    },
-    {
-        "question": "What is the oxidation number of an atom?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "Its atomic mass",
-            "B": "The number of bonds it forms",
-            "C": "The charge it appears to have in a compound",
-            "D": "Its group number"
-        },
-        "correct_option": "C",
-        "explanation": "Oxidation number (or state) is a theoretical charge assigned to an atom in a compound, representing the number of electrons it has lost, gained, or shared.",
-        "hint": "It's a bookkeeping tool for electrons."
-    },
-    {
-        "question": "If oxygen gains 2 electrons to form an oxide ion, what is its oxidation number?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "+1",
-            "B": "+2",
-            "C": "-1",
-            "D": "-2"
-        },
-        "correct_option": "D",
-        "explanation": "When an atom gains electrons, it acquires a negative oxidation number. Oxygen typically gains 2 electrons, so its oxidation number is -2 in most compounds.",
-        "hint": "Gaining electrons gives a negative sign."
-    },
-    {
-        "question": "What must the total charge of a stable compound be?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "Positive",
-            "B": "Negative",
-            "C": "Zero",
-            "D": "It varies"
-        },
-        "correct_option": "C",
-        "explanation": "A compound must be electrically neutral. The total positive charge from cations must equal the total negative charge from anions.",
-        "hint": "Think 'neutral'."
-    },
-    {
-        "question": "Using the crossover method, what is the formula for sodium oxide?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "NaO",
-            "B": "Na₂O",
-            "C": "NaO₂",
-            "D": "Na₂O₂"
-        },
-        "correct_option": "B",
-        "explanation": "Sodium (Na⁺) has a valency of +1. Oxygen (O²⁻) has a valency of -2. Swapping and simplifying gives Na₂O.",
-        "hint": "Swap the valency numbers as subscripts."
-    },
-    {
-        "question": "What is the formula for calcium chloride?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "CaCl",
-            "B": "CaCl₂",
-            "C": "Ca₂Cl",
-            "D": "CaCl₃"
-        },
-        "correct_option": "B",
-        "explanation": "Calcium (Ca²⁺) has a valency of +2. Chlorine (Cl⁻) has a valency of -1. Swapping gives Ca₁Cl₂, which is written as CaCl₂.",
-        "hint": "Use the criss-cross method."
-    },
-    {
-        "question": "What is the total number of atoms in one molecule of a substance called?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "Valency",
-            "B": "Atomicity",
-            "C": "Molecularity",
-            "D": "Stoichiometry"
-        },
-        "correct_option": "B",
-        "explanation": "Atomicity is defined as the total number of atoms present in one molecule (or one formula unit of an ionic compound).",
-        "hint": "It's a simple count."
-    },
-    {
-        "question": "What is the atomicity of an ozone (O₃) molecule?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "1",
-            "B": "2",
-            "C": "3",
-            "D": "4"
-        },
-        "correct_option": "C",
-        "explanation": "Atomicity is the count of atoms per molecule. Ozone (O₃) has three oxygen atoms, so its atomicity is 3.",
-        "hint": "Count the subscript."
-    },
-    {
-        "question": "What is the atomicity of calcium carbonate, CaCO₃?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "3",
-            "B": "4",
-            "C": "5",
-            "D": "6"
-        },
-        "correct_option": "C",
-        "explanation": "One formula unit of CaCO₃ contains 1 Ca atom + 1 C atom + 3 O atoms, totaling 5 atoms. Its atomicity is 5.",
-        "hint": "Add all the atoms: 1+1+3."
-    },
-    {
-        "question": "Which of these is a correct statement about radicals?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "They are always neutral.",
-            "B": "They are single atoms.",
-            "C": "They carry a net charge.",
-            "D": "They are only cations."
-        },
-        "correct_option": "C",
-        "explanation": "In this context, 'radical' is another term for a polyatomic ion—a group of atoms that collectively carry a net electric charge.",
-        "hint": "Think 'polyatomic ion'."
-    },
-    {
-        "question": "What is the valency of the hydroxide radical (OH⁻)?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "+1",
-            "B": "-1",
-            "C": "+2",
-            "D": "-2"
-        },
-        "correct_option": "B",
-        "explanation": "The valency of an ion or radical is equal to its charge. The hydroxide ion has a charge of -1, so its valency is -1.",
-        "hint": "The charge tells you the valency."
-    },
-    {
-        "question": "What must you use when writing the formula for a compound containing a polyatomic ion that needs a subscript greater than 1?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "A comma",
-            "B": "Parentheses",
-            "C": "A plus sign",
-            "D": "A dot"
-        },
-        "correct_option": "B",
-        "explanation": "When more than one polyatomic ion is needed, the ion is placed in parentheses, and the subscript is written outside. Example: (NH₄)₂SO₄.",
-        "hint": "It groups the ion together."
-    },
-    {
-        "question": "Using the criss-cross method with radicals, what is the formula for ammonium sulfate?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "NH₄SO₄",
-            "B": "(NH₄)₂SO₄",
-            "C": "NH₄(SO₄)₂",
-            "D": "N₂H₈SO₄"
-        },
-        "correct_option": "B",
-        "explanation": "Ammonium (NH₄⁺) has valency +1. Sulfate (SO₄²⁻) has valency -2. Swapping gives (NH₄)₂SO₄, with parentheses around NH₄.",
-        "hint": "Two +1 ions are needed to balance one -2 ion."
-    },
-    {
-        "question": "What does a balanced chemical equation obey?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Law of Conservation of Energy",
-            "B": "Law of Conservation of Mass",
-            "C": "Avogadro's Law",
-            "D": "Ideal Gas Law"
-        },
-        "correct_option": "B",
-        "explanation": "A balanced chemical equation has the same number of each type of atom on both sides, obeying the Law of Conservation of Mass (matter cannot be created or destroyed).",
-        "hint": "Atoms are just rearranged."
-    },
-    {
-        "question": "What is the first step before balancing a chemical equation?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Add coefficients",
-            "B": "Write correct formulas for all reactants and products",
-            "C": "Change subscripts",
-            "D": "Identify the catalyst"
-        },
-        "correct_option": "B",
-        "explanation": "You must first write the correct chemical formulas for all reactants and products using valency rules. Then you balance by adjusting coefficients.",
-        "hint": "Get the identities right first."
-    },
-    {
-        "question": "What type of reaction is: A + B → AB?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Decomposition",
-            "B": "Combination",
-            "C": "Displacement",
-            "D": "Double Displacement"
-        },
-        "correct_option": "B",
-        "explanation": "A combination (or synthesis) reaction occurs when two or more substances combine to form a single new product (A + B → AB).",
-        "hint": "Things come together."
-    },
-    {
-        "question": "Which of these is a combination reaction?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "2H₂O → 2H₂ + O₂",
-            "B": "2Mg + O₂ → 2MgO",
-            "C": "Zn + CuSO₄ → ZnSO₄ + Cu",
-            "D": "AgNO₃ + NaCl → AgCl + NaNO₃"
-        },
-        "correct_option": "B",
-        "explanation": "In 2Mg + O₂ → 2MgO, two reactants (Mg and O₂) combine to form one product (MgO), making it a combination reaction.",
-        "hint": "Look for multiple reactants forming one product."
-    },
-    {
-        "question": "What type of reaction is: AB → A + B?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Combination",
-            "B": "Decomposition",
-            "C": "Single Displacement",
-            "D": "Double Displacement"
-        },
-        "correct_option": "B",
-        "explanation": "A decomposition reaction occurs when a single compound breaks down into two or more simpler substances (AB → A + B).",
-        "hint": "One thing breaks apart."
-    },
-    {
-        "question": "What do decomposition reactions usually require?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "A catalyst",
-            "B": "An energy input",
-            "C": "A solvent",
-            "D": "High pressure"
-        },
-        "correct_option": "B",
-        "explanation": "Decomposition reactions require energy input (heat, light, or electricity) to break the chemical bonds in the reactant.",
-        "hint": "Breaking bonds needs energy."
-    },
-    {
-        "question": "What type of reaction is: A + BC → AC + B?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Combination",
-            "B": "Decomposition",
-            "C": "Single Displacement",
-            "D": "Double Displacement"
-        },
-        "correct_option": "C",
-        "explanation": "A single displacement (or replacement) reaction occurs when one element (A) replaces another element (B) in a compound (BC).",
-        "hint": "One element kicks another out."
-    },
-    {
-        "question": "Will zinc displace copper from copper sulfate solution?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "No, because zinc is less reactive.",
-            "B": "Yes, because zinc is more reactive.",
-            "C": "No, because they are both metals.",
-            "D": "Yes, because copper is a better conductor."
-        },
-        "correct_option": "B",
-        "explanation": "Zinc is above copper in the reactivity series. A more reactive metal (Zn) can displace a less reactive metal (Cu) from its compound.",
-        "hint": "Check the reactivity series."
-    },
-    {
-        "question": "Will copper displace zinc from zinc sulfate solution?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Yes, always.",
-            "B": "No, because copper is less reactive.",
-            "C": "Yes, if heated.",
-            "D": "No, because zinc sulfate is insoluble."
-        },
-        "correct_option": "B",
-        "explanation": "Copper is less reactive than zinc. A less reactive metal cannot displace a more reactive metal from its compound, so no reaction occurs.",
-        "hint": "The series works one way."
-    },
-    {
-        "question": "What type of reaction is: AB + CD → AD + CB?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Combination",
-            "B": "Decomposition",
-            "C": "Single Displacement",
-            "D": "Double Displacement"
-        },
-        "correct_option": "D",
-        "explanation": "A double displacement (or metathesis) reaction occurs when parts of two ionic compounds exchange places to form two new compounds.",
-        "hint": "Ions swap partners."
-    },
-    {
-        "question": "What is a precipitation reaction?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Any reaction in solution",
-            "B": "A double displacement that forms an insoluble solid",
-            "C": "A reaction that releases a gas",
-            "D": "A reaction that absorbs heat"
-        },
-        "correct_option": "B",
-        "explanation": "A precipitation reaction is a specific type of double displacement reaction where one of the products is an insoluble solid that forms a precipitate.",
-        "hint": "It makes a solid fall out of solution."
-    },
-    {
-        "question": "According to solubility rules, which compound is likely insoluble?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "NaCl",
-            "B": "KNO₃",
-            "C": "AgCl",
-            "D": "LiOH"
-        },
-        "correct_option": "C",
-        "explanation": "Most chlorides are soluble, but silver chloride (AgCl) is a common exception and is insoluble, often forming a white precipitate.",
-        "hint": "Think of the exceptions to the chloride rule."
-    },
-    {
-        "question": "What are spectator ions?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Ions that form the precipitate",
-            "B": "Ions that do not participate in the reaction",
-            "C": "Ions that are always anions",
-            "D": "Ions that are gaseous"
-        },
-        "correct_option": "B",
-        "explanation": "Spectator ions are ions present in solution that do not undergo any chemical change during the reaction. They appear unchanged on both sides of the ionic equation.",
-        "hint": "They just 'watch' the reaction."
-    },
-    {
-        "question": "Which of the following best describes an exothermic reaction?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Absorbs heat from surroundings",
-            "B": "Releases heat to surroundings",
-            "C": "Has no heat change",
-            "D": "Requires continuous heating"
-        },
-        "correct_option": "B",
-        "explanation": "An exothermic reaction releases energy, usually in the form of heat, causing the temperature of the surroundings to increase.",
-        "hint": "'Exo-' means out."
-    },
-    {
-        "question": "Which of the following is a pure substance?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Air",
-            "B": "Sea water",
-            "C": "Gold",
-            "D": "Milk"
-        },
-        "correct_option": "C",
-        "explanation": "A pure substance has a fixed composition and properties. Gold (Au) is an element, which is a pure substance. The others are mixtures.",
-        "hint": "Look for a single element or compound."
-    },
-    {
-        "question": "Elements can be synthetic. Which of these is most likely synthetic?",
-        "topic": "Atoms, Elements, and Their Properties",
-        "options": {
-            "A": "Oxygen (O)",
-            "B": "Gold (Au)",
-            "C": "Einsteinium (Es)",
-            "D": "Carbon (C)"
-        },
-        "correct_option": "C",
-        "explanation": "Most elements occur naturally, but some heavier elements like Einsteinium (Es) are synthetically created in laboratories and do not occur naturally in significant quantities.",
-        "hint": "Think of elements named after scientists, often created in labs."
-    },
-    {
-        "question": "What is the primary form of elemental nitrogen in the atmosphere?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "N",
-            "B": "N₂",
-            "C": "NO₂",
-            "D": "NH₃"
-        },
-        "correct_option": "B",
-        "explanation": "Nitrogen gas in the atmosphere exists primarily as diatomic molecules, N₂. This is a homoatomic molecule.",
-        "hint": "Think of the air we breathe."
-    },
-    {
-        "question": "Glucose (C₆H₁₂O₆) is an example of a:",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Homoatomic molecule",
-            "B": "Macromolecule and compound",
-            "C": "Ionic compound",
-            "D": "Element"
-        },
-        "correct_option": "B",
-        "explanation": "Glucose is a complex molecule (macromolecule) made of three different elements (C, H, O), so it is both a molecule and a compound.",
-        "hint": "It's large and made of different elements."
-    },
-    {
-        "question": "In the formula H₂O, the '2' is a:",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "Coefficient",
-            "B": "Superscript",
-            "C": "Subscript",
-            "D": "Valency"
-        },
-        "correct_option": "C",
-        "explanation": "In a chemical formula, numbers written slightly below the line (like the 2 in H₂) are subscripts, indicating the number of atoms of that element in the molecule.",
-        "hint": "It's small and low."
-    },
-    {
-        "question": "When writing the formula for magnesium nitride, Mg²⁺ and N³⁻ criss-cross to give:",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "MgN",
-            "B": "Mg₂N₃",
-            "C": "Mg₃N₂",
-            "D": "MgN₆"
-        },
-        "correct_option": "C",
-        "explanation": "Mg²⁺ and N³⁻ swap charges to become subscripts: Mg₃N₂. This is electrically neutral: 3*(+2) + 2*(-3) = 0.",
-        "hint": "The charges become subscripts for the other ion."
-    },
-    {
-        "question": "What is the correct balanced equation for the combustion of hydrogen?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "H₂ + O → H₂O",
-            "B": "2H₂ + O₂ → 2H₂O",
-            "C": "H₂ + O₂ → H₂O₂",
-            "D": "H₂ + O₂ → 2H₂O"
-        },
-        "correct_option": "B",
-        "explanation": "The correct formulas are H₂ and O₂ (diatomic). To balance atoms: 2H₂ has 4H, O₂ has 2O, producing 2H₂O which has 4H and 2O.",
-        "hint": "Balance hydrogen and oxygen atoms."
-    },
-    {
-        "question": "What is the valency of hydrogen in most compounds?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "+1",
-            "B": "-1",
-            "C": "+2",
-            "D": "0"
+            "A": "G1, S, and G2",
+            "B": "Prophase, Metaphase, Anaphase",
+            "C": "S, G2, and M",
+            "D": "G1 and G2 only"
         },
         "correct_option": "A",
-        "explanation": "Hydrogen typically loses its one electron to form H⁺, giving it an oxidation state (valency) of +1 in most compounds (except metal hydrides).",
-        "hint": "It's like the +1 of Group 1 metals."
+        "explanation": "The stages G1, S, and G2 make up interphase, which is the span between cell divisions.",
+        "hint": "Interphase is the 'in-between' phase where the cell is not dividing."
     },
     {
-        "question": "What type of bonding is found in molecular compounds?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
+        "question": "During which phase of the cell cycle does DNA replication occur?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Ionic bonding",
-            "B": "Covalent bonding",
-            "C": "Metallic bonding",
-            "D": "Hydrogen bonding"
+            "A": "G1 phase",
+            "B": "S phase",
+            "C": "G2 phase",
+            "D": "M phase"
         },
         "correct_option": "B",
-        "explanation": "Molecular compounds are formed when non-metal atoms share electrons to achieve stability. This sharing creates covalent bonds.",
-        "hint": "Non-metals share."
+        "explanation": "DNA replication occurs during the Synthesis (S) phase.",
+        "hint": "The 'S' stands for synthesis, specifically of DNA."
     },
     {
-        "question": "Which of these represents a physical change rather than a chemical reaction?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "Which phase is characterized by protein synthesis, growth, and preparation for DNA replication?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Burning wood",
-            "B": "Rusting iron",
-            "C": "Dissolving sugar in water",
-            "D": "Cooking an egg"
+            "A": "S phase",
+            "B": "G2 phase",
+            "C": "G1 phase",
+            "D": "M phase"
         },
         "correct_option": "C",
-        "explanation": "Dissolving sugar is a physical change. The sugar molecules are dispersed among water molecules, but their chemical identity does not change. The others involve chemical reactions forming new substances.",
-        "hint": "No new substances are formed."
+        "explanation": "During the G1 phase, the cell grows, performs protein synthesis, and prepares for DNA replication.",
+        "hint": "It is the first gap or growth phase after division."
     },
     {
-        "question": "A student writes 'Mg + O → MgO'. What is the main error?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "What is the G0 phase?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "The product is wrong.",
-            "B": "Oxygen should be written as O₂.",
-            "C": "It is already balanced.",
-            "D": "Magnesium should be Mg₂."
+            "A": "A phase of rapid DNA synthesis.",
+            "B": "The phase where the cell divides.",
+            "C": "A resting phase where cells exit the active cell cycle.",
+            "D": "The phase where chromosomes condense."
+        },
+        "correct_option": "C",
+        "explanation": "G0 is a resting phase where cells are not actively preparing to divide. Nerve cells are often cited as being in G0.",
+        "hint": "It is a non-dividing, quiescent state."
+    },
+    {
+        "question": "What is the primary purpose of mitosis?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "To reduce chromosome number by half.",
+            "B": "To produce genetically diverse gametes.",
+            "C": "To produce two diploid daughter cells that are genetic clones.",
+            "D": "To facilitate crossing over and genetic recombination."
+        },
+        "correct_option": "C",
+        "explanation": "Mitosis is a process of producing two diploid daughter cells with the same DNA as the parent cell (clones).",
+        "hint": "It is for growth, repair, and asexual reproduction."
+    },
+    {
+        "question": "What are the two main processes involved in the M-phase (Mitosis)?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "DNA replication and chromosome condensation.",
+            "B": "Karyokinesis and cytokinesis.",
+            "C": "Crossing over and synapsis.",
+            "D": "Transcription and translation."
         },
         "correct_option": "B",
-        "explanation": "Oxygen exists as a diatomic molecule (O₂) in its elemental form. The correct reactant is O₂, not O.",
-        "hint": "Remember the seven diatomic elements."
+        "explanation": "Mitosis involves karyokinesis (division of the nucleus) and cytokinesis (division of the cytoplasm).",
+        "hint": "One process divides the genetic material, the other divides the cell body."
     },
     {
-        "question": "In a balanced equation, you can change:",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "Which is the first and longest phase of mitosis?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "The subscripts in formulas",
-            "B": "The formulas of compounds",
-            "C": "The coefficients in front of formulas",
-            "D": "The identities of reactants"
+            "A": "Metaphase",
+            "B": "Anaphase",
+            "C": "Prophase",
+            "D": "Telophase"
         },
         "correct_option": "C",
-        "explanation": "To balance an equation, you adjust only the coefficients (the numbers in front of the formulas). Changing subscripts would alter the chemical identity of the substances.",
-        "hint": "Big numbers in front, not small numbers below."
+        "explanation": "Prophase is the first and longest phase of mitosis.",
+        "hint": "During this phase, chromosomes become visible."
     },
     {
-        "question": "Which of these reactions is NOT a decomposition reaction?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "What happens during prophase?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "2H₂O → 2H₂ + O₂",
-            "B": "CaCO₃ → CaO + CO₂",
-            "C": "2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O",
-            "D": "CH₄ + 2O₂ → CO₂ + 2H₂O"
+            "A": "Chromosomes line up at the equator.",
+            "B": "Sister chromatids are pulled apart.",
+            "C": "Chromatin condenses into visible chromosomes, and the nuclear envelope breaks down.",
+            "D": "Nuclear membranes reform."
         },
-        "correct_option": "D",
-        "explanation": "CH₄ + 2O₂ → CO₂ + 2H₂O is a combustion reaction (a type of combination with oxygen). It starts with multiple reactants, not a single compound breaking down.",
-        "hint": "Decomposition starts with one reactant."
+        "correct_option": "C",
+        "explanation": "During prophase, chromatin condenses into visible chromosomes, and the nuclear envelope breaks down.",
+        "hint": "The cell begins to organize its contents for division."
     },
     {
-        "question": "What is the product when sodium hydrogen carbonate (NaHCO₃) is heated?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "During which phase of mitosis do chromosomes align at the cell's equator?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Na₂O and H₂",
-            "B": "Na₂CO₃, CO₂, and H₂O",
-            "C": "NaOH and CO₂",
-            "D": "Na, H₂, CO₂, and O₂"
+            "A": "Prophase",
+            "B": "Metaphase",
+            "C": "Anaphase",
+            "D": "Telophase"
         },
         "correct_option": "B",
-        "explanation": "Upon heating, sodium hydrogen carbonate decomposes into sodium carbonate, carbon dioxide, and water: 2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O.",
-        "hint": "Baking soda decomposition."
+        "explanation": "During metaphase, spindle fibers pull sister chromatids to line up at the equator (center) of the cell.",
+        "hint": "This is the 'middle' phase of mitosis."
     },
     {
-        "question": "What is the main use of the reactivity series?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "What is the key event of anaphase?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "To predict atomic masses",
-            "B": "To predict colors of compounds",
-            "C": "To predict if displacement occurs",
-            "D": "To calculate formula masses"
+            "A": "Chromosomes condense.",
+            "B": "Chromosomes align at the metaphase plate.",
+            "C": "Sister chromatids separate and are pulled to opposite poles.",
+            "D": "The nucleus reforms."
         },
         "correct_option": "C",
-        "explanation": "The reactivity series lists metals in order of their tendency to lose electrons. It is used to predict whether one metal will displace another from its compound in a single displacement reaction.",
-        "hint": "It's about who is more reactive."
+        "explanation": "During anaphase, spindle fibers shorten, centromeres split, and sister chromatids are pulled to opposite ends of the cell.",
+        "hint": "The duplicated chromosomes are finally separated."
     },
     {
-        "question": "In the reaction AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq), what is the precipitate?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "Which phase is described as the 'reverse of prophase'?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "AgNO₃",
-            "B": "NaCl",
-            "C": "AgCl",
-            "D": "NaNO₃"
+            "A": "Metaphase",
+            "B": "Anaphase",
+            "C": "Telophase",
+            "D": "Cytokinesis"
         },
         "correct_option": "C",
-        "explanation": "Silver chloride (AgCl) is insoluble in water, so it forms a solid precipitate (indicated by 's'). The other products remain dissolved in solution (aq).",
-        "hint": "Look for the (s) state symbol."
+        "explanation": "Telophase is the reverse of prophase. Nuclear membranes reform, spindle fibers disassemble, and chromosomes uncoil back into chromatin.",
+        "hint": "The cell begins to return to its interphase state."
     },
     {
-        "question": "What is the net ionic equation for the precipitation of AgCl?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "What is cytokinesis?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s)",
-            "B": "AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)",
-            "C": "Na⁺(aq) + NO₃⁻(aq) → NaNO₃(aq)",
-            "D": "Ag⁺(aq) + NO₃⁻(aq) → AgNO₃(aq)"
+            "A": "Division of the nucleus.",
+            "B": "Division of the cytoplasm, resulting in two separate daughter cells.",
+            "C": "Replication of DNA.",
+            "D": "Condensation of chromosomes."
+        },
+        "correct_option": "B",
+        "explanation": "Cytokinesis is the division of the cytoplasm, resulting in two separate daughter cells with identical nuclei.",
+        "hint": "It is the final physical separation of the two new cells."
+    },
+    {
+        "question": "Which of the following is NOT a significance or importance of mitosis?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Growth of an organism.",
+            "B": "Repair of damaged tissues.",
+            "C": "Production of genetically diverse gametes.",
+            "D": "Replacement of worn-out cells."
+        },
+        "correct_option": "C",
+        "explanation": "Mitosis is for growth, repair, replacement, and asexual reproduction. Production of genetically diverse gametes is the role of meiosis.",
+        "hint": "Mitosis produces genetically identical cells."
+    },
+    {
+        "question": "What is the primary outcome of meiosis?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Two identical diploid cells.",
+            "B": "Four genetically distinct haploid cells.",
+            "C": "One large cell with multiple nuclei.",
+            "D": "Two diploid cells with crossed-over chromosomes."
+        },
+        "correct_option": "B",
+        "explanation": "Meiosis reduces the chromosome number by half, creating four haploid cells, each genetically distinct from the parent cell.",
+        "hint": "It is essential for sexual reproduction."
+    },
+    {
+        "question": "How many successive nuclear divisions occur in meiosis?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "One",
+            "B": "Two",
+            "C": "Three",
+            "D": "Four"
+        },
+        "correct_option": "B",
+        "explanation": "There are two successive divisions in meiosis: Meiosis I (reduction) and Meiosis II (division).",
+        "hint": "This is why it starts with one diploid cell and ends with four haploid cells."
+    },
+    {
+        "question": "During which stage of meiosis does crossing over occur?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Metaphase I",
+            "B": "Prophase I",
+            "C": "Anaphase II",
+            "D": "Telophase II"
+        },
+        "correct_option": "B",
+        "explanation": "Crossing over, the exchange of genetic material between homologous chromosomes, occurs during Prophase I.",
+        "hint": "Look for the specific sub-stage like pachytene within Prophase I."
+    },
+    {
+        "question": "What is the result of crossing over?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Reduction in chromosome number.",
+            "B": "Production of identical sister chromatids.",
+            "C": "Genetic variation among gametes.",
+            "D": "Alignment of chromosomes at the metaphase plate."
+        },
+        "correct_option": "C",
+        "explanation": "Crossing over exchanges genes between homologous chromosomes, resulting in new combinations of alleles and increasing genetic variation in gametes.",
+        "hint": "It shuffles the genetic deck."
+    },
+    {
+        "question": "What is a key difference between mitosis and meiosis?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Mitosis produces haploid cells; meiosis produces diploid cells.",
+            "B": "Mitosis involves one division; meiosis involves two divisions.",
+            "C": "DNA replication occurs only in meiosis.",
+            "D": "Crossing over is a hallmark of mitosis."
+        },
+        "correct_option": "B",
+        "explanation": "A key difference is that mitosis involves one division cycle, resulting in two cells, while meiosis involves two successive divisions, resulting in four cells.",
+        "hint": "The number of divisions is a fundamental distinction."
+    },
+    {
+        "question": "In humans, what is the chromosome composition of a normal female?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "22 pairs of autosomes and XY sex chromosomes.",
+            "B": "22 pairs of autosomes and XX sex chromosomes.",
+            "C": "23 pairs of autosomes and one X chromosome.",
+            "D": "22 autosomes and one Y chromosome."
+        },
+        "correct_option": "B",
+        "explanation": "Human females have 22 pairs of autosomes and one pair of X sex chromosomes (XX).",
+        "hint": "Males are XY, females are XX."
+    },
+    {
+        "question": "In chromosomal sex determination in mammals, which sex is heterogametic?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Female",
+            "B": "Male",
+            "C": "Both are homogametic.",
+            "D": "It varies by species."
+        },
+        "correct_option": "B",
+        "explanation": "In mammals like humans, males have two different sex chromosomes (XY) and are the heterogametic sex. Females (XX) are homogametic.",
+        "hint": "Hetero- means different; males produce two types of gametes regarding sex chromosomes."
+    },
+    {
+        "question": "What does the testis-determining factor (TDF) do?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Determines eye color.",
+            "B": "Promotes the development of the female phenotype.",
+            "C": "Promotes the development of the male phenotype.",
+            "D": "Causes crossing over during meiosis."
+        },
+        "correct_option": "C",
+        "explanation": "The testis-determining factor (TDF), located on the Y chromosome, promotes the development of the male phenotype.",
+        "hint": "It is a key gene for male sexual differentiation."
+    },
+    {
+        "question": "In birds, what is the sex chromosome composition of males and females?",
+        "topic": "CELL CYCLE",
+        "options": {
+            "A": "Males: ZZ; Females: ZW",
+            "B": "Males: XY; Females: XX",
+            "C": "Males: ZW; Females: ZZ",
+            "D": "Males: XX; Females: XY"
         },
         "correct_option": "A",
-        "explanation": "The net ionic equation shows only the ions that form the precipitate, removing the spectator ions (Na⁺ and NO₃⁻).",
-        "hint": "It shows the actual chemical change."
+        "explanation": "In birds and Lepidoptera, males are homogametic (ZZ) and females are heterogametic (ZW).",
+        "hint": "This is the opposite of the XY system in mammals."
     },
     {
-        "question": "According to solubility rules, which sulfate is insoluble?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "Which of the following correctly describes the preparatory steps before meiosis?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Na₂SO₄",
-            "B": "K₂SO₄",
-            "C": "BaSO₄",
-            "D": "(NH₄)₂SO₄"
-        },
-        "correct_option": "C",
-        "explanation": "Most sulfates are soluble, but barium sulfate (BaSO₄) is a common exception and is highly insoluble.",
-        "hint": "Think of the exceptions: Ba, Ca, Pb."
-    },
-    {
-        "question": "Which of the following statements about ions is FALSE?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "Cations are positively charged.",
-            "B": "Anions are formed by gaining electrons.",
-            "C": "Ions have the same number of protons and electrons.",
-            "D": "Polyatomic ions act as a single unit."
-        },
-        "correct_option": "C",
-        "explanation": "Ions have an unequal number of protons and electrons. Cations have more protons, anions have more electrons. This imbalance creates the charge.",
-        "hint": "Charges come from a proton-electron imbalance."
-    },
-    {
-        "question": "What is the charge on the aluminum ion?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
-        "options": {
-            "A": "+1",
-            "B": "+2",
-            "C": "+3",
-            "D": "-3"
-        },
-        "correct_option": "C",
-        "explanation": "Aluminum is in Group 13. It loses its three valence electrons to achieve stability, forming the Al³⁺ cation.",
-        "hint": "Group 13 metals lose 3 electrons."
-    },
-    {
-        "question": "What is the formula for the compound formed between Al³⁺ and O²⁻?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "AlO",
-            "B": "Al₂O",
-            "C": "AlO₃",
-            "D": "Al₂O₃"
-        },
-        "correct_option": "D",
-        "explanation": "Al³⁺ and O²⁻ criss-cross: Al₂O₃. This ensures electrical neutrality: (2*+3) + (3*-2) = 0.",
-        "hint": "Swap the 3 and the 2."
-    },
-    {
-        "question": "What is the formula for potassium nitrate?",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
-        "options": {
-            "A": "KNO₂",
-            "B": "KNO₃",
-            "C": "K₂NO₃",
-            "D": "K(NO₃)₂"
+            "A": "They are completely different from the mitotic interphase.",
+            "B": "They are identical in pattern and name to the interphase of the mitotic cell cycle.",
+            "C": "There is no preparatory phase for meiosis.",
+            "D": "Only the S phase occurs before meiosis."
         },
         "correct_option": "B",
-        "explanation": "Potassium (K⁺) has a valency of +1. Nitrate (NO₃⁻) has a valency of -1. They combine in a 1:1 ratio: KNO₃.",
-        "hint": "Both have a valency magnitude of 1."
+        "explanation": "The preparatory steps that lead up to meiosis are identical in pattern and name (G1, S, G2) to the interphase of the mitotic cell cycle.",
+        "hint": "Both processes require cell growth and DNA replication before division can begin."
     },
     {
-        "question": "Which element has a valency of zero?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
+        "question": "What is the significance of meiosis producing haploid gametes?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Hydrogen",
-            "B": "Oxygen",
-            "C": "Helium",
-            "D": "Chlorine"
-        },
-        "correct_option": "C",
-        "explanation": "Noble gases like helium have a full valence shell (duplet for He, octet for others). They are stable and do not tend to gain, lose, or share electrons, giving them a valency of zero.",
-        "hint": "Think of the unreactive gases."
-    },
-    {
-        "question": "In the reaction 2H₂ + O₂ → 2H₂O, how many moles of oxygen react with 4 moles of hydrogen?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
-        "options": {
-            "A": "1 mole",
-            "B": "2 moles",
-            "C": "4 moles",
-            "D": "8 moles"
+            "A": "It allows for unlimited cell growth.",
+            "B": "It ensures the zygote formed at fertilization has the correct diploid chromosome number.",
+            "C": "It makes cells more resistant to disease.",
+            "D": "It prevents any genetic variation."
         },
         "correct_option": "B",
-        "explanation": "The balanced equation shows a 2:1 mole ratio of H₂ to O₂. If you have 4 moles of H₂ (double the 2 in the equation), you need 2 moles of O₂ (double the 1 in the equation).",
-        "hint": "Use the ratio from the balanced equation."
+        "explanation": "Meiosis reduces the chromosome number to haploid in gametes. When two haploid gametes fuse during fertilization, the resulting zygote has the correct diploid number.",
+        "hint": "This maintains a constant chromosome number from generation to generation."
     },
     {
-        "question": "Which of these is an endothermic process?",
-        "topic": "Elements, Molecules & Compounds — Key Concepts",
+        "question": "During which phase of meiosis I do homologous chromosomes pair up in a process called synapsis?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "Burning gasoline",
-            "B": "Neutralizing acid with base",
-            "C": "Photosynthesis",
-            "D": "Condensation of water vapor"
-        },
-        "correct_option": "C",
-        "explanation": "Photosynthesis requires energy from sunlight to convert CO₂ and H₂O into glucose and O₂. It absorbs heat from the environment, making it endothermic.",
-        "hint": "Plants absorb sunlight energy."
-    },
-    {
-        "question": "What is the atomicity of the phosphate ion (PO₄³⁻)?",
-        "topic": "Atomicity, Radicals & Valency — Key Chemistry Concepts",
-        "options": {
-            "A": "4",
-            "B": "5",
-            "C": "7",
-            "D": "8"
+            "A": "Leptotene",
+            "B": "Zygotene",
+            "C": "Pachytene",
+            "D": "Diplotene"
         },
         "correct_option": "B",
-        "explanation": "Atomicity is the total number of atoms. The phosphate ion (PO₄³⁻) contains 1 P atom + 4 O atoms = 5 atoms.",
-        "hint": "Count P + O atoms: 1 + 4."
+        "explanation": "During the zygotene sub-stage of Prophase I, homologous chromosomes become closely associated (synapsis) to form bivalents.",
+        "hint": "The names of the sub-stages are in order: Lepto-, Zygo-, Pachy-, Diplo-, Diakinesis."
     },
     {
-        "question": "Which of these compounds is molecular (covalent)?",
-        "topic": "Ions: Formation, Types & Ionic Compounds",
+        "question": "What is the term for the structure formed by paired homologous chromosomes during Prophase I?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "KCl",
-            "B": "CaO",
-            "C": "CO",
-            "D": "MgBr₂"
+            "A": "Centromere",
+            "B": "Chiasma",
+            "C": "Bivalent or tetrad",
+            "D": "Spindle fiber"
         },
         "correct_option": "C",
-        "explanation": "CO (carbon monoxide) is formed between two non-metals (carbon and oxygen), so it is a molecular (covalent) compound. The others are metal + non-metal, so they are ionic.",
-        "hint": "Look for two non-metals."
+        "explanation": "A pair of synapsed homologous chromosomes is called a bivalent. Because each chromosome has two sister chromatids, a bivalent consists of four chromatids and is also called a tetrad.",
+        "hint": "It is a group of four chromatids."
     },
     {
-        "question": "The correct formula for iron(III) hydroxide is:",
-        "topic": "Atomicity, Radicals (Polyatomic Ions) & Valency",
+        "question": "Cancers can result from which of the following cellular malfunctions?",
+        "topic": "CELL CYCLE",
         "options": {
-            "A": "FeOH",
-            "B": "Fe(OH)₂",
-            "C": "Fe₂(OH)₃",
-            "D": "Fe(OH)₃"
+            "A": "Controlled mitosis of normal cells.",
+            "B": "Uncontrolled mitosis of abnormal cells.",
+            "C": "Proper functioning of the G0 phase.",
+            "D": "Accurate DNA replication during S phase."
         },
-        "correct_option": "D",
-        "explanation": "Iron(III) means Fe³⁺. Hydroxide is OH⁻ (valency -1). To balance, three OH⁻ ions are needed for one Fe³⁺ ion: Fe(OH)₃.",
-        "hint": "Roman numeral III gives the charge of the metal."
+        "correct_option": "B",
+        "explanation": "Cancers result from uncontrolled mitosis of abnormal cells.",
+        "hint": "This is a breakdown in the normal regulation of the cell cycle."
     }
-
-
-    ]
+]
 }
