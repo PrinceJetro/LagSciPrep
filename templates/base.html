@@ -400,13 +400,8 @@
                         </a>
                     </li>
                     <li class="nav-item nav-item-custom">
-                        <a class="nav-link nav-link-custom" href="#">
-                            <i class="fas fa-question-circle"></i>
-                            <span>Help Center</span>
-                        </a>
-                    </li>
-                    <li class="nav-item nav-item-custom">
-                        <a class="nav-link nav-link-custom" href="#">
+                        <a class="nav-link nav-link-custom {% if request.resolver_match.url_name == 'progress' %}active{% endif %}" 
+                           href="{% url 'progress' %}">
                             <i class="fas fa-chart-line"></i>
                             <span>Progress</span>
                         </a>

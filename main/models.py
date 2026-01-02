@@ -46,7 +46,30 @@ class PastQuestionsObj(models.Model):
         return f'{self.course.name} CBT Question: {self.question_text[:50]}'
 
 
+class Student(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    department = models.CharField(max_length=255, blank=True, null=True)
 
+    def __str__(self):
+        return self.user.username
+
+
+
+
+class CBTResult(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, null=True, blank=True)
+    score = models.IntegerField()
+    total_questions = models.IntegerField()
+    date_taken = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        if self.course:
+            return f"{self.student} - {self.course} - {self.score}/{self.total_questions}"
+        elif self.topic:
+            return f"{self.student} - {self.topic} - {self.score}/{self.total_questions}"
+        return f"{self.student} - {self.score}/{self.total_questions}"
 
 
 

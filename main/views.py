@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .models import Course, Topic, PastQuestionsObj
+from .models import Course, Topic, PastQuestionsObj, Student, CBTResult
 from django import forms
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
@@ -22,6 +22,29 @@ class CBTForm(forms.Form):
             widget=forms.RadioSelect,
             required=False,
         )
+
+
+class StudentRegistrationForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+    confirm_password = forms.CharField(widget=forms.PasswordInput)
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password']
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get('password')
+        confirm_password = cleaned_data.get('confirm_password')
+        if password != confirm_password:
+            raise forms.ValidationError("Passwords do not match")
+        return cleaned_data
+
+
+class StudentProfileForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = ['department']
 
 
 import random, time
@@ -139,6 +162,19 @@ def cbt_submit(request):
     total = len(questions)
     percent = (score / total) * 100 if total else 0
 
+    # Save result if user is authenticated
+    if request.user.is_authenticated:
+        try:
+            student = Student.objects.get(user=request.user)
+            CBTResult.objects.create(
+                student=student,
+                course=course,
+                score=score,
+                total_questions=total
+            )
+        except Student.DoesNotExist:
+            pass
+
     # clear session
     for key in [
         'cbt_course_id',
@@ -159,7 +195,27 @@ def cbt_submit(request):
 
 def home(request):
     courses = Course.objects.all()
-    return render(request, "home.html", {"courses": courses})
+    context = {"courses": courses}
+    
+    if request.user.is_authenticated:
+        try:
+            student = Student.objects.get(user=request.user)
+            results = CBTResult.objects.filter(student=student)
+            total_exams = results.count()
+            if total_exams > 0:
+                avg_score = sum(r.score for r in results) / total_exams
+                avg_total = sum(r.total_questions for r in results) / total_exams
+                avg_percent = (avg_score / avg_total) * 100 if avg_total else 0
+            else:
+                avg_percent = 0
+            context.update({
+                'total_exams': total_exams,
+                'avg_percent': avg_percent,
+            })
+        except Student.DoesNotExist:
+            pass
+    
+    return render(request, "home.html", context)
 
 def course_list(request):
     courses = Course.objects.all()
@@ -362,6 +418,20 @@ def topic_cbt_submit(request):
 
     percent = (score / len(questions)) * 100 if questions else 0
 
+    # Save result if user is authenticated
+    if request.user.is_authenticated:
+        try:
+            student = Student.objects.get(user=request.user)
+            CBTResult.objects.create(
+                student=student,
+                course=topic.course,
+                topic=topic,
+                score=score,
+                total_questions=len(questions)
+            )
+        except Student.DoesNotExist:
+            pass
+
     # clear session
     for key in [
         'cbt_topic_id',
@@ -391,6 +461,119 @@ def custom_logout(request):
         messages.success(request, "You have been successfully logged out.")
         return redirect('home')
     
+
+def register(request):
+    if request.method == 'POST':
+        user_form = StudentRegistrationForm(request.POST)
+        profile_form = StudentProfileForm(request.POST)
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save(commit=False)
+            user.set_password(user_form.cleaned_data['password'])
+            user.save()
+            student = profile_form.save(commit=False)
+            student.user = user
+            student.save()
+            messages.success(request, 'Registration successful. You can now log in.')
+            return redirect('login')
+    else:
+        user_form = StudentRegistrationForm()
+        profile_form = StudentProfileForm()
+    return render(request, 'student_register.html', {'form': user_form, 'profile_form': profile_form})
+
+
+def custom_login(request):
+    if request.method == 'POST':
+        username_or_email = request.POST.get('username')
+        password = request.POST.get('password')
+        user = None
+        try:
+            # Try to get user by username
+            user = User.objects.get(username=username_or_email)
+        except User.DoesNotExist:
+            try:
+                # Try to get user by email
+                user = User.objects.get(email=username_or_email)
+            except User.DoesNotExist:
+                pass
+        if user and user.check_password(password):
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.error(request, 'Invalid credentials')
+    return render(request, 'login.html')
+
+
+@login_required
+def progress(request):
+    try:
+        student = Student.objects.get(user=request.user)
+    except Student.DoesNotExist:
+        return redirect('home')
+    
+    results = CBTResult.objects.filter(student=student).order_by('-date_taken')
+    
+    # Overall stats
+    total_exams = results.count()
+    if total_exams > 0:
+        avg_score = sum(r.score for r in results) / total_exams
+        avg_total = sum(r.total_questions for r in results) / total_exams
+        avg_percent = (avg_score / avg_total) * 100 if avg_total else 0
+    else:
+        avg_percent = 0
+    
+    # Per course
+    course_stats = {}
+    for result in results:
+        if result.course:
+            c = result.course
+            if c not in course_stats:
+                course_stats[c] = {'scores': [], 'total': 0}
+            course_stats[c]['scores'].append((result.score / result.total_questions) * 100)
+            course_stats[c]['total'] += 1
+    
+    for c in course_stats:
+        scores = course_stats[c]['scores']
+        course_stats[c]['avg'] = sum(scores) / len(scores) if scores else 0
+    
+    # Per topic
+    topic_stats = {}
+    for result in results:
+        if result.topic:
+            t = result.topic
+            if t not in topic_stats:
+                topic_stats[t] = {'scores': [], 'total': 0}
+            topic_stats[t]['scores'].append((result.score / result.total_questions) * 100)
+            topic_stats[t]['total'] += 1
+    
+    for t in topic_stats:
+        scores = topic_stats[t]['scores']
+        topic_stats[t]['avg'] = sum(scores) / len(scores) if scores else 0
+    
+    # Strengths: avg > 70%
+    all_stats = {**course_stats, **topic_stats}
+    strengths = [{'item': k, 'avg': v['avg']} for k, v in all_stats.items() if v['avg'] > 70]
+    weaknesses = [{'item': k, 'avg': v['avg']} for k, v in all_stats.items() if v['avg'] < 50]
+    
+    # Add percentage to results
+    results_with_percent = []
+    for r in results:
+        percent = (r.score / r.total_questions) * 100 if r.total_questions else 0
+        results_with_percent.append({
+            'result': r,
+            'percentage': percent
+        })
+    
+    return render(request, 'progress.html', {
+        'results': results_with_percent,
+        'total_exams': total_exams,
+        'avg_percent': avg_percent,
+        'course_stats': course_stats,
+        'topic_stats': topic_stats,
+        'strengths': strengths,
+        'weaknesses': weaknesses,
+    })
+
+
 """
 from main.models import Course, Topic, PastQuestionsObj, PastQuestionsTheory
 

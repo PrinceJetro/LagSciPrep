@@ -1,381 +1,446 @@
 {
-    "BIO 101": [
-    {
-        "question": "What is the cell cycle?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "The process of cell death.",
-            "B": "The ordered sequence of events that occur in a cell in preparation for cell division.",
-            "C": "The process of energy production in mitochondria.",
-            "D": "The random division of cellular components."
-        },
-        "correct_option": "B",
-        "explanation": "The cell cycle is the ordered sequence of events that occur in a cell in preparation for cell division.",
-        "hint": "It is a regulated process leading to division."
+    "COM 101": [
+  {
+    "question": "Which technological component characterizes the First Generation of computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Transistors",
+      "B": "Integrated Circuits (ICs)",
+      "C": "Vacuum Tubes",
+      "D": "Microprocessors"
     },
-    {
-        "question": "What are the four main stages of the cell cycle?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "G1, G0, S, M",
-            "B": "Prophase, Metaphase, Anaphase, Telophase",
-            "C": "G1, S, G2, M",
-            "D": "Interphase, Mitosis, Cytokinesis, Meiosis"
-        },
-        "correct_option": "C",
-        "explanation": "The cell cycle is a four-stage process: Gap 1 (G1), Synthesis (S), Gap 2 (G2), and Mitosis (M).",
-        "hint": "These are the sequential phases before and during division."
+    "correct_option": "C",
+    "explanation": "The First Generation (1946–1959) of computers used vacuum tubes as the primary electronic component.",
+    "hint": "Check the 'Technology' heading for the First Generation."
+  },
+  {
+    "question": "During which years did the First Generation of computers primarily exist?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "1959–1971",
+      "B": "1946–1959",
+      "C": "1964–1971",
+      "D": "1974–1984"
     },
-    {
-        "question": "Which stages of the cell cycle make up interphase?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "G1, S, and G2",
-            "B": "Prophase, Metaphase, Anaphase",
-            "C": "S, G2, and M",
-            "D": "G1 and G2 only"
-        },
-        "correct_option": "A",
-        "explanation": "The stages G1, S, and G2 make up interphase, which is the span between cell divisions.",
-        "hint": "Interphase is the 'in-between' phase where the cell is not dividing."
+    "correct_option": "B",
+    "explanation": "The First Generation emerged between 1946 and 1959.",
+    "hint": "Look at the period under the 'FIRST GENERATION OF COMPUTERS' heading."
+  },
+  {
+    "question": "What was the main memory technology used in First Generation computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "RAM and ROM",
+      "B": "Magnetic Drum",
+      "C": "Magnetic Tape",
+      "D": "PROM and DRAM"
     },
-    {
-        "question": "During which phase of the cell cycle does DNA replication occur?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "G1 phase",
-            "B": "S phase",
-            "C": "G2 phase",
-            "D": "M phase"
-        },
-        "correct_option": "B",
-        "explanation": "DNA replication occurs during the Synthesis (S) phase.",
-        "hint": "The 'S' stands for synthesis, specifically of DNA."
+    "correct_option": "B",
+    "explanation": "First Generation computers used magnetic drums for memory.",
+    "hint": "This is listed as a 'Characteristic' and under 'Main Features'."
+  },
+  {
+    "question": "Which of the following was a major disadvantage of First Generation computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Low cost",
+      "B": "Generated excessive heat",
+      "C": "High portability",
+      "D": "High reliability"
     },
-    {
-        "question": "Which phase is characterized by protein synthesis, growth, and preparation for DNA replication?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "S phase",
-            "B": "G2 phase",
-            "C": "G1 phase",
-            "D": "M phase"
-        },
-        "correct_option": "C",
-        "explanation": "During the G1 phase, the cell grows, performs protein synthesis, and prepares for DNA replication.",
-        "hint": "It is the first gap or growth phase after division."
+    "correct_option": "B",
+    "explanation": "First Generation computers generated excessive heat and consumed much electricity.",
+    "hint": "Review the 'Disadvantages' list for the First Generation."
+  },
+  {
+    "question": "What was the first commercial computer, delivered to the U.S. Census Bureau in 1951?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "ENIAC",
+      "B": "EDVAC",
+      "C": "UNIVAC I",
+      "D": "IBM 1400"
     },
-    {
-        "question": "What is the G0 phase?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "A phase of rapid DNA synthesis.",
-            "B": "The phase where the cell divides.",
-            "C": "A resting phase where cells exit the active cell cycle.",
-            "D": "The phase where chromosomes condense."
-        },
-        "correct_option": "C",
-        "explanation": "G0 is a resting phase where cells are not actively preparing to divide. Nerve cells are often cited as being in G0.",
-        "hint": "It is a non-dividing, quiescent state."
+    "correct_option": "C",
+    "explanation": "The UNIVAC I was the first commercial computer, delivered to the U.S. Census Bureau in 1951.",
+    "hint": "This is stated in a note after the examples of First Generation computers."
+  },
+  {
+    "question": "What technology replaced vacuum tubes in the Second Generation of computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Integrated Circuits",
+      "B": "Microprocessors",
+      "C": "Transistors",
+      "D": "Artificial Intelligence"
     },
-    {
-        "question": "What is the primary purpose of mitosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "To reduce chromosome number by half.",
-            "B": "To produce genetically diverse gametes.",
-            "C": "To produce two diploid daughter cells that are genetic clones.",
-            "D": "To facilitate crossing over and genetic recombination."
-        },
-        "correct_option": "C",
-        "explanation": "Mitosis is a process of producing two diploid daughter cells with the same DNA as the parent cell (clones).",
-        "hint": "It is for growth, repair, and asexual reproduction."
+    "correct_option": "C",
+    "explanation": "The Second Generation replaced vacuum tubes with transistors.",
+    "hint": "The 'Technology' for the Second Generation is listed as 'Transistors'."
+  },
+  {
+    "question": "Which high-level programming language was introduced during the Second Generation?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Python",
+      "B": "FORTRAN",
+      "C": "Java",
+      "D": "C++"
     },
-    {
-        "question": "What are the two main processes involved in the M-phase (Mitosis)?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "DNA replication and chromosome condensation.",
-            "B": "Karyokinesis and cytokinesis.",
-            "C": "Crossing over and synapsis.",
-            "D": "Transcription and translation."
-        },
-        "correct_option": "B",
-        "explanation": "Mitosis involves karyokinesis (division of the nucleus) and cytokinesis (division of the cytoplasm).",
-        "hint": "One process divides the genetic material, the other divides the cell body."
+    "correct_option": "B",
+    "explanation": "High-level languages such as FORTRAN, COBOL, and BASIC were introduced in the Second Generation.",
+    "hint": "Check the 'Programming Languages' section under the Second Generation."
+  },
+  {
+    "question": "What was the typical processing speed unit for Second Generation computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Milliseconds",
+      "B": "Microseconds",
+      "C": "Nanoseconds",
+      "D": "Picoseconds"
     },
-    {
-        "question": "Which is the first and longest phase of mitosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Metaphase",
-            "B": "Anaphase",
-            "C": "Prophase",
-            "D": "Telophase"
-        },
-        "correct_option": "C",
-        "explanation": "Prophase is the first and longest phase of mitosis.",
-        "hint": "During this phase, chromosomes become visible."
+    "correct_option": "B",
+    "explanation": "Second Generation computers had processing speeds in microseconds.",
+    "hint": "This is listed as a 'Characteristic' of the Second Generation."
+  },
+  {
+    "question": "Which invention characterized the technological shift in the Third Generation of computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Vacuum Tubes",
+      "B": "Transistors",
+      "C": "Integrated Circuits (ICs)",
+      "D": "VLSI Microprocessors"
     },
-    {
-        "question": "What happens during prophase?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Chromosomes line up at the equator.",
-            "B": "Sister chromatids are pulled apart.",
-            "C": "Chromatin condenses into visible chromosomes, and the nuclear envelope breaks down.",
-            "D": "Nuclear membranes reform."
-        },
-        "correct_option": "C",
-        "explanation": "During prophase, chromatin condenses into visible chromosomes, and the nuclear envelope breaks down.",
-        "hint": "The cell begins to organize its contents for division."
+    "correct_option": "C",
+    "explanation": "The Third Generation introduced Integrated Circuits (ICs).",
+    "hint": "The 'Technology' for the Third Generation is 'Integrated Circuits (ICs)'."
+  },
+  {
+    "question": "Who is credited with the invention of the Integrated Circuit (IC)?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "William Shockley",
+      "B": "Jack Kilby and Robert Noyce",
+      "C": "Charles Babbage",
+      "D": "John von Neumann"
     },
-    {
-        "question": "During which phase of mitosis do chromosomes align at the cell's equator?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Prophase",
-            "B": "Metaphase",
-            "C": "Anaphase",
-            "D": "Telophase"
-        },
-        "correct_option": "B",
-        "explanation": "During metaphase, spindle fibers pull sister chromatids to line up at the equator (center) of the cell.",
-        "hint": "This is the 'middle' phase of mitosis."
+    "correct_option": "B",
+    "explanation": "Integrated Circuits (ICs) were invented by Jack Kilby and Robert Noyce.",
+    "hint": "This is stated in the 'Overview' of the Third Generation."
+  },
+  {
+    "question": "What new input/output devices became common in the Third Generation, replacing punched cards?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Punched cards and paper tape",
+      "B": "Keyboard and monitor",
+      "C": "Touchscreen and stylus",
+      "D": "Mouse and printer"
     },
-    {
-        "question": "What is the key event of anaphase?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Chromosomes condense.",
-            "B": "Chromosomes align at the metaphase plate.",
-            "C": "Sister chromatids separate and are pulled to opposite poles.",
-            "D": "The nucleus reforms."
-        },
-        "correct_option": "C",
-        "explanation": "During anaphase, spindle fibers shorten, centromeres split, and sister chromatids are pulled to opposite ends of the cell.",
-        "hint": "The duplicated chromosomes are finally separated."
+    "correct_option": "B",
+    "explanation": "The Third Generation saw the use of keyboards and monitors instead of punched cards.",
+    "hint": "This is mentioned in the 'Key Developments' and 'Main Features' for the Third Generation."
+  },
+  {
+    "question": "What was the processing speed unit for Third Generation computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Milliseconds",
+      "B": "Microseconds",
+      "C": "Nanoseconds",
+      "D": "Minutes"
     },
-    {
-        "question": "Which phase is described as the 'reverse of prophase'?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Metaphase",
-            "B": "Anaphase",
-            "C": "Telophase",
-            "D": "Cytokinesis"
-        },
-        "correct_option": "C",
-        "explanation": "Telophase is the reverse of prophase. Nuclear membranes reform, spindle fibers disassemble, and chromosomes uncoil back into chromatin.",
-        "hint": "The cell begins to return to its interphase state."
+    "correct_option": "C",
+    "explanation": "Third Generation computers had processing speeds in nanoseconds.",
+    "hint": "This is listed as a 'Characteristic' of the Third Generation."
+  },
+  {
+    "question": "What technology is the foundation of the Fourth Generation of computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Vacuum Tubes",
+      "B": "Transistors",
+      "C": "Integrated Circuits",
+      "D": "Microprocessors (VLSI)"
     },
-    {
-        "question": "What is cytokinesis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Division of the nucleus.",
-            "B": "Division of the cytoplasm, resulting in two separate daughter cells.",
-            "C": "Replication of DNA.",
-            "D": "Condensation of chromosomes."
-        },
-        "correct_option": "B",
-        "explanation": "Cytokinesis is the division of the cytoplasm, resulting in two separate daughter cells with identical nuclei.",
-        "hint": "It is the final physical separation of the two new cells."
+    "correct_option": "D",
+    "explanation": "The Fourth Generation was marked by the invention of the microprocessor, using Very Large Scale Integration (VLSI) technology.",
+    "hint": "The 'Technology' for the Fourth Generation is 'Microprocessors (VLSI)'."
+  },
+  {
+    "question": "Which of the following is an example of a Fourth Generation computer?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "ENIAC",
+      "B": "IBM 360",
+      "C": "IBM PC",
+      "D": "UNIVAC III"
     },
-    {
-        "question": "Which of the following is NOT a significance or importance of mitosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Growth of an organism.",
-            "B": "Repair of damaged tissues.",
-            "C": "Production of genetically diverse gametes.",
-            "D": "Replacement of worn-out cells."
-        },
-        "correct_option": "C",
-        "explanation": "Mitosis is for growth, repair, replacement, and asexual reproduction. Production of genetically diverse gametes is the role of meiosis.",
-        "hint": "Mitosis produces genetically identical cells."
+    "correct_option": "C",
+    "explanation": "The IBM PC is listed as an example of a Fourth Generation computer.",
+    "hint": "Check the 'Examples' list for the Fourth Generation."
+  },
+  {
+    "question": "What type of operating system was common in Fourth Generation microcomputers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "None (Manual operation)",
+      "B": "Single-user OS",
+      "C": "MS-DOS, PC-DOS",
+      "D": "GUI-based OS like Windows 95"
     },
-    {
-        "question": "What is the primary outcome of meiosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Two identical diploid cells.",
-            "B": "Four genetically distinct haploid cells.",
-            "C": "One large cell with multiple nuclei.",
-            "D": "Two diploid cells with crossed-over chromosomes."
-        },
-        "correct_option": "B",
-        "explanation": "Meiosis reduces the chromosome number by half, creating four haploid cells, each genetically distinct from the parent cell.",
-        "hint": "It is essential for sexual reproduction."
+    "correct_option": "C",
+    "explanation": "The 'Main Features' for the Fourth Generation list the operating system as MS-DOS, PC-DOS.",
+    "hint": "Refer to the 'Main Features' table for the Fourth Generation."
+  },
+  {
+    "question": "What is the core technology focus of the Fifth Generation of computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Mechanical calculation",
+      "B": "Electronic switching",
+      "C": "Artificial Intelligence (AI)",
+      "D": "Vacuum tube amplification"
     },
-    {
-        "question": "How many successive nuclear divisions occur in meiosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "One",
-            "B": "Two",
-            "C": "Three",
-            "D": "Four"
-        },
-        "correct_option": "B",
-        "explanation": "There are two successive divisions in meiosis: Meiosis I (reduction) and Meiosis II (division).",
-        "hint": "This is why it starts with one diploid cell and ends with four haploid cells."
+    "correct_option": "C",
+    "explanation": "The Fifth Generation is characterized by the use of Artificial Intelligence (AI).",
+    "hint": "The 'Technology' for the Fifth Generation is 'Artificial Intelligence (AI)'."
+  },
+  {
+    "question": "Which hardware technology, alongside AI, is associated with the Fifth Generation?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "VLSI",
+      "B": "ULSI",
+      "C": "SSIC",
+      "D": "Magnetic Drums"
     },
-    {
-        "question": "During which stage of meiosis does crossing over occur?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Metaphase I",
-            "B": "Prophase I",
-            "C": "Anaphase II",
-            "D": "Telophase II"
-        },
-        "correct_option": "B",
-        "explanation": "Crossing over, the exchange of genetic material between homologous chromosomes, occurs during Prophase I.",
-        "hint": "Look for the specific sub-stage like pachytene within Prophase I."
+    "correct_option": "B",
+    "explanation": "Fifth Generation computers use advanced hardware technologies such as ULSI (Ultra Large Scale Integration).",
+    "hint": "ULSI is mentioned in the 'Overview' and 'Main Features' of the Fifth Generation."
+  },
+  {
+    "question": "What is a key application of Fifth Generation AI computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Punched card processing",
+      "B": "Medical diagnosis",
+      "C": "Magnetic tape storage",
+      "D": "Vacuum tube manufacturing"
     },
-    {
-        "question": "What is the result of crossing over?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Reduction in chromosome number.",
-            "B": "Production of identical sister chromatids.",
-            "C": "Genetic variation among gametes.",
-            "D": "Alignment of chromosomes at the metaphase plate."
-        },
-        "correct_option": "C",
-        "explanation": "Crossing over exchanges genes between homologous chromosomes, resulting in new combinations of alleles and increasing genetic variation in gametes.",
-        "hint": "It shuffles the genetic deck."
+    "correct_option": "B",
+    "explanation": "Applications of AI computers include medical diagnosis, legal systems, robotics, and automation.",
+    "hint": "Review the 'Applications of AI Computers' section."
+  },
+  {
+    "question": "According to the summary table, which generation had 'Single-user' operating systems for both the First and Second Generations?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "First and Third",
+      "B": "Second and Fourth",
+      "C": "First and Second",
+      "D": "Third and Fifth"
     },
-    {
-        "question": "What is a key difference between mitosis and meiosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Mitosis produces haploid cells; meiosis produces diploid cells.",
-            "B": "Mitosis involves one division; meiosis involves two divisions.",
-            "C": "DNA replication occurs only in meiosis.",
-            "D": "Crossing over is a hallmark of mitosis."
-        },
-        "correct_option": "B",
-        "explanation": "A key difference is that mitosis involves one division cycle, resulting in two cells, while meiosis involves two successive divisions, resulting in four cells.",
-        "hint": "The number of divisions is a fundamental distinction."
+    "correct_option": "C",
+    "explanation": "The 'Generation of Computers at a Glance' table lists the Operating System for both the First and Second Generations as 'Single-user'.",
+    "hint": "Refer to the final column of the provided summary table."
+  },
+  {
+    "question": "What early calculating tool is mentioned as laying the foundation for modern computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Slide rule",
+      "B": "Calculator",
+      "C": "Abacus",
+      "D": "Compass"
     },
-    {
-        "question": "In humans, what is the chromosome composition of a normal female?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "22 pairs of autosomes and XY sex chromosomes.",
-            "B": "22 pairs of autosomes and XX sex chromosomes.",
-            "C": "23 pairs of autosomes and one X chromosome.",
-            "D": "22 autosomes and one Y chromosome."
-        },
-        "correct_option": "B",
-        "explanation": "Human females have 22 pairs of autosomes and one pair of X sex chromosomes (XX).",
-        "hint": "Males are XY, females are XX."
+    "correct_option": "C",
+    "explanation": "Early tools such as the abacus are mentioned as laying the foundation for modern computers.",
+    "hint": "This is in the 'Introduction' section."
+  },
+  {
+    "question": "What was the primary programming language for First Generation computers?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "FORTRAN",
+      "B": "Machine language",
+      "C": "COBOL",
+      "D": "BASIC"
     },
-    {
-        "question": "In chromosomal sex determination in mammals, which sex is heterogametic?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Female",
-            "B": "Male",
-            "C": "Both are homogametic.",
-            "D": "It varies by species."
-        },
-        "correct_option": "B",
-        "explanation": "In mammals like humans, males have two different sex chromosomes (XY) and are the heterogametic sex. Females (XX) are homogametic.",
-        "hint": "Hetero- means different; males produce two types of gametes regarding sex chromosomes."
+    "correct_option": "B",
+    "explanation": "Programs for First Generation computers were written in machine language (low-level language).",
+    "hint": "This is listed as a 'Characteristic' and under 'Main Features'."
+  },
+  {
+    "question": "Which generation saw the introduction of multi-programming capability?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "First Generation",
+      "B": "Second Generation",
+      "C": "Third Generation",
+      "D": "Fourth Generation"
     },
-    {
-        "question": "What does the testis-determining factor (TDF) do?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Determines eye color.",
-            "B": "Promotes the development of the female phenotype.",
-            "C": "Promotes the development of the male phenotype.",
-            "D": "Causes crossing over during meiosis."
-        },
-        "correct_option": "C",
-        "explanation": "The testis-determining factor (TDF), located on the Y chromosome, promotes the development of the male phenotype.",
-        "hint": "It is a key gene for male sexual differentiation."
+    "correct_option": "C",
+    "explanation": "The Third Generation introduced multi-programming capability.",
+    "hint": "This is listed as a 'Characteristic' of the Third Generation."
+  },
+  {
+    "question": "What was a major advantage of transistors over vacuum tubes in the Second Generation?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "They were larger.",
+      "B": "They generated more heat.",
+      "C": "They made computers smaller, faster, and more reliable.",
+      "D": "They were more expensive."
     },
-    {
-        "question": "In birds, what is the sex chromosome composition of males and females?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Males: ZZ; Females: ZW",
-            "B": "Males: XY; Females: XX",
-            "C": "Males: ZW; Females: ZZ",
-            "D": "Males: XX; Females: XY"
-        },
-        "correct_option": "A",
-        "explanation": "In birds and Lepidoptera, males are homogametic (ZZ) and females are heterogametic (ZW).",
-        "hint": "This is the opposite of the XY system in mammals."
+    "correct_option": "C",
+    "explanation": "Transistors made computers smaller, faster, cheaper, and more reliable than vacuum tube-based computers.",
+    "hint": "This is stated in the 'Overview' of the Second Generation."
+  },
+  {
+    "question": "Which generation is associated with the emergence of personal computers (PCs)?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Second Generation",
+      "B": "Third Generation",
+      "C": "Fourth Generation",
+      "D": "Fifth Generation"
     },
-    {
-        "question": "Which of the following correctly describes the preparatory steps before meiosis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "They are completely different from the mitotic interphase.",
-            "B": "They are identical in pattern and name to the interphase of the mitotic cell cycle.",
-            "C": "There is no preparatory phase for meiosis.",
-            "D": "Only the S phase occurs before meiosis."
-        },
-        "correct_option": "B",
-        "explanation": "The preparatory steps that lead up to meiosis are identical in pattern and name (G1, S, G2) to the interphase of the mitotic cell cycle.",
-        "hint": "Both processes require cell growth and DNA replication before division can begin."
+    "correct_option": "C",
+    "explanation": "The Fourth Generation was marked by the emergence of microcomputers (PCs).",
+    "hint": "This is listed as a 'Key Development' for the Fourth Generation."
+  },
+  {
+    "question": "Punched cards were first introduced by __________.",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Second Generation",
+      "B": "First Generation",
+      "C": "Third Generation",
+      "D": "Fourth Generation"
     },
-    {
-        "question": "What is the significance of meiosis producing haploid gametes?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "It allows for unlimited cell growth.",
-            "B": "It ensures the zygote formed at fertilization has the correct diploid chromosome number.",
-            "C": "It makes cells more resistant to disease.",
-            "D": "It prevents any genetic variation."
-        },
-        "correct_option": "B",
-        "explanation": "Meiosis reduces the chromosome number to haploid in gametes. When two haploid gametes fuse during fertilization, the resulting zygote has the correct diploid number.",
-        "hint": "This maintains a constant chromosome number from generation to generation."
+    "correct_option": "B",
+    "explanation": "First Generation computers used punched cards and paper tapes for input and output.",
+    "hint": "This is a characteristic of the First Generation."
+  },
+  {
+    "question": "The third generation of computers were built using which technology?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Vacuum Tubes",
+      "B": "Transistors",
+      "C": "Integrated Circuits (ICs)",
+      "D": "Microprocessors"
     },
-    {
-        "question": "During which phase of meiosis I do homologous chromosomes pair up in a process called synapsis?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Leptotene",
-            "B": "Zygotene",
-            "C": "Pachytene",
-            "D": "Diplotene"
-        },
-        "correct_option": "B",
-        "explanation": "During the zygotene sub-stage of Prophase I, homologous chromosomes become closely associated (synapsis) to form bivalents.",
-        "hint": "The names of the sub-stages are in order: Lepto-, Zygo-, Pachy-, Diplo-, Diakinesis."
+    "correct_option": "C",
+    "explanation": "The Third Generation introduced Integrated Circuits (ICs).",
+    "hint": "The technology for each generation is clearly listed in the classification."
+  },
+  {
+    "question": "The internal storage of first generation computers was made of __________.",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "RAM and ROM",
+      "B": "Magnetic Tape",
+      "C": "Magnetic Drum",
+      "D": "Floppy Disk"
     },
-    {
-        "question": "What is the term for the structure formed by paired homologous chromosomes during Prophase I?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Centromere",
-            "B": "Chiasma",
-            "C": "Bivalent or tetrad",
-            "D": "Spindle fiber"
-        },
-        "correct_option": "C",
-        "explanation": "A pair of synapsed homologous chromosomes is called a bivalent. Because each chromosome has two sister chromatids, a bivalent consists of four chromatids and is also called a tetrad.",
-        "hint": "It is a group of four chromatids."
+    "correct_option": "C",
+    "explanation": "First Generation computers used magnetic drums for internal storage (memory).",
+    "hint": "Review the 'Characteristics' or 'Main Features' of the First Generation."
+  },
+  {
+    "question": "The memory of second generation computers was built using __________.",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Magnetic Drum",
+      "B": "PROM and DRAM",
+      "C": "RAM and ROM",
+      "D": "EEPROM and SIMM"
     },
-    {
-        "question": "Cancers can result from which of the following cellular malfunctions?",
-        "topic": "CELL CYCLE",
-        "options": {
-            "A": "Controlled mitosis of normal cells.",
-            "B": "Uncontrolled mitosis of abnormal cells.",
-            "C": "Proper functioning of the G0 phase.",
-            "D": "Accurate DNA replication during S phase."
-        },
-        "correct_option": "B",
-        "explanation": "Cancers result from uncontrolled mitosis of abnormal cells.",
-        "hint": "This is a breakdown in the normal regulation of the cell cycle."
-    }
+    "correct_option": "C",
+    "explanation": "The 'Main Features' for the Second Generation list 'Main Memory' as 'RAM and ROM'.",
+    "hint": "Check the 'Main Features' section for the Second Generation."
+  },
+  {
+    "question": "The first computer made available for commercial use was __________.",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "ENIAC",
+      "B": "EDVAC",
+      "C": "UNIVAC I",
+      "D": "IBM 1400"
+    },
+    "correct_option": "C",
+    "explanation": "The UNIVAC I was the first commercial computer, delivered to the U.S. Census Bureau in 1951.",
+    "hint": "This fact is highlighted in a note about First Generation computers."
+  },
+  {
+    "question": "Fifth generation computers make use of __________.",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Transistors",
+      "B": "Artificial Intelligence",
+      "C": "Vacuum Tubes",
+      "D": "Punched Cards"
+    },
+    "correct_option": "B",
+    "explanation": "The Fifth Generation is characterized by the use of Artificial Intelligence (AI).",
+    "hint": "This is the defining technology of the Fifth Generation."
+  },
+  {
+    "question": "What does ENIAC stand for?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Electronic Numerical Integrator and Computer",
+      "B": "Electronic Networked Integrated Arithmetic Calculator",
+      "C": "Enhanced Numerical Integration and Computation",
+      "D": "Electronic Numeric Information Automatic Computer"
+    },
+    "correct_option": "A",
+    "explanation": "ENIAC stands for Electronic Numerical Integrator and Computer.",
+    "hint": "The full form is provided in the list of examples for the First Generation."
+  },
+  {
+    "question": "What does EDVAC stand for?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Electronic Digital Variable Automatic Computer",
+      "B": "Electronic Discrete Variable Automatic Computer",
+      "C": "Enhanced Data Variable Arithmetic Calculator",
+      "D": "Electronic Data Verification and Computation"
+    },
+    "correct_option": "B",
+    "explanation": "EDVAC stands for Electronic Discrete Variable Automatic Computer.",
+    "hint": "The full form is implied by its name listed as an example of a First Generation computer."
+  },
+  {
+    "question": "What does UNIVAC stand for?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "Universal Automatic Computer",
+      "B": "United Networked Integrated Variable Arithmetic Calculator",
+      "C": "Universal Numerical Integration and Computation",
+      "D": "Unified Variable Automatic Computer"
+    },
+    "correct_option": "A",
+    "explanation": "UNIVAC stands for Universal Automatic Computer.",
+    "hint": "The full form is provided in the list of examples for the First Generation."
+  },
+  {
+    "question": "According to the summary table, which generation had the fastest speed designation?",
+    "topic": "EVOLUTION OF COMPUTERS",
+    "options": {
+      "A": "First",
+      "B": "Third",
+      "C": "Fourth",
+      "D": "Fifth"
+    },
+    "correct_option": "D",
+    "explanation": "The 'Generation of Computers at a Glance' table lists the speed for the Fifth Generation as 'Extremely Fast'.",
+    "hint": "Compare the 'Speed' column in the provided summary table."
+  }
 ]
 }

@@ -1,0 +1,411 @@
+{% extends 'base.html' %}
+{% block title %}Your Progress - LagSciPrep{% endblock %}
+{% block og_title %}Your Progress - LagSciPrep{% endblock %}
+{% block og_description %}Track your CBT practice progress, scores, strengths, and areas for improvement{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">Your CBT Progress</h2>
+            <p class="text-muted">Track your performance and identify areas for improvement</p>
+        </div>
+        <div class="bg-primary text-white rounded-pill px-4 py-2">
+            <small>Overall Average</small>
+            <h3 class="mb-0">{{ avg_percent|floatformat:1 }}%</h3>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mb-5">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-file-alt text-primary fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title text-muted mb-1">Exams Taken</h5>
+                            <h2 class="fw-bold mb-0">{{ total_exams }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-success bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-chart-line text-success fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title text-muted mb-1">Best Subject</h5>
+                            <h2 class="fw-bold mb-0">
+                                {% if strengths.0 %}
+                                    {{ strengths.0.item.name|truncatechars:15 }}
+                                {% else %}
+                                    --
+                                {% endif %}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-warning bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-exclamation-triangle text-warning fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title text-muted mb-1">Needs Focus</h5>
+                            <h2 class="fw-bold mb-0">
+                                {% if weaknesses.0 %}
+                                    {{ weaknesses.0.item.name|truncatechars:15 }}
+                                {% else %}
+                                    --
+                                {% endif %}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-info bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-book text-info fa-lg"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title text-muted mb-1">Courses Covered</h5>
+                            <h2 class="fw-bold mb-0">{{ course_stats|length }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strengths & Weaknesses Section -->
+    <div class="row mb-5">
+        <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-success text-white border-0">
+                    <h5 class="mb-0"><i class="fas fa-trophy me-2"></i>Your Strengths</h5>
+                </div>
+                <div class="card-body">
+                    {% if strengths %}
+                    <div class="list-group list-group-flush">
+                        {% for s in strengths %}
+                        <div class="list-group-item border-0 px-0">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <h6 class="mb-0">{{ s.item.name }}</h6>
+                                <span class="badge bg-success">{{ s.avg|floatformat:1 }}%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" role="progressbar" 
+                                     style="width: {{ s.avg }}%" 
+                                     aria-valuenow="{{ s.avg }}" 
+                                     aria-valuemin="0" 
+                                     aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-chart-bar fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">No strengths identified yet.<br>Take more exams to see your strengths!</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-warning text-white border-0">
+                    <h5 class="mb-0"><i class="fas fa-lightbulb me-2"></i>Areas for Improvement</h5>
+                </div>
+                <div class="card-body">
+                    {% if weaknesses %}
+                    <div class="list-group list-group-flush">
+                        {% for w in weaknesses %}
+                        <div class="list-group-item border-0 px-0">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <h6 class="mb-0">{{ w.item.name }}</h6>
+                                <span class="badge bg-warning">{{ w.avg|floatformat:1 }}%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-warning" role="progressbar" 
+                                     style="width: {{ w.avg }}%" 
+                                     aria-valuenow="{{ w.avg }}" 
+                                     aria-valuemin="0" 
+                                     aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-lightbulb fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">No weaknesses identified yet.<br>Keep practicing to identify areas to improve!</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Charts Section -->
+    <div class="row mb-5">
+        <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-primary text-white border-0">
+                    <h5 class="mb-0"><i class="fas fa-graduation-cap me-2"></i>Performance by Course</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th class="text-center">Exams</th>
+                                    <th class="text-center">Average</th>
+                                    <th class="text-center">Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for course, stats in course_stats.items %}
+                                <tr>
+                                    <td>
+                                        <i class="fas fa-book text-primary me-2"></i>
+                                        {{ course.name }}
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-secondary">{{ stats.total }}</span>
+                                    </td>
+                                    <td class="text-center fw-bold">{{ stats.avg|floatformat:1 }}%</td>
+                                    <td>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" 
+                                                 style="width: {{ stats.avg }}%" 
+                                                 aria-valuenow="{{ stats.avg }}" 
+                                                 aria-valuemin="0" 
+                                                 aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-3">
+                                        <i class="fas fa-book fa-2x text-muted mb-2"></i>
+                                        <p class="text-muted mb-0">No course exams taken yet</p>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-info text-white border-0">
+                    <h5 class="mb-0"><i class="fas fa-tags me-2"></i>Performance by Topic</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th class="text-center">Exams</th>
+                                    <th class="text-center">Average</th>
+                                    <th class="text-center">Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for topic, stats in topic_stats.items %}
+                                <tr>
+                                    <td>
+                                        <i class="fas fa-tag text-info me-2"></i>
+                                        {{ topic.name }}
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-secondary">{{ stats.total }}</span>
+                                    </td>
+                                    <td class="text-center fw-bold">{{ stats.avg|floatformat:1 }}%</td>
+                                    <td>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-info" role="progressbar" 
+                                                 style="width: {{ stats.avg }}%" 
+                                                 aria-valuenow="{{ stats.avg }}" 
+                                                 aria-valuemin="0" 
+                                                 aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-3">
+                                        <i class="fas fa-tags fa-2x text-muted mb-2"></i>
+                                        <p class="text-muted mb-0">No topic exams taken yet</p>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Exams Section -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-dark text-white border-0">
+            <h5 class="mb-0"><i class="fas fa-history me-2"></i>Recent Exam Results</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Date & Time</th>
+                            <th>Course/Topic</th>
+                            <th>Score</th>
+                            <th>Percentage</th>
+                            <th>Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in results %}
+                        <tr>
+                            <td>
+                                <small class="text-muted">{{ item.result.date_taken|date:"M d, Y" }}</small><br>
+                                <small>{{ item.result.date_taken|date:"H:i" }}</small>
+                            </td>
+                            <td>
+                                {% if item.result.course %}
+                                    <i class="fas fa-book text-primary me-2"></i>
+                                    {{ item.result.course.name }}
+                                {% elif item.result.topic %}
+                                    <i class="fas fa-tag text-info me-2"></i>
+                                    {{ item.result.topic.name }}
+                                {% else %}
+                                    <i class="fas fa-question-circle me-2"></i>
+                                    Unknown
+                                {% endif %}
+                            </td>
+                            <td>
+                                <span class="fw-bold">{{ item.result.score }}/{{ item.result.total_questions }}</span>
+                            </td>
+                            <td>
+                                {% with percentage=item.percentage %}
+                                    {% if percentage >= 70 %}
+                                        <span class="badge bg-success">{{ percentage|floatformat:1 }}%</span>
+                                    {% elif percentage >= 50 %}
+                                        <span class="badge bg-warning">{{ percentage|floatformat:1 }}%</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">{{ percentage|floatformat:1 }}%</span>
+                                    {% endif %}
+                                {% endwith %}
+                            </td>
+                            <td>
+                                {% with percentage=item.percentage %}
+                                    {% if percentage >= 70 %}
+                                        <i class="fas fa-smile text-success"></i> Excellent
+                                    {% elif percentage >= 50 %}
+                                        <i class="fas fa-meh text-warning"></i> Good
+                                    {% else %}
+                                        <i class="fas fa-frown text-danger"></i> Needs Work
+                                    {% endif %}
+                                {% endwith %}
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center py-4">
+                                <i class="fas fa-clipboard-list fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">No exams taken yet</h5>
+                                <p class="text-muted mb-0">Start taking exams to track your progress</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Note -->
+    <div class="mt-4 text-center">
+        <small class="text-muted">
+            <i class="fas fa-info-circle me-1"></i>
+            Progress data is updated after each completed exam. Keep practicing to improve your scores!
+        </small>
+    </div>
+</div>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    .card {
+        border-radius: 12px;
+        transition: transform 0.2s;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .card-header {
+        border-radius: 12px 12px 0 0 !important;
+    }
+    
+    .progress {
+        border-radius: 10px;
+    }
+    
+    .progress-bar {
+        border-radius: 10px;
+    }
+    
+    .badge {
+        font-size: 0.85em;
+        padding: 0.4em 0.8em;
+    }
+    
+    .table th {
+        font-weight: 600;
+        color: #495057;
+        border-top: none;
+    }
+    
+    .table td {
+        vertical-align: middle;
+    }
+    
+    .list-group-item {
+        background-color: transparent;
+    }
+</style>
+{% endblock %}
