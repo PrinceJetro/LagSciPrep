@@ -25,20 +25,35 @@ class CBTForm(forms.Form):
 
 
 class StudentRegistrationForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-    confirm_password = forms.CharField(widget=forms.PasswordInput)
+    password1 = forms.CharField(
+        label='Password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'})
+    )
+    password2 = forms.CharField(
+        label='Confirm Password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'})
+    )
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password']
+        fields = ['username', 'email']
 
     def clean(self):
         cleaned_data = super().clean()
-        password = cleaned_data.get('password')
-        confirm_password = cleaned_data.get('confirm_password')
-        if password != confirm_password:
+        password1 = cleaned_data.get('password1')
+        password2 = cleaned_data.get('password2')
+        if password1 and password2 and password1 != password2:
             raise forms.ValidationError("Passwords do not match")
         return cleaned_data
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.username = user.username.lower()
+        user.email = user.email.lower()
+        user.set_password(self.cleaned_data['password1'])
+        if commit:
+            user.save()
+        return user
 
 
 class StudentProfileForm(forms.ModelForm):
@@ -467,14 +482,17 @@ def register(request):
         user_form = StudentRegistrationForm(request.POST)
         profile_form = StudentProfileForm(request.POST)
         if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save(commit=False)
-            user.set_password(user_form.cleaned_data['password'])
-            user.save()
+            print("Here")
+            user = user_form.save()
             student = profile_form.save(commit=False)
             student.user = user
             student.save()
             messages.success(request, 'Registration successful. You can now log in.')
-            return redirect('login')
+            # login the user directly and redirect to dashboard page
+            login(request, user)
+            return redirect('home')
+
+            
     else:
         user_form = StudentRegistrationForm()
         profile_form = StudentProfileForm()
@@ -483,16 +501,16 @@ def register(request):
 
 def custom_login(request):
     if request.method == 'POST':
-        username_or_email = request.POST.get('username')
+        username_or_email = request.POST.get('username', '').lower()
         password = request.POST.get('password')
         user = None
         try:
-            # Try to get user by username
-            user = User.objects.get(username=username_or_email)
+            # Try to get user by username (case-insensitive)
+            user = User.objects.get(username__iexact=username_or_email)
         except User.DoesNotExist:
             try:
-                # Try to get user by email
-                user = User.objects.get(email=username_or_email)
+                # Try to get user by email (case-insensitive)
+                user = User.objects.get(email__iexact=username_or_email)
             except User.DoesNotExist:
                 pass
         if user and user.check_password(password):

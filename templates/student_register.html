@@ -2,12 +2,470 @@
 {% block title %}Student Registration - LagSciPrep{% endblock %}
 {% block og_title %}Student Registration - LagSciPrep{% endblock %}
 {% block og_description %}Register as a student on LagSciPrep to start your CBT practice journey{% endblock %}
+
 {% block content %}
-<h2>Student Registration</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {{ profile_form.as_p }}
-  <button type="submit" class="btn btn-primary">Register</button>
-</form>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-10">
+            <!-- Registration Card -->
+            <div class="card registration-card border-0 shadow-lg overflow-hidden">
+                <!-- Card Header -->
+                <div class="card-header-gradient py-5">
+                    <div class="text-center">
+                        <div class="registration-icon-wrapper mx-auto mb-3">
+                            <i class="fas fa-user-plus text-white fa-2x"></i>
+                        </div>
+                        <h1 class="h2 fw-bold text-white mb-2">Join LagSciPrep</h1>
+                        <p class="text-white-50 mb-0">Start your journey to science excellence</p>
+                    </div>
+                </div>
+                
+                <!-- Card Body -->
+                <div class="card-body p-4 p-md-5">
+                    <div class="row">
+                        <!-- Left Column - Form -->
+                        <div>
+                            <form method="post" class="needs-validation" novalidate>
+                                {% csrf_token %}
+                                
+                                <!-- Form Header -->
+                                <div class="mb-4">
+                                    <h4 class="fw-bold text-dark mb-2">
+                                        <i class="fas fa-user-graduate text-primary me-2"></i>
+                                        Student Registration
+                                    </h4>
+                                    <p class="text-muted">Fill in your details to create your account</p>
+                                </div>
+                                
+                                <!-- Personal Information Section -->
+                                <div class="section-header mb-3">
+                                    <h5 class="fw-semibold text-dark mb-0">
+                                        <i class="fas fa-id-card text-primary me-2"></i>
+                                        Personal Information
+                                    </h5>
+                                    <div class="section-line"></div>
+                                </div>
+                                
+                                <div class="row g-3 mb-4">
+                                    <!-- Username -->
+                                    <div class="col-md-6">
+                                        <label for="id_username" class="form-label fw-semibold">
+                                            <i class="fas fa-user me-2 text-primary"></i>Username *
+                                        </label>
+                                        {{ form.username }}
+                                        {% if form.username.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.username.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}                                      
+                                    </div>
+                                    
+                                    <!-- Email -->
+                                    <div class="col-md-6">
+                                        <label for="id_email" class="form-label fw-semibold">
+                                            <i class="fas fa-envelope me-2 text-primary"></i>Email Address *
+                                        </label>
+                                        {{ form.email }}
+                                        {% if form.email.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.email.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                
+                                <!-- Password Section -->
+                                <div class="section-header mb-3">
+                                    <h5 class="fw-semibold text-dark mb-0">
+                                        <i class="fas fa-lock text-primary me-2"></i>
+                                        Security Information
+                                    </h5>
+                                    <div class="section-line"></div>
+                                </div>
+                                
+                                <div class="row g-3 mb-4">
+                                    <!-- Password -->
+                                    <div class="col-md-6">
+                                        <label for="id_password1" class="form-label fw-semibold">
+                                            <i class="fas fa-key me-2 text-primary"></i>Password *
+                                        </label>
+                                        <div class="input-group">
+                                            {{ form.password1 }}
+                                            <button class="btn btn-outline-secondary password-toggle" 
+                                                    type="button" 
+                                                    data-target="id_password1">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        {% if form.password1.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.password1.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                    
+                                    <!-- Confirm Password -->
+                                    <div class="col-md-6">
+                                        <label for="id_password2" class="form-label fw-semibold">
+                                            <i class="fas fa-key me-2 text-primary"></i>Confirm Password *
+                                        </label>
+                                        <div class="input-group">
+                                            {{ form.password2 }}
+                                            <button class="btn btn-outline-secondary password-toggle" 
+                                                    type="button" 
+                                                    data-target="id_password2">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        {% if form.password2.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.password2.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                        
+                                </div>
+                                
+                                <!-- Academic Information -->
+                                <div class="section-header mb-3">
+                                    <h5 class="fw-semibold text-dark mb-0">
+                                        <i class="fas fa-graduation-cap text-primary me-2"></i>
+                                        Academic Information
+                                    </h5>
+                                    <div class="section-line"></div>
+                                </div>
+                                
+                                <div class="row g-3 mb-4">
+                                    <!-- Department -->
+                                    <div class="col-12">
+                                        <label for="id_department" class="form-label fw-semibold">
+                                            <i class="fas fa-building me-2 text-primary"></i>Department *
+                                        </label>
+                                        {{ profile_form.department }}
+                                        {% if profile_form.department.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in profile_form.department.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary-gradient btn-lg fw-bold py-3">
+                                        <i class="fas fa-user-plus me-2"></i>Create Student Account
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Card Footer -->
+                <div class="card-footer bg-light text-center py-3">
+                    <small class="text-muted">
+                        <i class="fas fa-shield-alt me-1"></i>
+                        Your data is protected with 256-bit SSL encryption
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        --warning-gradient: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+        --info-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    }
+
+    .registration-card {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .card-header-gradient {
+        background: var(--primary-gradient);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-header-gradient::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+        animation: shine 3s infinite;
+    }
+
+    .registration-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary-gradient {
+        background: var(--primary-gradient);
+        border: none;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary-gradient:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section-line {
+        flex-grow: 1;
+        height: 2px;
+        background: linear-gradient(90deg, #667eea, transparent);
+    }
+
+    .form-floating {
+        position: relative;
+    }
+
+    .form-floating .form-control {
+        height: 56px;
+        padding: 16px;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        background: #f8f9fa;
+        transition: all 0.3s ease;
+    }
+
+    .form-floating .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        background: white;
+    }
+
+    .form-floating label {
+        padding: 16px;
+        color: #6c757d;
+        font-weight: 500;
+    }
+
+    .form-floating .form-control:focus ~ label,
+    .form-floating .form-control:not(:placeholder-shown) ~ label {
+        transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+        background: white;
+        padding: 0 8px;
+        color: #667eea;
+    }
+
+    .password-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: transparent;
+        border: none;
+    }
+
+    .password-requirements {
+        border-radius: 12px;
+    }
+
+    .password-requirements li {
+        transition: all 0.3s ease;
+    }
+
+    .password-requirements li:hover {
+        transform: translateX(5px);
+    }
+
+    .benefits-card {
+        border-radius: 16px;
+    }
+
+    .benefit-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .benefit-item {
+        transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .form-check-input {
+        width: 1.2em;
+        height: 1.2em;
+        margin-top: 0.2em;
+        border: 2px solid #dee2e6;
+    }
+
+    .form-check-input:checked {
+        background-color: #667eea;
+        border-color: #667eea;
+    }
+
+    .form-check-input:focus {
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+    }
+
+    /* Error styling */
+    .is-invalid {
+        border-color: #dc3545 !important;
+    }
+
+    .invalid-feedback {
+        font-size: 0.875em;
+        margin-top: 0.25rem;
+    }
+
+    @keyframes shine {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .section-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .section-line {
+            width: 100%;
+            margin-top: 5px;
+        }
+        
+        .form-floating .form-control {
+            height: 50px;
+        }
+    }
+</style>
+
+<script>
+    // Password toggle functionality
+    document.querySelectorAll('.password-toggle').forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const passwordInput = document.getElementById(targetId);
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+                this.setAttribute('aria-label', 'Hide password');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+                this.setAttribute('aria-label', 'Show password');
+            }
+        });
+    });
+
+    // Real-time password validation
+    const password1 = document.getElementById('id_password1');
+    const password2 = document.getElementById('id_password2');
+    
+    function validatePasswords() {
+        if (password1.value && password2.value) {
+            if (password1.value !== password2.value) {
+                password2.classList.add('is-invalid');
+                password2.nextElementSibling.innerHTML = 
+                    '<i class="fas fa-exclamation-circle me-1"></i>';
+            } else {
+                password2.classList.remove('is-invalid');
+                password2.classList.add('is-valid');
+            }
+        }
+    }
+    
+    password1.addEventListener('input', validatePasswords);
+    password2.addEventListener('input', validatePasswords);
+
+    // Form validation
+    (function() {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+
+    // Add CSS classes to form inputs
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            if (input.id && input.id.startsWith('id_')) {
+                input.classList.add('form-control');
+                
+                // Add placeholder if needed
+                if (!input.placeholder && input.id.includes('username')) {
+                    input.placeholder = 'Enter your username';
+                } else if (!input.placeholder && input.id.includes('email')) {
+                    input.placeholder = 'you@example.com';
+                } else if (!input.placeholder && input.id.includes('password')) {
+                    input.placeholder = '••••••••';
+                } else if (!input.placeholder && input.id.includes('department')) {
+                    input.placeholder = 'Select your department';
+                }
+            }
+        });
+        
+        // Style select inputs
+        const selects = document.querySelectorAll('select');
+        selects.forEach(select => {
+            select.classList.add('form-select');
+        });
+        
+        // Auto-focus first input
+        if (inputs.length > 0) {
+            inputs[0].focus();
+        }
+    });
+</script>
 {% endblock %}
