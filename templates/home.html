@@ -13,7 +13,7 @@
                     <i class="fas fa-user-graduate fa-lg"></i>
                 </div>
                 <div>
-                    <h1 class="display-6 fw-bold text-dark mb-1">Welcome back, {{ user.get_full_name|default:user.username }}!</h1>
+                    <h1 class="display-6 fw-bold text-dark mb-1">Welcome back, {{ user.get_full_name|default:user.username|title }}!</h1>
                     <p class="lead text-muted">Ready to ace your next science assessment?</p>
                 </div>
             </div>
@@ -152,6 +152,23 @@
                 </div>
             </div>
         </div>
+
+            <!-- WhatsApp Community -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white border-0 py-3">
+                    <h4 class="fw-bold mb-0 text-dark">
+                        <i class="fab fa-whatsapp text-success me-2"></i>Join Our WhatsApp Community
+                    </h4>
+                </div>
+                <div class="card-body p-3">
+                    <p class="text-muted small mb-3">Stay updated, ask questions, and connect with other learners.</p>
+                    <div class="d-grid">
+                        <a href="https://whatsapp.com/channel/0029VbBtigpJZg43t3dggG03" target="_blank" rel="noopener noreferrer" class="btn btn-success-gradient btn-sm">
+                            <i class="fab fa-whatsapp me-2"></i>Join WhatsApp Channel
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         <!-- Sidebar -->
         <div class="col-lg-4">
@@ -300,6 +317,13 @@
 
     .btn-primary-gradient {
         background: var(--primary-gradient);
+        border: none;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn-success-gradient {
+        background: var(--success-gradient);
         border: none;
         color: white;
         transition: all 0.3s ease;

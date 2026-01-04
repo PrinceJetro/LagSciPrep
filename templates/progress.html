@@ -305,7 +305,7 @@
                             <td>
                                 {% if item.result.course %}
                                     <i class="fas fa-book text-primary me-2"></i>
-                                    {{ item.result.course.name }}
+                                    {{ item.result.course.name }} -- {{ item.result.topic.name }}
                                 {% elif item.result.topic %}
                                     <i class="fas fa-tag text-info me-2"></i>
                                     {{ item.result.topic.name }}
