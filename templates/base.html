@@ -408,6 +408,14 @@
                     </li>
                 </ul>
                 
+                <!-- Search Form -->
+                <form class="d-flex me-3" action="{% url 'search' %}" method="get">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search topics, questions..." aria-label="Search" value="{{ request.GET.q }}">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
                 <div class="user-profile">
                     {% if user.is_authenticated %}
                         <img src="https://ui-avatars.com/api/?name={{ user.username }}&background=4a6bff&color=fff&bold=true&size=128" 

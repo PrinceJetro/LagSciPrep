@@ -592,6 +592,60 @@ def progress(request):
     })
 
 
+
+from django.http import JsonResponse
+
+def search_json(request):
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return JsonResponse({'results': []})
+    
+    # Search in Topics only
+    topics = Topic.objects.filter(
+        Q(name__icontains=query) | Q(content__icontains=query)
+    ).values('id', 'name', 'content', 'course__name')
+    
+    results = {
+        'topics': list(topics),
+    }
+    
+    return JsonResponse({'query': query, 'results': results})
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return render(request, 'search_results.html', {'query': query, 'results': []})
+    
+    # Search in Courses
+    courses = Course.objects.filter(name__icontains=query)
+    
+    # Search in Topics
+    topics = Topic.objects.filter(
+        Q(name__icontains=query) | Q(content__icontains=query)
+    )
+    
+    # Search in Questions
+    questions = PastQuestionsObj.objects.filter(
+        Q(question_text__icontains=query) |
+        Q(option_a__icontains=query) |
+        Q(option_b__icontains=query) |
+        Q(option_c__icontains=query) |
+        Q(option_d__icontains=query) |
+        Q(explanation__icontains=query) |
+        Q(hint__icontains=query)
+    )
+    
+    results = {
+        'courses': courses,
+        'topics': topics,
+        'questions': questions,
+    }
+    
+    return render(request, 'search_results.html', {
+        'query': query,
+        'results': results,
+    })
+
+
+
 """
 from main.models import Course, Topic, PastQuestionsObj, PastQuestionsTheory
 
@@ -831,6 +885,65 @@ PastQuestionsTheory.objects.create(
 
 
 
+from django.db.models import Q
+
+def search(request):
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return render(request, 'search_results.html', {'query': query, 'results': []})
+    
+    # Search in Courses
+    courses = Course.objects.filter(name__icontains=query)
+    
+    # Search in Topics
+    topics = Topic.objects.filter(
+        Q(name__icontains=query) | Q(content__icontains=query)
+    )
+    
+    # Search in Questions
+    questions = PastQuestionsObj.objects.filter(
+        Q(question_text__icontains=query) |
+        Q(option_a__icontains=query) |
+        Q(option_b__icontains=query) |
+        Q(option_c__icontains=query) |
+        Q(option_d__icontains=query) |
+        Q(explanation__icontains=query) |
+        Q(hint__icontains=query)
+    )
+    
+    results = {
+        'courses': courses,
+        'topics': topics,
+        'questions': questions,
+    }
+    
+    return render(request, 'search_results.html', {
+        'query': query,
+        'results': results,
+    })
+
+from django.http import JsonResponse
+
+def search_json(request):
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return JsonResponse({'results': []})
+    
+    
+    # Search in Topics
+    topics = Topic.objects.filter(
+        Q(name__icontains=query) | Q(content__icontains=query)
+    ).values('id', 'name', 'course__name', "content")
+
+    
+    results = {
+        'topics': list(topics),
+    }
+    
+    return JsonResponse({'query': query, 'results': results})
+
+
+
 # Act as an expert educator and instructional designer. I am going to provide you with lecture notes from a PowerPoint presentation. Your task is to generate as many multiple-choice questions as possible (aiming for 100) based strictly and exclusively on the content of the provided text.
 
 # Requirements:
@@ -844,4 +957,3 @@ PastQuestionsTheory.objects.create(
 # Volume: Generate as many unique questions as the text allows, up to 100. If the text is exhausted before 100, provide as many as are logically possible.
 
 # Here is the lecture text: 
-

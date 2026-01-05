@@ -32,6 +32,8 @@ urlpatterns = [
     path('topic-cbt/data/', views.topic_cbt_data, name='topic_cbt_data'),
     path('topic-cbt/submit-answers/', views.topic_cbt_submit_answers, name='topic_cbt_submit_answers'),
     path('topic-cbt/submit/', views.topic_cbt_submit, name='topic_cbt_submit'),
+    path('search/', views.search, name='search'),
+    path('search/json/', views.search_json, name='search_json'),
 
     
 ]

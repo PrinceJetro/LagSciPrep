@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results - {{ query }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-search"></i>
+                    Search Results for "{{ query }}"
+                </h4>
+            </div>
+            <div class="card-body">
+                {% if results.courses or results.topics or results.questions %}
+                    <!-- Courses -->
+                    {% if results.courses %}
+                    <h5 class="text-primary mb-3">
+                        <i class="fas fa-book"></i>
+                        Courses ({{ results.courses|length }})
+                    </h5>
+                    <div class="list-group mb-4">
+                        {% for course in results.courses %}
+                        <a href="{% url 'course_detail' course.id %}" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{ course.name }}</h5>
+                                <small>{{ course.objective_questions.count }} questions</small>
+                            </div>
+                            <p class="mb-1">Topics: {{ course.topics.all|join:", " }}</p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Topics -->
+                    {% if results.topics %}
+                    <h5 class="text-success mb-3">
+                        <i class="fas fa-topic"></i>
+                        Topics ({{ results.topics|length }})
+                    </h5>
+                    <div class="list-group mb-4">
+                        {% for topic in results.topics %}
+                        <a href="{% url 'topic_detail' topic.id %}" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{ topic.name }}</h5>
+                                <small>{{ topic.course.name }}</small>
+                            </div>
+                            <p class="mb-1">{{ topic.content|truncatechars:200|safe }}</p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Questions -->
+                    {% if results.questions %}
+                    <h5 class="text-warning mb-3">
+                        <i class="fas fa-question-circle"></i>
+                        Questions ({{ results.questions|length }})
+                    </h5>
+                    <div class="accordion" id="questionsAccordion">
+                        {% for question in results.questions %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading{{ question.id }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ question.id }}" aria-expanded="false" aria-controls="collapse{{ question.id }}">
+                                    <strong>{{ question.question_text|truncatechars:100|safe }}</strong>
+                                    <small class="ms-2 text-muted">({{ question.course.name }}{% if question.topic %} - {{ question.topic.name }}{% endif %})</small>
+                                </button>
+                            </h2>
+                            <div id="collapse{{ question.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ question.id }}" data-bs-parent="#questionsAccordion">
+                                <div class="accordion-body">
+                                    {% if question.option_a %}
+                                    <p><strong>Options:</strong></p>
+                                    <ul>
+                                        <li><strong>A:</strong> {{ question.option_a }}</li>
+                                        <li><strong>B:</strong> {{ question.option_b }}</li>
+                                        <li><strong>C:</strong> {{ question.option_c }}</li>
+                                        <li><strong>D:</strong> {{ question.option_d }}</li>
+                                    </ul>
+                                    <p><strong>Correct Answer:</strong> {{ question.correct_option }}</p>
+                                    {% endif %}
+                                    {% if question.explanation %}
+                                    <p><strong>Explanation:</strong> {{ question.explanation|safe }}</p>
+                                    {% endif %}
+                                    {% if question.hint %}
+                                    <p><strong>Hint:</strong> {{ question.hint|safe }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% else %}
+                    <div class="text-center py-5">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <h5 class="text-muted">No results found for "{{ query }}"</h5>
+                        <p class="text-muted">Try different keywords or check your spelling.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

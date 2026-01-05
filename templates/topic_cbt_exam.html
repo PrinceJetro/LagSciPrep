@@ -40,9 +40,12 @@
         <button type="button" class="btn btn-secondary me-2" id="topicBtn">
             <i class="fas fa-book me-2"></i>Topic Content
         </button>
-        <button type="button" class="btn btn-warning" id="viewTopicBtn">
-            <i class="fas fa-bookmark me-2"></i>Back to Topic
-        </button>
+        <div class="input-group" style="max-width: 300px;">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search topics, questions...">
+            <button class="btn btn-primary" type="button" id="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
     </div>
 
     <!-- Main Question Area -->
@@ -548,17 +551,72 @@ document.addEventListener('DOMContentLoaded', function() {
         topicModal.show();
     });
     
-    // Back to topic button
-    document.getElementById('viewTopicBtn')?.addEventListener('click', function() {
-        window.location.href = "{% url 'topic_detail' topic.id %}";
-    });
-    
     // Exit button
     document.getElementById('exitBtn')?.addEventListener('click', function() {
         const exitModal = new bootstrap.Modal(document.getElementById('exitModal'));
         exitModal.show();
     });
+
+    // Search functionality
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    function performSearch() {
+        const query = searchInput.value.trim();
+        if (!query) return;
+
+        fetch(`{% url 'search_json' %}?q=${encodeURIComponent(query)}`)
+        .then(res => res.json())
+        .then(data => {
+            displaySearchResults(data);
+        })
+        .catch(error => {
+            console.error('Search error:', error);
+            document.getElementById('searchResults').innerHTML = '<p class="text-danger">Error performing search.</p>';
+        });
+    }
+
+    searchBtn?.addEventListener('click', performSearch);
+    searchInput?.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
 });
+
+function displaySearchResults(data) {
+    const resultsDiv = document.getElementById('searchResults');
+    let html = '';
+
+    if (data.results.topics.length === 0) {
+        html = '<p class="text-muted">No topics found.</p>';
+    } else {
+        html += '<h6>Topics:</h6>';
+        data.results.topics.forEach(topic => {
+            const highlightedContent = highlightText(topic.content, data.query);
+            html += `
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h6 class="card-title">${topic.name} (${topic.course__name})</h6>
+                        <div class="topic-content">
+                            ${highlightedContent}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    resultsDiv.innerHTML = html;
+    const searchModal = new bootstrap.Modal(document.getElementById('searchModal'));
+    searchModal.show();
+}
+
+function highlightText(text, query) {
+    if (!query) return text;
+    const regex = new RegExp(`(${query})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+}
 
 // Auto-save indicator (cosmetic)
 setInterval(() => {
@@ -730,4 +788,20 @@ setInterval(() => {
     }
 }
 </style>
+
+<!-- Search Results Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="searchResults">
+                <!-- Results will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
