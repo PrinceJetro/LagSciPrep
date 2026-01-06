@@ -3,103 +3,411 @@
 {% block title %}Search Results - {{ query }}{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12">
-        <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white">
-                <h4 class="mb-0">
-                    <i class="fas fa-search"></i>
-                    Search Results for "{{ query }}"
-                </h4>
+<div class="container-fluid py-4">
+    <!-- Search Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div>
+                    <h1 class="h2 mb-1">
+                        <i class="fas fa-search me-2 text-primary"></i>
+                        Search Results
+                    </h1>
+                    <p class="text-muted mb-0">
+                        Showing results for "<span class="fw-semibold">{{ query }}</span>"
+                    </p>
+                </div>
+                <div class="text-muted">
+                    <small>
+                        {% if results.courses or results.topics or results.questions %}
+                            {% with total=results.courses|length|add:results.topics|length|add:results.questions|length %}
+                                {{ total }} result{{ total|pluralize }} found
+                            {% endwith %}
+                       
+                        {% endif %}
+                    </small>
+                </div>
             </div>
-            <div class="card-body">
-                {% if results.courses or results.topics or results.questions %}
-                    <!-- Courses -->
-                    {% if results.courses %}
-                    <h5 class="text-primary mb-3">
-                        <i class="fas fa-book"></i>
-                        Courses ({{ results.courses|length }})
-                    </h5>
-                    <div class="list-group mb-4">
+            
+            <!-- Search Stats -->
+            <div class="row g-3 mb-4">
+                {% if results.courses %}
+                <div class="col-md-4">
+                    <div class="card border-start border-primary border-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-book text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">{{ results.courses|length }}</h3>
+                                    <p class="text-muted mb-0">Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if results.topics %}
+                <div class="col-md-4">
+                    <div class="card border-start border-success border-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-folder text-success"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">{{ results.topics|length }}</h3>
+                                    <p class="text-muted mb-0">Topics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if results.questions %}
+                <div class="col-md-4">
+                    <div class="card border-start border-warning border-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-question-circle text-warning"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">{{ results.questions|length }}</h3>
+                                    <p class="text-muted mb-0">Questions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Content -->
+    <div class="row">
+        <div class="col-12">
+            {% if results.courses or results.topics or results.questions %}
+                <!-- Courses Section -->
+                {% if results.courses %}
+                <section class="mb-5">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h3 class="h4">
+                            <i class="fas fa-book text-primary me-2"></i>
+                            Courses
+                            <span class="badge bg-primary ms-2">{{ results.courses|length }}</span>
+                        </h3>
+                        <a href="#questions" class="btn btn-sm btn-outline-primary">
+                            Jump to Questions <i class="fas fa-arrow-down ms-1"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="row g-4">
                         {% for course in results.courses %}
-                        <a href="{% url 'course_detail' course.id %}" class="list-group-item list-group-item-action">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">{{ course.name }}</h5>
-                                <small>{{ course.objective_questions.count }} questions</small>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 hover-shadow">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                            <i class="fas fa-book-open text-primary"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">
+                                                <a href="{% url 'course_detail' course.id %}" class="text-decoration-none text-dark">
+                                                    {{ course.name }}
+                                                </a>
+                                            </h5>
+                                            <small class="text-muted">
+                                                {{ course.objective_questions.count }} questions
+                                            </small>
+                                        </div>
+                                    </div>
+                                    
+                                    {% if course.topics.all %}
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block mb-1">Topics in this course:</small>
+                                        <div class="d-flex flex-wrap gap-1">
+                                            {% for topic in course.topics.all|slice:":3" %}
+                                            <span class="badge bg-light text-dark border">
+                                                {{ topic.name }}
+                                            </span>
+                                            {% endfor %}
+                                            {% if course.topics.all|length > 3 %}
+                                            <span class="badge bg-light text-dark border">
+                                                +{{ course.topics.all|length|add:"-3" }} more
+                                            </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <a href="{% url 'course_detail' course.id %}" class="btn btn-sm btn-outline-primary">
+                                        View Course <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <p class="mb-1">Topics: {{ course.topics.all|join:", " }}</p>
-                        </a>
+                        </div>
                         {% endfor %}
                     </div>
-                    {% endif %}
+                </section>
+                <hr class="my-5">
+                {% endif %}
 
-                    <!-- Topics -->
-                    {% if results.topics %}
-                    <h5 class="text-success mb-3">
-                        <i class="fas fa-topic"></i>
-                        Topics ({{ results.topics|length }})
-                    </h5>
-                    <div class="list-group mb-4">
+                <!-- Topics Section -->
+                {% if results.topics %}
+                <section class="mb-5">
+                    <h3 class="h4 mb-3">
+                        <i class="fas fa-folder text-success me-2"></i>
+                        Topics
+                        <span class="badge bg-success ms-2">{{ results.topics|length }}</span>
+                    </h3>
+                    
+                    <div class="row g-4">
                         {% for topic in results.topics %}
-                        <a href="{% url 'topic_detail' topic.id %}" class="list-group-item list-group-item-action">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">{{ topic.name }}</h5>
-                                <small>{{ topic.course.name }}</small>
-                            </div>
-                            <p class="mb-1">{{ topic.content|truncatechars:200|safe }}</p>
-                        </a>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-
-                    <!-- Questions -->
-                    {% if results.questions %}
-                    <h5 class="text-warning mb-3">
-                        <i class="fas fa-question-circle"></i>
-                        Questions ({{ results.questions|length }})
-                    </h5>
-                    <div class="accordion" id="questionsAccordion">
-                        {% for question in results.questions %}
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading{{ question.id }}">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ question.id }}" aria-expanded="false" aria-controls="collapse{{ question.id }}">
-                                    <strong>{{ question.question_text|truncatechars:100|safe }}</strong>
-                                    <small class="ms-2 text-muted">({{ question.course.name }}{% if question.topic %} - {{ question.topic.name }}{% endif %})</small>
-                                </button>
-                            </h2>
-                            <div id="collapse{{ question.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ question.id }}" data-bs-parent="#questionsAccordion">
-                                <div class="accordion-body">
-                                    {% if question.option_a %}
-                                    <p><strong>Options:</strong></p>
-                                    <ul>
-                                        <li><strong>A:</strong> {{ question.option_a }}</li>
-                                        <li><strong>B:</strong> {{ question.option_b }}</li>
-                                        <li><strong>C:</strong> {{ question.option_c }}</li>
-                                        <li><strong>D:</strong> {{ question.option_d }}</li>
-                                    </ul>
-                                    <p><strong>Correct Answer:</strong> {{ question.correct_option }}</p>
-                                    {% endif %}
-                                    {% if question.explanation %}
-                                    <p><strong>Explanation:</strong> {{ question.explanation|safe }}</p>
-                                    {% endif %}
-                                    {% if question.hint %}
-                                    <p><strong>Hint:</strong> {{ question.hint|safe }}</p>
+                        <div class="col-md-6">
+                            <div class="card h-100 hover-shadow">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div>
+                                            <h5 class="card-title mb-1">
+                                                <a href="{% url 'topic_detail' topic.id %}" class="text-decoration-none text-dark">
+                                                    {{ topic.name }}
+                                                </a>
+                                            </h5>
+                                            <small class="text-muted">
+                                                <i class="fas fa-book me-1"></i>
+                                                {{ topic.course.name }}
+                                            </small>
+                                        </div>
+                                        <span class="badge bg-success bg-opacity-10 text-success">
+                                            Topic
+                                        </span>
+                                    </div>
+                                    
+                                    {% if topic.content %}
+                                    <div class="mt-3">
+                                        <p class="card-text text-muted small">
+                                            {{ topic.content|truncatechars:200|striptags|safe }}
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <a href="{% url 'topic_detail' topic.id %}" class="btn btn-sm btn-outline-success">
+                                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                                            </a>
+                                            <small class="text-muted">
+                                                {{ topic.content|wordcount }} words
+                                            </small>
+                                        </div>
+                                    </div>
                                     {% endif %}
                                 </div>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
-                    {% endif %}
-                {% else %}
-                    <div class="text-center py-5">
-                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
-                        <h5 class="text-muted">No results found for "{{ query }}"</h5>
-                        <p class="text-muted">Try different keywords or check your spelling.</p>
-                    </div>
+                </section>
+                <hr class="my-5">
                 {% endif %}
-            </div>
+
+                <!-- Questions Section -->
+                {% if results.questions %}
+                <section id="questions">
+                    <h3 class="h4 mb-3">
+                        <i class="fas fa-question-circle text-warning me-2"></i>
+                        Questions
+                        <span class="badge bg-warning ms-2">{{ results.questions|length }}</span>
+                    </h3>
+                    
+                    <div class="accordion" id="questionsAccordion">
+                        {% for question in results.questions %}
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h2 class="accordion-header" id="heading{{ question.id }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                        data-bs-target="#collapse{{ question.id }}" aria-expanded="false" 
+                                        aria-controls="collapse{{ question.id }}">
+                                    <div class="d-flex align-items-start w-100">
+                                        <div class="flex-shrink-0 me-3">
+                                            <span class="badge bg-warning bg-opacity-10 text-warning p-2 rounded-circle">
+                                                Q{{ forloop.counter }}
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1 text-start">
+                                            <div class="mb-1">
+                                                {{ question.question_text|truncatechars:150|safe }}
+                                            </div>
+                                            <div class="small text-muted">
+                                                <span class="badge bg-light text-dark border me-2">
+                                                    <i class="fas fa-book me-1"></i>
+                                                    {{ question.course.name }}
+                                                </span>
+                                                {% if question.topic %}
+                                                <span class="badge bg-light text-dark border">
+                                                    <i class="fas fa-folder me-1"></i>
+                                                    {{ question.topic.name }}
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <i class="fas fa-chevron-down accordion-arrow"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapse{{ question.id }}" class="accordion-collapse collapse" 
+                                 aria-labelledby="heading{{ question.id }}" data-bs-parent="#questionsAccordion">
+                                <div class="accordion-body pt-4">
+                                    {% if question.option_a %}
+                                    <div class="mb-4">
+                                        <h6 class="fw-semibold mb-3">Options:</h6>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <div class="p-3 rounded border {% if question.correct_option == 'A' %}border-success bg-success bg-opacity-5{% endif %}">
+                                                    <strong class="me-2">A:</strong>
+                                                    {{ question.option_a }}
+                                                    {% if question.correct_option == 'A' %}
+                                                    <span class="badge bg-success ms-2">
+                                                        <i class="fas fa-check"></i> Correct
+                                                    </span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="p-3 rounded border {% if question.correct_option == 'B' %}border-success bg-success bg-opacity-5{% endif %}">
+                                                    <strong class="me-2">B:</strong>
+                                                    {{ question.option_b }}
+                                                    {% if question.correct_option == 'B' %}
+                                                    <span class="badge bg-success ms-2">
+                                                        <i class="fas fa-check"></i> Correct
+                                                    </span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="p-3 rounded border {% if question.correct_option == 'C' %}border-success bg-success bg-opacity-5{% endif %}">
+                                                    <strong class="me-2">C:</strong>
+                                                    {{ question.option_c }}
+                                                    {% if question.correct_option == 'C' %}
+                                                    <span class="badge bg-success ms-2">
+                                                        <i class="fas fa-check"></i> Correct
+                                                    </span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="p-3 rounded border {% if question.correct_option == 'D' %}border-success bg-success bg-opacity-5{% endif %}">
+                                                    <strong class="me-2">D:</strong>
+                                                    {{ question.option_d }}
+                                                    {% if question.correct_option == 'D' %}
+                                                    <span class="badge bg-success ms-2">
+                                                        <i class="fas fa-check"></i> Correct
+                                                    </span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+
+                                    <div class="row">
+                                        {% if question.explanation %}
+                                        <div class="col-md-8">
+                                            <div class="p-3 bg-light rounded">
+                                                <h6 class="fw-semibold mb-2">
+                                                    <i class="fas fa-lightbulb text-info me-2"></i>
+                                                    Explanation
+                                                </h6>
+                                                <p class="mb-0">{{ question.explanation|safe }}</p>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        
+                                        <div class="col-md-4">
+                                            <div class="d-flex flex-column gap-3">
+                                                {% if question.hint %}
+                                                <div class="p-3 bg-warning bg-opacity-10 rounded border border-warning">
+                                                    <h6 class="fw-semibold mb-1">
+                                                        <i class="fas fa-bullseye text-warning me-1"></i>
+                                                        Hint
+                                                    </h6>
+                                                    <p class="small mb-0">{{ question.hint|safe }}</p>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                <div class="p-3 bg-primary bg-opacity-5 rounded border border-primary">
+                                                    <h6 class="fw-semibold mb-1">Quick Info</h6>
+                                                    <div class="small">
+                                                        <div class="mb-1">
+                                                            <strong>Answer:</strong> 
+                                                            <span class="badge bg-success">{{ question.correct_option }}</span>
+                                                        </div>
+                                                        <div>
+                                                            <strong>Type:</strong> 
+                                                            <span class="badge bg-info">Multiple Choice</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+            {% else %}
+                <!-- No Results -->
+                <div class="text-center py-5 my-5">
+                    <div class="mb-4">
+                        <i class="fas fa-search fa-4x text-muted opacity-25"></i>
+                    </div>
+                    <h3 class="h4 text-muted mb-3">No results found for "{{ query }}"</h3>
+                    <p class="text-muted mb-4">Try adjusting your search terms or browse by category</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="{% url 'course_list' %}" class="btn btn-outline-primary">
+                            <i class="fas fa-book me-1"></i>
+                            Browse Courses
+                        </a>
+                        <a href="{% url 'question_list' %}" class="btn btn-outline-warning">
+                            <i class="fas fa-question-circle me-1"></i>
+                            Browse Questions
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
+
+<style>
+    .hover-shadow {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hover-shadow:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: rgba(var(--bs-warning-rgb), 0.05);
+    }
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(var(--bs-warning-rgb), 0.5);
+    }
+    .accordion-arrow {
+        transition: transform 0.3s;
+    }
+    .accordion-button:not(.collapsed) .accordion-arrow {
+        transform: rotate(180deg);
+    }
+    .badge.border {
+        border: 1px solid #dee2e6 !important;
+    }
+</style>
 {% endblock %}
