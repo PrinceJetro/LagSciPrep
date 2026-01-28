@@ -1,706 +1,1278 @@
 {
-    "CHM 101": [
-  {
-    "question": "Will magnesium displace zinc from zinc chloride solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because magnesium is less reactive than zinc.",
-      "B": "No, because magnesium is less reactive than zinc.",
-      "C": "Yes, because magnesium is more reactive than zinc.",
-      "D": "No, because magnesium and zinc are equally reactive."
+    "ZOO 101":[
+    {
+        "question": "The skeleton is the bony __________ of the body.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "protection",
+            "B": "framework",
+            "C": "structure",
+            "D": "anchor"
+        },
+        "correct_option": "B",
+        "explanation": "The skeleton is the bony framework of the body.",
+        "hint": "Think of the basic structural role."
     },
-    "correct_option": "C",
-    "explanation": "Magnesium is more reactive than zinc, so it can displace zinc from its compound.",
-    "hint": "Check the positions of magnesium and zinc in the reactivity series."
-  },
-  {
-    "question": "Will iron displace copper from copper nitrate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because iron is less reactive than copper.",
-      "B": "No, because iron is less reactive than copper.",
-      "C": "Yes, because iron is more reactive than copper.",
-      "D": "No, because they form an insoluble product."
+    {
+        "question": "The skeleton provides __________, shape, rigidity, and __________ to the soft tissues and organs.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "movement, growth",
+            "B": "support, protection",
+            "C": "energy, flexibility",
+            "D": "blood, strength"
+        },
+        "correct_option": "B",
+        "explanation": "The skeleton provides support, shape, rigidity, and protection.",
+        "hint": "The first function is structural, the last is defensive."
     },
-    "correct_option": "C",
-    "explanation": "Iron is more reactive than copper, so it will displace copper from its solution.",
-    "hint": "Iron is higher in the reactivity series than copper."
-  },
-  {
-    "question": "Will silver displace lead from lead acetate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because silver is more reactive than lead.",
-      "B": "No, because silver is less reactive than lead.",
-      "C": "Yes, because both are unreactive.",
-      "D": "No, because silver only reacts with acids."
+    {
+        "question": "The sophisticated skeletal build-up of __________ allows it to stand erect.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "animals",
+            "B": "man",
+            "C": "vertebrates",
+            "D": "mammals"
+        },
+        "correct_option": "B",
+        "explanation": "The sophisticated skeletal build-up of man allows it to stand erect.",
+        "hint": "Refers specifically to humans."
     },
-    "correct_option": "B",
-    "explanation": "Silver is less reactive than lead, so it cannot displace lead from its compound.",
-    "hint": "Silver is below lead in the reactivity series."
-  },
-  {
-    "question": "Will zinc displace iron from iron(II) sulfate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because zinc is more reactive than iron.",
-      "B": "No, because zinc is less reactive than iron.",
-      "C": "Yes, because they are both moderately reactive.",
-      "D": "No, because the reaction would be too slow."
+    {
+        "question": "The cuticle is composed of a protein called __________ and a thin waterproof layer of wax.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "collagen",
+            "B": "keratin",
+            "C": "chitin",
+            "D": "actin"
+        },
+        "correct_option": "C",
+        "explanation": "The cuticle is composed of chitin and wax.",
+        "hint": "This is a key structural protein in arthropods."
     },
-    "correct_option": "A",
-    "explanation": "Zinc is more reactive than iron, so it can displace iron from its salt solution.",
-    "hint": "Zinc is placed above iron in the reactivity series."
-  },
-  {
-    "question": "Will copper displace silver from silver nitrate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because copper is more reactive than silver.",
-      "B": "No, because copper is less reactive than silver.",
-      "C": "Yes, because copper is more expensive.",
-      "D": "No, because silver nitrate is not soluble."
+    {
+        "question": "Because chitin is non-living, animals with this structure undergo moulting, also known as __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "shedding",
+            "B": "ecdysis",
+            "C": "metamorphosis",
+            "D": "renewal"
+        },
+        "correct_option": "B",
+        "explanation": "Moulting is also known as ecdysis.",
+        "hint": "The biological term for the process of shedding the outer cuticle."
     },
-    "correct_option": "A",
-    "explanation": "Copper is more reactive than silver, so it will displace silver, forming copper nitrate and solid silver.",
-    "hint": "Copper is above silver in the reactivity series."
-  },
-  {
-    "question": "Will potassium displace sodium from sodium chloride solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because potassium is more reactive than sodium.",
-      "B": "No, because potassium is less reactive than sodium.",
-      "C": "Yes, because they are both alkali metals.",
-      "D": "No, because the reaction with water would interfere."
+    {
+        "question": "The cuticle is an example of an __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "endoskeleton",
+            "B": "hydrostatic skeleton",
+            "C": "exoskeleton",
+            "D": "axial skeleton"
+        },
+        "correct_option": "C",
+        "explanation": "The cuticle is an example of an exoskeleton.",
+        "hint": "It is an external supporting structure."
     },
-    "correct_option": "D",
-    "explanation": "While potassium is more reactive than sodium, it would react violently with the water in the solution first, rather than displacing sodium in a straightforward manner.",
-    "hint": "Potassium reacts explosively with water, so it would react with the solvent."
-  },
-  {
-    "question": "Will tin displace magnesium from magnesium sulfate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because tin is more reactive than magnesium.",
-      "B": "No, because tin is less reactive than magnesium.",
-      "C": "Yes, because both are extracted by carbon reduction.",
-      "D": "No, because magnesium sulfate is insoluble."
+    {
+        "question": "Examples of organisms with a cuticle are Arthropods like insects, crabs, and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "earthworms",
+            "B": "sharks",
+            "C": "toads",
+            "D": "scorpions"
+        },
+        "correct_option": "D",
+        "explanation": "Scorpions are an example of an arthropod with a cuticle.",
+        "hint": "Another arthropod besides insects and crabs."
     },
-    "correct_option": "B",
-    "explanation": "Tin is less reactive than magnesium, so it cannot displace magnesium from its compound.",
-    "hint": "Magnesium is much higher in the reactivity series than tin."
-  },
-  {
-    "question": "Will lead displace zinc from zinc sulfate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because lead is more reactive than zinc.",
-      "B": "No, because lead is less reactive than zinc.",
-      "C": "Yes, because lead is denser.",
-      "D": "No, because zinc sulfate is a weak electrolyte."
+    {
+        "question": "Bones consist of living bone cells called __________ and protein fibres called collagen.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "chondroblasts",
+            "B": "osteocytes",
+            "C": "osteoblasts",
+            "D": "macrophages"
+        },
+        "correct_option": "B",
+        "explanation": "The living bone cells are called osteocytes.",
+        "hint": "The mature cell type found within bone tissue."
     },
-    "correct_option": "B",
-    "explanation": "Lead is less reactive than zinc, so it cannot displace zinc.",
-    "hint": "In the series, zinc is above lead."
-  },
-  {
-    "question": "Will aluminium displace iron from iron(III) oxide?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because aluminium is more reactive than iron.",
-      "B": "No, because aluminium is less reactive than iron.",
-      "C": "Yes, but only at very high temperatures (thermite reaction).",
-      "D": "No, because aluminium forms a protective oxide layer."
+    {
+        "question": "The minerals in bone are mainly __________ and calcium carbonate.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "sodium chloride",
+            "B": "calcium phosphate",
+            "C": "magnesium sulfate",
+            "D": "potassium iodide"
+        },
+        "correct_option": "B",
+        "explanation": "Bone minerals are mainly calcium phosphate and calcium carbonate.",
+        "hint": "The primary salt providing rigidity is a phosphate."
     },
-    "correct_option": "C",
-    "explanation": "Aluminium is more reactive than iron. This displacement is the basis of the thermite reaction, but it requires high heat to initiate.",
-    "hint": "This is a specific, well-known extraction reaction for iron."
-  },
-  {
-    "question": "Will gold displace copper from copper sulfate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because gold is more valuable.",
-      "B": "No, because gold is less reactive than copper.",
-      "C": "Yes, because gold is more reactive than copper.",
-      "D": "No, because copper sulfate would tarnish the gold."
+    {
+        "question": "The hard outer layer of a bone is called the __________, and the cavity is filled with __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "marrow, cartilage",
+            "B": "periosteum, blood",
+            "C": "shaft, bone marrow",
+            "D": "cortex, fat"
+        },
+        "correct_option": "C",
+        "explanation": "The hard outer layer is the shaft, and the cavity contains bone marrow.",
+        "hint": "The answer uses simple anatomical terms for the outer part and the inner content."
     },
-    "correct_option": "B",
-    "explanation": "Gold is much less reactive than copper, so it cannot displace copper.",
-    "hint": "Gold is at the very bottom of the reactivity series."
-  },
-  {
-    "question": "Will calcium displace aluminium from aluminium oxide?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because calcium is more reactive than aluminium.",
-      "B": "No, because calcium is less reactive than aluminium.",
-      "C": "Yes, but only in an aqueous solution.",
-      "D": "No, because aluminium oxide is very stable."
+    {
+        "question": "Animals with bones include bony fish, toad, lizard, and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "sharks",
+            "B": "crabs",
+            "C": "mammals",
+            "D": "earthworms"
+        },
+        "correct_option": "C",
+        "explanation": "Mammals are animals with bones.",
+        "hint": "Think of a major vertebrate group with a bony endoskeleton."
     },
-    "correct_option": "A",
-    "explanation": "Calcium is more reactive than aluminium, so it can displace aluminium from its oxide, though this may require specific conditions.",
-    "hint": "Calcium is above aluminium in the reactivity series."
-  },
-  {
-    "question": "Will sodium displace potassium from potassium hydroxide solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because sodium is more reactive.",
-      "B": "No, because sodium is less reactive than potassium.",
-      "C": "Yes, because they are both in Group 1.",
-      "D": "No, because potassium hydroxide is a base, not a salt."
+    {
+        "question": "Cartilage consists of living cells called __________, carbohydrate, and protein fibre.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "osteocytes",
+            "B": "chondroblast",
+            "C": "fibrocytes",
+            "D": "adipocytes"
+        },
+        "correct_option": "B",
+        "explanation": "The living cells in cartilage are called chondroblasts.",
+        "hint": "The cell name shares its root with the tissue name."
     },
-    "correct_option": "B",
-    "explanation": "Sodium is less reactive than potassium, so it cannot displace potassium. Furthermore, sodium would react violently with the water in the solution.",
-    "hint": "Potassium is the most reactive metal."
-  },
-  {
-    "question": "Will magnesium displace aluminium from aluminium chloride solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because magnesium is more reactive.",
-      "B": "No, because magnesium is less reactive than aluminium.",
-      "C": "Yes, because aluminium chloride is acidic.",
-      "D": "No, because a passive layer forms on magnesium."
+    {
+        "question": "Cartilage is found in the skeleton of complex __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "invertebrates",
+            "B": "vertebrates",
+            "C": "plants",
+            "D": "microorganisms"
+        },
+        "correct_option": "B",
+        "explanation": "Cartilage is found in the skeletons of complex vertebrates.",
+        "hint": "Refers to animals with backbones."
     },
-    "correct_option": "B",
-    "explanation": "Magnesium is less reactive than aluminium, so it cannot displace aluminium from its compound.",
-    "hint": "Check their order in the series: Aluminium comes after Magnesium."
-  },
-  {
-    "question": "Will zinc displace tin from tin(II) chloride solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because zinc is more reactive than tin.",
-      "B": "No, because zinc is less reactive than tin.",
-      "C": "Yes, because tin is amphoteric.",
-      "D": "No, because tin(II) chloride hydrolyzes in water."
+    {
+        "question": "Examples of organisms with cartilage are cartilaginous fishes like __________ and rays.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "trout",
+            "B": "salmon",
+            "C": "Shark",
+            "D": "catfish"
+        },
+        "correct_option": "C",
+        "explanation": "Sharks are an example of a cartilaginous fish.",
+        "hint": "A well-known fish whose skeleton is made of cartilage, not bone."
     },
-    "correct_option": "A",
-    "explanation": "Zinc is more reactive than tin, so it will displace tin.",
-    "hint": "Zinc is placed above tin in the reactivity series."
-  },
-  {
-    "question": "Will iron displace magnesium from magnesium chloride solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because iron is more reactive.",
-      "B": "No, because iron is less reactive than magnesium.",
-      "C": "Yes, because magnesium is an alkaline earth metal.",
-      "D": "No, because magnesium chloride is hygroscopic."
+    {
+        "question": "The cartilage found in the trachea and on the surface of moveable joints is __________ cartilage.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "elastic",
+            "B": "fibro",
+            "C": "hyaline",
+            "D": "articular"
+        },
+        "correct_option": "C",
+        "explanation": "Hyaline cartilage is found in the trachea and on joint surfaces.",
+        "hint": "This is the most common and glassy-looking type of cartilage."
     },
-    "correct_option": "B",
-    "explanation": "Iron is less reactive than magnesium, so it cannot displace magnesium.",
-    "hint": "Magnesium is much higher in the series than iron."
-  },
-  {
-    "question": "Will copper displace gold from gold chloride solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because copper is more reactive than gold.",
-      "B": "No, because copper is less reactive than gold.",
-      "C": "Yes, because gold is inert.",
-      "D": "No, because gold chloride is unstable."
+    {
+        "question": "Fibro-cartilage is found between the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "ribs",
+            "B": "ear lobes",
+            "C": "inter vertebral column",
+            "D": "skull bones"
+        },
+        "correct_option": "C",
+        "explanation": "Fibro-cartilage is found between the vertebrae in the intervertebral discs.",
+        "hint": "It acts as a shock absorber in the spinal column."
     },
-    "correct_option": "A",
-    "explanation": "Copper is more reactive than gold, so it can displace gold from its compounds.",
-    "hint": "This is a classic test for gold ions in solution."
-  },
-  {
-    "question": "Will lead displace copper from copper sulfate solution?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because lead is more reactive.",
-      "B": "No, because lead is less reactive than copper.",
-      "C": "Yes, because lead ions are colorless.",
-      "D": "No, because lead sulfate is insoluble and coats the metal."
+    {
+        "question": "Elastic cartilage is found in the ear and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "nose",
+            "B": "epiglottis",
+            "C": "knee",
+            "D": "windpipe"
+        },
+        "correct_option": "B",
+        "explanation": "Elastic cartilage is found in the ear and the epiglottis.",
+        "hint": "Think of a flexible structure in the throat that needs to spring back into place."
     },
-    "correct_option": "D",
-    "explanation": "While lead is theoretically more reactive than copper, the lead sulfate formed in the reaction is insoluble and forms a coating that stops the reaction. Therefore, in practice, the displacement does not proceed.",
-    "hint": "Practical observations sometimes differ from theoretical predictions due to product solubility."
-  },
-  {
-    "question": "Will silver displace hydrogen from dilute hydrochloric acid?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because silver is shiny.",
-      "B": "No, because silver is below hydrogen in the reactivity series.",
-      "C": "Yes, because all metals react with acids.",
-      "D": "No, because silver forms an insoluble chloride layer."
+    {
+        "question": "A __________ skeleton is possessed by soft-bodied animals like the earthworm.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "exo",
+            "B": "endo",
+            "C": "hydrostatic",
+            "D": "cartilaginous"
+        },
+        "correct_option": "C",
+        "explanation": "A hydrostatic (or fluid) skeleton is possessed by animals like the earthworm.",
+        "hint": "This skeleton type uses fluid pressure for support and movement."
     },
-    "correct_option": "B",
-    "explanation": "Silver is below hydrogen in the reactivity series, so it does not react with dilute acids to produce hydrogen gas.",
-    "hint": "Only metals above hydrogen displace hydrogen from acids."
-  },
-  {
-    "question": "Will a strip of magnesium displace hydrogen from dilute sulfuric acid?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because magnesium is above hydrogen.",
-      "B": "No, because magnesium is below hydrogen.",
-      "C": "No, because sulfuric acid is oxidizing.",
-      "D": "Yes, but only if the acid is concentrated."
+    {
+        "question": "An exoskeleton is found on the __________ part of the body.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "internal",
+            "B": "axial",
+            "C": "appendicular",
+            "D": "external"
+        },
+        "correct_option": "D",
+        "explanation": "An exoskeleton is found on the external part of the body.",
+        "hint": "The prefix 'exo-' means outside."
     },
-    "correct_option": "A",
-    "explanation": "Magnesium is well above hydrogen in the reactivity series and will react vigorously with dilute sulfuric acid to produce magnesium sulfate and hydrogen gas.",
-    "hint": "This is a standard laboratory test for hydrogen production."
-  },
-  {
-    "question": "What is the reactivity series?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "A list of metals arranged by their atomic mass.",
-      "B": "A list of metals arranged by their density.",
-      "C": "A list of metals arranged in order of decreasing reactivity.",
-      "D": "A list of metals arranged by their melting point."
+    {
+        "question": "The exoskeleton of most invertebrates is composed of __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "bone",
+            "B": "cartilage",
+            "C": "chitin",
+            "D": "cellulose"
+        },
+        "correct_option": "C",
+        "explanation": "The exoskeleton of most invertebrates is composed of chitin.",
+        "hint": "This is the same material mentioned in the cuticle of arthropods."
     },
-    "correct_option": "C",
-    "explanation": "The reactivity series is a list of metals arranged in order of decreasing reactivity.",
-    "hint": "It is also called the activity series."
-  },
-  {
-    "question": "Which metal is at the top of the reactivity series?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Sodium (Na)",
-      "B": "Calcium (Ca)",
-      "C": "Potassium (K)",
-      "D": "Magnesium (Mg)"
+    {
+        "question": "An endoskeleton is found __________ the body of the animal.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "on",
+            "B": "inside",
+            "C": "around",
+            "D": "underneath"
+        },
+        "correct_option": "B",
+        "explanation": "An endoskeleton is found inside the body.",
+        "hint": "The prefix 'endo-' means within."
     },
-    "correct_option": "C",
-    "explanation": "Potassium (K) is the most reactive metal in the series.",
-    "hint": "The series is in order of decreasing reactivity."
-  },
-  {
-    "question": "Which of these metals is the least reactive?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Iron (Fe)",
-      "B": "Zinc (Zn)",
-      "C": "Gold (Au)",
-      "D": "Aluminium (Al)"
+    {
+        "question": "The endoskeleton in mammals includes the skull, vertebral column, ribs, and the bones of the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "cuticle",
+            "B": "organs",
+            "C": "fore and hind limbs",
+            "D": "muscles"
+        },
+        "correct_option": "C",
+        "explanation": "The mammalian endoskeleton includes the bones of the fore and hind limbs.",
+        "hint": "These are the appendages."
     },
-    "correct_option": "C",
-    "explanation": "Gold (Au) is one of the least reactive metals in the series.",
-    "hint": "Gold is often found free in nature."
-  },
-  {
-    "question": "In the mnemonic 'Please Stop Calling Me A Careless Zebra Instead Try Learning How Copper Saves Gold', which metal does 'Careless' represent?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Calcium",
-      "B": "Zinc",
-      "C": "Iron",
-      "D": "Copper"
+    {
+        "question": "The mammalian skeletal system is grouped into two major parts: the axial skeleton and the __________ skeleton.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "cranial",
+            "B": "appendicular",
+            "C": "pectoral",
+            "D": "pelvic"
+        },
+        "correct_option": "B",
+        "explanation": "The two major parts are the axial and appendicular skeletons.",
+        "hint": "This part pertains to the limbs and their girdles."
     },
-    "correct_option": "B",
-    "explanation": "In the given mnemonic, 'Careless' represents Zinc (Zn).",
-    "hint": "The sequence is: Please (Potassium), Stop (Sodium), Calling (Calcium), Me (Magnesium), A (Aluminium), Careless (Zinc)."
-  },
-  {
-    "question": "What does a metal being 'more reactive' mean?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "It gains electrons easily.",
-      "B": "It is a very good conductor of heat.",
-      "C": "It loses electrons easily and forms compounds readily.",
-      "D": "It has a very high density."
+    {
+        "question": "The axial skeleton comprises the skull, vertebral column, ribs, and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "pelvis",
+            "B": "sternum",
+            "C": "scapula",
+            "D": "humerus"
+        },
+        "correct_option": "B",
+        "explanation": "The axial skeleton comprises the skull, vertebral column, ribs, and sternum.",
+        "hint": "This is the breastbone in the center of the chest."
     },
-    "correct_option": "C",
-    "explanation": "A more reactive metal loses electrons easily, reacts quickly with water or acids, and forms compounds readily.",
-    "hint": "Reactivity is related to the ease of losing electrons."
-  },
-  {
-    "question": "Where are highly reactive metals typically found in nature?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Free and uncombined.",
-      "B": "Combined in compounds or ores.",
-      "C": "Only in alloy form.",
-      "D": "Floating on water."
+    {
+        "question": "The appendicular skeleton is made up of the limb girdles and the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "skull",
+            "B": "ribs",
+            "C": "limbs",
+            "D": "vertebrae"
+        },
+        "correct_option": "C",
+        "explanation": "The appendicular skeleton is made up of the limb girdles and the limbs.",
+        "hint": "This includes the arms and legs."
     },
-    "correct_option": "B",
-    "explanation": "Highly reactive metals are usually found combined in nature, while less reactive metals may be found free or uncombined.",
-    "hint": "Their high reactivity means they readily form compounds with other elements."
-  },
-  {
-    "question": "Which metals react violently with cold water?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Calcium and Magnesium",
-      "B": "Potassium and Sodium",
-      "C": "Zinc and Iron",
-      "D": "Copper and Silver"
+    {
+        "question": "The flat bones of the skull are joined by immovable joints called __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "sutures",
+            "B": "symphyses",
+            "C": "synovial",
+            "D": "ligaments"
+        },
+        "correct_option": "A",
+        "explanation": "The immovable joints of the skull are called sutures.",
+        "hint": "These are the jagged, interlocking seams seen in a skull."
     },
-    "correct_option": "B",
-    "explanation": "Potassium and Sodium react violently with cold water.",
-    "hint": "The reaction produces hydrogen gas and a lot of heat."
-  },
-  {
-    "question": "What are the products when sodium reacts with water?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Sodium oxide and Hydrogen",
-      "B": "Sodium chloride and Water",
-      "C": "Sodium hydroxide and Hydrogen",
-      "D": "Sodium carbonate and Oxygen"
+    {
+        "question": "The part of the skull that holds the brain is the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "maxilla",
+            "B": "mandible",
+            "C": "cranium",
+            "D": "facial"
+        },
+        "correct_option": "C",
+        "explanation": "The cranium is the part of the skull that holds the brain.",
+        "hint": "It is also called the brain box."
     },
-    "correct_option": "C",
-    "explanation": "Sodium + Water → Sodium hydroxide + Hydrogen. The equation is 2Na + 2H₂O → 2NaOH + H₂.",
-    "hint": "The reaction forms a metal hydroxide and hydrogen gas."
-  },
-  {
-    "question": "Which metal reacts slowly with cold water?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Potassium",
-      "B": "Sodium",
-      "C": "Calcium",
-      "D": "Magnesium"
+    {
+        "question": "The facial skeleton supports the nose, eyes, and muscles of the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "head",
+            "B": "cheek",
+            "C": "neck",
+            "D": "jaw"
+        },
+        "correct_option": "B",
+        "explanation": "The facial skeleton supports the nose, eyes, and cheek muscles.",
+        "hint": "Think of the prominent area below the eyes."
     },
-    "correct_option": "C",
-    "explanation": "Calcium reacts slowly with cold water.",
-    "hint": "Its reaction is less violent than potassium or sodium."
-  },
-  {
-    "question": "Which metals react only with steam, not cold water?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Potassium, Sodium, Calcium",
-      "B": "Magnesium, Zinc, Iron",
-      "C": "Copper, Silver, Gold",
-      "D": "Aluminium, Tin, Lead"
+    {
+        "question": "The upper jaw is called the __________ and the lower jaw is called the mandible.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "cranium",
+            "B": "maxilla",
+            "C": "clavicle",
+            "D": "zygomatic"
+        },
+        "correct_option": "B",
+        "explanation": "The upper jaw is called the maxilla.",
+        "hint": "This bone also holds the upper teeth."
     },
-    "correct_option": "B",
-    "explanation": "Magnesium, Zinc, and Iron react with steam but not with cold water.",
-    "hint": "They require the higher energy of steam to react."
-  },
-  {
-    "question": "What is the product when magnesium reacts with steam?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Magnesium hydroxide and Hydrogen",
-      "B": "Magnesium chloride and Water",
-      "C": "Magnesium oxide and Hydrogen",
-      "D": "Magnesium sulfate and Oxygen"
+    {
+        "question": "The skull protects the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "heart",
+            "B": "lungs",
+            "C": "brain",
+            "D": "spinal cord"
+        },
+        "correct_option": "C",
+        "explanation": "The skull protects the brain.",
+        "hint": "This is its primary protective function."
     },
-    "correct_option": "C",
-    "explanation": "Mg + H₂O (steam) → MgO + H₂.",
-    "hint": "The reaction with steam produces a metal oxide, not a hydroxide."
-  },
-  {
-    "question": "Which of the following metals does NOT react with water at all?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Zinc",
-      "B": "Iron",
-      "C": "Copper",
-      "D": "Magnesium"
+    {
+        "question": "The skull bears the __________ which help in grinding food.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "muscles",
+            "B": "teeth",
+            "C": "sinuses",
+            "D": "nerves"
+        },
+        "correct_option": "B",
+        "explanation": "The skull bears the teeth, which help in grinding food.",
+        "hint": "These are the hard structures embedded in the jaw bones."
     },
-    "correct_option": "C",
-    "explanation": "Copper, along with Silver and Gold, does not react with water.",
-    "hint": "These metals are low in the reactivity series."
-  },
-  {
-    "question": "With dilute acids, what do metals above hydrogen in the reactivity series produce?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Salt and Water",
-      "B": "Salt and Hydrogen gas",
-      "C": "Metal oxide and Carbon dioxide",
-      "D": "Metal hydroxide and Oxygen"
+    {
+        "question": "The vertebral column is the central __________ structure of the skeleton.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "movable",
+            "B": "protective",
+            "C": "supporting",
+            "D": "flexible"
+        },
+        "correct_option": "C",
+        "explanation": "The vertebral column is the central supporting structure.",
+        "hint": "It is the main pillar that supports the body's weight."
     },
-    "correct_option": "B",
-    "explanation": "Metals above hydrogen react with dilute acids to produce salt and hydrogen gas.",
-    "hint": "The general equation is: Metal + Acid → Salt + Hydrogen."
-  },
-  {
-    "question": "Which of these reactions represents a metal reacting with a dilute acid?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Cu + 2HCl → CuCl₂ + H₂",
-      "B": "Zn + 2HCl → ZnCl₂ + H₂",
-      "C": "Ag + H₂SO₄ → AgSO₄ + H₂",
-      "D": "Au + 2HCl → AuCl₂ + H₂"
+    {
+        "question": "In humans, the vertebral column consists of __________ vertebrae.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "26",
+            "B": "31",
+            "C": "33",
+            "D": "35"
+        },
+        "correct_option": "C",
+        "explanation": "In humans, the vertebral column consists of 33 vertebrae.",
+        "hint": "This is the typical number before some fuse in adulthood."
     },
-    "correct_option": "B",
-    "explanation": "Zinc, being above hydrogen, reacts with hydrochloric acid to form zinc chloride and hydrogen.",
-    "hint": "Zinc is more reactive than hydrogen."
-  },
-  {
-    "question": "Why do metals like copper, silver, and gold not react with dilute acids?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "They are too dense.",
-      "B": "They are below hydrogen in the reactivity series.",
-      "C": "They form an oxide layer.",
-      "D": "They only react with concentrated acids."
+    {
+        "question": "Between consecutive vertebrae are pads called __________ discs.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "cartilage",
+            "B": "synovial",
+            "C": "intervertebral",
+            "D": "shock"
+        },
+        "correct_option": "C",
+        "explanation": "The pads between vertebrae are called intervertebral discs.",
+        "hint": "The name describes their location 'between vertebrae'."
     },
-    "correct_option": "B",
-    "explanation": "Metals below hydrogen in the reactivity series, such as copper, silver, and gold, do not react with dilute acids.",
-    "hint": "Hydrogen is a key reference point in the series for acid reactions."
-  },
-  {
-    "question": "What is a displacement reaction?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "A reaction where two metals combine to form an alloy.",
-      "B": "A reaction where a more reactive metal displaces a less reactive metal from its compound.",
-      "C": "A reaction where a metal reacts with water to form a hydroxide.",
-      "D": "A reaction where a metal decomposes upon heating."
+    {
+        "question": "The vertebrae are held together by strong __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "tendons",
+            "B": "muscles",
+            "C": "ligaments",
+            "D": "cartilage"
+        },
+        "correct_option": "C",
+        "explanation": "The vertebrae are held together by strong ligaments.",
+        "hint": "These are fibrous connective tissues that connect bone to bone."
     },
-    "correct_option": "B",
-    "explanation": "A displacement reaction occurs when a more reactive metal displaces a less reactive metal from its compound.",
-    "hint": "The more reactive metal takes the place of the less reactive one."
-  },
-  {
-    "question": "In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, why does zinc displace copper?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Zinc is less reactive than copper.",
-      "B": "Zinc is more reactive than copper.",
-      "C": "Zinc is cheaper than copper.",
-      "D": "Copper sulfate is a weak compound."
+    {
+        "question": "In humans, rabbits, and rats, the number of cervical vertebrae is always __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "5",
+            "B": "7",
+            "C": "12",
+            "D": "variable"
+        },
+        "correct_option": "B",
+        "explanation": "The number of cervical vertebrae is always 7 in humans, rabbits, and rats.",
+        "hint": "Almost all mammals have this same number, regardless of neck length."
     },
-    "correct_option": "B",
-    "explanation": "Zinc displaces copper from copper sulfate because zinc is more reactive than copper.",
-    "hint": "A more reactive metal can displace a less reactive one."
-  },
-  {
-    "question": "Can iron displace zinc from a solution of zinc sulfate?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Yes, because iron is more reactive than zinc.",
-      "B": "No, because zinc is more reactive than iron.",
-      "C": "Yes, because they are both moderately reactive.",
-      "D": "No, because they form an alloy instead."
+    {
+        "question": "Thoracic vertebrae are found in the __________ region.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "neck",
+            "B": "chest",
+            "C": "lower back",
+            "D": "tail"
+        },
+        "correct_option": "B",
+        "explanation": "Thoracic vertebrae are found in the chest (thoracic) region.",
+        "hint": "These are the vertebrae that articulate with the ribs."
     },
-    "correct_option": "B",
-    "explanation": "Iron cannot displace zinc because zinc is more reactive than iron. A less reactive metal cannot displace a more reactive metal.",
-    "hint": "Check the positions of iron and zinc in the reactivity series."
-  },
-  {
-    "question": "Which method is used to extract highly reactive metals like aluminium?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Reduction with carbon",
-      "B": "Heating alone",
-      "C": "Electrolysis",
-      "D": "Displacement with a less reactive metal"
+    {
+        "question": "Lumbar vertebrae are found in the __________ region.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "neck",
+            "B": "chest",
+            "C": "upper abdominal",
+            "D": "pelvic"
+        },
+        "correct_option": "C",
+        "explanation": "Lumbar vertebrae are found in the upper abdominal (lower back) region.",
+        "hint": "This is the region of the lower back, below the ribs."
     },
-    "correct_option": "C",
-    "explanation": "Highly reactive metals (K, Na, Ca, Mg, Al) are extracted by electrolysis.",
-    "hint": "Their strong hold on electrons requires a powerful method like electrolysis."
-  },
-  {
-    "question": "How are moderately reactive metals like iron extracted?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Found free in nature.",
-      "B": "By electrolysis.",
-      "C": "By reduction with carbon or carbon monoxide.",
-      "D": "By displacement with sodium."
+    {
+        "question": "In humans, the sacral vertebrae are fused together to form the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "coccyx",
+            "B": "sacrum",
+            "C": "pelvis",
+            "D": "ilium"
+        },
+        "correct_option": "B",
+        "explanation": "The fused sacral vertebrae form the sacrum.",
+        "hint": "It is a large, triangular bone at the base of the spine."
     },
-    "correct_option": "C",
-    "explanation": "Moderately reactive metals (Zn, Fe, Sn, Pb) are extracted by reduction with carbon or carbon monoxide.",
-    "hint": "The reaction involves removing oxygen from the ore."
-  },
-  {
-    "question": "Why are metals like gold and silver often found free in nature?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "They are highly soluble in water.",
-      "B": "They are very reactive and form compounds easily.",
-      "C": "They are very unreactive and do not readily form compounds.",
-      "D": "They are magnetic."
+    {
+        "question": "Caudal vertebrae are found in the __________ region.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "head",
+            "B": "chest",
+            "C": "sacral",
+            "D": "tail"
+        },
+        "correct_option": "D",
+        "explanation": "Caudal vertebrae are found in the tail region.",
+        "hint": "'Caudal' relates to the tail."
     },
-    "correct_option": "C",
-    "explanation": "Least reactive metals (Cu, Ag, Au) are found free in nature because they are very unreactive and do not readily combine with other elements.",
-    "hint": "Their low position in the reactivity series explains this."
-  },
-  {
-    "question": "Which metal is extracted from bauxite by electrolysis?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Iron",
-      "B": "Copper",
-      "C": "Aluminium",
-      "D": "Zinc"
+    {
+        "question": "The passage for the spinal cord is the __________ canal.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "central",
+            "B": "vertebral",
+            "C": "neural",
+            "D": "spinal"
+        },
+        "correct_option": "C",
+        "explanation": "The passage for the spinal cord is the neural canal.",
+        "hint": "It is named for the neural (nervous) structure it protects."
     },
-    "correct_option": "C",
-    "explanation": "Aluminium is extracted from its ore, bauxite, by electrolysis.",
-    "hint": "Aluminium is a highly reactive metal."
-  },
-  {
-    "question": "Why does iron rust easily while gold does not?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Iron is denser than gold.",
-      "B": "Iron is higher in the reactivity series and corrodes easily.",
-      "C": "Gold has a protective coating.",
-      "D": "Iron is magnetic."
+    {
+        "question": "The __________ projects upward dorsally for muscle attachment.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "centrum",
+            "B": "transverse process",
+            "C": "neural spine",
+            "D": "zygapophysis"
+        },
+        "correct_option": "C",
+        "explanation": "The neural spine projects upward dorsally for muscle attachment.",
+        "hint": "It is the prominent spike you can feel down the middle of your back."
     },
-    "correct_option": "B",
-    "explanation": "Metals high in the reactivity series, like iron, corrode easily. Gold, being very low in the series, is very unreactive and resists corrosion.",
-    "hint": "Rusting is a form of corrosion involving reaction with oxygen and water."
-  },
-  {
-    "question": "What is the purpose of using zinc for sacrificial protection of iron?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Zinc is cheaper than paint.",
-      "B": "Zinc is more reactive than iron and corrodes first, protecting the iron.",
-      "C": "Zinc forms a more attractive layer.",
-      "D": "Zinc is less reactive and provides a physical barrier."
+    {
+        "question": "The transverse processes project from the __________ of the vertebra.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "top",
+            "B": "bottom",
+            "C": "front",
+            "D": "side"
+        },
+        "correct_option": "D",
+        "explanation": "The transverse processes project from the side of the vertebra.",
+        "hint": "'Transverse' means extending across or from side to side."
     },
-    "correct_option": "B",
-    "explanation": "Zinc is used for sacrificial protection because it is more reactive than iron. It will corrode preferentially, thereby protecting the iron from rusting.",
-    "hint": "This is an application based on the reactivity series."
-  },
-  {
-    "question": "Which of the following is NOT a use of the reactivity series?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Predicting reactions between metals and water.",
-      "B": "Determining the color of metal salts.",
-      "C": "Choosing suitable methods for metal extraction.",
-      "D": "Predicting displacement reactions."
+    {
+        "question": "The solid piece of bone below the neural canal is the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "centrum",
+            "B": "spine",
+            "C": "facet",
+            "D": "body"
+        },
+        "correct_option": "A",
+        "explanation": "The solid piece of bone below the neural canal is the centrum.",
+        "hint": "This is the main weight-bearing part of the vertebra."
     },
-    "correct_option": "B",
-    "explanation": "The reactivity series is used to predict reactions with water and acids, determine displacement reactions, choose extraction methods, and prevent corrosion. It is not used to determine the color of salts.",
-    "hint": "The series relates to chemical reactivity, not physical properties like color."
-  },
-  {
-    "question": "In the shorter mnemonic 'King Solomon Can Make A Zebra Iron Tin Lead Copper Silver Gold', which metal does 'Make' represent?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Magnesium",
-      "B": "Aluminium",
-      "C": "Zinc",
-      "D": "Iron"
+    {
+        "question": "A __________ is a small, smooth, flat area for contact with another bone.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "facet",
+            "B": "condyle",
+            "C": "foramen",
+            "D": "fossa"
+        },
+        "correct_option": "A",
+        "explanation": "A facet is a small, smooth, flat area for contact with another bone.",
+        "hint": "Think of a small, polished surface for articulation."
     },
-    "correct_option": "A",
-    "explanation": "In the mnemonic 'King Solomon Can Make A Zebra...', 'Make' represents Magnesium (Mg).",
-    "hint": "The sequence is: King (Potassium), Solomon (Sodium), Can (Calcium), Make (Magnesium)."
-  },
-  {
-    "question": "What is the correct order of reactivity from most reactive to least reactive?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Na, K, Ca, Mg, Al, Zn, Fe, Sn, Pb, Cu, Ag, Au",
-      "B": "K, Na, Ca, Mg, Al, Zn, Fe, Sn, Pb, Cu, Ag, Au",
-      "C": "Au, Ag, Cu, Pb, Sn, Fe, Zn, Al, Mg, Ca, Na, K",
-      "D": "K, Ca, Na, Mg, Al, Zn, Fe, Pb, Sn, Cu, Ag, Au"
+    {
+        "question": "The articular surfaces for successive vertebrae are called __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "condyles",
+            "B": "processes",
+            "C": "zygapophyses",
+            "D": "facets"
+        },
+        "correct_option": "C",
+        "explanation": "The articular surfaces for successive vertebrae are called zygapophyses.",
+        "hint": "These are the specific processes that interlock with those of adjacent vertebrae."
     },
-    "correct_option": "B",
-    "explanation": "The correct order is: Potassium (K), Sodium (Na), Calcium (Ca), Magnesium (Mg), Aluminium (Al), Zinc (Zn), Iron (Fe), Tin (Sn), Lead (Pb), Copper (Cu), Silver (Ag), Gold (Au).",
-    "hint": "Potassium is always first, gold is last."
-  },
-  {
-    "question": "Which metal would safely displace silver from a solution of silver nitrate?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Copper",
-      "B": "Gold",
-      "C": "Platinum",
-      "D": "Silver"
+    {
+        "question": "Pre-zygapophyses face inward and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "upward",
+            "B": "downward",
+            "C": "forward",
+            "D": "backward"
+        },
+        "correct_option": "A",
+        "explanation": "Pre-zygapophyses face inward and upward.",
+        "hint": "Their direction helps prevent the vertebra from sliding forward."
     },
-    "correct_option": "A",
-    "explanation": "Copper is more reactive than silver, so it can displace silver from silver nitrate. Gold and platinum are less reactive than silver.",
-    "hint": "The displacing metal must be higher in the series than the metal in the compound."
-  },
-  {
-    "question": "What is the main gas produced when a reactive metal reacts with a dilute acid?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Oxygen",
-      "B": "Carbon dioxide",
-      "C": "Hydrogen",
-      "D": "Nitrogen"
+    {
+        "question": "Post-zygapophyses face outward and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "upward",
+            "B": "downward",
+            "C": "forward",
+            "D": "backward"
+        },
+        "correct_option": "B",
+        "explanation": "Post-zygapophyses face outward and downward.",
+        "hint": "They articulate with the upward-facing processes of the vertebra behind."
     },
-    "correct_option": "C",
-    "explanation": "The reaction between a metal above hydrogen and a dilute acid produces hydrogen gas.",
-    "hint": "The general equation is Metal + Acid → Salt + Hydrogen."
-  },
-  {
-    "question": "Why is carbon not used to extract aluminium from its ore?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Carbon is more expensive.",
-      "B": "Aluminium is more reactive than carbon.",
-      "C": "Carbon does not react with aluminium ore.",
-      "D": "The process would produce too much heat."
+    {
+        "question": "The first cervical vertebra is called the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "axis",
+            "B": "atlas",
+            "C": "cervix",
+            "D": "thoracic"
+        },
+        "correct_option": "B",
+        "explanation": "The first cervical vertebra is called the atlas.",
+        "hint": "Named after the Titan who held up the heavens, as it holds up the skull."
     },
-    "correct_option": "B",
-    "explanation": "Aluminium is more reactive than carbon. Highly reactive metals cannot be reduced by carbon; they require electrolysis.",
-    "hint": "Carbon can only reduce metals that are less reactive than itself."
-  },
-  {
-    "question": "Which of the following equations correctly shows the extraction of iron?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
-      "B": "Al₂O₃ → 2Al + 3O₂",
-      "C": "2NaCl → 2Na + Cl₂",
-      "D": "CuO + C → Cu + CO"
+    {
+        "question": "The second cervical vertebra is called the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "axis",
+            "B": "atlas",
+            "C": "vertebra prominens",
+            "D": "sacrum"
+        },
+        "correct_option": "A",
+        "explanation": "The second cervical vertebra is called the axis.",
+        "hint": "It provides the pivot upon which the atlas and skull rotate."
     },
-    "correct_option": "A",
-    "explanation": "Iron oxide is reduced by carbon monoxide in the blast furnace: Fe₂O₃ + 3CO → 2Fe + 3CO₂.",
-    "hint": "Iron is a moderately reactive metal extracted by reduction."
-  },
-  {
-    "question": "If a metal does not react with water or dilute acids, where is it likely to be found in the reactivity series?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "At the top.",
-      "B": "In the middle.",
-      "C": "Below hydrogen.",
-      "D": "Between magnesium and zinc."
+    {
+        "question": "The atlas fits into the __________ __________ of the skull.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "mandibular fossa",
+            "B": "foramen magnum",
+            "C": "occipital condyles",
+            "D": "sella turcica"
+        },
+        "correct_option": "C",
+        "explanation": "The atlas fits into the occipital condyles of the skull.",
+        "hint": "These are the two rounded knobs on the underside of the occipital bone."
     },
-    "correct_option": "C",
-    "explanation": "Metals that do not react with water or dilute acids are below hydrogen in the reactivity series.",
-    "hint": "Hydrogen is a benchmark for reaction with acids."
-  },
-  {
-    "question": "What is formed when calcium reacts with water?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Calcium oxide and Hydrogen",
-      "B": "Calcium hydroxide and Hydrogen",
-      "C": "Calcium carbonate and Water",
-      "D": "Calcium chloride and Oxygen"
+    {
+        "question": "A characteristic of the atlas is that the __________ is absent.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "neural spine",
+            "B": "centrum",
+            "C": "transverse process",
+            "D": "vertebral foramen"
+        },
+        "correct_option": "B",
+        "explanation": "A characteristic of the atlas is that the centrum is absent.",
+        "hint": "Its body is fused to the axis, forming the dens."
     },
-    "correct_option": "B",
-    "explanation": "Calcium reacts with cold water to form calcium hydroxide and hydrogen gas: Ca + 2H₂O → Ca(OH)₂ + H₂.",
-    "hint": "The reaction with cold water produces a hydroxide."
-  },
-  {
-    "question": "Which metal's reaction with water is so vigorous it can cause fire?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Magnesium",
-      "B": "Calcium",
-      "C": "Potassium and Sodium",
-      "D": "Aluminium"
+    {
+        "question": "The atlas has a __________ canal for the passage of blood vessels.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "transverse",
+            "B": "vertebrarterial",
+            "C": "neural",
+            "D": "carotid"
+        },
+        "correct_option": "B",
+        "explanation": "The atlas has a vertebrarterial canal for the passage of blood vessels.",
+        "hint": "This canal allows for the vertebral artery to pass through."
     },
-    "correct_option": "C",
-    "explanation": "The reaction of potassium and sodium with cold water is violent and produces enough heat to ignite the hydrogen gas.",
-    "hint": "These are the most reactive metals with water."
-  },
-  {
-    "question": "In the context of the reactivity series, what does 'reduction with carbon' mean?",
-    "topic": "REACTIVITY SERIES OF METALS",
-    "options": {
-      "A": "Adding carbon to increase the metal's mass.",
-      "B": "Using carbon to remove oxygen from a metal ore.",
-      "C": "Mixing carbon with the metal to form an alloy.",
-      "D": "Heating carbon with the metal to make it shinier."
+    {
+        "question": "The axis articulates with the atlas through the __________ process.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "transverse",
+            "B": "spinous",
+            "C": "odontoid",
+            "D": "xiphoid"
+        },
+        "correct_option": "C",
+        "explanation": "The axis articulates with the atlas through the odontoid process (dens).",
+        "hint": "This tooth-like projection acts as a pivot."
     },
-    "correct_option": "B",
-    "explanation": "Reduction with carbon involves using carbon (or carbon monoxide) to remove oxygen from a metal oxide ore, leaving the pure metal.",
-    "hint": "It is a common extraction method for metals like iron."
-  }
+    {
+        "question": "Thoracic vertebrae have demifacets for the attachment of __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "muscles",
+            "B": "ribs",
+            "C": "the skull",
+            "D": "the pelvis"
+        },
+        "correct_option": "B",
+        "explanation": "Thoracic vertebrae have demifacets for the attachment of ribs.",
+        "hint": "This is a key distinguishing feature of vertebrae in the chest region."
+    },
+    {
+        "question": "The neural spine of a thoracic vertebra projects upward and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "forward",
+            "B": "backward",
+            "C": "downward",
+            "D": "laterally"
+        },
+        "correct_option": "B",
+        "explanation": "The neural spine of a thoracic vertebra projects upward and backward.",
+        "hint": "They are long and slanted, often pointing downwards, which is described as 'backward'."
+    },
+    {
+        "question": "Lumbar vertebrae have a large, flattened __________ process.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "neural spine",
+            "B": "transverse",
+            "C": "odontoid",
+            "D": "articular"
+        },
+        "correct_option": "B",
+        "explanation": "Lumbar vertebrae have a large, flattened transverse process.",
+        "hint": "These are the wing-like projections on the sides."
+    },
+    {
+        "question": "For abdominal muscle attachment, lumbar vertebrae have extra projections called anapophysis and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "zygapophysis",
+            "B": "metapophysis",
+            "C": "hypapophysis",
+            "D": "pleurapophysis"
+        },
+        "correct_option": "B",
+        "explanation": "The extra projections are called anapophysis and metapophysis.",
+        "hint": "One is 'ana-', the other is 'meta-'."
+    },
+    {
+        "question": "In humans, the five sacral vertebrae are fused to form the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "coccyx",
+            "B": "sacrum",
+            "C": "pelvis",
+            "D": "ilium"
+        },
+        "correct_option": "B",
+        "explanation": "The fused sacral vertebrae form the sacrum.",
+        "hint": "This is a repeat from a previous question, confirming its importance."
+    },
+    {
+        "question": "The sacrum is joined with the __________ girdle for support and strength.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "pectoral",
+            "B": "shoulder",
+            "C": "pelvic",
+            "D": "thoracic"
+        },
+        "correct_option": "C",
+        "explanation": "The sacrum is joined with the pelvic girdle.",
+        "hint": "This connection forms the posterior wall of the pelvic cavity."
+    },
+    {
+        "question": "In humans, there are __________ pairs of ribs.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "10",
+            "B": "11",
+            "C": "12",
+            "D": "13"
+        },
+        "correct_option": "C",
+        "explanation": "In humans, there are 12 pairs of ribs.",
+        "hint": "A typical human has this number."
+    },
+    {
+        "question": "The __________ is a single bone in the center of the chest.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "scapula",
+            "B": "clavicle",
+            "C": "sternum",
+            "D": "humerus"
+        },
+        "correct_option": "C",
+        "explanation": "The sternum is the single bone in the center of the chest.",
+        "hint": "Also known as the breastbone."
+    },
+    {
+        "question": "The ribs that are not attached to the sternum are called __________ ribs.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "true",
+            "B": "false",
+            "C": "floating",
+            "D": "cervical"
+        },
+        "correct_option": "C",
+        "explanation": "Ribs not attached to the sternum are called floating ribs.",
+        "hint": "They 'float' because their ventral ends are free."
+    },
+    {
+        "question": "The pectoral girdle holds the __________ limbs to the axial skeleton.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "upper",
+            "B": "lower",
+            "C": "hind",
+            "D": "tail"
+        },
+        "correct_option": "A",
+        "explanation": "The pectoral girdle holds the upper (or fore) limbs.",
+        "hint": "It is the shoulder girdle."
+    },
+    {
+        "question": "The two large, flat, triangular bones of the pectoral girdle are called the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "clavicles",
+            "B": "humeri",
+            "C": "scapula",
+            "D": "ilium"
+        },
+        "correct_option": "C",
+        "explanation": "The large, flat triangular bones are the scapulae (shoulder blades).",
+        "hint": "These are the bones you feel on your upper back."
+    },
+    {
+        "question": "The two small, slender bones at the front of the pectoral girdle are the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "scapulae",
+            "B": "humeri",
+            "C": "clavicles",
+            "D": "sternum"
+        },
+        "correct_option": "C",
+        "explanation": "The small, slender bones at the front are the clavicles (collar bones).",
+        "hint": "These are the bones that run from the sternum to the shoulder."
+    },
+    {
+        "question": "The depression on the scapula where the humerus fits is the __________ cavity.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "acetabulum",
+            "B": "obturator",
+            "C": "glenoid",
+            "D": "synovial"
+        },
+        "correct_option": "C",
+        "explanation": "The depression on the scapula is the glenoid cavity (or fossa).",
+        "hint": "It is the socket for the ball of the humerus."
+    },
+    {
+        "question": "The pelvic girdle consists of two halves joined at the __________ symphysis.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "sacral",
+            "B": "ischial",
+            "C": "pubis",
+            "D": "iliac"
+        },
+        "correct_option": "C",
+        "explanation": "The two halves of the pelvic girdle are joined at the pubis symphysis.",
+        "hint": "This is the fibrocartilage joint at the front of the pelvis."
+    },
+    {
+        "question": "Each half of the pelvic girdle is made of three bones: the ilium, ischium, and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "sacrum",
+            "B": "pubis",
+            "C": "femur",
+            "D": "coccyx"
+        },
+        "correct_option": "B",
+        "explanation": "The three bones are the ilium, ischium, and pubis.",
+        "hint": "These three bones fuse in adults to form one hip bone."
+    },
+    {
+        "question": "The __________ is the largest and longest of the three pelvic bones.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "ischium",
+            "B": "pubis",
+            "C": "ilium",
+            "D": "sacrum"
+        },
+        "correct_option": "C",
+        "explanation": "The ilium is the largest and longest of the three pelvic bones.",
+        "hint": "This is the flared, upper part of the hip bone."
+    },
+    {
+        "question": "The cavity where the femur fits is called the __________ cavity.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "glenoid",
+            "B": "acetabulum",
+            "C": "obturator",
+            "D": "neural"
+        },
+        "correct_option": "B",
+        "explanation": "The cavity where the femur fits is the acetabulum.",
+        "hint": "This is the deep socket of the hip joint."
+    },
+    {
+        "question": "The hole enclosed by the ischium and pubis is the __________ foramen.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "sciatic",
+            "B": "obturator",
+            "C": "acetabular",
+            "D": "vertebral"
+        },
+        "correct_option": "B",
+        "explanation": "The hole enclosed by the ischium and pubis is the obturator foramen.",
+        "hint": "It is a large opening covered by a membrane."
+    },
+    {
+        "question": "The basic plan for vertebrate limbs is the __________ limb plan.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "tetrapod",
+            "B": "bipedal",
+            "C": "pentadactyl",
+            "D": "segmented"
+        },
+        "correct_option": "C",
+        "explanation": "The basic plan is the pentadactyl (or 5-digit) limb plan.",
+        "hint": "The prefix 'penta-' means five."
+    },
+    {
+        "question": "The upper arm bone is called the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "radius",
+            "B": "ulna",
+            "C": "humerus",
+            "D": "femur"
+        },
+        "correct_option": "C",
+        "explanation": "The upper arm bone is the humerus.",
+        "hint": "It is the bone of the brachium (upper arm)."
+    },
+    {
+        "question": "The bones of the wrist are called __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "tarsals",
+            "B": "metacarpals",
+            "C": "phalanges",
+            "D": "carpals"
+        },
+        "correct_option": "D",
+        "explanation": "The bones of the wrist are called carpals.",
+        "hint": "Think of 'carpal tunnel syndrome'."
+    },
+    {
+        "question": "The bones of the digits are called metacarpals and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "carpals",
+            "B": "tarsals",
+            "C": "phalanges",
+            "D": "metatarsals"
+        },
+        "correct_option": "C",
+        "explanation": "The bones of the digits (fingers/toes) are metacarpals/metatarsals and phalanges.",
+        "hint": "These are the bones of the individual fingers."
+    },
+    {
+        "question": "The thigh bone is called the __________, which is the strongest bone in the body.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "humerus",
+            "B": "femur",
+            "C": "tibia",
+            "D": "fibula"
+        },
+        "correct_option": "B",
+        "explanation": "The thigh bone is the femur.",
+        "hint": "It is the longest and strongest bone."
+    },
+    {
+        "question": "The projections near the top of the femur for muscle attachment are called __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "condyles",
+            "B": "trochanters",
+            "C": "tubercles",
+            "D": "processes"
+        },
+        "correct_option": "B",
+        "explanation": "The projections near the top of the femur are called trochanters.",
+        "hint": "The greater and lesser trochanters are major sites for hip muscle attachment."
+    },
+    {
+        "question": "The two rounded knobs at the distal end of the femur are called __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "trochanters",
+            "B": "tuberosities",
+            "C": "condyles",
+            "D": "malleoli"
+        },
+        "correct_option": "C",
+        "explanation": "The rounded knobs at the distal end are the condyles.",
+        "hint": "They articulate with the tibia to form the knee joint."
+    },
+    {
+        "question": "The shank is made up of the tibia and __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "fibula",
+            "B": "femur",
+            "C": "patella",
+            "D": "tarsals"
+        },
+        "correct_option": "A",
+        "explanation": "The shank (lower leg) is made up of the tibia and fibula.",
+        "hint": "The smaller, lateral bone of the lower leg."
+    },
+    {
+        "question": "The knee cap is called the __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "tarsal",
+            "B": "patella",
+            "C": "meniscus",
+            "D": "condyle"
+        },
+        "correct_option": "B",
+        "explanation": "The knee cap is the patella.",
+        "hint": "It is a sesamoid bone embedded in the quadriceps tendon."
+    },
+    {
+        "question": "The tarsals of the ankle form the __________ bone.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "ankle",
+            "B": "heel",
+            "C": "arch",
+            "D": "shin"
+        },
+        "correct_option": "B",
+        "explanation": "The tarsals form the heel bone (specifically the calcaneus).",
+        "hint": "This is the bone that forms the prominence of the heel."
+    },
+    {
+        "question": "A joint is a place where two or more bones __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "fuse",
+            "B": "meet",
+            "C": "grow",
+            "D": "separate"
+        },
+        "correct_option": "B",
+        "explanation": "A joint is where two or more bones meet (or articulate).",
+        "hint": "The primary definition of a joint is a point of connection."
+    },
+    {
+        "question": "Immovable joints in the skull are called __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "synovial",
+            "B": "symphyses",
+            "C": "sutures",
+            "D": "ligaments"
+        },
+        "correct_option": "C",
+        "explanation": "The immovable joints of the skull are sutures.",
+        "hint": "This repeats an earlier point, confirming its importance."
+    },
+    {
+        "question": "A __________ joint, like in the shoulder, allows movement in all directions (360°).",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "hinge",
+            "B": "pivot",
+            "C": "gliding",
+            "D": "ball and socket"
+        },
+        "correct_option": "D",
+        "explanation": "A ball and socket joint allows movement in all directions.",
+        "hint": "Named for the ball-like end of one bone fitting into a socket of another."
+    },
+    {
+        "question": "A __________ joint, like in the elbow, allows movement in only one direction.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "ball and socket",
+            "B": "hinge",
+            "C": "pivot",
+            "D": "gliding"
+        },
+        "correct_option": "B",
+        "explanation": "A hinge joint allows movement in only one plane (like a door hinge).",
+        "hint": "The elbow and knee are classic examples."
+    },
+    {
+        "question": "Wrist and ankle joints are examples of __________ joints.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "hinge",
+            "B": "pivot",
+            "C": "gliding",
+            "D": "ball and socket"
+        },
+        "correct_option": "C",
+        "explanation": "Wrist and ankle joints are examples of gliding (or sliding) joints.",
+        "hint": "These joints allow limited sliding movements between flat bone surfaces."
+    },
+    {
+        "question": "The joint between the atlas and axis is a __________ joint, allowing rotation.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "hinge",
+            "B": "ball and socket",
+            "C": "pivot",
+            "D": "gliding"
+        },
+        "correct_option": "C",
+        "explanation": "The joint between the atlas and axis is a pivot joint.",
+        "hint": "This joint allows the head to rotate side-to-side, as in saying 'no'."
+    },
+    {
+        "question": "Ligaments hold __________ together at a joint.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "muscles",
+            "B": "bones",
+            "C": "tendons",
+            "D": "organs"
+        },
+        "correct_option": "B",
+        "explanation": "Ligaments hold bones together at a joint.",
+        "hint": "They are connective tissues that connect bone to bone."
+    },
+    {
+        "question": "Tendons join __________ to bones.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "ligaments",
+            "B": "muscles",
+            "C": "other bones",
+            "D": "cartilage"
+        },
+        "correct_option": "B",
+        "explanation": "Tendons join muscles to bones.",
+        "hint": "They are the tough, fibrous ends of muscles."
+    },
+    {
+        "question": "__________ cartilage protects bones from wear and tear at joints.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "Hyaline",
+            "B": "Elastic",
+            "C": "Fibro",
+            "D": "Articular"
+        },
+        "correct_option": "D",
+        "explanation": "Articular cartilage protects bones from wear and tear at joints.",
+        "hint": "It is the smooth, white tissue that covers the ends of bones where they meet."
+    },
+    {
+        "question": "The synovial membrane secretes __________ fluid.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "cerebrospinal",
+            "B": "synovial",
+            "C": "mucous",
+            "D": "serous"
+        },
+        "correct_option": "B",
+        "explanation": "The synovial membrane secretes synovial fluid.",
+        "hint": "The fluid is named after the membrane that secretes it."
+    },
+    {
+        "question": "Synovial fluid reduces __________ between bones.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "adhesion",
+            "B": "friction",
+            "C": "pressure",
+            "D": "temperature"
+        },
+        "correct_option": "B",
+        "explanation": "Synovial fluid reduces friction between bones.",
+        "hint": "It acts as a lubricant for the joint."
+    },
+    {
+        "question": "The space containing the synovial fluid is the synovial __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "cavity",
+            "B": "capsule",
+            "C": "membrane",
+            "D": "sheath"
+        },
+        "correct_option": "B",
+        "explanation": "The space is the synovial capsule (or cavity).",
+        "hint": "It is the enclosed space within the joint capsule."
+    },
+    {
+        "question": "Muscles are joined to bone by __________.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "ligaments",
+            "B": "cartilage",
+            "C": "tendons",
+            "D": "fascia"
+        },
+        "correct_option": "C",
+        "explanation": "Muscles are joined to bone by tendons.",
+        "hint": "This repeats a key point from the joint structure section."
+    },
+    {
+        "question": "An __________ pair of muscles work against each other.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "agonist",
+            "B": "synergist",
+            "C": "antagonist",
+            "D": "extensor"
+        },
+        "correct_option": "C",
+        "explanation": "An antagonist pair of muscles work against each other.",
+        "hint": "For example, the biceps and triceps are antagonists."
+    },
+    {
+        "question": "The biceps muscle __________ the arm.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "straightens",
+            "B": "bends",
+            "C": "rotates",
+            "D": "abducts"
+        },
+        "correct_option": "B",
+        "explanation": "The biceps muscle bends (or flexes) the arm.",
+        "hint": "It is the primary flexor of the elbow."
+    },
+    {
+        "question": "The triceps muscle is an example of an __________ muscle that straightens the arm.",
+        "topic":  "SKELETON AND SUPPORTING SYSTEMS (Questions Only)",
+        "options": {
+            "A": "flexor",
+            "B": "abductor",
+            "C": "rotator",
+            "D": "extensor"
+        },
+        "correct_option": "D",
+        "explanation": "The triceps is an extensor muscle that straightens the arm.",
+        "hint": "It opposes the action of the biceps."
+    }
 ]
 }

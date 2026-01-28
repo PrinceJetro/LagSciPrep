@@ -147,6 +147,19 @@ def cbt_submit_answers(request):
     return JsonResponse({'status': 'ok'})
 
 
+def get_option_text(question, option_letter):
+    """Get the text content of an option given the letter"""
+    if not option_letter:
+        return None
+    option_map = {
+        'A': question.option_a,
+        'B': question.option_b,
+        'C': question.option_c,
+        'D': question.option_d,
+    }
+    return option_map.get(option_letter)
+
+
 def cbt_submit(request):
     course_id = request.session.get('cbt_course_id')
     answers = request.session.get('cbt_answers', {})
@@ -170,7 +183,9 @@ def cbt_submit(request):
             failed.append({
                 'question': q,
                 'your_answer': ans,
+                'your_answer_text': get_option_text(q, ans),
                 'correct_answer': q.correct_option,
+                'correct_answer_text': get_option_text(q, q.correct_option),
                 'explanation': q.explanation
             })
 
@@ -427,7 +442,9 @@ def topic_cbt_submit(request):
             failed.append({
                 'question': q,
                 'your_answer': ans,
+                'your_answer_text': get_option_text(q, ans),
                 'correct_answer': q.correct_option,
+                'correct_answer_text': get_option_text(q, q.correct_option),
                 'explanation': q.explanation
             })
 

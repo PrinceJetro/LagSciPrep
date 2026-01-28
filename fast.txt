@@ -1,4 +1,3 @@
 env\scripts\activate
 cd personalprojects/cbt_app/lagsciprep
 python manage.py runserver
-
