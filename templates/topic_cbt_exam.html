@@ -37,7 +37,7 @@
         <button type="button" class="btn btn-info me-2" id="hintBtn">
             <i class="fas fa-lightbulb me-2"></i>View Hint
         </button>
-        <button type="button" class="btn btn-secondary me-2" id="topicBtn">
+        <button type="button" class="btn btn-secondary me-2" id="topicBtn" data-bs-toggle="modal" data-bs-target="#topicModal">
             <i class="fas fa-book me-2"></i>Topic Content
         </button>
         <div class="input-group" style="max-width: 300px;">
@@ -114,7 +114,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><i class="fas fa-lightbulb text-warning"></i> Hint</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="hintContent">
                 No hint available for this question.
@@ -131,10 +131,19 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><i class="fas fa-book text-primary"></i> Topic Content</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="topicContent">
-                No topic content available.
+                {% if embed_url %}
+                <div class="mb-3">
+                    <iframe src="{{ embed_url }}" title="Topic document preview" width="100%" height="480" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="mb-0"><small class="text-muted">If the preview is blocked, <a href="{{ topic.external_url }}" target="_blank" rel="noopener">open the document</a> in a new tab.</small></p>
+                {% elif topic.external_url %}
+                <p>Preview unavailable. <a href="{{ topic.external_url }}" target="_blank" rel="noopener">Open document</a></p>
+                {% else %}
+                <p>No document available for this topic.</p>
+                {% endif %}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -148,7 +157,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Exit Topic CBT</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>Are you sure you want to exit the topic CBT? Your progress will be lost.</p>
@@ -164,11 +173,28 @@
 <!-- JavaScript with all your original functionality + styling -->
 <script>
 // Global variables (keeping your original variables)
+const TOPIC_ID = {{ topic.id }};
+const STORAGE_KEY = `cbt_state_topic_${TOPIC_ID}`;
 let QUESTIONS = [];
 let answers = {};
 let index = 0;
 let learnMode = false;
 let seconds = 0;
+
+function saveState() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({answers, index})); } catch (e) { console.warn('Failed to save state', e); }
+}
+function loadState() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const state = JSON.parse(raw);
+        if (state.answers) answers = state.answers;
+        if (typeof state.index === 'number' && state.index >= 0 && state.index < QUESTIONS.length) index = state.index;
+    } catch (e) { console.warn('Failed to load state', e); }
+}
+function clearState() { try { localStorage.removeItem(STORAGE_KEY); } catch (e) {} }
+window.addEventListener('beforeunload', saveState);
 
 // Fetch data on page load
 fetch("{% url 'topic_cbt_data' %}")
@@ -180,13 +206,16 @@ fetch("{% url 'topic_cbt_data' %}")
     
     // Initialize question navigation
     initQuestionNav();
-    
-    // Render first question
+
+    // Restore saved state (answers + index) if present
+    loadState();
+
+    // Render first (or restored) question
     render();
-    
+
     // Start timer
     startTimer();
-    
+
     // Update progress
     updateProgress();
 })
@@ -197,6 +226,14 @@ fetch("{% url 'topic_cbt_data' %}")
             Error loading topic CBT. Please try again.
         </div>
     `;
+});
+
+// Ensure modals clean up leftover backdrops and remove modal-open body class
+document.querySelectorAll('.modal').forEach(modalEl => {
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+        document.body.classList.remove('modal-open');
+    });
 });
 
 // Main render function (modified for styling)
@@ -323,7 +360,8 @@ function render() {
 // Your original functions (with minor additions for UI updates)
 function selectAnswer(qid, value) {
     answers[qid] = value;
-    
+    saveState();
+
     // Update save indicator
     const saveIndicator = document.getElementById('saveIndicator');
     saveIndicator.innerHTML = '<i class="fas fa-check text-success me-1"></i>Answer saved';
@@ -375,6 +413,7 @@ function selectAnswer(qid, value) {
 function next() {
     if (index < QUESTIONS.length - 1) {
         index++;
+        saveState();
         render();
     }
 }
@@ -382,6 +421,7 @@ function next() {
 function prev() {
     if (index > 0) {
         index--;
+        saveState();
         render();
     }
 }
@@ -399,6 +439,7 @@ function submitExam() {
     })
     .then(response => {
         if (response.ok) {
+            clearState();
             window.location.href = "{% url 'topic_cbt_submit' %}";
         } else {
             alert('Error submitting topic CBT. Please try again.');
@@ -542,7 +583,15 @@ document.addEventListener('DOMContentLoaded', function() {
             topicContent.innerHTML = `
                 <h6 class="mb-3">{{ topic.name }}</h6>
                 <div class="topic-content">
-                    {{ topic.content|safe|default:"No topic content available." }}
+                    {% if embed_url %}
+                    <div class="mb-3">
+                        <iframe src="{{ embed_url }}" title="Topic document preview" width="100%" height="480" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    {% elif topic.external_url %}
+                    <p><a href="{{ topic.external_url }}" target="_blank" rel="noopener">Open document</a></p>
+                    {% else %}
+                    <p class="text-muted">No document available for this topic.</p>
+                    {% endif %}
                 </div>
             `;
         }
@@ -593,13 +642,13 @@ function displaySearchResults(data) {
     } else {
         html += '<h6>Topics:</h6>';
         data.results.topics.forEach(topic => {
-            const highlightedContent = highlightText(topic.content, data.query);
+            const linkHtml = topic.external_url ? `<a href="${topic.external_url}" target="_blank" rel="noopener">Open document</a>` : '<small class="text-muted">No document available.</small>';
             html += `
                 <div class="card mb-2">
                     <div class="card-body">
                         <h6 class="card-title">${topic.name} (${topic.course__name})</h6>
                         <div class="topic-content">
-                            ${highlightedContent}
+                            ${linkHtml}
                         </div>
                     </div>
                 </div>

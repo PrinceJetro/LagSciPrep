@@ -242,10 +242,14 @@
             </div>
             <div class="modal-body">
                 <div class="topic-content">
-                    {% if topic.content %}
-                        {{ topic.content|safe }}
+                    {% if embed_url %}
+                    <div class="mb-3">
+                        <iframe src="{{ embed_url }}" title="Topic document preview" width="100%" height="480" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    {% elif topic.external_url %}
+                    <p><a href="{{ topic.external_url }}" target="_blank" rel="noopener">Open document</a></p>
                     {% else %}
-                        <p class="text-muted">No content available for this topic.</p>
+                    <p class="text-muted">No document available for this topic.</p>
                     {% endif %}
                 </div>
             </div>

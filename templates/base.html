@@ -643,6 +643,24 @@
                 }, 5000);
             });
         });
+
+        // Manage focus for Bootstrap modals to avoid aria-hidden-focus warnings
+        document.addEventListener('shown.bs.modal', function(e) {
+            try {
+                e.target.__previouslyFocused = document.activeElement;
+                const closeBtn = e.target.querySelector('.btn-close');
+                if (closeBtn && typeof closeBtn.focus === 'function') closeBtn.focus();
+            } catch (err) { /* ignore */ }
+        });
+        document.addEventListener('hidden.bs.modal', function(e) {
+            try {
+                const prev = e.target.__previouslyFocused;
+                if (prev && typeof prev.focus === 'function') prev.focus();
+                // cleanup leftover backdrops too
+                document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+                document.body.classList.remove('modal-open');
+            } catch (err) { /* ignore */ }
+        });
     </script>
 </body>
 </html>

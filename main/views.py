@@ -17,7 +17,8 @@ class CBTForm(forms.Form):
                 ('A', question.option_a),
                 ('B', question.option_b),
                 ('C', question.option_c),
-                ('D', question.option_d)
+                ('D', question.option_d),
+                ('E', question.option_e),
             ],
             widget=forms.RadioSelect,
             required=False,
@@ -95,7 +96,30 @@ def cbt_exam(request):
         return redirect('home')
 
     course = get_object_or_404(Course, id=course_id)
-    return render(request, 'cbt_exam.html', {'course': course})
+
+    # Collect topic documents (topics with external_url) to show in the exam modal
+    topic_docs = []
+    try:
+        topics_with_docs = course.topics.filter(external_url__isnull=False).exclude(external_url__exact='')
+        for t in topics_with_docs:
+            try:
+                topic_docs.append({
+                    'id': t.id,
+                    'name': t.name,
+                    'external_url': t.external_url,
+                    'embed_url': t.get_embed_url() if hasattr(t, 'get_embed_url') else None,
+                })
+            except Exception:
+                topic_docs.append({
+                    'id': t.id,
+                    'name': t.name,
+                    'external_url': t.external_url,
+                    'embed_url': None,
+                })
+    except Exception:
+        topic_docs = []
+
+    return render(request, 'cbt_exam.html', {'course': course, 'topic_docs': topic_docs})
 
 
 def cbt_data(request):
@@ -121,6 +145,7 @@ def cbt_data(request):
                 'B': q.option_b,
                 'C': q.option_c,
                 'D': q.option_d,
+                'E': q.option_e,
             },
             'correct': q.correct_option,
             'explanation': q.explanation or "No explanation provided",
@@ -156,6 +181,7 @@ def get_option_text(question, option_letter):
         'B': question.option_b,
         'C': question.option_c,
         'D': question.option_d,
+        'E': question.option_e,
     }
     return option_map.get(option_letter)
 
@@ -303,10 +329,16 @@ def topic_detail(request, topic_id):
     topic = get_object_or_404(Topic, id=topic_id)
     course = topic.course
     obj_questions_count = course.objective_questions.count()
+    embed_url = None
+    try:
+        embed_url = topic.get_embed_url() if hasattr(topic, 'get_embed_url') else None
+    except Exception:
+        embed_url = None
     return render(request, "topic_detail.html", {
         "topic": topic,
         "course": course,
         "obj_questions_count": obj_questions_count,
+        "embed_url": embed_url,
     })
 
 
@@ -368,7 +400,12 @@ def topic_cbt_exam(request):
         return redirect('home')
 
     topic = get_object_or_404(Topic, id=topic_id)
-    return render(request, 'topic_cbt_exam.html', {'topic': topic})
+    embed_url = None
+    try:
+        embed_url = topic.get_embed_url() if hasattr(topic, 'get_embed_url') else None
+    except Exception:
+        embed_url = None
+    return render(request, 'topic_cbt_exam.html', {'topic': topic, 'embed_url': embed_url})
 
 
 def topic_cbt_data(request):
@@ -393,6 +430,7 @@ def topic_cbt_data(request):
                 'B': q.option_b,
                 'C': q.option_c,
                 'D': q.option_d,
+                'E': q.option_e,
             },
             'correct': q.correct_option,
             'explanation': q.explanation or "No explanation provided",
@@ -488,7 +526,6 @@ def custom_logout(request):
     """
     if request.method == 'POST':
         # User confirmed logout
-        print("Here")
         logout(request)
         messages.success(request, "You have been successfully logged out.")
         return redirect('home')
@@ -499,7 +536,6 @@ def register(request):
         user_form = StudentRegistrationForm(request.POST)
         profile_form = StudentProfileForm(request.POST)
         if user_form.is_valid() and profile_form.is_valid():
-            print("Here")
             user = user_form.save()
             student = profile_form.save(commit=False)
             student.user = user
@@ -610,56 +646,7 @@ def progress(request):
 
 
 
-from django.http import JsonResponse
-
-def search_json(request):
-    query = request.GET.get('q', '').strip()
-    if not query:
-        return JsonResponse({'results': []})
-    
-    # Search in Topics only
-    topics = Topic.objects.filter(
-        Q(name__icontains=query) | Q(content__icontains=query)
-    ).values('id', 'name', 'content', 'course__name')
-    
-    results = {
-        'topics': list(topics),
-    }
-    
-    return JsonResponse({'query': query, 'results': results})
-    query = request.GET.get('q', '').strip()
-    if not query:
-        return render(request, 'search_results.html', {'query': query, 'results': []})
-    
-    # Search in Courses
-    courses = Course.objects.filter(name__icontains=query)
-    
-    # Search in Topics
-    topics = Topic.objects.filter(
-        Q(name__icontains=query) | Q(content__icontains=query)
-    )
-    
-    # Search in Questions
-    questions = PastQuestionsObj.objects.filter(
-        Q(question_text__icontains=query) |
-        Q(option_a__icontains=query) |
-        Q(option_b__icontains=query) |
-        Q(option_c__icontains=query) |
-        Q(option_d__icontains=query) |
-        Q(explanation__icontains=query) |
-        Q(hint__icontains=query)
-    )
-    
-    results = {
-        'courses': courses,
-        'topics': topics,
-        'questions': questions,
-    }
-    
-    return render(request, 'search_results.html', {
-        'query': query,
-        'results': results,
-    })
+# json search endpoint defined later (deduplicated)
 
 
 
@@ -863,43 +850,54 @@ PastQuestionsTheory.objects.create(
 
 
 
-# import json
-# from main.models import Course, Topic, PastQuestionsObj
+def load_random_questions_from_file(filepath='random_questions.json'):
+    """Load questions from a JSON file into the database.
 
-# with open('random_questions.json', 'r', encoding='utf-8') as f:
-#     data = json.load(f)
+    This helper does NOT run on import. Call it explicitly from a script,
+    the Django shell, or a management command. Example:
+      from main.views import load_random_questions_from_file
+      load_random_questions_from_file()
+    """
+    import json
+    from main.models import Course, Topic, PastQuestionsObj
 
-# for course_name, questions in data.items():
-#     course, _ = Course.objects.get_or_create(name=course_name)
-#     for q in questions:
-#         topic_name = q.get("topic", "")
-#         if topic_name:
-#             topic, _ = Topic.objects.get_or_create(name=topic_name, course=course)
-#         else:
-#             topic = None
-#         options = q.get("options", {})
-#         # Use get_or_create to avoid duplicates based on course and question_text
-#         obj, created = PastQuestionsObj.objects.get_or_create(
-#             course=course,
-#             question_text=q.get("question", ""),
-#             defaults={
-#                 'topic': topic,
-#                 'option_a': options.get("A", ""),
-#                 'option_b': options.get("B", ""),
-#                 'option_c': options.get("C", ""),
-#                 'option_d': options.get("D", ""),
-#                 'correct_option': q.get("correct_option", ""),
-#                 'explanation': q.get("explanation", ""),
-#                 'hint': q.get("hint", ""),
-#             }
-#         )
-#         print("Created" + " " + obj.question_text) if created else print("Exists" + " " + obj.question_text)
-#         if not created:
-#             # Optionally update existing if needed
-#             print("Question already exists:", obj.question_text)
-#             pass
+    with open(filepath, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
+    for course_name, questions in data.items():
+        course, _ = Course.objects.get_or_create(name=course_name)
+        for q in questions:
+            topic_name = q.get("topic", "")
+            if topic_name:
+                topic, _ = Topic.objects.get_or_create(name=topic_name, course=course)
+            else:
+                topic = None
+            options = q.get("options", {})
+            # Use get_or_create to avoid duplicates based on course and question_text
+            obj, created = PastQuestionsObj.objects.get_or_create(
+                course=course,
+                question_text=q.get("question", ""),
+                defaults={
+                    'topic': topic,
+                    'option_a': options.get("A", ""),
+                    'option_b': options.get("B", ""),
+                    'option_c': options.get("C", ""),
+                    'option_d': options.get("D", ""),
+                    'option_e': options.get("E", ""),
+                    'correct_option': q.get("correct_option", ""),
+                    'explanation': q.get("explanation", ""),
+                    'hint': q.get("hint", ""),
+                }
+            )
+            if created:
+                print("Created", obj.question_text)
+            else:
+                print("Exists", obj.question_text)
 
+# NOTE: For safety and reproducibility, prefer moving this logic into a Django
+# management command (see `python manage.py help`) or run it from the shell.
+
+# load_random_questions_from_file()
 
 
 from django.db.models import Q
@@ -912,9 +910,9 @@ def search(request):
     # Search in Courses
     courses = Course.objects.filter(name__icontains=query)
     
-    # Search in Topics
+    # Search in Topics (search name and document link)
     topics = Topic.objects.filter(
-        Q(name__icontains=query) | Q(content__icontains=query)
+        Q(name__icontains=query) | Q(external_url__icontains=query)
     )
     
     # Search in Questions
@@ -924,6 +922,7 @@ def search(request):
         Q(option_b__icontains=query) |
         Q(option_c__icontains=query) |
         Q(option_d__icontains=query) |
+        Q(option_e__icontains=query) |
         Q(explanation__icontains=query) |
         Q(hint__icontains=query)
     )
@@ -947,10 +946,10 @@ def search_json(request):
         return JsonResponse({'results': []})
     
     
-    # Search in Topics
+    # Search in Topics (search name and document link)
     topics = Topic.objects.filter(
-        Q(name__icontains=query) | Q(content__icontains=query)
-    ).values('id', 'name', 'course__name', "content")
+        Q(name__icontains=query) | Q(external_url__icontains=query)
+    ).values('id', 'name', 'course__name', 'external_url')
 
     
     results = {
@@ -974,3 +973,6 @@ def search_json(request):
 # Volume: Generate as many unique questions as the text allows, up to 100. If the text is exhausted before 100, provide as many as are logically possible.
 
 # Here is the lecture text: 
+
+
+

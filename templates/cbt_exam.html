@@ -36,6 +36,11 @@
         <button type="button" class="btn btn-info me-2" id="hintBtn">
             <i class="fas fa-lightbulb me-2"></i>View Hint
         </button>
+        {% if topic_docs %}
+        <button type="button" class="btn btn-secondary me-2" id="docsBtn" data-bs-toggle="modal" data-bs-target="#docsModal">
+            <i class="fas fa-file-alt me-2"></i>Course Materials
+        </button>
+        {% endif %}
         <div class="input-group" style="max-width: 300px;">
             <input type="text" class="form-control" id="searchInput" placeholder="Search topics, questions...">
             <button class="btn btn-primary" type="button" id="searchBtn">
@@ -110,7 +115,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><i class="fas fa-lightbulb text-warning"></i> Hint</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="hintContent">
                 No hint available for this question.
@@ -122,15 +127,48 @@
     </div>
 </div>
 
+{% if topic_docs %}
+<div class="modal fade" id="docsModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-file-alt text-primary"></i> Course Materials</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {% for doc in topic_docs %}
+                <div class="mb-4">
+                    <h6 class="mb-2">{{ doc.name }}</h6>
+                    {% if doc.embed_url %}
+                    <div class="ratio ratio-16x9 mb-2">
+                        <iframe src="{{ doc.embed_url }}" title="{{ doc.name }} preview" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="mb-0"><small class="text-muted">If the preview is blocked, <a href="{{ doc.external_url }}" target="_blank" rel="noopener">open the document</a> in a new tab.</small></p>
+                    {% else %}
+                    <p>Preview unavailable. <a href="{{ doc.external_url }}" target="_blank" rel="noopener">Open document</a></p>
+                    {% endif %}
+                </div>
+                <hr/>
+                {% endfor %}
+                <p class="mt-2"><small class="text-muted">Ensure documents are shared publicly (Anyone with the link) for previews to work.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 <div class="modal fade" id="topicModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen-md-down">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><i class="fas fa-book text-primary"></i> Topic Content</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="topicContent">
-                No topic content available.
+                <p class="text-muted">No document available for this topic.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -144,7 +182,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Exit Exam</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>Are you sure you want to exit the exam? Your progress will be lost.</p>
@@ -160,11 +198,35 @@
 <!-- JavaScript with all your original functionality + styling -->
 <script>
 // Global variables (keeping your original variables)
+const COURSE_ID = {{ course.id }};
+const STORAGE_KEY = `cbt_state_course_${COURSE_ID}`;
 let QUESTIONS = [];
 let answers = {};
 let index = 0;
 let learnMode = false;
 let seconds = 0;
+
+function saveState() {
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({answers, index}));
+    } catch (e) { console.warn('Failed to save state', e); }
+}
+
+function loadState() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const state = JSON.parse(raw);
+        if (state.answers) answers = state.answers;
+        if (typeof state.index === 'number' && state.index >= 0 && state.index < QUESTIONS.length) index = state.index;
+    } catch (e) { console.warn('Failed to load state', e); }
+}
+
+function clearState() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+}
+
+window.addEventListener('beforeunload', saveState);
 
 // Fetch data on page load
 fetch("{% url 'cbt_data' %}")
@@ -176,13 +238,16 @@ fetch("{% url 'cbt_data' %}")
     
     // Initialize question navigation
     initQuestionNav();
-    
-    // Render first question
+
+    // Restore saved state (answers + index) if present
+    loadState();
+
+    // Render first (or restored) question
     render();
-    
+
     // Start timer
     startTimer();
-    
+
     // Update progress
     updateProgress();
 })
@@ -318,7 +383,8 @@ function render() {
 // Your original functions (with minor additions for UI updates)
 function selectAns(qid, val) {
     answers[qid] = val;
-    
+    saveState();
+
     // Update save indicator
     const saveIndicator = document.getElementById('saveIndicator');
     saveIndicator.innerHTML = '<i class="fas fa-check text-success me-1"></i>Answer saved';
@@ -367,6 +433,7 @@ function selectAns(qid, val) {
 function next() {
     if (index < QUESTIONS.length - 1) {
         index++;
+        saveState();
         render();
     }
 }
@@ -374,6 +441,7 @@ function next() {
 function prev() {
     if (index > 0) {
         index--;
+        saveState();
         render();
     }
 }
@@ -393,6 +461,7 @@ function submitExam() {
     })
     .then(response => {
         if (response.ok) {
+            clearState();
             window.location.href = "{% url 'cbt_submit' %}";
         } else {
             alert('Error submitting exam. Please try again.');
@@ -582,13 +651,13 @@ function displaySearchResults(data) {
     } else {
         html += '<h6>Topics:</h6>';
         data.results.topics.forEach(topic => {
-            const highlightedContent = highlightText(topic.content, data.query);
+            const linkHtml = topic.external_url ? `<a href="${topic.external_url}" target="_blank" rel="noopener">Open document</a>` : '<small class="text-muted">No document available.</small>';
             html += `
                 <div class="card mb-2">
                     <div class="card-body">
                         <h6 class="card-title">${topic.name} (${topic.course__name})</h6>
                         <div class="topic-content">
-                            ${highlightedContent}
+                            ${linkHtml}
                         </div>
                     </div>
                 </div>
@@ -617,6 +686,14 @@ setInterval(() => {
         }, 3000);
     }
 }, 30000);
+
+// Ensure modals clean up leftover backdrops and remove modal-open body class
+document.querySelectorAll('.modal').forEach(modalEl => {
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+        document.body.classList.remove('modal-open');
+    });
+});
 </script>
 
 <style>

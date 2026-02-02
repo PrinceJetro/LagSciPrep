@@ -10,9 +10,11 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(Topic)
 class TopicAdmin(admin.ModelAdmin):
-	search_fields = ['name', 'course__name']
-	list_display = ['name', 'course', "id"]
-	list_filter = ['course']
+    search_fields = ['name', 'course__name', 'external_url']
+    list_display = ['id', 'name', 'course', 'external_url']
+    list_filter = ['course']
+    # Keep the admin simple: only allow editing the external_url (and basic metadata)
+    fields = ('name', 'course', 'external_url')
 
 @admin.register(PastQuestionsObj)
 class PastQuestionsObjAdmin(admin.ModelAdmin):
