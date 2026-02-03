@@ -1,108 +1,823 @@
 {
-    "BIO 101": [
+    "ZOO 101":[
   {
-    "question": "A scientist known for transformation experiments with bacteria was __________.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
+    "question": "What does every cell in the body need to receive besides oxygen?",
+    "topic": "Mammalian Circulatory System",
     "options": {
-      "A": "Oswald Avery",
-      "B": "Erwin Chargaff",
-      "C": "Frederick Griffith",
-      "D": "Linus Pauling"
-    },
-    "correct_option": "C",
-    "explanation": "Frederick Griffith was known for transformation experiments with bacteria.",
-    "hint": "His experiments involved mixing heat-killed pathogenic and live non-pathogenic bacteria."
-  },
-  {
-    "question": "__________ demonstrated that DNA was the transforming principle.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
-    "options": {
-      "A": "Frederick Griffith",
-      "B": "Oswald Avery",
-      "C": "Alfred Hershey",
-      "D": "Friedrich Miescher"
+      "A": "Hormones",
+      "B": "Nutrients",
+      "C": "Carbon dioxide",
+      "D": "Waste products"
     },
     "correct_option": "B",
-    "explanation": "Oswald Avery demonstrated that DNA was the transforming principle.",
-    "hint": "His work built upon Griffith's experiments to identify the molecule of inheritance."
+    "explanation": "Every cell in the body needs to receive oxygen and nutrients.",
+    "hint": "It includes substances like glucose and amino acids."
   },
   {
-    "question": "The scientist who established that A=T and C=G was __________.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
+    "question": "What is the major purpose of the circulatory system regarding transport?",
+    "topic": "Mammalian Circulatory System",
     "options": {
-      "A": "Linus Pauling",
-      "B": "Erwin Chargaff",
-      "C": "Rosalind Franklin",
-      "D": "James Watson"
+      "A": "Slow chemical transport",
+      "B": "Rapid mass transport",
+      "C": "Selective electrical transport",
+      "D": "Passive thermal transport"
     },
     "correct_option": "B",
-    "explanation": "Erwin Chargaff established that A=T and C=G.",
-    "hint": "This base-pairing rule is named after him."
+    "explanation": "The major purpose of the circulatory system is to provide rapid mass transport over distances where diffusion is too slow.",
+    "hint": "It moves large quantities of substances quickly."
   },
   {
-    "question": "__________ produced critical X-ray diffraction images of DNA.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
+    "question": "Circulation is a necessity for large animals with high what?",
+    "topic": "Mammalian Circulatory System",
     "options": {
-      "A": "James Watson",
-      "B": "Francis Crick",
-      "C": "Rosalind Franklin (and Maurice Wilkins)",
-      "D": "Erwin Chargaff"
-    },
-    "correct_option": "C",
-    "explanation": "Rosalind Franklin (and Maurice Wilkins) produced critical X-ray diffraction images of DNA.",
-    "hint": "Image 51, from her work, was crucial in deducing DNA's structure."
-  },
-  {
-    "question": "The Hershey-Chase experiment used __________ to confirm DNA is the genetic material.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
-    "options": {
-      "A": "bacteria",
-      "B": "mice",
-      "C": "bacteriophages (viruses)",
-      "D": "fruit flies"
-    },
-    "correct_option": "C",
-    "explanation": "The Hershey-Chase experiment used bacteriophages (viruses) to confirm DNA is the genetic material.",
-    "hint": "They labeled the protein coat and DNA of viruses with different radioactive isotopes."
-  },
-  {
-    "question": "__________ proposed an incorrect triple-helix model of DNA.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
-    "options": {
-      "A": "Francis Crick",
-      "B": "Linus Pauling",
-      "C": "Frederick Griffith",
-      "D": "Maurice Wilkins"
+      "A": "Reproductive rates",
+      "B": "Metabolic rates",
+      "C": "Growth rates",
+      "D": "Mutation rates"
     },
     "correct_option": "B",
-    "explanation": "Linus Pauling proposed an incorrect triple-helix model of DNA.",
-    "hint": "This chemist is also famous for his work on the structure of proteins and chemical bonds."
+    "explanation": "Circulation is a necessity for large animals with high metabolic rates.",
+    "hint": "It relates to the rate of energy use."
   },
   {
-    "question": "The scientists who deduced the double-helix structure of DNA were __________ and __________.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
+    "question": "Which organs work with the heart and lungs to complete circulation?",
+    "topic": "Mammalian Circulatory System",
     "options": {
-      "A": "Griffith and Avery",
-      "B": "Hershey and Chase",
-      "C": "Watson and Crick",
-      "D": "Pauling and Corey"
-    },
-    "correct_option": "C",
-    "explanation": "The scientists who deduced the double-helix structure of DNA were James Watson and Francis Crick.",
-    "hint": "They published their model in 1953."
-  },
-  {
-    "question": "The discoverer of 'nuclein' (DNA) was __________.",
-    "topic": "Foundations of Biology – From Scientific Inquiry to the Central Dogma",
-    "options": {
-      "A": "Friedrich Miescher",
-      "B": "Gregor Mendel",
-      "C": "Oswald Avery",
-      "D": "Thomas Hunt Morgan"
+      "A": "Blood vessels",
+      "B": "Kidneys",
+      "C": "Muscles",
+      "D": "Nerves"
     },
     "correct_option": "A",
-    "explanation": "The discoverer of 'nuclein' (DNA) was Friedrich Miescher.",
-    "hint": "He isolated the substance from white blood cell nuclei in the 1860s."
+    "explanation": "The heart, lungs, and blood vessels work together to complete circulation.",
+    "hint": "They are the tubes that carry blood."
+  },
+  {
+    "question": "In a closed circulatory system, blood returns to the heart without doing what?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Flowing",
+      "B": "Leaving it",
+      "C": "Circulating",
+      "D": "Pumping"
+    },
+    "correct_option": "B",
+    "explanation": "In a closed circulatory system, blood remains within a system of tubes and returns to the heart without leaving it.",
+    "hint": "Blood is always contained within vessels."
+  },
+  {
+    "question": "What type of circulatory system do vertebrates have?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Open",
+      "B": "Closed",
+      "C": "Lacunar",
+      "D": "Incomplete"
+    },
+    "correct_option": "B",
+    "explanation": "Vertebrates have a closed circulatory system.",
+    "hint": "Blood is confined to vessels."
+  },
+  {
+    "question": "In an open circulatory system, where does blood flow freely before returning to the heart?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Between the vessels",
+      "B": "Between the tissues",
+      "C": "Between the bones",
+      "D": "Between the nerves"
+    },
+    "correct_option": "B",
+    "explanation": "In an open circulatory system (e.g., in molluscs), blood flows freely between the tissues before returning to the heart.",
+    "hint": "It bathes the organs directly."
+  },
+  {
+    "question": "Closed circulatory systems are usually what type of pressure systems?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Low-pressure",
+      "B": "High-pressure",
+      "C": "Variable-pressure",
+      "D": "No-pressure"
+    },
+    "correct_option": "B",
+    "explanation": "Closed systems are usually high-pressure systems.",
+    "hint": "Blood is under greater force."
+  },
+  {
+    "question": "Open circulatory systems are usually what type of pressure systems?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "High-pressure",
+      "B": "Low-pressure",
+      "C": "Negative-pressure",
+      "D": "Oscillating-pressure"
+    },
+    "correct_option": "B",
+    "explanation": "Open systems are usually low-pressure systems.",
+    "hint": "Blood flows more sluggishly."
+  },
+  {
+    "question": "In closed systems, high pressure requires high peripheral what?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Conductance",
+      "B": "Resistance",
+      "C": "Capacitance",
+      "D": "Elasticity"
+    },
+    "correct_option": "B",
+    "explanation": "In closed systems, high pressure requires high peripheral resistance.",
+    "hint": "It opposes blood flow in small vessels."
+  },
+  {
+    "question": "In closed systems, sustained pressure between heartbeats requires what kind of walls in the vessels?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Muscular walls",
+      "B": "Elastic walls",
+      "C": "Rigid walls",
+      "D": "Thin walls"
+    },
+    "correct_option": "B",
+    "explanation": "In closed systems, sustained pressure between heartbeats requires elastic walls in the vessels.",
+    "hint": "They stretch and recoil."
+  },
+  {
+    "question": "In which type of system is blood return to the heart rapid?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Open systems",
+      "B": "Closed systems",
+      "C": "Both systems",
+      "D": "Neither system"
+    },
+    "correct_option": "B",
+    "explanation": "Blood return to the heart is rapid in closed systems.",
+    "hint": "Vessels provide a direct pathway."
+  },
+  {
+    "question": "What are the three major kinds of circulation in humans?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Pulmonary, systemic, and portal",
+      "B": "Pulmonary, systemic, and coronary",
+      "C": "Systemic, hepatic, and renal",
+      "D": "Cardiac, pulmonary, and systemic"
+    },
+    "correct_option": "B",
+    "explanation": "The three major kinds of circulation are pulmonary, systemic, and coronary.",
+    "hint": "One is for the lungs, one for the body, one for the heart muscle."
+  },
+  {
+    "question": "Which circulation carries de-oxygenated blood from the heart to the lungs?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Systemic circulation",
+      "B": "Coronary circulation",
+      "C": "Pulmonary circulation",
+      "D": "Hepatic circulation"
+    },
+    "correct_option": "C",
+    "explanation": "The pulmonary circulation carries de-oxygenated blood from the heart to the lungs.",
+    "hint": "It involves the lungs."
+  },
+  {
+    "question": "How is de-oxygenated blood pumped to the lungs?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Via the pulmonary vein",
+      "B": "Via the pulmonary artery",
+      "C": "Via the aorta",
+      "D": "Via the vena cava"
+    },
+    "correct_option": "B",
+    "explanation": "De-oxygenated blood is pumped to the lungs via the pulmonary artery.",
+    "hint": "An artery that carries deoxygenated blood is an exception."
+  },
+  {
+    "question": "How does oxygenated blood return from the lungs to the heart?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Via the pulmonary artery",
+      "B": "Via the pulmonary vein",
+      "C": "Via the aorta",
+      "D": "Via the coronary sinus"
+    },
+    "correct_option": "B",
+    "explanation": "Oxygenated blood returns from the lungs to the heart via the pulmonary vein.",
+    "hint": "A vein that carries oxygenated blood is an exception."
+  },
+  {
+    "question": "Which circulation transports oxygenated blood from the heart to the rest of the body?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Pulmonary circulation",
+      "B": "Systemic circulation",
+      "C": "Coronary circulation",
+      "D": "Portal circulation"
+    },
+    "correct_option": "B",
+    "explanation": "The systemic circulation transports oxygenated blood from the heart to the rest of the body.",
+    "hint": "It supplies the entire body except the lungs."
+  },
+  {
+    "question": "Through which vessel does systemic circulation transport blood away from the heart?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "The pulmonary artery",
+      "B": "The vena cava",
+      "C": "The aorta",
+      "D": "The coronary artery"
+    },
+    "correct_option": "C",
+    "explanation": "Systemic circulation transports blood away from the heart through the aorta.",
+    "hint": "It is the largest artery."
+  },
+  {
+    "question": "How does the distance of systemic circulation compare to pulmonary circulation?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Much shorter",
+      "B": "Much longer",
+      "C": "The same length",
+      "D": "Variable length"
+    },
+    "correct_option": "B",
+    "explanation": "Systemic circulation is, distance-wise, much longer than pulmonary circulation.",
+    "hint": "It goes to the toes and back."
+  },
+  {
+    "question": "Which circulation provides a blood supply to the muscles of the heart itself?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Pulmonary circulation",
+      "B": "Systemic circulation",
+      "C": "Coronary circulation",
+      "D": "Cerebral circulation"
+    },
+    "correct_option": "C",
+    "explanation": "The coronary circulation provides a blood supply to the muscles of the heart itself.",
+    "hint": "It nourishes the heart muscle."
+  },
+  {
+    "question": "Where does coronary circulation arise from and drain into?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Arises from the vena cava, drains into the right atrium",
+      "B": "Arises from the aorta, drains into the right atrium",
+      "C": "Arises from the pulmonary artery, drains into the left atrium",
+      "D": "Arises from the aorta, drains into the left atrium"
+    },
+    "correct_option": "B",
+    "explanation": "Coronary circulation arises from the aorta and drains into the right atrium.",
+    "hint": "It starts just above the aortic valve."
+  },
+  {
+    "question": "What type of blood vessel carries blood away from the heart?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Veins",
+      "B": "Capillaries",
+      "C": "Arteries",
+      "D": "Venules"
+    },
+    "correct_option": "C",
+    "explanation": "Arteries carry blood away from the heart.",
+    "hint": "They usually carry oxygenated blood (except one)."
+  },
+  {
+    "question": "What is the largest artery?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Pulmonary artery",
+      "B": "Aorta",
+      "C": "Carotid artery",
+      "D": "Femoral artery"
+    },
+    "correct_option": "B",
+    "explanation": "The largest artery is the aorta.",
+    "hint": "It exits the left ventricle."
+  },
+  {
+    "question": "How does the pressure in arteries compare to veins?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Higher pressure",
+      "B": "Lower pressure",
+      "C": "Same pressure",
+      "D": "Variable pressure"
+    },
+    "correct_option": "A",
+    "explanation": "Arteries have a higher pressure than veins.",
+    "hint": "They are closer to the pumping heart."
+  },
+  {
+    "question": "What are small arteries called?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Venules",
+      "B": "Arterioles",
+      "C": "Capillaries",
+      "D": "Vasculoles"
+    },
+    "correct_option": "B",
+    "explanation": "Small arteries are called arterioles.",
+    "hint": "They regulate blood flow into capillaries."
+  },
+  {
+    "question": "What type of blood vessel carries blood towards the heart?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Arteries",
+      "B": "Capillaries",
+      "C": "Veins",
+      "D": "Arterioles"
+    },
+    "correct_option": "C",
+    "explanation": "Veins carry blood towards the heart.",
+    "hint": "They usually carry deoxygenated blood (except one)."
+  },
+  {
+    "question": "What is the widest blood vessel?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Aorta",
+      "B": "Pulmonary vein",
+      "C": "Vena cava",
+      "D": "Coronary sinus"
+    },
+    "correct_option": "C",
+    "explanation": "The widest blood vessel is the vena cava.",
+    "hint": "It returns blood to the heart."
+  },
+  {
+    "question": "What are small veins called?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Arterioles",
+      "B": "Venules",
+      "C": "Capillaries",
+      "D": "Ventricles"
+    },
+    "correct_option": "B",
+    "explanation": "Small veins are called venules.",
+    "hint": "They collect blood from capillaries."
+  },
+  {
+    "question": "What are the vessels composed of a single layer of cells where fluid and gas exchange occurs?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Arteries",
+      "B": "Veins",
+      "C": "Capillaries",
+      "D": "Arterioles"
+    },
+    "correct_option": "C",
+    "explanation": "Capillaries are composed of a single layer of cells and are the site of fluid and gas exchange.",
+    "hint": "They are microscopic."
+  },
+  {
+    "question": "What are capillary walls made of?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Muscle tissue",
+      "B": "Connective tissue",
+      "C": "Very thin endothelium",
+      "D": "Elastic fibers"
+    },
+    "correct_option": "C",
+    "explanation": "Capillary walls are made of very thin endothelium.",
+    "hint": "A single layer of squamous epithelial cells."
+  },
+  {
+    "question": "Where is blood flow rate the lowest?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "In the arteries",
+      "B": "In the veins",
+      "C": "In the capillaries",
+      "D": "In the arterioles"
+    },
+    "correct_option": "C",
+    "explanation": "Blood flow rate is lowest in the capillaries.",
+    "hint": "This allows time for exchange."
+  },
+  {
+    "question": "What results when capillaries burst from impact?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Bleeding",
+      "B": "Bruising",
+      "C": "Clotting",
+      "D": "Swelling"
+    },
+    "correct_option": "B",
+    "explanation": "Bruising results when capillaries burst from impact.",
+    "hint": "It causes a visible discoloration under the skin."
+  },
+  {
+    "question": "How many chambers does the human heart have?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Two",
+      "B": "Three",
+      "C": "Four",
+      "D": "Five"
+    },
+    "correct_option": "C",
+    "explanation": "The human heart has four chambers.",
+    "hint": "Two atria and two ventricles."
+  },
+  {
+    "question": "What are the two upper chambers of the heart called?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Ventricles",
+      "B": "Atria or auricles",
+      "C": "Septums",
+      "D": "Valves"
+    },
+    "correct_option": "B",
+    "explanation": "The two upper chambers are called the atria or auricles.",
+    "hint": "They are the receiving chambers."
+  },
+  {
+    "question": "What are the two lower chambers of the heart called?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Atria",
+      "B": "Ventricles",
+      "C": "Auricles",
+      "D": "Septums"
+    },
+    "correct_option": "B",
+    "explanation": "The two lower chambers are called ventricles.",
+    "hint": "They are the pumping chambers."
+  },
+  {
+    "question": "What separates the atria?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Interventricular septum",
+      "B": "Interatrial septum",
+      "C": "Atrioventricular valve",
+      "D": "Coronary sulcus"
+    },
+    "correct_option": "B",
+    "explanation": "The atria are separated by the interatrial septum.",
+    "hint": "A wall between the right and left atria."
+  },
+  {
+    "question": "What separates the ventricles?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Interatrial septum",
+      "B": "Interventricular septum",
+      "C": "Aortic valve",
+      "D": "Tricuspid valve"
+    },
+    "correct_option": "B",
+    "explanation": "The ventricles are separated by the interventricular septum.",
+    "hint": "A thick muscular wall."
+  },
+  {
+    "question": "What is the muscular wall of the heart called?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Epicardium",
+      "B": "Endocardium",
+      "C": "Myocardium",
+      "D": "Pericardium"
+    },
+    "correct_option": "C",
+    "explanation": "The muscular wall of the heart is called the myocardium.",
+    "hint": "It is the heart muscle itself."
+  },
+  {
+    "question": "What are the outer and inner layers of the heart wall?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Myocardium and endocardium",
+      "B": "Epicardium and myocardium",
+      "C": "Epicardium and endocardium",
+      "D": "Pericardium and epicardium"
+    },
+    "correct_option": "C",
+    "explanation": "The outer layer of the heart wall is the epicardium, and the inner layer is the endocardium.",
+    "hint": "One is on the outside surface, one lines the inside chambers."
+  },
+  {
+    "question": "What structures separate the atrial from the ventricular cavities?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Septums",
+      "B": "Valves",
+      "C": "Chords",
+      "D": "Sinuses"
+    },
+    "correct_option": "B",
+    "explanation": "Valves separate the atrial from the ventricular cavities.",
+    "hint": "They prevent backflow of blood."
+  },
+  {
+    "question": "Approximately how many times per minute does the human heart beat?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "50",
+      "B": "60",
+      "C": "70",
+      "D": "80"
+    },
+    "correct_option": "C",
+    "explanation": "The heart beats approximately 70 times per minute.",
+    "hint": "A typical resting heart rate."
+  },
+  {
+    "question": "What does the cardiac cycle consist of?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Filling and emptying",
+      "B": "Systole and diastole",
+      "C": "Contraction and expansion",
+      "D": "Pumping and resting"
+    },
+    "correct_option": "B",
+    "explanation": "The cardiac cycle consists of systole (contraction) and diastole (relaxation).",
+    "hint": "One is the active phase, one is the resting phase."
+  },
+  {
+    "question": "Which atrium fills with deoxygenated blood from the body?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Left atrium",
+      "B": "Right atrium",
+      "C": "Both atria",
+      "D": "Neither atrium"
+    },
+    "correct_option": "B",
+    "explanation": "Deoxygenated blood from the body fills the right atrium.",
+    "hint": "It receives blood from the superior and inferior vena cava."
+  },
+  {
+    "question": "Which atrium fills with oxygenated blood from the lungs?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Right atrium",
+      "B": "Left atrium",
+      "C": "Both atria",
+      "D": "Neither atrium"
+    },
+    "correct_option": "B",
+    "explanation": "Oxygenated blood from the lungs fills the left atrium.",
+    "hint": "It receives blood from the pulmonary veins."
+  },
+  {
+    "question": "What is the valve between the right atrium and right ventricle?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Mitral valve",
+      "B": "Tricuspid valve",
+      "C": "Aortic valve",
+      "D": "Pulmonary valve"
+    },
+    "correct_option": "B",
+    "explanation": "The valve between the right atrium and right ventricle is the tricuspid valve.",
+    "hint": "It has three leaflets or cusps."
+  },
+  {
+    "question": "What is the valve between the left atrium and left ventricle?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Tricuspid valve",
+      "B": "Mitral valve",
+      "C": "Pulmonary valve",
+      "D": "Aortic valve"
+    },
+    "correct_option": "B",
+    "explanation": "The valve between the left atrium and left ventricle is the mitral valve (or bicuspid).",
+    "hint": "It has two leaflets."
+  },
+  {
+    "question": "Where is blood forced from the right ventricle?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Into the aorta",
+      "B": "Into the pulmonary trunk",
+      "C": "Into the vena cava",
+      "D": "Into the coronary sinus"
+    },
+    "correct_option": "B",
+    "explanation": "Blood from the right ventricle is forced into the pulmonary trunk.",
+    "hint": "It goes to the lungs."
+  },
+  {
+    "question": "Where is blood forced from the left ventricle?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Into the pulmonary artery",
+      "B": "Into the aorta",
+      "C": "Into the vena cava",
+      "D": "Into the right atrium"
+    },
+    "correct_option": "B",
+    "explanation": "Blood from the left ventricle is forced into the aorta.",
+    "hint": "It goes to the body."
+  },
+  {
+    "question": "What is the fluid component of blood called?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Serum",
+      "B": "Plasma",
+      "C": "Lymph",
+      "D": "Interstitial fluid"
+    },
+    "correct_option": "B",
+    "explanation": "Blood contains cells and a fluid called plasma.",
+    "hint": "It is the straw-colored liquid."
+  },
+  {
+    "question": "What are the main components of blood?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Plasma, RBCs, WBCs, platelets",
+      "B": "Serum, RBCs, WBCs, proteins",
+      "C": "Plasma, hemoglobin, leukocytes, fibrin",
+      "D": "Water, cells, salts, hormones"
+    },
+    "correct_option": "A",
+    "explanation": "The composition of blood includes plasma, red blood cells, white blood cells, and platelets.",
+    "hint": "Remember the three cellular components."
+  },
+  {
+    "question": "What percentage of entire blood does plasma constitute?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "About 38%",
+      "B": "About 45%",
+      "C": "About 52% to 62%",
+      "D": "About 90%"
+    },
+    "correct_option": "C",
+    "explanation": "Plasma constitutes about 52% to 62% of entire blood.",
+    "hint": "It's slightly more than half."
+  },
+  {
+    "question": "What is the main component of plasma (91.5%)?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Proteins",
+      "B": "Water",
+      "C": "Salts",
+      "D": "Lipids"
+    },
+    "correct_option": "B",
+    "explanation": "The main component of plasma (91.5%) is water.",
+    "hint": "It is the solvent."
+  },
+  {
+    "question": "What percentage of plasma is made up of plasma proteins?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "About 1%",
+      "B": "About 7%",
+      "C": "About 20%",
+      "D": "About 50%"
+    },
+    "correct_option": "B",
+    "explanation": "Plasma proteins constitute about 7% of plasma.",
+    "hint": "It's a significant but minority component."
+  },
+  {
+    "question": "What are the three main types of plasma proteins?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Albumins, globulins, hemoglobin",
+      "B": "Albumins, globulins, fibrinogen",
+      "C": "Globulins, fibrinogen, thrombin",
+      "D": "Albumins, antibodies, complement"
+    },
+    "correct_option": "B",
+    "explanation": "The three main types of plasma proteins are albumins, globulins, and fibrinogen.",
+    "hint": "One maintains osmotic pressure, one includes antibodies, one is for clotting."
+  },
+  {
+    "question": "What is another name for white blood cells?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Erythrocytes",
+      "B": "Leucocytes",
+      "C": "Thrombocytes",
+      "D": "Granulocytes"
+    },
+    "correct_option": "B",
+    "explanation": "White blood cells are also called leucocytes.",
+    "hint": "The prefix 'leuko-' means white."
+  },
+  {
+    "question": "What percentage of total blood cell volume do leucocytes constitute?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Less than 1%",
+      "B": "About 7%",
+      "C": "About 38% to 48%",
+      "D": "About 55%"
+    },
+    "correct_option": "A",
+    "explanation": "Leucocytes constitute less than 1% of total blood cell volume.",
+    "hint": "They are far outnumbered by red blood cells."
+  },
+  {
+    "question": "What is the basic function of leucocytes?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Transport oxygen",
+      "B": "Form clots",
+      "C": "Attack and destroy foreign matter",
+      "D": "Maintain osmotic pressure"
+    },
+    "correct_option": "C",
+    "explanation": "The basic function of leucocytes is to attack and destroy foreign matter.",
+    "hint": "They are part of the immune system."
+  },
+  {
+    "question": "What is another name for blood platelets?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Erythrocytes",
+      "B": "Leucocytes",
+      "C": "Thrombocytes",
+      "D": "Granulocytes"
+    },
+    "correct_option": "C",
+    "explanation": "Blood platelets are also called thrombocytes.",
+    "hint": "The prefix 'thrombo-' relates to clotting."
+  },
+  {
+    "question": "What are thrombocytes responsible for forming?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Antibodies",
+      "B": "Clots",
+      "C": "Oxygen carriers",
+      "D": "Hormones"
+    },
+    "correct_option": "B",
+    "explanation": "Thrombocytes are responsible for forming clots to block blood loss.",
+    "hint": "They plug leaks in blood vessels."
+  },
+  {
+    "question": "What is another name for red blood cells?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Leucocytes",
+      "B": "Thrombocytes",
+      "C": "Erythrocytes",
+      "D": "Granulocytes"
+    },
+    "correct_option": "C",
+    "explanation": "Red blood cells are also called erythrocytes.",
+    "hint": "The prefix 'erythro-' means red."
+  },
+  {
+    "question": "What percentage of whole blood do erythrocytes constitute?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Less than 1%",
+      "B": "About 7%",
+      "C": "Between 38% and 48%",
+      "D": "About 52% to 62%"
+    },
+    "correct_option": "C",
+    "explanation": "Erythrocytes constitute between 38% and 48% of whole blood.",
+    "hint": "This value is the hematocrit."
+  },
+  {
+    "question": "What is the function of red blood cells?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Immune defense",
+      "B": "Blood clotting",
+      "C": "Transport of oxygen and carbon dioxide",
+      "D": "Hormone production"
+    },
+    "correct_option": "C",
+    "explanation": "The function of RBCs is to transport oxygen and carbon dioxide.",
+    "hint": "They contain hemoglobin."
+  },
+  {
+    "question": "What is the shape of a normal human red blood cell?",
+    "topic": "Mammalian Circulatory System",
+    "options": {
+      "A": "Spherical",
+      "B": "Biconcave disc",
+      "C": "Rod-shaped",
+      "D": "Irregular"
+    },
+    "correct_option": "B",
+    "explanation": "A normal human RBC is shaped like a biconcave disc.",
+    "hint": "It is indented on both sides."
   }
 ]
 }

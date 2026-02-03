@@ -350,11 +350,19 @@ function render() {
             </button>
         `;
     } else {
-        html += `
-            <button onclick="submitExam()" class="btn btn-success btn-lg" id="submitBtn">
-                <i class="fas fa-paper-plane me-2"></i>Submit Exam
-            </button>
-        `;
+        if (learnMode) {
+            html += `
+                <button class="btn btn-secondary btn-lg" id="learnEndBtn" disabled>
+                    <i class="fas fa-stop me-2"></i>End of Learn Mode
+                </button>
+            `;
+        } else {
+            html += `
+                <button onclick="submitExam()" class="btn btn-success btn-lg" id="submitBtn">
+                    <i class="fas fa-paper-plane me-2"></i>Submit Exam
+                </button>
+            `;
+        }
     }
     
     html += `
@@ -447,6 +455,10 @@ function prev() {
 }
 
 function submitExam() {
+    if (learnMode) {
+        alert('You cannot submit while in Learn Mode.');
+        return;
+    }
     if (!confirm("Are you sure you want to submit your exam? You cannot change your answers after submission.")) {
         return;
     }
@@ -480,9 +492,12 @@ function startTimer() {
     function updateTimer() {
         if (seconds <= 0) {
             timerEl.innerHTML = '<span class="text-warning">Time Up!</span>';
-            setTimeout(() => {
-                submitExam();
-            }, 2000);
+            // In learn mode we do not auto-submit
+            if (!learnMode) {
+                setTimeout(() => {
+                    submitExam();
+                }, 2000);
+            }
             clearInterval(timerInterval);
             return;
         }

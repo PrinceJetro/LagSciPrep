@@ -144,9 +144,15 @@
                                     Next <i class="fas fa-arrow-right ms-2"></i>
                                 </button>
                             {% else %}
-                                <button name="submit" type="submit" class="btn btn-success btn-lg" id="submitBtn">
-                                    <i class="fas fa-paper-plane me-2"></i>Submit Exam
-                                </button>
+                                {% if learn_mode %}
+                                    <button type="button" class="btn btn-secondary btn-lg" id="learnEndBtn" disabled>
+                                        <i class="fas fa-stop me-2"></i>End of Learn Mode
+                                    </button>
+                                {% else %}
+                                    <button name="submit" type="submit" class="btn btn-success btn-lg" id="submitBtn">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Exam
+                                    </button>
+                                {% endif %}
                             {% endif %}
                         </div>
                     </div>

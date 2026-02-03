@@ -72,8 +72,26 @@ class PastQuestionsObj(models.Model):
 
 
 class Student(models.Model):
+    DEPARTMENT_CHOICES = [
+        ('Botany', 'Botany'),
+        ('Cell Biology & Genetics', 'Cell Biology & Genetics'),
+        ('Chemistry', 'Chemistry'),
+        ('Computer Science', 'Computer Science'),
+        ('Geosciences', 'Geosciences (Geology/Geophysics)'),
+        ('Marine Biology/Fisheries', 'Marine Biology/Fisheries'),
+        ('Mathematics', 'Mathematics'),
+        ('Physics', 'Physics'),
+        ('Zoology', 'Zoology'),
+        ('Others', 'Others'),
+    ]
+    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    department = models.CharField(max_length=255, blank=True, null=True)
+    department = models.CharField(
+        max_length=50,
+        choices=DEPARTMENT_CHOICES,
+        blank=True,
+        null=True
+    )
 
     def __str__(self):
         return self.user.username

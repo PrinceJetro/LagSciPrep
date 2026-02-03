@@ -50,10 +50,15 @@ function render() {
 
     html += `<div class="mt-3">`;
     if (index > 0) html += `<button onclick="prev()">Prev</button> `;
-    if (index < QUESTIONS.length - 1)
+    if (index < QUESTIONS.length - 1) {
         html += `<button onclick="next()">Next</button>`;
-    else
-        html += `<button onclick="submitExam()">Submit</button>`;
+    } else {
+        if (learnMode) {
+            html += `<button class="btn btn-secondary" disabled>End of Learn Mode</button>`;
+        } else {
+            html += `<button onclick="submitExam()">Submit</button>`;
+        }
+    }
     html += `</div>`;
 
     document.getElementById('cbtApp').innerHTML = html;
@@ -81,6 +86,11 @@ function prev() {
 }
 
 function submitExam() {
+    if (learnMode) {
+        alert('You cannot submit while in Learn Mode.');
+        return;
+    }
+
     if (!confirm("Submit exam?")) return;
 
     fetch("{% url 'cbt_submit_answers' %}", {
@@ -98,7 +108,9 @@ function submitExam() {
 function startTimer() {
     const t = document.getElementById('timer');
     setInterval(() => {
-        if (seconds <= 0) submitExam();
+        if (seconds <= 0) {
+            if (!learnMode) submitExam();
+        }
         let m = Math.floor(seconds / 60);
         let s = seconds % 60;
         t.innerText = `${m}:${s.toString().padStart(2,'0')}`;

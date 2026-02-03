@@ -58,6 +58,15 @@ class StudentRegistrationForm(forms.ModelForm):
 
 
 class StudentProfileForm(forms.ModelForm):
+    department = forms.ChoiceField(
+        choices=Student.DEPARTMENT_CHOICES,
+        widget=forms.Select(attrs={
+            'class': 'form-control',
+            'required': 'required'
+        }),
+        required=False
+    )
+    
     class Meta:
         model = Student
         fields = ['department']
@@ -188,6 +197,11 @@ def get_option_text(question, option_letter):
 
 def cbt_submit(request):
     course_id = request.session.get('cbt_course_id')
+    # Prevent submission when in learn mode
+    learn_mode = request.session.get('cbt_learn_mode', False)
+    if learn_mode:
+        messages.error(request, 'Cannot submit while in Learn Mode.')
+        return redirect('cbt_exam')
     answers = request.session.get('cbt_answers', {})
     ids = request.session.get('cbt_selected_questions', [])
 
@@ -459,6 +473,11 @@ def topic_cbt_submit_answers(request):
 
 def topic_cbt_submit(request):
     topic_id = request.session.get('cbt_topic_id')
+    # Prevent submission when in learn mode for topic CBT
+    learn_mode = request.session.get('cbt_topic_learn_mode', False)
+    if learn_mode:
+        messages.error(request, 'Cannot submit while in Learn Mode.')
+        return redirect('topic_cbt_exam')
     answers = request.session.get('cbt_topic_answers', {})
     ids = request.session.get('cbt_topic_selected_questions', [])
 
@@ -897,7 +916,7 @@ def load_random_questions_from_file(filepath='random_questions.json'):
 # NOTE: For safety and reproducibility, prefer moving this logic into a Django
 # management command (see `python manage.py help`) or run it from the shell.
 
-# load_random_questions_from_file()
+load_random_questions_from_file()
 
 
 from django.db.models import Q
@@ -974,5 +993,22 @@ def search_json(request):
 
 # Here is the lecture text: 
 
+
+
+# Act as a specialized tutor. I am going to provide you with slides from my class. Your goal is to create a comprehensive Gap-Fill (Fill-in-the-blanks) study guide that covers every single fact, term, and definition found on these slides.
+
+# Rules for the questions:
+
+# No skipping: Every bullet point, label, and heading must be turned into a question.
+
+# Key terms only: Replace the most important technical terms, numbers, or names with a blank line (__________).
+
+# Context: Provide enough of the sentence so I understand the context, but leave the 'answer' blank.
+
+# Organization: Group the questions by slide title so I can follow along.
+
+# Answer Key: Provide a numbered answer key at the very bottom so I can check my work after I finish writing them in my notes.
+
+# Please process these slides now
 
 
