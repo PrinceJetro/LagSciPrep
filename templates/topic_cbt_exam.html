@@ -174,7 +174,8 @@
 <script>
 // Global variables (keeping your original variables)
 const TOPIC_ID = {{ topic.id }};
-const STORAGE_KEY = `cbt_state_topic_${TOPIC_ID}`;
+let SESSION_KEY = null;
+let STORAGE_KEY = null;
 let QUESTIONS = [];
 let answers = {};
 let index = 0;
@@ -182,19 +183,29 @@ let learnMode = false;
 let seconds = 0;
 
 function saveState() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({answers, index})); } catch (e) { console.warn('Failed to save state', e); }
-}
+    try {
+        if (!SESSION_KEY || seconds <= 0 || !STORAGE_KEY) return;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({answers, index, saved_at: Date.now()}));
+    } catch (e) { console.warn('Failed to save state', e); }
+} 
 function loadState() {
     try {
+        if (!SESSION_KEY || seconds <= 0 || !STORAGE_KEY) return;
         const raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) return;
         const state = JSON.parse(raw);
         if (state.answers) answers = state.answers;
         if (typeof state.index === 'number' && state.index >= 0 && state.index < QUESTIONS.length) index = state.index;
     } catch (e) { console.warn('Failed to load state', e); }
-}
+} 
 function clearState() { try { localStorage.removeItem(STORAGE_KEY); } catch (e) {} }
-window.addEventListener('beforeunload', saveState);
+window.addEventListener('beforeunload', (e) => {
+    if (!SESSION_KEY || seconds <= 0) {
+        clearState();
+    } else {
+        saveState();
+    }
+});
 
 // Fetch data on page load
 fetch("{% url 'topic_cbt_data' %}")
@@ -203,12 +214,18 @@ fetch("{% url 'topic_cbt_data' %}")
     QUESTIONS = data.questions;
     learnMode = data.learn_mode;
     seconds = data.remaining || (15 * 60); // Default 15 minutes if not provided
-    
+
+    // Setup session + storage key
+    SESSION_KEY = data.session_key || null;
+    STORAGE_KEY = SESSION_KEY ? `cbt_state_topic_${TOPIC_ID}_session_${SESSION_KEY}` : null;
+
     // Initialize question navigation
     initQuestionNav();
 
-    // Restore saved state (answers + index) if present
-    loadState();
+    // Restore saved state only if this session is still active
+    if (SESSION_KEY && seconds > 0) {
+        loadState();
+    }
 
     // Render first (or restored) question
     render();
@@ -234,6 +251,18 @@ document.querySelectorAll('.modal').forEach(modalEl => {
         document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
         document.body.classList.remove('modal-open');
     });
+});
+
+// Clear saved state when user navigates away using internal links
+document.addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if (!a || !a.href) return;
+    try {
+        const url = new URL(a.href, location.href);
+        if (url.origin === location.origin && url.pathname !== location.pathname) {
+            clearState();
+        }
+    } catch (err) {}
 });
 
 // Main render function (modified for styling)
@@ -458,6 +487,8 @@ function startTimer() {
     function updateTimer() {
         if (seconds <= 0) {
             timerEl.innerHTML = '<span class="text-warning">Time Up!</span>';
+            // clear saved progress for this session
+            clearState();
             setTimeout(() => {
                 submitExam();
             }, 2000);

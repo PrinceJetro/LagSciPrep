@@ -74,7 +74,7 @@ class StudentProfileForm(forms.ModelForm):
 
 import random, time
 
-import random, time, json
+import random, time, json, uuid
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -91,6 +91,8 @@ def start_cbt(request, course_id):
         request.session['cbt_selected_questions'] = [q.id for q in selected]
         request.session['cbt_learn_mode'] = request.POST.get('learn_mode') == 'on'
         request.session['cbt_end_time'] = time.time() + (7 * 60 + 30)
+        # unique session key for this CBT attempt (used by frontend to scope saved progress)
+        request.session['cbt_session_key'] = str(uuid.uuid4())
 
         return redirect('cbt_exam')
 
@@ -167,6 +169,8 @@ def cbt_data(request):
         'questions': payload,
         'learn_mode': learn_mode,
         'remaining': remaining,
+        'session_key': request.session.get('cbt_session_key'),
+        'end_time': end_time,
     })
 
 
@@ -401,6 +405,8 @@ def start_topic_cbt(request, topic_id):
         request.session['cbt_topic_selected_questions'] = [q.id for q in questions]
         request.session['cbt_topic_learn_mode'] = request.POST.get('learn_mode') == 'on'
         request.session['cbt_topic_end_time'] = time.time() + len(questions) * 60
+        # unique session key for this topic CBT attempt
+        request.session['cbt_topic_session_key'] = str(uuid.uuid4())
 
         return redirect('topic_cbt_exam')
 
@@ -457,6 +463,8 @@ def topic_cbt_data(request):
         'questions': payload,
         'learn_mode': learn_mode,
         'remaining': remaining,
+        'session_key': request.session.get('cbt_topic_session_key'),
+        'end_time': end_time,
     })
 
 
@@ -916,7 +924,7 @@ def load_random_questions_from_file(filepath='random_questions.json'):
 # NOTE: For safety and reproducibility, prefer moving this logic into a Django
 # management command (see `python manage.py help`) or run it from the shell.
 
-load_random_questions_from_file()
+# load_random_questions_from_file()
 
 
 from django.db.models import Q
