@@ -34,6 +34,7 @@ urlpatterns = [
     path('topic-cbt/submit/', views.topic_cbt_submit, name='topic_cbt_submit'),
     path('search/', views.search, name='search'),
     path('search/json/', views.search_json, name='search_json'),
+    path('students/', views.student_list, name='student_list'),
 
     
 ]

@@ -986,6 +986,17 @@ def search_json(request):
     return JsonResponse({'query': query, 'results': results})
 
 
+@login_required
+def student_list(request):
+    """List registered students (full name, username, department). Only staff members can access this page."""
+    # Restrict access to staff users
+    if not request.user.is_staff:
+        return HttpResponseForbidden()
+
+    students = Student.objects.select_related('user').order_by('user__username').all()
+    return render(request, 'student_list.html', {'students': students})
+
+
 
 # Act as an expert educator and instructional designer. I am going to provide you with lecture notes from a PowerPoint presentation. Your task is to generate as many multiple-choice questions as possible (aiming for 100) based strictly and exclusively on the content of the provided text.
 
