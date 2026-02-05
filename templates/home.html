@@ -61,6 +61,51 @@
     </div>
     {% endfor %}
 
+        {# Modal to collect missing first/last name for existing users #}
+        {% if show_name_modal %}
+        <div class="modal fade" id="nameModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Complete your profile</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="name_update" value="1">
+                        <div class="modal-body">
+                            <p>Please provide your first and last name to complete your profile.</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First name</label>
+                                    {{ name_form.first_name }}
+                                    {% if name_form.first_name.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for err in name_form.first_name.errors %}{{ err }}{% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last name</label>
+                                    {{ name_form.last_name }}
+                                    {% if name_form.last_name.errors %}
+                                    <div class="invalid-feedback d-block">
+                                        {% for err in name_form.last_name.errors %}{{ err }}{% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Later</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
     <div class="row g-4">
         <!-- Courses -->
         <div class="col-lg-8">
@@ -223,5 +268,20 @@
 }
 
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const show = {{ show_name_modal|yesno:"true,false" }};
+        if (show) {
+            try {
+                var modalEl = document.getElementById('nameModal');
+                if (modalEl) {
+                    var modal = new bootstrap.Modal(modalEl);
+                    modal.show();
+                }
+            } catch (err) { console.error(err); }
+        }
+    });
+</script>
 
 {% endblock %}

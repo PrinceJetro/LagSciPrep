@@ -55,6 +55,16 @@ class StudentRegistrationForm(forms.ModelForm):
         password2 = cleaned_data.get('password2')
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError("Passwords do not match")
+
+        # Validate uniqueness of username and email (case-insensitive)
+        username = cleaned_data.get('username')
+        email = cleaned_data.get('email')
+        if username:
+            if User.objects.filter(username__iexact=username).exists():
+                self.add_error('username', 'A user with that username already exists.')
+        if email:
+            if User.objects.filter(email__iexact=email).exists():
+                self.add_error('email', 'A user with that email address already exists.')
         return cleaned_data
 
     def save(self, commit=True):
@@ -83,6 +93,19 @@ class StudentProfileForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = ['department']
+
+
+class NameUpdateForm(forms.Form):
+    first_name = forms.CharField(
+        label='First name',
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First name'})
+    )
+    last_name = forms.CharField(
+        label='Last name',
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last name'})
+    )
 
 
 import random, time
@@ -284,6 +307,7 @@ def home(request):
     courses = Course.objects.all()
     context = {"courses": courses}
     
+    # If user is authenticated, offer quick stats and optionally prompt for missing names
     if request.user.is_authenticated:
         try:
             student = Student.objects.get(user=request.user)
@@ -301,7 +325,27 @@ def home(request):
             })
         except Student.DoesNotExist:
             pass
-    
+    # Handle name update POST from modal for users missing names
+    name_form = None
+    show_name_modal = False
+    if request.user.is_authenticated:
+        missing_names = not (request.user.first_name and request.user.last_name)
+        if missing_names:
+            show_name_modal = True
+            if request.method == 'POST' and request.POST.get('name_update'):
+                name_form = NameUpdateForm(request.POST)
+                if name_form.is_valid():
+                    request.user.first_name = name_form.cleaned_data['first_name']
+                    request.user.last_name = name_form.cleaned_data['last_name']
+                    request.user.save()
+                    messages.success(request, 'Name saved successfully.')
+                    return redirect('home')
+            else:
+                name_form = NameUpdateForm()
+
+    context['name_form'] = name_form
+    context['show_name_modal'] = show_name_modal
+
     return render(request, "home.html", context)
 
 def course_list(request):
