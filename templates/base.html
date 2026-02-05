@@ -63,6 +63,7 @@
         /* Navbar Styles */
         .navbar-main {
             background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             padding: 1rem 0;
@@ -82,6 +83,40 @@
             align-items: center;
             gap: 1rem;
         }
+
+        /* Toggler and focus improvements */
+        .navbar-toggler {
+            border: none;
+            padding: 0.35rem 0.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar-toggler:focus { outline: 3px solid rgba(74,107,255,0.12); outline-offset: 2px; }
+
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 22px;
+            height: 2px;
+            background: currentColor;
+            position: relative;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: currentColor;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar-toggler-icon::before { top: -7px; }
+        .navbar-toggler-icon::after { bottom: -7px; }
+
+        .btn-close:focus { outline: 3px solid rgba(0,0,0,0.08); outline-offset: 2px; border-radius: 4px; }
+
         
         .brand-logo {
             width: 60px;
@@ -302,6 +337,7 @@
         /* Utility Classes */
         .glass-effect {
             background: rgba(255, 255, 255, 0.9);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -338,6 +374,10 @@
             box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
             color: white;
         }
+
+        /* Small utilities */
+        .muted-opacity { opacity: 0.85; }
+        .muted-opacity-icon { opacity: 0.8; }
         
         /* Responsive Design */
         @media (max-width: 992px) {
@@ -386,7 +426,7 @@
                 <span class="brand-text">LagSciPrep</span>
             </div>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -418,8 +458,9 @@
                 <!-- Search Form -->
                 <form class="d-flex me-3" action="{% url 'search' %}" method="get">
                     <input class="form-control me-2" type="search" name="q" placeholder="Search topics, questions..." aria-label="Search" value="{{ request.GET.q }}">
-                    <button class="btn btn-outline-primary" type="submit">
-                        <i class="fas fa-search"></i>
+                    <button class="btn btn-outline-primary" type="submit" aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <span class="visually-hidden">Search</span>
                     </button>
                 </form>
                 
@@ -468,7 +509,7 @@
                                 <div class="flex-grow-1">
                                     {{ message }}
                                 </div>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         {% endfor %}
                     </div>
@@ -489,26 +530,26 @@
                 <!-- About Section -->
                 <div class="col-lg-12 col-md-6 footer-section">
                     <h4 class="footer-heading">About LagSciPrep</h4>
-                    <p class="text-light mb-3" style="opacity: 0.8;">
+                    <p class="text-light mb-3 muted-opacity">
                         A cutting-edge Computer-Based Testing platform designed by the  <b>2025/2026 Cell Biology and Genetics Students of the University of Lagos</b> under the supervision of The Course Advisor <i>Dr Olasan Olalekan</i> to help students excel in science subjects through interactive practice and real-time feedback.
                     </p>
-                    <p class="text-light mb-3" style="opacity: 0.8;">
+                    <p class="text-light mb-3 muted-opacity">
                         <b>Disclaimer</b>: All lecture slides and instructional materials provided on this platform are original resources shared by the course lecturers for learning purposes. Ownership of these materials remains with the respective lecturers and the University of Lagos.                   
                      </p>
-                    <p class="text-light mb-3" style="opacity: 0.8;">
+                    <p class="text-light mb-3 muted-opacity">
                         The unique contribution of this platform lies in its practice system, question bank, and interactive testing portal designed to enhance understanding and exam preparedness.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-icon">
+                        <a href="#" class="social-icon" aria-label="Twitter" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="#" class="social-icon" aria-label="Facebook" title="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -525,7 +566,7 @@
                             &copy; <span id="currentYear"></span> LagSciPrep — Science CBT Practice Platform. All rights reserved.
                         </p>
                         <p class="mt-2 mb-0">
-                            Designed with <i class="fas fa-heart text-danger" style="opacity: 0.8;"></i> for students worldwide
+                            Designed with <i class="fas fa-heart text-danger muted-opacity-icon" aria-hidden="true"></i> for students worldwide
                         </p>
                     </div>
                 </div>

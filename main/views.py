@@ -335,11 +335,31 @@ def topic_obj_questions(request, topic_id):
     topic = get_object_or_404(Topic, id=topic_id)
     course = topic.course
     # get the objective questions for this topic
-    obj_questions = topic.questions.all()
+    obj_questions = list(topic.questions.all())
+
+    # Get saved answers (if coming from a CBT session)
+    answers = request.session.get('cbt_topic_answers', {})
+
+    # Build a lightweight nav structure so templates don't need complex lookups
+    question_nav = []
+    for idx, q in enumerate(obj_questions):
+        answered = False
+        try:
+            # answers keys are stored as strings in session
+            answered = bool(answers.get(str(q.id)))
+        except Exception:
+            answered = False
+        question_nav.append({
+            'id': q.id,
+            'number': idx + 1,
+            'answered': answered,
+        })
+
     return render(request, "obj_questions_topic.html", {
         "topic": topic,
         "course": course,
         "obj_questions": obj_questions,
+        "question_nav": question_nav,
     })
 
 
