@@ -47,6 +47,38 @@
                                 </div>
                                 
                                 <div class="row g-3 mb-4">
+                                    <!-- First name -->
+                                    <div class="col-md-6">
+                                        <label for="id_first_name" class="form-label fw-semibold">
+                                            <i class="fas fa-address-card me-2 text-primary"></i>First Name
+                                        </label>
+                                        {{ form.first_name }}
+                                        {% if form.first_name.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.first_name.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+
+                                    <!-- Last name -->
+                                    <div class="col-md-6">
+                                        <label for="id_last_name" class="form-label fw-semibold">
+                                            <i class="fas fa-address-card me-2 text-primary"></i>Last Name
+                                        </label>
+                                        {{ form.last_name }}
+                                        {% if form.last_name.errors %}
+                                        <div class="invalid-feedback d-block">
+                                            {% for error in form.last_name.errors %}
+                                            <i class="fas fa-exclamation-circle me-1"></i>{{ error }}
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-4">
                                     <!-- Username -->
                                     <div class="col-md-6">
                                         <label for="id_username" class="form-label fw-semibold">

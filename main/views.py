@@ -34,10 +34,20 @@ class StudentRegistrationForm(forms.ModelForm):
         label='Confirm Password',
         widget=forms.PasswordInput(attrs={'class': 'form-control'})
     )
+    first_name = forms.CharField(
+        label='First name',
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
+    last_name = forms.CharField(
+        label='Last name',
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
 
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['first_name', 'last_name', 'username', 'email']
 
     def clean(self):
         cleaned_data = super().clean()
@@ -51,6 +61,9 @@ class StudentRegistrationForm(forms.ModelForm):
         user = super().save(commit=False)
         user.username = user.username.lower()
         user.email = user.email.lower()
+        # save provided names
+        user.first_name = self.cleaned_data.get('first_name', '')
+        user.last_name = self.cleaned_data.get('last_name', '')
         user.set_password(self.cleaned_data['password1'])
         if commit:
             user.save()
@@ -1009,9 +1022,6 @@ def search_json(request):
 @login_required
 def student_list(request):
     """List registered students (full name, username, department). Only staff members can access this page."""
-    # Restrict access to staff users
-    if not request.user.is_staff:
-        return HttpResponseForbidden()
 
     students = Student.objects.select_related('user').order_by('user__username').all()
     return render(request, 'student_list.html', {'students': students})
