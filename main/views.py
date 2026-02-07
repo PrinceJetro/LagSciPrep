@@ -564,12 +564,48 @@ def start_topic_cbt(request, topic_id):
         # Determine mode: learn_mode True means the user selected Learn Mode
         learn_mode = request.POST.get('learn_mode') == 'on'
 
-        # Practice mode: sample up to 15 random questions; Learn mode: use all questions
+        # Practice mode batching: use sliding-window batches of fixed size
+        BATCH_SIZE = 15
+        OVERLAP = 4  # number of questions to repeat between consecutive batches
+
         if learn_mode:
             selected = [q.id for q in questions]
         else:
-            selected_questions = random.sample(questions, min(15, len(questions)))
-            selected = [q.id for q in selected_questions]
+            # Ensure deterministic ordering (by id)
+            ordered_questions = list(topic.questions.order_by('id'))
+            total = len(ordered_questions)
+
+            # If not enough questions, return them all
+            if total <= BATCH_SIZE:
+                selected = [q.id for q in ordered_questions]
+            else:
+                step = max(1, BATCH_SIZE - OVERLAP)
+
+                # session key for tracking batch start for this topic
+                batch_key = f'cbt_topic_batch_start_{topic.id}'
+                last_start = request.session.get(batch_key, 0)
+
+                # On first run last_start will be 0 (start at beginning)
+                start = last_start
+
+                # Build window and then advance for next time
+                end = start + BATCH_SIZE
+                if end <= total:
+                    window = ordered_questions[start:end]
+                else:
+                    # If window would overflow, wrap to the end and then pad from start
+                    window = ordered_questions[start:total]
+                    needed = BATCH_SIZE - len(window)
+                    window += ordered_questions[0:needed]
+
+                selected = [q.id for q in window]
+
+                # Advance start for next batch and wrap if necessary
+                new_start = start + step
+                if new_start > total - 1:
+                    # wrap back to 0 once past the last index
+                    new_start = 0
+                request.session[batch_key] = new_start
 
         request.session['cbt_topic_id'] = topic.id
         request.session['cbt_topic_selected_questions'] = selected
