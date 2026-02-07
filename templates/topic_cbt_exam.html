@@ -287,6 +287,9 @@ function render() {
                     ` : ''}
                     <span class="badge bg-warning text-dark">Topic CBT</span>
                     <span class="badge bg-light text-dark">${Math.round(((index + 1) / QUESTIONS.length) * 100)}% Complete</span>
+                    <button class="btn btn-sm btn-outline-danger" onclick="flagCurrentQuestion(${q.id})" title="Flag this question for review">
+                        <i class="fas fa-flag"></i> Flag
+                    </button>
                 </div>
             </div>
             
@@ -708,6 +711,35 @@ setInterval(() => {
         }, 3000);
     }
 }, 30000);
+
+// Flag question function
+function flagCurrentQuestion(questionId) {
+    const reason = prompt('Why are you flagging this question? (optional)', '');
+    if (reason === null) return; // User cancelled
+
+    fetch('{% url "flag_question" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            question_id: questionId,
+            reason: reason || ''
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === 'ok') {
+            alert('✓ Question flagged. Thank you for reporting this issue!');
+        } else {
+            alert('Error: ' + (data.error || 'Could not flag question'));
+        }
+    })
+    .catch(error => {
+        console.error('Error flagging question:', error);
+        alert('Error flagging question. Please try again.');
+    });
+}
 </script>
 
 <style>

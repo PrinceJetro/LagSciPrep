@@ -35,6 +35,7 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('search/json/', views.search_json, name='search_json'),
     path('students/', views.student_list, name='student_list'),
+    path('flag-question/', views.flag_question, name='flag_question'),
 
     
 ]

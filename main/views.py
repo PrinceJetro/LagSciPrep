@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .models import Course, Topic, PastQuestionsObj, Student, CBTResult
+from .models import Course, Topic, PastQuestionsObj, Student, CBTResult, FlaggedQuestion
 from django import forms
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
@@ -221,6 +221,54 @@ def cbt_submit_answers(request):
     return JsonResponse({'status': 'ok'})
 
 
+@csrf_exempt
+def flag_question(request):
+    """Flag a question for review (course or topic mode)"""
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid request'}, status=400)
+
+    try:
+        data = json.loads(request.body)
+        question_id = data.get('question_id')
+        reason = data.get('reason', '')
+
+        if not question_id:
+            return JsonResponse({'error': 'Question ID required'}, status=400)
+
+        question = PastQuestionsObj.objects.get(id=question_id)
+        
+        # Get Student if user is authenticated
+        student = None
+        if request.user.is_authenticated:
+            try:
+                student = Student.objects.get(user=request.user)
+            except Student.DoesNotExist:
+                pass
+
+        # Create or update flag
+        flag, created = FlaggedQuestion.objects.get_or_create(
+            question=question,
+            student=student,
+            defaults={'reason': reason}
+        )
+        
+        # If it already existed and was marked resolved, unmark it
+        if not created and flag.resolved:
+            flag.resolved = False
+            flag.save()
+
+        return JsonResponse({
+            'status': 'ok',
+            'message': f'Question flagged for review{"(re-opened)" if not created else ""}'
+        })
+
+    except PastQuestionsObj.DoesNotExist:
+        return JsonResponse({'error': 'Question not found'}, status=404)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=400)
+
+
+
 def get_option_text(question, option_letter):
     """Get the text content of an option given the letter"""
     if not option_letter:
@@ -356,9 +404,44 @@ def course_detail(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     topics = course.topics.all()
     obj_questions_count = course.objective_questions.count()
+    
+    # Enrich topics with practice stats
+    topics_with_stats = []
+    
+    if request.user.is_authenticated:
+        try:
+            student = Student.objects.get(user=request.user)
+            results = CBTResult.objects.filter(student=student, course=course, topic__isnull=False)
+            
+            # Build stats dict
+            stats_dict = {}
+            for result in results:
+                topic_id = result.topic.id
+                if topic_id not in stats_dict:
+                    stats_dict[topic_id] = {'scores': []}
+                percentage = (result.score / result.total_questions * 100) if result.total_questions else 0
+                stats_dict[topic_id]['scores'].append(percentage)
+            
+            # Calculate averages
+            for topic_id in stats_dict:
+                scores = stats_dict[topic_id]['scores']
+                stats_dict[topic_id]['avg'] = sum(scores) / len(scores) if scores else 0
+                stats_dict[topic_id]['attempts'] = len(scores)
+            
+            # Enrich topics
+            for topic in topics:
+                topic_data = {'topic': topic}
+                if topic.id in stats_dict:
+                    topic_data['stats'] = stats_dict[topic.id]
+                topics_with_stats.append(topic_data)
+        except Student.DoesNotExist:
+            topics_with_stats = [{'topic': t} for t in topics]
+    else:
+        topics_with_stats = [{'topic': t} for t in topics]
+    
     return render(request, "course_detail.html", {
         "course": course,
-        "topics": topics,
+        "topics_with_stats": topics_with_stats,
         "obj_questions_count": obj_questions_count,
     })
 
@@ -478,10 +561,21 @@ def start_topic_cbt(request, topic_id):
             messages.error(request, 'No CBT questions available for this topic.')
             return redirect('topic_detail', topic_id=topic_id)
 
+        # Determine mode: learn_mode True means the user selected Learn Mode
+        learn_mode = request.POST.get('learn_mode') == 'on'
+
+        # Practice mode: sample up to 15 random questions; Learn mode: use all questions
+        if learn_mode:
+            selected = [q.id for q in questions]
+        else:
+            selected_questions = random.sample(questions, min(15, len(questions)))
+            selected = [q.id for q in selected_questions]
+
         request.session['cbt_topic_id'] = topic.id
-        request.session['cbt_topic_selected_questions'] = [q.id for q in questions]
-        request.session['cbt_topic_learn_mode'] = request.POST.get('learn_mode') == 'on'
-        request.session['cbt_topic_end_time'] = time.time() + len(questions) * 60
+        request.session['cbt_topic_selected_questions'] = selected
+        request.session['cbt_topic_learn_mode'] = learn_mode
+        # Set end time proportional to number of selected questions (approx 60s per question)
+        request.session['cbt_topic_end_time'] = time.time() + len(selected) * 60
         # unique session key for this topic CBT attempt
         request.session['cbt_topic_session_key'] = str(uuid.uuid4())
 

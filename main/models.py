@@ -115,4 +115,19 @@ class CBTResult(models.Model):
         return f"{self.student} - {self.score}/{self.total_questions}"
 
 
+class FlaggedQuestion(models.Model):
+    """Track questions flagged by students for review"""
+    question = models.ForeignKey(PastQuestionsObj, on_delete=models.CASCADE, related_name='flags')
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True, blank=True)
+    reason = models.TextField(blank=True, help_text="Reason for flagging (e.g., wrong answer, unclear question, typo)")
+    flagged_at = models.DateTimeField(auto_now_add=True)
+    resolved = models.BooleanField(default=False, help_text="Mark as resolved after addressing the issue")
+
+    class Meta:
+        ordering = ['-flagged_at']
+
+    def __str__(self):
+        return f"Flagged: {self.question.question_text[:50]} - {self.student}"
+
+
 

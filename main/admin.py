@@ -1,7 +1,7 @@
 
 
 from django.contrib import admin
-from .models import Course, Topic, PastQuestionsObj, Student, CBTResult
+from .models import Course, Topic, PastQuestionsObj, Student, CBTResult, FlaggedQuestion
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
@@ -37,3 +37,11 @@ class CBTResultAdmin(admin.ModelAdmin):
 	readonly_fields = ['date_taken']
 	ordering = ['-date_taken']
 
+@admin.register(FlaggedQuestion)
+class FlaggedQuestionAdmin(admin.ModelAdmin):
+	search_fields = ['question__question_text', 'student__user__username', 'reason']
+	list_display = ['id', 'question', 'student', 'flagged_at', 'resolved']
+	list_filter = ['resolved', 'flagged_at']
+	readonly_fields = ['flagged_at']
+	ordering = ['-flagged_at']
+	fields = ('question', 'student', 'reason', 'flagged_at', 'resolved')
