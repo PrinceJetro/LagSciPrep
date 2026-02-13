@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% block title %}Mock Exam - LagSciPrep{% endblock %}
+{% block content %}
+<div class="exam-container">
+  <div class="exam-header mb-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="h3 fw-bold text-primary mb-1">Scheduled Mock</h1>
+        <p class="text-muted mb-0">Switch between courses — progress is preserved per course.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <div class="timer-card">
+          <div class="timer-header"><i class="fas fa-clock me-2"></i>Time Remaining</div>
+          <div class="timer-display" id="timer">00:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course switcher -->
+  <div class="mb-4 d-flex gap-2 align-items-center">
+    <label class="me-2 mb-0"><strong>Course:</strong></label>
+    <div class="btn-group" role="group" id="courseSwitcher">
+      {% for c in courses %}
+        <button type="button" class="btn btn-outline-primary course-switch" data-course-id="{{ c.id }}">{{ c.name }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Reuse the CBT question area (loaded via JS) -->
+  <div id="mockApp">
+    <div class="text-center py-5">
+      <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+      <p class="mt-3">Loading mock...</p>
+    </div>
+  </div>
+
+  <div class="exam-footer mt-4">
+    <div class="card card-custom">
+      <div class="card-body py-3 text-center">
+        <button class="btn btn-success" id="submitMockBtn">Submit Mock</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Mock front-end logic (mirrors CBT behaviour but supports switching courses)
+let ACTIVE_COURSE_ID = {% if active_course %}{{ active_course.id }}{% else %}null{% endif %};
+let QUESTIONS = [];
+let answers = {};
+let index = 0;
+let seconds = 0;
+let SESSION_KEY = null;
+let mockSubmitted = false;
+
+// Server-provided end time (UNIX seconds). Use this to initialise display only —
+// authoritative remaining time comes from `mock_data` responses.
+const SERVER_END_TIME = {{ end_time|default:0 }};
+if (typeof SERVER_END_TIME === 'number' && SERVER_END_TIME > 0) {
+  const now = Math.floor(Date.now() / 1000);
+  seconds = Math.max(0, SERVER_END_TIME - now);
+}
+
+function fetchCourseData(courseId) {
+  return fetch(`{% url 'mock_data' %}?course_id=${courseId}`)
+    .then(r => r.json());
+}
+
+function loadCourse(courseId) {
+  ACTIVE_COURSE_ID = courseId;
+  document.querySelectorAll('.course-switch').forEach(b=> b.classList.remove('active'));
+  const btn = document.querySelector(`.course-switch[data-course-id="${courseId}"]`);
+  if (btn) btn.classList.add('active');
+
+  fetchCourseData(courseId).then(data => {
+    if (data.error) {
+      document.getElementById('mockApp').innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+      return;
+    }
+    QUESTIONS = data.questions || [];
+    answers = {};
+    // restore saved answers if present
+    QUESTIONS.forEach(q => { if (q.your_answer) answers[q.id] = q.your_answer; });
+    index = 0;
+    SESSION_KEY = data.session_key;
+    // only override seconds if server returned a positive remaining value
+    if (typeof data.remaining === 'number' && data.remaining > 0) {
+      seconds = data.remaining;
+    }
+    renderQuestion();
+    startTimer();
+  }).catch(err => {
+    console.error(err);
+    document.getElementById('mockApp').innerHTML = `<div class="alert alert-danger">Failed to load mock data.</div>`;
+  });
+}
+
+function renderQuestion() {
+  if (!QUESTIONS.length) {
+    document.getElementById('mockApp').innerHTML = `<div class="alert alert-warning">No questions available for this course.</div>`;
+    return;
+  }
+  const q = QUESTIONS[index];
+  let html = `
+    <div class="card card-custom question-card">
+      <div class="card-body">
+        <h5>Question ${index+1} / ${QUESTIONS.length}</h5>
+        <div class="mb-3">${q.question}</div>
+        <div class="form-options">
+  `;
+  ['A','B','C','D','E'].forEach(opt => {
+    if (q.options[opt]) {
+      html += `
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="opt_${q.id}" id="opt_${q.id}_${opt}" value="${opt}" ${answers[q.id]===opt? 'checked':''} onchange="selectAns(${q.id}, '${opt}')">
+          <label class="form-check-label" for="opt_${q.id}_${opt}"><strong>${opt}.</strong> ${q.options[opt]}</label>
+        </div>`;
+    }
+  });
+  html += `
+        </div>
+        <div class="mt-4 d-flex justify-content-between">
+          <div>
+            ${index>0? '<button class="btn btn-secondary" onclick="prev()">Previous</button>':''}
+          </div>
+          <div>
+            ${index<QUESTIONS.length-1? '<button class="btn btn-primary" onclick="next()">Next</button>' : '<button class="btn btn-secondary" disabled>End of course — switch course</button>'}
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  document.getElementById('mockApp').innerHTML = html;
+}
+
+function selectAns(qid, opt) {
+  answers[qid] = opt;
+  // persist to server immediately
+  fetch(`{% url 'mock_submit_answers' %}`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'X-CSRFToken': getCookie('csrftoken')},
+    body: JSON.stringify({course_id: ACTIVE_COURSE_ID, answers: answers})
+  }).catch(e => console.warn('save failed', e));
+}
+
+function prev(){ if (index>0){ index--; renderQuestion(); }}
+function next(){ if (index<QUESTIONS.length-1){ index++; renderQuestion(); }}
+
+// Submit the entire mock (all courses in session)
+function submitMock(){
+  fetch(`{% url 'mock_submit_all' %}`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-CSRFToken': getCookie('csrftoken')},
+    body: ''
+  }).then(r => {
+    if (r.redirected) {
+      window.location.href = r.url;
+      return;
+    }
+    return r.text();
+  }).then(html => {
+    if (html) document.open(), document.write(html), document.close();
+  }).catch(e => {
+    alert('Submission failed — please try again.');
+    console.error(e);
+  });
+}
+
+// simple cookie helper
+function getCookie(name) { const v = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)'); return v ? v.pop() : ''; }
+
+// Timer
+let timerInterval = null;
+function startTimer(){
+  if (timerInterval) clearInterval(timerInterval);
+  timerInterval = setInterval(()=>{
+    if (seconds <= 0){
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent='00:00';
+      if (!mockSubmitted) {
+        mockSubmitted = true;
+        submitMock();
+      }
+      return;
+    }
+    seconds -= 1;
+    const m = Math.floor(seconds/60).toString().padStart(2,'0');
+    const s = (seconds%60).toString().padStart(2,'0');
+    document.getElementById('timer').textContent = `${m}:${s}`;
+  }, 1000);
+}
+
+// wire up course switcher
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.querySelectorAll('.course-switch').forEach(b=>{
+    b.addEventListener('click', ()=> loadCourse(b.dataset.courseId));
+  });
+  // load initial
+  if (ACTIVE_COURSE_ID) loadCourse(ACTIVE_COURSE_ID);
+  // wire submit mock button
+  document.getElementById('submitMockBtn').addEventListener('click', submitMock);
+});
+</script>
+{% endblock %}

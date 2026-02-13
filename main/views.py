@@ -621,6 +621,412 @@ def start_topic_cbt(request, topic_id):
     return render(request, 'topic_cbt_mode_select.html', {'topic': topic})
 
 
+# ---------------------------
+# Mock exam (scheduled multi-course mock)
+# ---------------------------
+from django.utils import timezone
+from datetime import time as dtime, datetime
+
+MOCK_START_HOUR = 6
+MOCK_START_MIN = 55
+MOCK_END_HOUR = 7
+MOCK_END_MIN = 10
+MOCK_DURATION_SECONDS = (MOCK_END_HOUR * 3600 + MOCK_END_MIN * 60) - (MOCK_START_HOUR * 3600 + MOCK_START_MIN * 60)
+
+def _is_mock_open(now=None):
+    """Return True if current local time is within the mock window (18:00–19:40)."""
+    now = now or timezone.localtime()
+    t = now.time()
+    return (t >= dtime(MOCK_START_HOUR, MOCK_START_MIN)) and (t <= dtime(MOCK_END_HOUR, MOCK_END_MIN))
+
+
+def _student_has_mock_result_today(student, course):
+    """Return True if student already has a CBTResult for `course` taken today during the mock window."""
+    if not student:
+        return False
+    today = timezone.localtime().date()
+    start_dt = datetime.combine(today, dtime(MOCK_START_HOUR, MOCK_START_MIN))
+    end_dt = datetime.combine(today, dtime(MOCK_END_HOUR, MOCK_END_MIN))
+    return CBTResult.objects.filter(student=student, course=course, date_taken__range=(start_dt, end_dt)).exists()
+
+
+def start_mock(request):
+    """Initialize mock session for a set of courses. GET shows selectable courses; POST creates session state.
+
+    Selection rules (per your spec):
+      - For ZOO 101, BIO 101, GST 111, PHY 101, CHM 101, COM 101: draw 50 random questions from topics whose name contains "Past Questions" (case-insensitive).
+      - For MTH 101: draw 50 random questions from any topic (i.e. from the course pool).
+      - Fallback: if fewer than 50 available, use all available.
+
+    The mock is only startable/accessed between 18:00 and 19:40 local time.
+    """
+    courses = Course.objects.all().order_by('name')
+        # ---------------------------
+    from django.utils import timezone
+    from datetime import time as dtime, datetime
+
+    print("SERVER NOW:", timezone.now())
+    print("LOCAL NOW :", timezone.localtime())
+
+    if request.method == 'POST':
+        # Enforce availability window
+        if not _is_mock_open():
+            print("Attempt to start mock outside of window")
+            messages.error(request, 'Mock is only available between 18:00 and 19:40 local time.')
+            return redirect('home')
+        print("Starting mock session for courses:", request.POST.getlist('courses'))
+
+        # Determine which courses to include (check boxes in form). Default: include all.
+        selected_course_ids = request.POST.getlist('courses') or [str(c.id) for c in courses]
+        selected_courses = Course.objects.filter(id__in=selected_course_ids)
+
+        # Prevent students from re-attempting same mock after it ends (server-side check)
+        student_obj = None
+        if request.user.is_authenticated:
+            try:
+                student_obj = Student.objects.get(user=request.user)
+            except Student.DoesNotExist:
+                student_obj = None
+
+        # Set mock session window (use today's 18:00..19:40)
+        from django.utils import timezone
+
+        today = timezone.localdate()
+
+        start_dt = timezone.make_aware(
+            datetime.combine(today, dtime(MOCK_START_HOUR, MOCK_START_MIN)),
+            timezone.get_current_timezone()
+        )
+
+        end_dt = timezone.make_aware(
+            datetime.combine(today, dtime(MOCK_END_HOUR, MOCK_END_MIN)),
+            timezone.get_current_timezone()
+        )
+        request.session['mock_start_time'] = start_dt.timestamp()
+        request.session['mock_end_time'] = end_dt.timestamp()
+        request.session['mock_courses'] = [c.id for c in selected_courses]
+
+        # For each course prepare 50-question selection according to rules
+        for course in selected_courses:
+            # If student already has a saved mock result for this course today, skip
+            if student_obj and _student_has_mock_result_today(student_obj, course):
+                continue
+
+            qs = PastQuestionsObj.objects.filter(course=course)
+            # Default filter: topics with "Past Questions" in the name (case-insensitive)
+            if course.name.strip().upper() == 'MTH 101':
+                pool = list(qs)
+            else:
+                pool = list(qs.filter(topic__name__icontains='Past Questions'))
+                if not pool:
+                    # fallback to whole-course pool if no matching topic exists
+                    pool = list(qs)
+
+            selected = []
+            if pool:
+                import random
+                selected = random.sample(pool, min(50, len(pool)))
+                selected_ids = [q.id for q in selected]
+            else:
+                selected_ids = []
+
+            # Store per-course mock session data so student can switch courses while preserving progress
+            request.session[f'mock_{course.id}_selected_questions'] = selected_ids
+            request.session[f'mock_{course.id}_answers'] = {}
+            request.session[f'mock_{course.id}_session_key'] = str(uuid.uuid4())
+            request.session[f'mock_{course.id}_end_time'] = end_dt.timestamp()
+            request.session[f'mock_{course.id}_completed'] = False
+
+        messages.success(request, 'Mock session initialized — good luck!')
+        return redirect('mock_exam')
+
+    # GET: show selection form
+    return render(request, 'mock_mode_select.html', {'courses': courses, 'mock_open': _is_mock_open()})
+
+
+def mock_exam(request):
+    """Render the mock exam shell. The frontend will request per-course questions via `mock_data`.
+
+    Access restricted to mock window only.
+    """
+    # Ensure mock has been initialized in session
+    course_ids = request.session.get('mock_courses')
+    end_time = request.session.get('mock_end_time')
+    if not course_ids or not end_time:
+        messages.error(request, 'Mock session not initialized.')
+        return redirect('home')
+
+    # Block access outside window
+    if not _is_mock_open():
+        messages.error(request, 'Mock is only accessible between 18:00 and 19:40 local time.')
+        return redirect('home')
+
+    courses = Course.objects.filter(id__in=course_ids)
+    # active course defaults to first
+    active_course = courses.first() if courses.exists() else None
+
+    # Ensure we pass an integer UNIX timestamp (seconds) to the template
+    end_time_ts = int(end_time) if end_time else None
+
+    return render(request, 'mock_exam.html', {
+        'courses': courses,
+        'active_course': active_course,
+        'end_time': end_time_ts,
+    })
+
+
+def mock_data(request):
+    """Return questions for a specific course within the mock session.
+
+    GET param `course_id` required (or falls back to first mock course in session).
+    """
+    course_ids = request.session.get('mock_courses')
+    end_time = request.session.get('mock_end_time')
+    if not course_ids or not end_time:
+        return JsonResponse({'error': 'Mock session not initialized'}, status=400)
+
+    # Block access outside window
+    if not _is_mock_open():
+        return JsonResponse({'error': 'Mock is only available between 18:00 and 19:40'}, status=403)
+
+    course_id = request.GET.get('course_id')
+    try:
+        course_id = int(course_id) if course_id else int(course_ids[0])
+    except Exception:
+        return JsonResponse({'error': 'Invalid course id'}, status=400)
+
+    if course_id not in course_ids:
+        return JsonResponse({'error': 'Course not part of the current mock session'}, status=400)
+
+    ids = request.session.get(f'mock_{course_id}_selected_questions', [])
+    answers = request.session.get(f'mock_{course_id}_answers', {})
+    session_key = request.session.get(f'mock_{course_id}_session_key')
+    from django.utils import timezone
+    now_ts = timezone.now().timestamp()
+    remaining = int(end_time - now_ts) if end_time else None
+
+
+    questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+    # Preserve order
+    questions.sort(key=lambda q: ids.index(q.id) if q.id in ids else 0)
+
+    payload = []
+    for q in questions:
+        payload.append({
+            'id': q.id,
+            'question': q.question_text,
+            'options': {
+                'A': q.option_a,
+                'B': q.option_b,
+                'C': q.option_c,
+                'D': q.option_d,
+                'E': q.option_e,
+            },
+            'correct': q.correct_option,
+            'explanation': q.explanation or "No explanation provided",
+            'hint': q.hint or "",
+            'your_answer': answers.get(str(q.id))
+        })
+
+    return JsonResponse({
+        'questions': payload,
+        'remaining': remaining,
+        'session_key': session_key,
+        'end_time': end_time,
+        'course_id': course_id,
+    })
+
+
+@csrf_exempt
+def mock_submit_answers(request):
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid request'}, status=400)
+
+    data = json.loads(request.body)
+    course_id = data.get('course_id')
+    answers = data.get('answers', {})
+    if not course_id:
+        return JsonResponse({'error': 'course_id required'}, status=400)
+
+    # Ensure course is part of session
+    course_ids = request.session.get('mock_courses', [])
+    if int(course_id) not in course_ids:
+        return JsonResponse({'error': 'Course not in current mock session'}, status=400)
+
+    request.session[f'mock_{course_id}_answers'] = answers
+    return JsonResponse({'status': 'ok'})
+
+
+def mock_submit(request):
+    """Finalize and save a student's mock result for a specific course.
+
+    Submission allowed only inside mock window or immediately after when finalizing.
+    """
+    course_id = request.POST.get('course_id') or request.session.get('mock_courses', [None])[0]
+    if not course_id:
+        messages.error(request, 'Course not specified')
+        return redirect('mock_exam')
+
+    try:
+        course = Course.objects.get(id=course_id)
+    except Course.DoesNotExist:
+        messages.error(request, 'Course not found')
+        return redirect('mock_exam')
+
+    # If student already has a mock result today for this course, block re-submit
+    if request.user.is_authenticated:
+        try:
+            student = Student.objects.get(user=request.user)
+            if _student_has_mock_result_today(student, course):
+                messages.error(request, 'You have already submitted this mock for today.')
+                return redirect('mock_exam')
+        except Student.DoesNotExist:
+            student = None
+    else:
+        student = None
+
+    # Use saved answers in session for the course
+    ids = request.session.get(f'mock_{course.id}_selected_questions', [])
+    answers = request.session.get(f'mock_{course.id}_answers', {})
+    questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+    questions.sort(key=lambda q: ids.index(q.id) if q.id in ids else 0)
+
+    score = 0
+    failed = []
+    for q in questions:
+        ans = answers.get(str(q.id))
+        if ans == q.correct_option:
+            score += 1
+        else:
+            failed.append({
+                'question': q,
+                'your_answer': ans,
+                'your_answer_text': get_option_text(q, ans),
+                'correct_answer': q.correct_option,
+                'correct_answer_text': get_option_text(q, q.correct_option),
+                'explanation': q.explanation
+            })
+
+    total = len(questions)
+    percent = (score / total) * 100 if total else 0
+
+    # Save CBTResult to record the mock attempt per course
+    if student:
+        CBTResult.objects.create(
+            student=student,
+            course=course,
+            score=score,
+            total_questions=total
+        )
+
+    # mark as completed in session so user cannot reattempt this course in the same mock
+    request.session[f'mock_{course.id}_completed'] = True
+
+    return render(request, 'cbt_submit.html', {
+        'course': course,
+        'score': score,
+        'total': total,
+        'percent': percent,
+        'failed_questions': failed
+    })
+
+
+def mock_submit_all(request):
+    """Submit and save mock results for all courses in the current mock session.
+
+    - Iterates over session['mock_courses']
+    - Uses session answers for each course
+    - Creates a CBTResult per course (if user/student exists and not already submitted today)
+    - Marks each course as completed in session
+    - Renders a summary page showing scores per course and failed questions
+    """
+    course_ids = request.session.get('mock_courses', [])
+    if not course_ids:
+        messages.error(request, 'Mock session not initialized.')
+        return redirect('home')
+
+    # Allow submission up to a short grace period after the session end_time stored in session
+    session_end = request.session.get('mock_end_time')
+    now_ts = time.time()
+    if session_end:
+        # allow submissions until 5 minutes after end_time (grace for client-side submission)
+        if now_ts > (session_end + 300):
+            messages.error(request, 'Mock submissions are only accepted during or shortly after the mock window.')
+            return redirect('mock_exam')
+    else:
+        # fallback: enforce regular mock window check
+        if not _is_mock_open():
+            messages.error(request, 'Mock submissions are only accepted between 18:00 and 19:40 local time.')
+            return redirect('mock_exam')
+
+    student = None
+    if request.user.is_authenticated:
+        try:
+            student = Student.objects.get(user=request.user)
+        except Student.DoesNotExist:
+            student = None
+
+    summary = []
+
+    for cid in course_ids:
+        try:
+            course = Course.objects.get(id=cid)
+        except Course.DoesNotExist:
+            continue
+
+        # skip if already submitted today for this course
+        if student and _student_has_mock_result_today(student, course):
+            summary.append({'course': course, 'skipped': True, 'reason': 'Already submitted today'})
+            continue
+
+        ids = request.session.get(f'mock_{course.id}_selected_questions', [])
+        answers = request.session.get(f'mock_{course.id}_answers', {})
+        questions = list(PastQuestionsObj.objects.filter(id__in=ids))
+        questions.sort(key=lambda q: ids.index(q.id) if q.id in ids else 0)
+
+        score = 0
+        failed = []
+        for q in questions:
+            ans = answers.get(str(q.id))
+            if ans == q.correct_option:
+                score += 1
+            else:
+                failed.append({
+                    'question': q,
+                    'your_answer': ans,
+                    'your_answer_text': get_option_text(q, ans),
+                    'correct_answer': q.correct_option,
+                    'correct_answer_text': get_option_text(q, q.correct_option),
+                    'explanation': q.explanation
+                })
+
+        total = len(questions)
+        percent = (score / total) * 100 if total else 0
+
+        # persist
+        if student:
+            CBTResult.objects.create(student=student, course=course, score=score, total_questions=total)
+
+        request.session[f'mock_{course.id}_completed'] = True
+
+        summary.append({
+            'course': course,
+            'score': score,
+            'total': total,
+            'percent': percent,
+            'failed_questions': failed,
+            'skipped': False,
+        })
+
+    # After saving all, clear the mock session keys so user can't resubmit the same session
+    request.session.pop('mock_courses', None)
+    request.session.pop('mock_start_time', None)
+    request.session.pop('mock_end_time', None)
+
+    return render(request, 'mock_submit_summary.html', {'summary': summary})
+
+
+
 def topic_cbt_exam(request):
     topic_id = request.session.get('cbt_topic_id')
     if not topic_id:

@@ -37,5 +37,11 @@ urlpatterns = [
     path('students/', views.student_list, name='student_list'),
     path('flag-question/', views.flag_question, name='flag_question'),
 
-    
+    # Mock exam (scheduled group mock across courses)
+    path('mock/start/', views.start_mock, name='start_mock'),
+    path('mock/exam/', views.mock_exam, name='mock_exam'),
+    path('mock/data/', views.mock_data, name='mock_data'),
+    path('mock/submit-answers/', views.mock_submit_answers, name='mock_submit_answers'),
+    path('mock/submit/', views.mock_submit, name='mock_submit'),
+    path('mock/submit-all/', views.mock_submit_all, name='mock_submit_all'),
 ]

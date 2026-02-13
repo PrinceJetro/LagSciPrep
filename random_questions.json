@@ -1,1149 +1,1935 @@
 {
-  "PHY 101": [
+  "ZOO 101": [
   {
-    "question": "The relationship between the mass m of a material, its volume V, and its density D is:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which hormone plays a central role in initiating puberty in both males and females?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "D/V = m",
-      "B": "V = mD",
-      "C": "m/V = D",
-      "D": "D = V/m"
+      "A": "Estrogen",
+      "B": "Gonadotropin-releasing hormone (GnRH)",
+      "C": "Testosterone",
+      "D": "Luteinizing hormone (LH)"
+    },
+    "correct_option": "B",
+    "explanation": "GnRH is the master hormone released from the hypothalamus that stimulates the pituitary gland to release FSH and LH, thereby initiating the hormonal cascade of puberty in both sexes.",
+    "hint": "This hormone is released from the brain and acts on the pituitary gland."
+  },
+  {
+    "question": "What physiological change is most directly associated with the onset of menarche in females?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Maturation of the adrenal gland",
+      "B": "Peak in oxytocin levels",
+      "C": "Initiation of the menstrual cycle due to ovarian activity",
+      "D": "Closure of growth plates in bones"
     },
     "correct_option": "C",
-    "explanation": "Density is defined as mass per unit volume. Therefore, D = m/V, which can be rearranged as m/V = D.",
-    "hint": "Recall the definition of density."
+    "explanation": "Menarche, the first menstrual period, occurs directly as a result of the initiation of the menstrual cycle driven by ovarian activity and hormone production.",
+    "hint": "This event marks the beginning of cyclic reproductive function."
   },
   {
-    "question": "The element 133Cs is the standard for defining which of these:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which of the following is a primary sex characteristic in males?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "Second",
-      "B": "Meter",
-      "C": "Mass",
-      "D": "Ampere"
+      "A": "Development of testes",
+      "B": "Broadening of shoulders",
+      "C": "Deepening of the voice",
+      "D": "Growth of facial hair"
     },
     "correct_option": "A",
-    "explanation": "The second is defined by the radiation frequency corresponding to the transition between two hyperfine levels of the ground state of the cesium-133 atom.",
-    "hint": "Think about the atomic standard for time."
+    "explanation": "Primary sex characteristics are those directly related to reproduction, including the internal and external reproductive organs such as the testes.",
+    "hint": "These characteristics are present at birth and are directly involved in reproduction."
   },
   {
-    "question": "The coefficient of thermal expansion, α, of a metal bar of length l whose length expands by Δl when its temperature increases by ΔT is given by Δl = α l ΔT. What is the dimension of α?",
-    "topic": "Physical Quantities And Units",
+    "question": "Spermatogenesis in males begins at what stage of development?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "K⁻¹",
-      "B": "L²T⁻¹",
-      "C": "LT⁻²",
-      "D": "L⁻²K⁻¹"
-    },
-    "correct_option": "A",
-    "explanation": "From Δl = α l ΔT, α = Δl / (l ΔT). Δl and l have the same dimension (L), so α has dimension 1/ΔT, which is K⁻¹ (or more generally, temperature inverse).",
-    "hint": "Rearrange the formula to solve for α and perform dimensional analysis."
-  },
-  {
-    "question": "Which of the following is the internationally agreed system of units (S.I.) for physical measurements?",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "lb, ft, sec",
-      "B": "g, m, sec",
-      "C": "kg, m, sec",
-      "D": "cm, g, sec"
+      "A": "Birth",
+      "B": "Infancy",
+      "C": "Puberty",
+      "D": "Fetal stage"
     },
     "correct_option": "C",
-    "explanation": "The SI base units include kilogram (kg) for mass, metre (m) for length, and second (s) for time.",
-    "hint": "Recall the SI base units for mass, length, and time."
+    "explanation": "Spermatogenesis, the production of sperm, remains dormant during childhood and initiates at puberty when hormonal signals activate the testes.",
+    "hint": "This process starts when secondary sexual characteristics begin to appear."
   },
   {
-    "question": "The SI units of magnetic field is:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which of the following is responsible for the development of secondary sexual characteristics in females?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "Weber per metre²",
-      "B": "Newton per coulomb per (metre per second)",
-      "C": "Ampere per metre",
-      "D": "All the above"
+      "A": "Estrogen",
+      "B": "Progesterone"
     },
-    "correct_option": "D",
-    "explanation": "Magnetic field (B) can be expressed in tesla (T), where 1 T = 1 Wb/m². It can also be expressed as N/(C·m/s) since F = q(v x B). Magnetic field intensity (H) is in A/m. Since the question asks for SI units of magnetic field (B), all are equivalent forms.",
-    "hint": "The tesla has several equivalent expressions."
+    "correct_option": "A",
+    "explanation": "Estrogen is the primary hormone responsible for the development of female secondary sexual characteristics such as breast development and body fat distribution.",
+    "hint": "This hormone is produced primarily by the ovaries."
   },
   {
-    "question": "The dimensions of energy per unit volume are the same as those of:",
-    "topic": "Physical Quantities And Units",
+    "question": "In males, which hormone stimulates Leydig cells to produce testosterone?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "Pressure",
-      "B": "Force",
-      "C": "Modulus of elasticity",
-      "D": "All the above"
-    },
-    "correct_option": "D",
-    "explanation": "Energy has dimensions ML²T⁻². Energy per volume = ML²T⁻² / L³ = ML⁻¹T⁻². Pressure = Force/Area = MLT⁻² / L² = ML⁻¹T⁻². Modulus of elasticity (stress) also has dimensions ML⁻¹T⁻². Force alone is MLT⁻², which is different, but the question's correct answer is D, implying 'All the above' because modulus of elasticity and pressure have the same dimensions as energy/volume.",
-    "hint": "Check the dimensions of pressure, stress, and energy density."
-  },
-  {
-    "question": "Which of the following derived units is NOT a unit of power?",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Joule/second",
-      "B": "Ampere × volt",
-      "C": "Ampere/volt",
-      "D": "Volts²/ohms"
+      "A": "GnRH",
+      "B": "FSH",
+      "C": "LH",
+      "D": "Prolactin"
     },
     "correct_option": "C",
-    "explanation": "Power is the rate of energy transfer. Joule/second = watt. Ampere × volt = watt (since P = IV). Volts²/ohms = watt (since P = V²/R). Ampere/volt is siemens, the unit of electrical conductance, not power.",
-    "hint": "Recall the formulas for electrical power."
+    "explanation": "Luteinizing hormone (LH) acts directly on the Leydig cells located in the testes to stimulate the synthesis and secretion of testosterone.",
+    "hint": "This pituitary hormone shares its name with a phase of the ovarian cycle."
   },
   {
-    "question": "Which of the underlisted quantities has the dimension ML²T⁻²?",
-    "topic": "Physical Quantities And Units",
+    "question": "Which structure is primarily responsible for the nourishment of the fetus during pregnancy?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "Moment of a force",
-      "B": "Work",
-      "C": "Acceleration",
-      "D": "Moment of a force and work"
+      "A": "Amniotic sac",
+      "B": "Placenta",
+      "C": "Umbilical cord",
+      "D": "Uterus wall"
     },
-    "correct_option": "D",
-    "explanation": "Work (energy) = Force × distance has dimensions ML²T⁻². Moment of a force (torque) = Force × distance also has dimensions ML²T⁻². Acceleration has dimensions LT⁻².",
-    "hint": "Both torque and work/energy share the same dimensional formula."
+    "correct_option": "B",
+    "explanation": "The placenta is the organ that develops during pregnancy and facilitates the exchange of nutrients, gases, and wastes between the mother and the fetus.",
+    "hint": "This structure is expelled from the uterus after birth as the afterbirth."
   },
   {
-    "question": "What is the unit of quantity of electricity?",
-    "topic": "Physical Quantities And Units",
+    "question": "Sexual maturity in females is most closely associated with which developmental event?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "Coulomb",
-      "B": "Volt",
-      "C": "Ampere",
-      "D": "Ohm"
+      "A": "Growth of pubic hair",
+      "B": "Menarche",
+      "C": "Ovulation during infancy",
+      "D": "Development of the clitoris"
+    },
+    "correct_option": "B",
+    "explanation": "Menarche, the first menstrual period, is the key marker signifying that a female has reached reproductive capability and sexual maturity.",
+    "hint": "This event signals the ability to conceive, though cycles may initially be anovulatory."
+  },
+  {
+    "question": "Which of the following best describes the role of FSH in the male reproductive system?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Stimulates testosterone secretion",
+      "B": "Initiates spermatogenesis",
+      "C": "Inhibits GnRH production",
+      "D": "Triggers erection"
+    },
+    "correct_option": "B",
+    "explanation": "Follicle-stimulating hormone (FSH) acts on the Sertoli cells within the seminiferous tubules to support and initiate spermatogenesis.",
+    "hint": "This hormone supports sperm production rather than hormone secretion."
+  },
+  {
+    "question": "The release of an ovum from the ovary is triggered by a surge in which hormone?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "FSH",
+      "B": "LH",
+      "C": "Estrogen",
+      "D": "Progesterone"
+    },
+    "correct_option": "B",
+    "explanation": "A sharp, rapid increase in Luteinizing Hormone (LH), known as the LH surge, is the direct trigger for ovulation, causing the mature follicle to rupture and release the ovum.",
+    "hint": "This hormone is also important for stimulating testosterone production in males."
+  },
+  {
+    "question": "Which statement best reflects the concept of sexuality in humans as described in the document?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "It is purely a biological response",
+      "B": "It encompasses biological, psychological, and sociocultural dimensions",
+      "C": "It is limited to reproductive behavior",
+      "D": "It is fully developed at birth"
+    },
+    "correct_option": "B",
+    "explanation": "Human sexuality is a complex, multidimensional concept that integrates biological factors, psychological aspects, and sociocultural influences.",
+    "hint": "This view goes beyond simple biology and reproduction."
+  },
+  {
+    "question": "In terms of human reproduction, what is the function of the corpus luteum?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Secretes progesterone to maintain the uterine lining",
+      "B": "Produces estrogen during menopause",
+      "C": "Triggers follicular development",
+      "D": "Prevents fertilization"
     },
     "correct_option": "A",
-    "explanation": "Quantity of electricity refers to electric charge. Its SI unit is the coulomb (C).",
-    "hint": "Quantity of electricity is another term for electric charge."
+    "explanation": "Following ovulation, the ruptured follicle transforms into the corpus luteum, which secretes progesterone to thicken and maintain the endometrium for potential implantation.",
+    "hint": "This structure degenerates if pregnancy does not occur."
   },
   {
-    "question": "The position of a mass at the end of a spring is found as a function of time to be A sin(ωt). Select the dimensions of A and ω.",
-    "topic": "Physical Quantities And Units",
+    "question": "Which hormone is essential in maintaining pregnancy in the early stages before the placenta takes over?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "L & T",
-      "B": "L & dimensionless",
-      "C": "sin(L) & T⁻¹",
-      "D": "L & T⁻¹"
-    },
-    "correct_option": "D",
-    "explanation": "The argument of sine must be dimensionless. ωt is dimensionless, so ω has dimension T⁻¹. A is the amplitude of displacement, so it has dimension L.",
-    "hint": "The sine function's argument is dimensionless. Amplitude has the dimension of the oscillating quantity."
-  },
-  {
-    "question": "In a gas experiment, the pressure of the gas is plotted against the reciprocal of the volume of the gas at a constant temperature. The unit of the slope of the resulting curve is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Newton",
-      "B": "Newton/m",
-      "C": "Joule",
-      "D": "Newton/m³"
+      "A": "LH",
+      "B": "Oxytocin",
+      "C": "hCG (human chorionic gonadotropin)",
+      "D": "FSH"
     },
     "correct_option": "C",
-    "explanation": "For an ideal gas at constant T, P = nRT / V = constant * (1/V). So slope = ΔP / Δ(1/V) = nRT * V? Actually, P vs 1/V gives a straight line through origin with slope = nRT. nRT has dimensions of energy (since PV = energy). So the slope has units of energy, joule.",
-    "hint": "For an ideal gas at constant T, P ∝ 1/V. The constant of proportionality is nRT."
+    "explanation": "Human chorionic gonadotropin (hCG) is secreted by the developing embryo and later the placenta to maintain the corpus luteum, ensuring continued progesterone production during early pregnancy.",
+    "hint": "This is the hormone detected by home pregnancy tests."
   },
   {
-    "question": "Which of the following is a derived unit?",
-    "topic": "Physical Quantities And Units",
+    "question": "What marks the end of female reproductive capacity?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "Kilogram",
-      "B": "Metre",
-      "C": "Kelvin",
-      "D": "None of the above"
+      "A": "Fertility treatment",
+      "B": "Menopause",
+      "C": "Ovulation",
+      "D": "Menarche"
     },
-    "correct_option": "D",
-    "explanation": "Kilogram, metre, and Kelvin are all base SI units, not derived units.",
-    "hint": "Derived units are combinations of base units (e.g., newton, joule)."
+    "correct_option": "B",
+    "explanation": "Menopause is defined as the permanent cessation of menstruation for 12 consecutive months, marking the end of a female's natural reproductive capacity.",
+    "hint": "This event typically occurs around age 50."
   },
   {
-    "question": "Which of the following units is equivalent to kg·m/s?",
-    "topic": "Physical Quantities And Units",
+    "question": "Which of the following best describes the difference between sex and gender as presented in the document?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "J/s",
-      "B": "N/s",
-      "C": "Ns",
-      "D": "N·ms"
+      "A": "Both are biological concepts",
+      "B": "Both refer to reproductive capacity",
+      "C": "Sex is biological, while gender is a cultural and psychological identity",
+      "D": "Gender determines chromosome type"
     },
     "correct_option": "C",
-    "explanation": "kg·m/s is the unit of momentum (p = mv). Ns (newton-second) is impulse, which equals change in momentum, so it has the same dimensions: [F][T] = MLT⁻² * T = MLT⁻¹.",
-    "hint": "Recall that impulse = force × time, and has the same unit as momentum."
+    "explanation": "Sex refers to biological and physiological characteristics (chromosomes, anatomy), whereas gender refers to the socially constructed roles, behaviors, and identities of individuals.",
+    "hint": "One is biological; the other is socially and psychologically defined."
   },
   {
-    "question": "A calorie is a unit of heat or energy and it equals about 4.2 J. Suppose we employ a system of units in which the unit of mass = α kg, length = β m, and time = γ s. Determine the magnitude of 4.2 J in terms of the new units.",
-    "topic": "Physical Quantities And Units",
+    "question": "Which of the following functions is not primarily performed by the skeletal system?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "4.2 α⁻¹ β⁻² γ²",
-      "B": "4.2 α¹ β² γ²",
-      "C": "4.2 α² β³ γ²",
-      "D": "4.2 α⁻¹/² β² γ²"
-    },
-    "correct_option": "A",
-    "explanation": "Energy has dimensions ML²T⁻². In new system: unit mass = α kg → 1 kg = 1/α new mass unit. Similarly, 1 m = 1/β new length unit, 1 s = 1/γ new time unit. So, 1 J = 1 kg m² s⁻² = (1/α)(1/β)²(1/γ)⁻² = α⁻¹ β⁻² γ² new energy units. Therefore, 4.2 J = 4.2 α⁻¹ β⁻² γ² in new units.",
-    "hint": "Convert the joule into the new system using dimensional analysis."
-  },
-  {
-    "question": "The product PV where P is pressure and V is volume has the same unit as:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Density",
-      "B": "Power",
-      "C": "Momentum",
-      "D": "Energy"
-    },
-    "correct_option": "D",
-    "explanation": "PV has dimensions ML⁻¹T⁻² * L³ = ML²T⁻², which is the dimension of energy (work). In thermodynamics, PV has units of energy.",
-    "hint": "Think of the work done by a gas: W = ∫P dV."
-  },
-  {
-    "question": "Which of the following are derived units? (I) Second (II) Newton (III) Kilogram (IV) Ampere (V) Joule",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "I and III only",
-      "B": "II and V only",
-      "C": "II, IV and V only",
-      "D": "I only"
+      "A": "Protection of internal organs",
+      "B": "Regulation of blood glucose levels",
+      "C": "Storage of minerals",
+      "D": "Support for body structure"
     },
     "correct_option": "B",
-    "explanation": "Second (time), kilogram (mass), ampere (electric current) are base units. Newton (force) and joule (energy) are derived units.",
-    "hint": "Identify which are combinations of base units."
+    "explanation": "Regulation of blood glucose levels is an endocrine function primarily performed by the pancreas and liver, not the skeletal system.",
+    "hint": "This function involves hormones like insulin and glucagon."
   },
   {
-    "question": "Which of the following are derived quantities? (I) Force (II) Temperature (III) Area (IV) Pressure",
-    "topic": "Physical Quantities And Units",
+    "question": "The axial skeleton includes which of the following components?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "I and IV only",
-      "B": "II, III and IV only",
-      "C": "I and III only",
-      "D": "I, III and IV only"
-    },
-    "correct_option": "D",
-    "explanation": "Force (MLT⁻²), area (L²), and pressure (ML⁻¹T⁻²) are derived from base quantities. Temperature is a base quantity.",
-    "hint": "Derived quantities are defined in terms of base quantities."
-  },
-  {
-    "question": "Which of the following is/are supplementary unit(s)? (I) Kelvin (II) Newton (III) Second (IV) Radian",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "I and III only",
-      "B": "IV only",
-      "C": "I and II only",
-      "D": "I, II and III only"
+      "A": "Pelvic girdle",
+      "B": "Vertebral column",
+      "C": "Limbs",
+      "D": "Clavicle and scapula"
     },
     "correct_option": "B",
-    "explanation": "Radian (plane angle) is a supplementary unit. Kelvin and second are base units. Newton is a derived unit.",
-    "hint": "Supplementary SI units are radian and steradian."
+    "explanation": "The axial skeleton forms the central axis of the body and includes the skull, vertebral column, and rib cage.",
+    "hint": "This division includes the bones that protect the brain and spinal cord."
   },
   {
-    "question": "The velocity of a body moving in viscous medium is given as v = At + B, where t is time, A and B are constants. Then the dimensions of A and B are:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which type of bone cell is responsible for breaking down bone matrix during remodeling?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "M⁰L⁰T⁰",
-      "B": "M⁰L¹T⁰",
-      "C": "M⁰L¹T⁻²",
-      "D": "M¹L⁰T¹"
+      "A": "Osteoblast",
+      "B": "Osteocyte",
+      "C": "Osteoclast",
+      "D": "Chondrocyte"
     },
     "correct_option": "C",
-    "explanation": "v has dimensions LT⁻¹. In v = At + B, each term must have same dimension. So [At] = LT⁻¹ → [A] = LT⁻¹ / T = LT⁻². [B] = LT⁻¹ (same as v). So A has dimensions LT⁻², B has LT⁻¹. The option given matches A's dimension (M⁰L¹T⁻²).",
-    "hint": "Use dimensional homogeneity: each term in an equation must have the same dimension."
+    "explanation": "Osteoclasts are large, multinucleated cells that secrete acids and enzymes to resorb or break down bone tissue, a process essential for remodeling and calcium homeostasis.",
+    "hint": "These cells are derived from monocytes and 'clast' means to break."
   },
   {
-    "question": "Which of the following is the dimension of power?",
-    "topic": "Physical Quantities And Units",
+    "question": "Compact bone is primarily organized into structural units called:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "ML²T⁻³",
-      "B": "MLT⁻²",
-      "C": "ML²T⁻²",
-      "D": "ML⁻²T³"
-    },
-    "correct_option": "A",
-    "explanation": "Power = Energy/time = ML²T⁻² / T = ML²T⁻³.",
-    "hint": "Power is the rate of doing work."
-  },
-  {
-    "question": "In which of the following physical quantities are the units correctly indicated? (I) Weight [N] (II) Power [J/s] (III) Momentum [kg·m/s] (IV) Acceleration [N/kg]",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "I and II only",
-      "B": "III and IV only",
-      "C": "I, II and III only",
-      "D": "I, II, III and IV"
-    },
-    "correct_option": "D",
-    "explanation": "All are correct: Weight is force (N). Power is J/s = watt. Momentum = kg·m/s. Acceleration = N/kg = (kg m/s²)/kg = m/s².",
-    "hint": "Check if each unit matches the definition of the quantity."
-  },
-  {
-    "question": "The watt is equivalent to:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "N·m/s",
-      "B": "J·s",
-      "C": "kg·m²·s²",
-      "D": "N/s"
-    },
-    "correct_option": "A",
-    "explanation": "Watt = joule/second = (N·m)/s = N·m/s.",
-    "hint": "Recall that work = force × distance."
-  },
-  {
-    "question": "Which of the following quantities has the same unit as the kilowatt-hour?",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Force × time",
-      "B": "Force × distance",
-      "C": "Force × velocity",
-      "D": "Force × acceleration"
-    },
-    "correct_option": "B",
-    "explanation": "Kilowatt-hour is a unit of energy (power × time). Force × distance = work (energy).",
-    "hint": "Kilowatt-hour is a unit of energy."
-  },
-  {
-    "question": "The dimensions of entropy are:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "M⁰L⁰T⁰K¹",
-      "B": "M⁰L⁰T⁰K²",
-      "C": "M¹L¹T⁻²K¹",
-      "D": "M¹L²T⁻²K⁻¹"
-    },
-    "correct_option": "D",
-    "explanation": "Entropy change dS = dQ_rev/T. Heat dQ has dimensions of energy ML²T⁻², temperature T has K. So entropy dimensions: ML²T⁻²K⁻¹.",
-    "hint": "Entropy = energy/temperature."
-  },
-  {
-    "question": "If momentum (p), area (A) and time (T) are taken to be fundamental quantities, then energy has the dimensional formula:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "[p A⁻¹ T⁻¹]",
-      "B": "[p² A T]",
-      "C": "[p A² T]",
-      "D": "[p A T²]"
-    },
-    "correct_option": "D",
-    "explanation": "Energy has dimensions ML²T⁻². Let energy E = p^x A^y T^z. p = MLT⁻¹, A = L², T = T. So ML²T⁻² = (MLT⁻¹)^x (L²)^y (T)^z = M^x L^{x+2y} T^{-x+z}. Equate: x=1, x+2y=2 → 1+2y=2 → y=1/2, -x+z=-2 → -1+z=-2 → z=-1. So E = p^1 A^{1/2} T^{-1}? That doesn't match options. Alternatively, solve systematically: p = [MLT⁻¹], A = [L²], T = [T]. We want E = [ML²T⁻²]. Let E = p^a A^b T^c. Then ML²T⁻² = M^a L^{a+2b} T^{-a+c}. So a=1, a+2b=2 → 1+2b=2 → b=1/2, -a+c=-2 → -1+c=-2 → c=-1. So E = p A^{1/2} T^{-1}. But none of the options have A^{1/2}. Perhaps they expect [p A T²]? Let's check: p A T² = (MLT⁻¹)(L²)(T²) = ML³T¹, not correct. Wait, maybe they meant energy in terms of p, A, T. Possibly the given answer is D, but let's verify: [p A T²] = (MLT⁻¹)(L²)(T²) = ML³T¹. That's not ML²T⁻². There might be a misprint. However, based on typical problems, the correct match is often [p A T²] but dimensionally it's wrong. Given the provided answer key, D is marked correct, so we'll stick with that, noting the discrepancy.",
-    "hint": "Express dimensions of energy in terms of p, A, T."
-  },
-  {
-    "question": "Which of the following physical quantities have no dimension? (i) Stress (ii) Strain (iii) Temperature (iv) Angular momentum (v) Angular amplitude (vi) Friction",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "i and iv",
-      "B": "ii and v",
-      "C": "iv and vi",
-      "D": "i and v"
-    },
-    "correct_option": "B",
-    "explanation": "Strain (ΔL/L) is dimensionless. Angular amplitude (angle) is dimensionless. Stress has dimensions, temperature has dimension, angular momentum has dimensions, friction (force) has dimensions.",
-    "hint": "Look for ratios of same quantities or angles."
-  },
-  {
-    "question": "If P, Q, R are physical quantities having different dimensions, which of the following combinations can never be meaningful?",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "(P − Q)/R",
-      "B": "PQ − R",
-      "C": "PQ/R",
-      "D": "(PR − Q²)/R"
-    },
-    "correct_option": "A",
-    "explanation": "In (P − Q), P and Q must have same dimensions for subtraction to be meaningful. Since they have different dimensions, (P − Q) is not allowed.",
-    "hint": "Only quantities with the same dimensions can be added or subtracted."
-  },
-  {
-    "question": "Which of the following pairs of physical quantities does not have the same dimensional formula?",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Work and torque",
-      "B": "Angular momentum and Planck’s constant",
-      "C": "Tension and surface tension",
-      "D": "Impulse and linear momentum"
+      "A": "Trabeculae",
+      "B": "Cartilage pads",
+      "C": "Osteons (Haversian systems)",
+      "D": "Marrow cavities"
     },
     "correct_option": "C",
-    "explanation": "Tension is force [MLT⁻²]. Surface tension is force per length [MT⁻²]. Others: work and torque both [ML²T⁻²]; angular momentum and Planck's constant both [ML²T⁻¹]; impulse and momentum both [MLT⁻¹].",
-    "hint": "Surface tension has an extra L⁻¹ compared to tension."
+    "explanation": "Compact bone is densely packed and organized into cylindrical structures called osteons or Haversian systems, which contain concentric lamellae surrounding a central canal.",
+    "hint": "These units contain blood vessels and nerves running through the central canal."
   },
   {
-    "question": "If the number of radioactive atoms is N(t) = N₀ exp(−kt), where N₀ is the number at t=0, what is the dimension of k?",
-    "topic": "Physical Quantities And Units",
+    "question": "The periosteum serves which of the following functions?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "L/T",
-      "B": "log(T)",
-      "C": "T",
-      "D": "T⁻¹"
-    },
-    "correct_option": "D",
-    "explanation": "The exponent (−kt) must be dimensionless. t has dimension T, so k must have dimension T⁻¹.",
-    "hint": "The argument of an exponential function must be dimensionless."
-  },
-  {
-    "question": "In the van der Waals equation P = RT/(V−b) − a/V², the dimensional formula for b is the same as that for:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "P",
-      "B": "V",
-      "C": "PV²",
-      "D": "RT"
+      "A": "Forms red blood cells",
+      "B": "Provides a surface for ligament and tendon attachment",
+      "C": "Produces synovial fluid",
+      "D": "Houses osteons"
     },
     "correct_option": "B",
-    "explanation": "In the term (V−b), b must have the same dimension as V (volume). So [b] = [V] = L³.",
-    "hint": "Quantities that are added or subtracted must have same dimensions."
+    "explanation": "The periosteum is a dense fibrous membrane covering the outer surface of bones, providing an attachment point for ligaments, tendons, and containing osteoblasts for bone growth and repair.",
+    "hint": "This outer layer is essential for anchoring muscles to bone."
   },
   {
-    "question": "The dimensional formula for a is the same as that for:",
-    "topic": "Physical Quantities And Units",
+    "question": "What distinguishes spongy bone from compact bone structurally?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "V²",
-      "B": "P",
-      "C": "PV²",
-      "D": "RT"
+      "A": "Higher calcium content",
+      "B": "Presence of trabeculae and absence of osteons",
+      "C": "Denser collagen fibers",
+      "D": "Lack of living cells"
+    },
+    "correct_option": "B",
+    "explanation": "Spongy bone is characterized by a lattice-like network of trabeculae and does not contain true osteons, unlike compact bone which is densely organized into Haversian systems.",
+    "hint": "This structure reduces weight and houses red bone marrow."
+  },
+  {
+    "question": "Which type of joint allows for the greatest range of motion?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Ball-and-socket joint",
+      "B": "Hinge joint",
+      "C": "Pivot joint",
+      "D": "Gliding joint"
+    },
+    "correct_option": "A",
+    "explanation": "Ball-and-socket joints, such as the hip and shoulder, consist of a spherical head articulating with a cup-like cavity, permitting movement in multiple axes including flexion, extension, abduction, adduction, and rotation.",
+    "hint": "This joint allows you to swing your arm in a full circle."
+  },
+  {
+    "question": "The process of bone formation from cartilage templates during development is called:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Osteolysis",
+      "B": "Endochondral ossification",
+      "C": "Intramembranous calcification",
+      "D": "Synovial synthesis"
+    },
+    "correct_option": "B",
+    "explanation": "Endochondral ossification is the process where existing cartilage is gradually replaced by bone tissue. This is the primary method of bone formation for most bones in the body, including long bones.",
+    "hint": "Most bones of the skeleton develop using this method, which involves a hyaline cartilage model."
+  },
+  {
+    "question": "Which of the following bones is part of the appendicular skeleton?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Sternum",
+      "B": "Skull",
+      "C": "Femur",
+      "D": "Rib"
     },
     "correct_option": "C",
-    "explanation": "In the term a/V², a/V² must have same dimension as P (pressure). So [a] = [P][V²] = ML⁻¹T⁻² * L⁶ = ML⁵T⁻². PV² has dimensions (ML⁻¹T⁻²)(L⁶) = ML⁵T⁻².",
-    "hint": "Each term in the equation must have the same dimension (pressure)."
+    "explanation": "The appendicular skeleton includes the bones of the upper and lower limbs and the girdles that attach them to the axial skeleton. The femur (thigh bone) is a lower limb bone.",
+    "hint": "This division includes bones of the arms and legs."
   },
   {
-    "question": "Which of the following does not have the same dimensional formula as that for RT?",
-    "topic": "Physical Quantities And Units",
+    "question": "In long bones, where does hematopoiesis primarily occur?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "PV",
-      "B": "Pb",
-      "C": "a/V²",
-      "D": "ab/V²"
-    },
-    "correct_option": "D",
-    "explanation": "RT has dimensions of energy per mole? Actually, in van der Waals, P = RT/(V−b) − a/V², so RT has same dimensions as PV (since PV = RT for ideal gas). So [RT] = [PV] = ML²T⁻² (energy). Pb: [P][b] = ML⁻¹T⁻² * L³ = ML²T⁻² (same). a/V²: already same as P, but P has ML⁻¹T⁻², not ML²T⁻². Wait, check: a/V² has same dimension as P, which is ML⁻¹T⁻², while RT is ML²T⁻². So a/V² does NOT have same dimension as RT. But the question says 'which does not have same dimension as RT?' and answer is D? Let's check: ab/V² = (ML⁵T⁻²)(L³)/L⁶ = ML²T⁻², actually same as RT. So a/V² is different. But the given answer is D. Possibly a/V² is not an option, but it's C. Hmm. According to typical analysis, a/V² has dimensions of pressure, RT has dimensions of energy. So C is also not same. But the answer key says D. There might be a misprint. Usually, ab/V² has dimensions of ML⁸T⁻⁴? Let's recalc: [a] = ML⁵T⁻², [b] = L³, so [ab] = ML⁸T⁻². [ab/V²] = ML⁸T⁻² / L⁶ = ML²T⁻², same as energy. So ab/V² has same as RT. So then all except a/V² have same as RT? But a/V² is option C. So correct answer should be C. However, the provided answer is D, so we'll stick with D as per given key.",
-    "hint": "Find dimensions of each and compare with RT (which has dimensions of energy)."
-  },
-  {
-    "question": "The dimensional formula for ab/RT is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "ML·T⁻²",
-      "B": "ML³",
-      "C": "ML⁻¹T⁻²",
-      "D": "ML⁶"
-    },
-    "correct_option": "A",
-    "explanation": "[a] = ML⁵T⁻², [b] = L³, so [ab] = ML⁸T⁻². [RT] = ML²T⁻². So [ab/RT] = ML⁸T⁻² / ML²T⁻² = L⁶. That is not matching any? L⁶ is volume squared. But option A is MLT⁻², which is force. Possibly misprint. Given answer A, we'll note the inconsistency.",
-    "hint": "Compute dimensions of a, b, R, T and then divide."
-  },
-  {
-    "question": "The dimensional formula for ab/RT is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "ML·T⁻²",
-      "B": "MLT",
-      "C": "ML⁻¹T⁻²",
-      "D": "ML·T"
-    },
-    "correct_option": "A",
-    "explanation": "Similar to previous, likely same answer.",
-    "hint": "Same as previous."
-  },
-  {
-    "question": "The dimensional formula of RT is the same as that of:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Energy",
-      "B": "Force",
-      "C": "Specific heat",
-      "D": "Latent heat"
-    },
-    "correct_option": "A",
-    "explanation": "RT has dimensions of energy per mole (or just energy if R is gas constant per mole). Specific heat and latent heat have different dimensions (energy per mass per K, energy per mass).",
-    "hint": "PV = nRT, so RT has dimensions of energy/mole."
-  },
-  {
-    "question": "In the S.I. system, the unit for temperature is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Centigrade",
-      "B": "Kelvin",
-      "C": "Celsius",
-      "D": "Fahrenheit"
-    },
-    "correct_option": "B",
-    "explanation": "The SI base unit for thermodynamic temperature is the kelvin (K).",
-    "hint": "SI base unit for temperature."
-  },
-  {
-    "question": "The unit of energy in S.I. system is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Erg",
-      "B": "Calorie",
-      "C": "Joule",
-      "D": "Fahrenheit"
+      "A": "Periosteum",
+      "B": "Articular cartilage",
+      "C": "Red bone marrow in the epiphysis",
+      "D": "Compact bone shaft"
     },
     "correct_option": "C",
-    "explanation": "The SI derived unit for energy is the joule (J).",
-    "hint": "SI unit of energy."
+    "explanation": "Hematopoiesis, the production of blood cells, occurs in red bone marrow, which in long bones is primarily located in the epiphyses (ends) and in spongy bone.",
+    "hint": "Yellow marrow stores fat, but red marrow produces blood cells."
   },
   {
-    "question": "The dimensions of the ratio of angular momentum to linear momentum is:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which hormone is responsible for increasing blood calcium levels by stimulating bone resorption?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "[L]",
-      "B": "[MLT⁻¹]",
-      "C": "[MLT⁻¹]",
-      "D": "[M'L'T']"
+      "A": "Parathyroid hormone (PTH)",
+      "B": "Calcitonin",
+      "C": "Growth hormone",
+      "D": "Estrogen"
     },
     "correct_option": "A",
-    "explanation": "Angular momentum L = mvr, dimensions ML²T⁻¹. Linear momentum p = mv, dimensions MLT⁻¹. Ratio L/p = (ML²T⁻¹)/(MLT⁻¹) = L.",
-    "hint": "Divide dimensions of angular momentum by linear momentum."
+    "explanation": "Parathyroid hormone (PTH) is secreted by the parathyroid glands in response to low blood calcium. It stimulates osteoclast activity to break down bone matrix and release calcium into the bloodstream.",
+    "hint": "This hormone is released when calcium levels drop too low."
   },
   {
-    "question": "If F + (x/density) + C is dimensionally correct, then the dimensions of x are:",
-    "topic": "Physical Quantities And Units",
+    "question": "Synovial fluid serves what primary function in freely movable joints?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "MLT⁻²",
-      "B": "MLT⁻³",
-      "C": "ML²T⁻³",
-      "D": "M²L⁻²T⁻²"
+      "A": "Strengthens ligaments",
+      "B": "Reduces friction and nourishes cartilage",
+      "C": "Connects bones",
+      "D": "Stimulates osteocyte growth"
+    },
+    "correct_option": "B",
+    "explanation": "Synovial fluid is a viscous fluid found in the cavity of synovial joints. It lubricates the joint surfaces to reduce friction and provides nutrients to the avascular articular cartilage.",
+    "hint": "This fluid is similar to raw egg white in consistency."
+  },
+  {
+    "question": "Which of the following bones is not a part of the cranial structure?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Frontal",
+      "B": "Parietal",
+      "C": "Occipital",
+      "D": "Mandible"
     },
     "correct_option": "D",
-    "explanation": "F is force [MLT⁻²]. Density is [ML⁻³]. So x/density must have same dimension as F. So [x]/[ML⁻³] = MLT⁻² → [x] = MLT⁻² * ML⁻³ = M²L⁻²T⁻².",
-    "hint": "All added terms must have same dimension as F."
+    "explanation": "The mandible, or lower jaw, is a facial bone. It is not one of the cranial bones that encase and protect the brain.",
+    "hint": "This is the only movable bone of the skull."
   },
   {
-    "question": "The dimensional formula for angular momentum is:",
-    "topic": "Physical Quantities And Units",
+    "question": "The vertebral column has how many cervical vertebrae?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "ML²T⁻²",
-      "B": "ML²T⁻¹",
-      "C": "MLT⁻¹",
-      "D": "L²T⁻²"
+      "A": "5",
+      "B": "7",
+      "C": "12",
+      "D": "9"
     },
     "correct_option": "B",
-    "explanation": "Angular momentum L = r × p. r has L, p has MLT⁻¹, so L has ML²T⁻¹.",
-    "hint": "Angular momentum = distance × linear momentum."
+    "explanation": "The vertebral column is divided into regions. The cervical region, located in the neck, consists of 7 vertebrae (C1-C7).",
+    "hint": "These are the smallest, lightest vertebrae and most people have the same number as giraffes."
   },
   {
-    "question": "For 10(at+3) = 1, where t is time, the dimension of a is:",
-    "topic": "Physical Quantities And Units",
+    "question": "A fracture that breaks the bone but does not puncture the skin is referred to as:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "MLT",
-      "B": "MLT⁻²",
-      "C": "ML⁻¹T⁻¹",
-      "D": "None of these"
-    },
-    "correct_option": "B",
-    "explanation": "The equation is 10(at+3)=1. Since 10 and 1 are dimensionless, (at+3) must be dimensionless. So at is dimensionless. t has dimension T, so a has dimension T⁻¹. But none of the options have T⁻¹. Option B is MLT⁻², which is force. Possibly misprint. Given answer B, we'll note.",
-    "hint": "The term inside must be dimensionless."
-  },
-  {
-    "question": "The velocity of a moving particle depends on time t as v = at + b where c is a constant. The dimension of c is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "[MLT²]",
-      "B": "[L]",
-      "C": "[ML²T²]",
-      "D": "[ML⁻¹T²]"
-    },
-    "correct_option": "B",
-    "explanation": "The equation given is v = at + b. There's a typo: 'where c is a constant' likely refers to b? Assuming b is constant, v has LT⁻¹, so b must have same dimension as v, LT⁻¹. But option B is [L], which is length. Possibly they meant c is a constant in some other form. Given answer B, we'll accept.",
-    "hint": "In v = at + b, b must have same dimension as v."
-  },
-  {
-    "question": "F = ax + b² + c where F is force, x is distance and t is time. The dimension of a is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "[ML²T²]",
-      "B": "[MLT²]",
-      "C": "[M⁰L⁰T]",
-      "D": "[MLT⁻²]"
+      "A": "Closed (simple) fracture",
+      "B": "Compound fracture",
+      "C": "Comminuted fracture",
+      "D": "Spiral fracture"
     },
     "correct_option": "A",
-    "explanation": "F = ax + b² + c. Each term must have dimension of force MLT⁻². So ax has MLT⁻², x has L, so a must have MLT⁻² / L = MT⁻²? But option A is ML²T², which is not matching. Possibly misprint. Given answer A.",
-    "hint": "Compare dimensions term by term."
+    "explanation": "A closed or simple fracture is defined as a break in the bone where the skin remains intact and the bone does not protrude through the skin.",
+    "hint": "The opposite of this is an open or compound fracture."
   },
   {
-    "question": "If force, time, and velocity are treated as fundamental quantities, then the dimensional formula of energy is:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which component of the nervous system is primarily responsible for integrating sensory input and initiating motor output?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "[FTV]",
-      "B": "[FT²V]",
-      "C": "[FTV²]",
-      "D": "[FT²V²]"
-    },
-    "correct_option": "D",
-    "explanation": "Energy = work = force × distance. Distance = velocity × time. So energy = force × (velocity × time) = F V T. So dimensions [F][V][T]. That's F T V. But that's option A. However, energy also = ½ mv². If F, T, V are fundamental, then mass = F / acceleration = F / (V/T) = FT/V. So energy = (FT/V) * V² = F T V. So [FTV]. But option D is FT²V². Possibly they want [FTV]. Given answer D, we'll note discrepancy.",
-    "hint": "Express energy in terms of force, time, velocity."
-  },
-  {
-    "question": "Which of the following physical quantities do not have the same dimensions?",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Pressure, Young modulus, stress",
-      "B": "Electromotive force, voltage, potential",
-      "C": "Heat, work, energy",
-      "D": "Electric dipole, electric field, flux"
-    },
-    "correct_option": "D",
-    "explanation": "Electric dipole moment has dimensions [L I T]. Electric field has [MLT⁻³I⁻¹]. Flux (electric) has [ML³T⁻³I⁻¹]. So they are different. Others: pressure, Young's modulus, stress all [ML⁻¹T⁻²]; emf, voltage, potential all [ML²T⁻³I⁻¹]; heat, work, energy all [ML²T⁻²].",
-    "hint": "Check dimensions of electric dipole moment vs. electric field."
-  },
-  {
-    "question": "If L is the inductance and C is the capacitance, then the dimensional representation of 1/(2π√LC) is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "[LT]",
-      "B": "[T⁻¹]",
-      "C": "[T]",
-      "D": "None of the above"
+      "A": "Peripheral nervous system",
+      "B": "Central nervous system",
+      "C": "Autonomic nervous system",
+      "D": "Somatic nervous system"
     },
     "correct_option": "B",
-    "explanation": "The quantity 1/√(LC) is angular frequency. Dimensions: [L] = ML²T⁻²I⁻²? Actually, inductance L has dimensions ML²T⁻²I⁻². Capacitance C has dimensions M⁻¹L⁻²T⁴I². So LC has dimensions T². √(LC) has T. 1/√(LC) has T⁻¹, which is frequency.",
-    "hint": "Recall that ω = 1/√(LC) for LC circuit."
+    "explanation": "The central nervous system (CNS), consisting of the brain and spinal cord, acts as the main integration center. It processes sensory information and determines the appropriate motor response.",
+    "hint": "This division includes the brain and spinal cord."
   },
   {
-    "question": "Find the dimensions of b in the equation P = a − bx/t², where P is pressure, x is distance, and t is time.",
-    "topic": "Physical Quantities And Units",
+    "question": "The function of the myelin sheath is to:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "[M²LT⁻²]",
-      "B": "[LT⁻³]",
-      "C": "[MT⁻²]",
-      "D": "[ML³T⁻¹]"
+      "A": "Generate neurotransmitters",
+      "B": "Increase the speed of nerve impulse conduction",
+      "C": "Facilitate synaptic communication",
+      "D": "Convert stimuli into action potentials"
+    },
+    "correct_option": "B",
+    "explanation": "The myelin sheath is an insulating lipid layer that surrounds axons. It prevents signal leakage and allows for saltatory conduction, significantly increasing the velocity of action potentials.",
+    "hint": "This sheath is produced by Schwann cells and oligodendrocytes."
+  },
+  {
+    "question": "The autonomic nervous system regulates which of the following functions?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Conscious skeletal muscle control",
+      "B": "Visual processing",
+      "C": "Involuntary activities like heart rate and digestion",
+      "D": "Learning and memory"
     },
     "correct_option": "C",
-    "explanation": "P = a − (bx)/t². Each term must have dimension of pressure ML⁻¹T⁻². So bx/t² has ML⁻¹T⁻². x has L, t² has T². So b * L / T² = ML⁻¹T⁻² → b = ML⁻¹T⁻² * T² / L = ML⁻². None of the options match. Option C is MT⁻², close but not exactly. Given answer C, we'll accept.",
-    "hint": "Compare dimensions of bx/t² with pressure."
+    "explanation": "The autonomic nervous system (ANS) is a motor division of the peripheral nervous system that controls involuntary, visceral functions including heart rate, digestion, respiratory rate, and glandular secretion.",
+    "hint": "This system operates without conscious effort and has sympathetic and parasympathetic divisions."
   },
   {
-    "question": "The potential energy U of a particle varies with distance x as U = Ax² + B where A and B are dimensional constants. The dimensional formula for AB is:",
-    "topic": "Physical Quantities And Units",
+    "question": "Which part of the neuron receives incoming signals from other neurons?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "[MLT⁻²]",
-      "B": "[MLT⁻²]",
-      "C": "[ML²T⁻²]",
-      "D": "[ML²T⁻²]"
-    },
-    "correct_option": "B",
-    "explanation": "U has dimensions of energy ML²T⁻². So Ax² must have ML²T⁻², so A = ML²T⁻² / L² = MT⁻². B must have same as U, ML²T⁻². So AB = (MT⁻²)(ML²T⁻²) = M²L²T⁻⁴. Not matching any option. Options are repeated. Possibly they want dimensions of A or B. Given answer B, we'll note.",
-    "hint": "Determine dimensions of A and B first."
-  },
-  {
-    "question": "The number of particles crossing unit area per unit time is N = −D (n₂−n₁)/(z₂−z₁). The dimensional formula for the diffusion constant D is:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "[MLT²]",
-      "B": "[L²T⁻¹]",
-      "C": "[L²T³]",
-      "D": "[LT]"
-    },
-    "correct_option": "B",
-    "explanation": "N is number per area per time, dimensions L⁻²T⁻¹. (n₂−n₁) is concentration difference, number per volume, dimensions L⁻³. (z₂−z₁) is length, dimensions L. So D = −N * (z₂−z₁)/(n₂−n₁). Dimensions: [D] = (L⁻²T⁻¹) * L / L⁻³ = L⁻²T⁻¹ * L⁴ = L²T⁻¹.",
-    "hint": "Solve for D and find dimensions."
-  },
-  {
-    "question": "If E = energy, G = gravitational constant, I = impulse, and M = mass, the dimension of G^{1/2} M / (E² I) is the same as that of:",
-    "topic": "Physical Quantities And Units",
-    "options": {
-      "A": "Spring constant",
-      "B": "Wavelength",
-      "C": "Energy gradient",
-      "D": "Rydberg constant"
-    },
-    "correct_option": "B",
-    "explanation": "[G] = M⁻¹L³T⁻², so G^{1/2} has M^{-1/2} L^{3/2} T^{-1}. [M] = M. [E] = ML²T⁻², so E² = M²L⁴T⁻⁴. [I] = MLT⁻¹. So G^{1/2} M / (E² I) = M^{-1/2} L^{3/2} T^{-1} * M / (M²L⁴T⁻⁴ * MLT⁻¹) = M^{-1/2+1} L^{3/2} T^{-1} / (M³ L⁵ T⁻⁵) = M^{1/2} L^{3/2} T^{-1} / M³ L⁵ T⁻⁵ = M^{-5/2} L^{-7/2} T^{4}. That is not obviously wavelength (L). Possibly there's a misprint. Given answer B.",
-    "hint": "Compute dimensions carefully."
-  },
-  {
-    "question": "A moving body is covering distances in proportion to the square of time along a straight line. The acceleration of the body is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "increasing",
-      "B": "decreasing",
-      "C": "zero",
-      "D": "constant"
-    },
-    "correct_option": "D",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "The distance covered by a body in time 't' is proportional to the square of the time 't'. The acceleration of the body is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "zero",
-      "B": "constant",
-      "C": "increasing",
-      "D": "decreasing"
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A train travels 4 km due east and then 3 km due north and finally comes back to the starting position travelling 5 km along south-west direction. What is the net displacement?",
-    "topic": "Kinematics",
-    "options": {
-      "A": "12 km",
-      "B": "5 km",
-      "C": "zero",
-      "D": "1 km"
-    },
-    "correct_option": "C",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A body moves along a straight line, the motion of the body is said to be:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "one dimensional",
-      "B": "two dimensional",
-      "C": "three dimensional",
-      "D": "may be any of these three"
-    },
-    "correct_option": "D",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A stone is released with zero velocity from the top of a tower reaches the ground in 4 second, the height of the tower is about",
-    "topic": "Kinematics",
-    "options": {
-      "A": "20 m",
-      "B": "40 m",
-      "C": "80 m",
-      "D": "16 m"
-    },
-    "correct_option": "C",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A stone is thrown vertically upwards with an initial velocity of 30 m/s. The time taken for the stone to rise to its maximum height is",
-    "topic": "Kinematics",
-    "options": {
-      "A": "0.326 s",
-      "B": "3.26 s",
-      "C": "30.6 s",
-      "D": "3.06 s"
-    },
-    "correct_option": "D",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "Two balls are dropped from same height at 1 second interval of time. The separation between the two balls after 3 seconds of the drop of first ball is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "50 m",
-      "B": "40 m",
-      "C": "35 m",
-      "D": "25 m"
-    },
-    "correct_option": "D",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "The position-time graph of a body is parallel to t-axis. The body is said to be moving with:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "uniform velocity",
-      "B": "non-uniform velocity",
-      "C": "may be uniform or non-uniform velocity",
-      "D": "no motion at all"
-    },
-    "correct_option": "D",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "The relation between time t and distance x is t = ax² + bx, where a and b are constants. The acceleration is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "2bV³",
-      "B": "-2abV²",
-      "C": "2aV²",
-      "D": "-2aV³"
-    },
-    "correct_option": "D",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A car has to cover the distance 60 km, if half of the total time it travels with velocity 80 km/h and in rest half time its speed becomes 40 km/h, the average speed of car will be,",
-    "topic": "Kinematics",
-    "options": {
-      "A": "60 km/h",
-      "B": "80 km/h",
-      "C": "120 km/h",
-      "D": "180 km/h"
+      "A": "Dendrites",
+      "B": "Axon terminals",
+      "C": "Myelin sheath",
+      "D": "Nodes of Ranvier"
     },
     "correct_option": "A",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Dendrites are highly branched, tree-like extensions of the neuron cell body that receive chemical signals (neurotransmitters) from the axon terminals of neighboring neurons.",
+    "hint": "The name of this structure comes from the Greek word for 'tree'."
   },
   {
-    "question": "In a straight line motion the distance travelled is proportional to the square root of the time taken. The acceleration of the particle is proportional to:",
-    "topic": "Kinematics",
+    "question": "Which of the following accurately describes the difference between white and gray matter?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "velocity",
-      "B": "V²",
-      "C": "V³",
-      "D": "VV"
-    },
-    "correct_option": "C",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "The displacement of a particle along a straight line at time t is given by x = b₀ + b₁t + b₂t². The acceleration of the particle is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "b₀",
-      "B": "b₁",
-      "C": "2b₂",
-      "D": "b₂/2"
-    },
-    "correct_option": "C",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "Ball A is thrown straight up. Which of the following statements about the ball are true at the highest point in its path?",
-    "topic": "Kinematics",
-    "options": {
-      "A": "The velocity and acceleration are both zero.",
-      "B": "The velocity is zero, but the acceleration is not zero.",
-      "C": "The velocity is not zero, but the acceleration is zero.",
-      "D": "Neither the velocity nor the acceleration are zero."
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "Ball A is thrown straight up with an initial speed v₀ and reaches a maximum elevation h before falling back down. When A reaches its maximum elevation, a second ball is thrown straight upward with the same initial speed v₀. At what height, y, will the balls cross paths?",
-    "topic": "Kinematics",
-    "options": {
-      "A": "y = h",
-      "B": "y > h/2",
-      "C": "y = h/2",
-      "D": "y < h/2",
-      "E": "y = 0"
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "If a car at rest accelerates uniformly to a speed of 144 km/h in 20 s, it covers a distance of:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "20 m",
-      "B": "800 m",
-      "C": "400 m",
-      "D": "1200 m"
-    },
-    "correct_option": "C",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "If a body of mass 3 kg is dropped downwards, after 1 sec another ball is dropped downwards from the same point. What is the distance between them after 3 sec.",
-    "topic": "Kinematics",
-    "options": {
-      "A": "25 m",
-      "B": "20 m",
-      "C": "50 m",
-      "D": "9.8 m"
+      "A": "White matter contains myelinated axons; gray matter contains neuron cell bodies",
+      "B": "Gray matter conducts faster impulses",
+      "C": "White matter is only found in the peripheral nervous system",
+      "D": "Gray matter insulates neurons"
     },
     "correct_option": "A",
-    "explanation": "",
-    "hint": ""
+    "explanation": "White matter appears white due to the high concentration of myelinated axons. Gray matter, in contrast, is composed primarily of neuron cell bodies, dendrites, and unmyelinated axons.",
+    "hint": "Think of the cortex as gray and the deeper tracts as white."
   },
   {
-    "question": "Two bodies of different masses m_a and m_b are dropped from two different heights a and b. The ratio of the times taken by the two to drop through these distances is:",
-    "topic": "Kinematics",
+    "question": "The resting membrane potential in neurons is typically maintained by:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "a:b",
-      "B": "b:a",
-      "C": "a²:b²",
-      "D": "√a:√b"
+      "A": "Sodium-potassium pump",
+      "B": "Calcium channels",
+      "C": "Neurotransmitter vesicles",
+      "D": "Voltage-gated sodium channels"
+    },
+    "correct_option": "A",
+    "explanation": "The sodium-potassium pump is an active transport mechanism that moves 3 sodium ions out of the cell and 2 potassium ions into the cell, establishing and maintaining the negative resting membrane potential.",
+    "hint": "This pump uses ATP to maintain ion gradients."
+  },
+  {
+    "question": "Which lobe of the brain is primarily associated with processing visual information?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Frontal",
+      "B": "Parietal",
+      "C": "Occipital",
+      "D": "Temporal"
+    },
+    "correct_option": "C",
+    "explanation": "The occipital lobe, located at the posterior portion of the cerebrum, contains the primary visual cortex and is predominantly responsible for processing visual information.",
+    "hint": "Damage to this lobe can result in cortical blindness."
+  },
+  {
+    "question": "Which structure of the brain is responsible for regulating vital autonomic functions such as heartbeat and respiration?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Cerebellum",
+      "B": "Medulla oblongata",
+      "C": "Hypothalamus",
+      "D": "Thalamus"
+    },
+    "correct_option": "B",
+    "explanation": "The medulla oblongata, located in the brainstem, houses the cardiac center, vasomotor center, and respiratory center, making it essential for regulating heartbeat, blood vessel diameter, and breathing.",
+    "hint": "This structure connects the brain to the spinal cord."
+  },
+  {
+    "question": "The blood-brain barrier serves to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Produce cerebrospinal fluid",
+      "B": "Protect the brain from harmful substances in the blood",
+      "C": "Facilitate rapid hormone passage",
+      "D": "Stimulate sensory reflexes"
+    },
+    "correct_option": "B",
+    "explanation": "The blood-brain barrier is a highly selective semipermeable border of endothelial cells that prevents pathogens, toxins, and other harmful substances in the blood from entering the brain tissue while allowing necessary nutrients to pass.",
+    "hint": "This protective mechanism makes brain infections difficult to treat with antibiotics."
+  },
+  {
+    "question": "Which neurotransmitter is most commonly associated with mood regulation and is often targeted in antidepressant therapy?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Dopamine",
+      "B": "Acetylcholine",
+      "C": "Serotonin",
+      "D": "GABA"
+    },
+    "correct_option": "C",
+    "explanation": "Serotonin is a neurotransmitter that plays a key role in regulating mood, anxiety, and happiness. Many antidepressants (SSRIs) work by increasing serotonin availability in the synaptic cleft.",
+    "hint": "This neurotransmitter is sometimes called the 'feel-good' chemical."
+  },
+  {
+    "question": "Reflex arcs bypass which major structure for a quicker response?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Spinal nerves",
+      "B": "Brain",
+      "C": "Cerebellum",
+      "D": "Basal ganglia"
+    },
+    "correct_option": "B",
+    "explanation": "Reflex arcs are neural pathways that involve sensory neurons, interneurons (sometimes), and motor neurons. They bypass the brain entirely, with processing occurring in the spinal cord, allowing for rapid, involuntary responses.",
+    "hint": "This allows you to pull your hand away from a hot stove before you consciously feel the pain."
+  },
+  {
+    "question": "Which glial cell type is responsible for forming the myelin sheath in the central nervous system?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Schwann cells",
+      "B": "Oligodendrocytes",
+      "C": "Astrocytes",
+      "D": "Ependymal cells"
+    },
+    "correct_option": "B",
+    "explanation": "Oligodendrocytes are glial cells in the central nervous system (brain and spinal cord) that extend processes to wrap around multiple axons, forming the myelin sheath.",
+    "hint": "In the PNS, this job is done by Schwann cells, which only myelinate one axon."
+  },
+  {
+    "question": "The sympathetic division of the autonomic nervous system is activated during:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Deep sleep",
+      "B": "Fight or flight response",
+      "C": "Digestion",
+      "D": "Meditation"
+    },
+    "correct_option": "B",
+    "explanation": "The sympathetic division is responsible for the body's 'fight or flight' response, mobilizing energy reserves, increasing heart rate, and redirecting blood flow to muscles during stress or perceived threats.",
+    "hint": "This system uses norepinephrine as its primary neurotransmitter."
+  },
+  {
+    "question": "The corpus callosum serves what function in the brain?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Controls respiration",
+      "B": "Connects the left and right cerebral hemispheres",
+      "C": "Regulates hormone production",
+      "D": "Filters sensory information"
+    },
+    "correct_option": "B",
+    "explanation": "The corpus callosum is a large band of nerve fibers that facilitates communication between the left and right cerebral hemispheres.",
+    "hint": "This structure is essential for interhemispheric transfer of information."
+  },
+  {
+    "question": "Which ion is primarily responsible for depolarization during an action potential?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Potassium (K+)",
+      "B": "Sodium (Na+)",
+      "C": "Calcium (Ca2+)",
+      "D": "Chloride (Cl-)"
+    },
+    "correct_option": "B",
+    "explanation": "Depolarization occurs when voltage-gated sodium channels open, allowing Na+ to rapidly enter the cell and make the interior less negative.",
+    "hint": "This ion is more concentrated outside the neuron at rest."
+  },
+  {
+    "question": "Which of the following criteria is fundamental to classifying animals into different phyla?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Method of respiration",
+      "B": "Number of appendages",
+      "C": "Body symmetry and embryonic development",
+      "D": "Type of exoskeleton"
+    },
+    "correct_option": "C",
+    "explanation": "Body symmetry (radial vs. bilateral) and embryonic development (protostome vs. deuterostome) are fundamental criteria for classifying animals at the phylum level.",
+    "hint": "These characteristics are established early in development."
+  },
+  {
+    "question": "What is a key characteristic of organisms in the phylum Porifera?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Segmented body",
+      "B": "Lack of true tissues and organs",
+      "C": "Bilateral symmetry",
+      "D": "Closed circulatory system"
+    },
+    "correct_option": "B",
+    "explanation": "Sponges (Porifera) are the simplest animals and lack true tissues and organs; they exist at the cellular level of organization.",
+    "hint": "These animals are essentially colonies of specialized cells."
+  },
+  {
+    "question": "In Cnidarians, the specialized stinging cells used for defense and prey capture are called:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Statocysts",
+      "B": "Nematocysts",
+      "C": "Choanocytes",
+      "D": "Flame cells"
+    },
+    "correct_option": "B",
+    "explanation": "Nematocysts are specialized organelles within cnidocytes that contain barbed threads capable of injecting toxin into prey or predators.",
+    "hint": "These explosive cells give the phylum its name."
+  },
+  {
+    "question": "Which of the following phyla is characterized by a pseudocoelom and a complete digestive system?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Nematoda",
+      "B": "Annelida",
+      "C": "Platyhelminthes",
+      "D": "Porifera"
+    },
+    "correct_option": "A",
+    "explanation": "Nematodes (roundworms) possess a pseudocoelom, a body cavity not fully lined by mesoderm, and have a complete digestive tract with mouth and anus.",
+    "hint": "These unsegmented worms are found in virtually every habitat."
+  },
+  {
+    "question": "Which of these animals exhibits cephalization and segmentation?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Hydra",
+      "B": "Earthworm",
+      "C": "Sponge",
+      "D": "Starfish"
+    },
+    "correct_option": "B",
+    "explanation": "Earthworms (Annelida) exhibit both cephalization (concentration of sensory structures at the anterior end) and metameric segmentation (division of body into repeating units).",
+    "hint": "This animal is a segmented worm with a distinct head region."
+  },
+  {
+    "question": "Which of the following traits is not typically found in members of the phylum Arthropoda?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Exoskeleton",
+      "B": "Notochord",
+      "C": "Jointed appendages",
+      "D": "Segmented body plan"
+    },
+    "correct_option": "B",
+    "explanation": "The notochord is a defining feature of chordates, not arthropods. Arthropods are characterized by exoskeleton, jointed appendages, and segmented bodies.",
+    "hint": "This structure is a flexible rod found in the embryos of vertebrates."
+  },
+  {
+    "question": "What is the primary function of the water vascular system in echinoderms?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Circulating nutrients",
+      "B": "Locomotion and feeding",
+      "C": "Sexual reproduction",
+      "D": "Sensory detection"
+    },
+    "correct_option": "B",
+    "explanation": "The water vascular system in echinoderms is a hydraulic system used for locomotion (tube feet), feeding, and gas exchange.",
+    "hint": "Starfish use this system to pry open clams."
+  },
+  {
+    "question": "Which characteristic distinguishes chordates from all other invertebrates?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Closed circulatory system",
+      "B": "Presence of a notochord",
+      "C": "Bilateral symmetry",
+      "D": "Exoskeleton"
+    },
+    "correct_option": "B",
+    "explanation": "The presence of a notochord, dorsal hollow nerve cord, pharyngeal slits, and post-anal tail at some stage of development distinguishes chordates from all other animal phyla.",
+    "hint": "This flexible rod is replaced by the vertebral column in most vertebrates."
+  },
+  {
+    "question": "Which class of vertebrates is defined by the presence of mammary glands and hair?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Reptilia",
+      "B": "Amphibia",
+      "C": "Aves",
+      "D": "Mammalia"
     },
     "correct_option": "D",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Mammals are uniquely characterized by the presence of mammary glands for milk production and hair or fur covering their bodies.",
+    "hint": "Humans belong to this class."
   },
   {
-    "question": "A ball takes t second to fall from a height h₁ and 2t seconds to fall from a height h₂. Then h₁/h₂ is:",
-    "topic": "Kinematics",
+    "question": "In amphibians, metamorphosis primarily refers to:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "0.5",
-      "B": "0.25",
-      "C": "2",
-      "D": "4"
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "What determines the nature of path following by the particle?",
-    "topic": "Kinematics",
-    "options": {
-      "A": "speed",
-      "B": "velocity",
-      "C": "acceleration",
-      "D": "none of these"
-    },
-    "correct_option": "A",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A train travels a distance of 100 m due east in 10 s. What is its speed and velocity?",
-    "topic": "Kinematics",
-    "options": {
-      "A": "speed = 10 m/s, velocity = 10 m/s west",
-      "B": "speed = 10 m/s, velocity = 10 m/s east",
-      "C": "speed = 5 m/s, velocity = 5 m/s east",
-      "D": "speed = 15 m/s, velocity = 15 m/s east"
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A train moving with a uniform speed covers a distance of 120 m in 2 s. Calculate the speed of the train and time taken to cover a distance of 240 m.",
-    "topic": "Kinematics",
-    "options": {
-      "A": "speed = 60 m/s, time = 4 s",
-      "B": "speed = 60 m/s, time = 2 s",
-      "C": "speed = 120 m/s, time = 2 s",
-      "D": "speed = 30 m/s, time = 8 s"
-    },
-    "correct_option": "A",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A car takes 3 hours to travel from Lagos to Ondo with a uniform speed of 65 km/h. Find the distance between the cities.",
-    "topic": "Kinematics",
-    "options": {
-      "A": "130 km",
-      "B": "195 km",
-      "C": "200 km",
-      "D": "260 km"
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A body rises vertically upward to a height of 100 m in 5 seconds, then comes back to the same position after another 5 s. The average speed is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "0 m/s",
-      "B": "10 m/s",
-      "C": "20 m/s",
-      "D": "40 m/s"
+      "A": "Development of lungs",
+      "B": "Formation of the spinal cord",
+      "C": "Transformation from aquatic larval to terrestrial adult form",
+      "D": "Shedding of the outer skin"
     },
     "correct_option": "C",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Amphibian metamorphosis is the dramatic developmental transition from an aquatic, gill-breathing larva (tadpole) to a terrestrial, lung-breathing adult form.",
+    "hint": "This process involves resorption of the tail and development of limbs in frogs."
   },
   {
-    "question": "A car accelerates from 12 m/s to 30 m/s in 9 s. The acceleration of the car is:",
-    "topic": "Kinematics",
+    "question": "Which of the following is a defining feature of reptiles compared to amphibians?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "1 m/s²",
-      "B": "2 m/s²",
-      "C": "3 m/s²",
-      "D": "4 m/s²"
+      "A": "Gills in larvae",
+      "B": "Amniotic egg",
+      "C": "Moist skin",
+      "D": "Aquatic reproduction"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Reptiles produce an amniotic egg with extraembryonic membranes, allowing reproduction on land independent of water. Amphibians lack this adaptation and require water for reproduction.",
+    "hint": "This egg type includes the amnion, chorion, and allantois."
   },
   {
-    "question": "A driver of a car has a reaction time of 0.2 s. He is moving with a uniform speed of 36 km/h and spots a boy crossing the road. The distance he travels before applying the brake is:",
-    "topic": "Kinematics",
+    "question": "Birds are classified under the class Aves due to which adaptation?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "0.2 m",
-      "B": "2 m",
-      "C": "7.2 m",
-      "D": "10 m"
+      "A": "Presence of scales",
+      "B": "Feathers and hollow bones for flight",
+      "C": "External fertilization",
+      "D": "Dual circulatory system"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Birds (Aves) are defined by the presence of feathers, which are modified scales, and hollow, pneumatized bones that reduce weight for flight.",
+    "hint": "No other living vertebrates possess feathers."
   },
   {
-    "question": "A body initially at rest starts accelerating at the rate of 2 m/s². The distance travelled by the body after 5 s is:",
-    "topic": "Kinematics",
+    "question": "Which group of mammals lays eggs instead of giving birth to live young?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "10 m",
-      "B": "25 m",
-      "C": "50 m",
-      "D": "100 m"
+      "A": "Marsupials",
+      "B": "Placental mammals",
+      "C": "Monotremes",
+      "D": "Rodents"
     },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "correct_option": "C",
+    "explanation": "Monotremes are egg-laying mammals. Examples include the platypus and echidna. Marsupials and placental mammals give birth to live young.",
+    "hint": "These are the most primitive living mammals."
   },
   {
-    "question": "A train moving with a velocity of 72 km/h is brought to rest by applying brakes in 5 s. The retardation is:",
-    "topic": "Kinematics",
+    "question": "The primary excretory structure in flatworms (Platyhelminthes) is:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "4 m/s²",
-      "B": "8 m/s²",
-      "C": "10 m/s²",
-      "D": "14.4 m/s²"
+      "A": "Flame cells",
+      "B": "Malpighian tubules",
+      "C": "Nephridia",
+      "D": "Kidneys"
     },
     "correct_option": "A",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Flatworms possess a protonephridial system with flame cells (ciliated cells) that beat to move fluid through tubules for osmoregulation and excretion.",
+    "hint": "These cells are named for the flickering movement of their cilia."
   },
   {
-    "question": "A body initially at moving with a speed of 18 km/h is accelerated uniformly at the rate of 9 cm/s² over a distance of 200 m. The final velocity is approximately:",
-    "topic": "Kinematics",
+    "question": "Which of the following best describes the feeding mechanism of sponges (Porifera)?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "5 m/s",
-      "B": "7.81 m/s",
-      "C": "10 m/s",
-      "D": "12.5 m/s"
+      "A": "Phagocytosis by epidermal cells",
+      "B": "Water filtration through choanocytes",
+      "C": "Extracellular digestion",
+      "D": "Radula scraping"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Sponges are filter feeders. Choanocytes (collar cells) create water currents and capture food particles, which are then phagocytosed and digested intracellularly.",
+    "hint": "These cells closely resemble the protists that likely gave rise to animals."
   },
   {
-    "question": "A body initially at rest travels a distance of 100 m in 5 s with constant acceleration. The acceleration is:",
-    "topic": "Kinematics",
+    "question": "Which of the following correctly describes the flow of blood through the mammalian heart starting from the vena cava?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "4 m/s²",
-      "B": "8 m/s²",
-      "C": "10 m/s²",
-      "D": "20 m/s²"
+      "A": "Left atrium → left ventricle → lungs → body",
+      "B": "Right atrium → left atrium → lungs → right ventricle",
+      "C": "Right atrium → right ventricle → lungs → left atrium → left ventricle → body",
+      "D": "Lungs → right atrium → left ventricle → body"
+    },
+    "correct_option": "C",
+    "explanation": "Deoxygenated blood enters the right atrium from the vena cava, passes to the right ventricle, is pumped to the lungs, returns oxygenated to the left atrium, moves to the left ventricle, and is pumped to the body via the aorta.",
+    "hint": "The right side pumps to lungs; the left side pumps to body."
+  },
+  {
+    "question": "Which structure in the mammalian heart prevents backflow of blood into the left atrium?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Tricuspid valve",
+      "B": "Bicuspid (mitral) valve",
+      "C": "Pulmonary valve",
+      "D": "Aortic valve"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "The bicuspid or mitral valve is located between the left atrium and left ventricle. It closes during ventricular systole to prevent regurgitation of blood into the atrium.",
+    "hint": "This valve has two cusps and is also called the mitral valve."
   },
   {
-    "question": "A vehicle is moving at a velocity of 30 km/h at some instant. After 2 s its velocity is found to be 33.6 km/h and after further 2 s the velocity is found to be 37.2 km/h. The acceleration of the vehicle is:",
-    "topic": "Kinematics",
+    "question": "The sinoatrial (SA) node functions as the heart's natural pacemaker by:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "0.25 m/s²",
-      "B": "0.5 m/s²",
-      "C": "0.75 m/s²",
-      "D": "1 m/s²"
+      "A": "Pumping blood through valves",
+      "B": "Initiating electrical impulses that trigger atrial contraction",
+      "C": "Distributing oxygenated blood",
+      "D": "Stimulating nerve endings in the myocardium"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "The SA node, located in the right atrium, spontaneously generates action potentials that spread across the atria, causing them to contract and setting the heart rate.",
+    "hint": "This cluster of cells sets the rhythm for the entire heart."
   },
   {
-    "question": "A body is moving with 10 m/s and accelerated at 5 m/s². The distance travelled by the body in 5 s is:",
-    "topic": "Kinematics",
+    "question": "What is the primary function of the pulmonary circuit in mammals?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "50 m",
-      "B": "112.5 m",
-      "C": "125 m",
-      "D": "137.5 m"
+      "A": "Distribute nutrients to tissues",
+      "B": "Transport waste to kidneys",
+      "C": "Carry deoxygenated blood to lungs and return oxygenated blood to the heart",
+      "D": "Supply blood to the brain"
+    },
+    "correct_option": "C",
+    "explanation": "The pulmonary circuit moves blood between the heart and lungs, unloading CO2 and loading O2, converting deoxygenated blood to oxygenated blood.",
+    "hint": "This circuit bypasses the rest of the body."
+  },
+  {
+    "question": "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Pulmonary artery",
+      "B": "Pulmonary vein",
+      "C": "Aorta",
+      "D": "Vena cava"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Pulmonary veins are unique among veins because they carry oxygenated blood from the lungs to the left atrium of the heart.",
+    "hint": "Most veins carry deoxygenated blood, but this is an exception."
   },
   {
-    "question": "A car initially at rest starts moving with acceleration 0.5 m/s² and covers a distance of 25 m. The time required is:",
-    "topic": "Kinematics",
+    "question": "The thick muscular walls of the left ventricle are necessary because:",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "5 s",
-      "B": "10 s",
-      "C": "15 s",
-      "D": "20 s"
+      "A": "It stores excess blood",
+      "B": "It pumps blood to the entire body",
+      "C": "It controls valve opening",
+      "D": "It filters blood"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "The left ventricle must generate sufficient pressure to overcome systemic vascular resistance and pump blood through the aorta to all systemic tissues.",
+    "hint": "This chamber works harder than the right ventricle."
   },
   {
-    "question": "A ball is moving with a velocity of 0.5 m/s. Its velocity is decreasing at the rate of 0.05 m/s². The time it will take from start to stop is:",
-    "topic": "Kinematics",
+    "question": "Which component of blood is primarily responsible for clotting?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "5 s",
-      "B": "10 s",
-      "C": "15 s",
-      "D": "20 s"
+      "A": "Red blood cells",
+      "B": "Plasma",
+      "C": "Platelets",
+      "D": "White blood cells"
+    },
+    "correct_option": "C",
+    "explanation": "Platelets (thrombocytes) are cell fragments that aggregate at sites of vascular injury and release clotting factors to initiate coagulation.",
+    "hint": "These are not complete cells but cytoplasmic fragments."
+  },
+  {
+    "question": "In the systemic circulation, oxygenated blood exits the heart through which major artery?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Pulmonary artery",
+      "B": "Aorta",
+      "C": "Subclavian artery",
+      "D": "Coronary artery"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "The aorta is the largest artery in the body and receives oxygenated blood from the left ventricle to distribute to the systemic circulation.",
+    "hint": "This vessel arches superiorly from the heart before descending."
   },
   {
-    "question": "A car acquires a velocity of 72 km/h in 10 s starting from rest. Its average velocity during this period is:",
-    "topic": "Kinematics",
+    "question": "What is the role of capillaries in the circulatory system?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "7.2 m/s",
-      "B": "10 m/s",
-      "C": "20 m/s",
-      "D": "36 m/s"
+      "A": "Generate pressure",
+      "B": "Facilitate exchange of gases, nutrients, and waste with tissues",
+      "C": "Return blood to the heart",
+      "D": "Produce red blood cells"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Capillaries are microscopic vessels with thin, permeable walls that allow diffusion of oxygen, carbon dioxide, nutrients, and waste between blood and interstitial fluid.",
+    "hint": "These are the smallest blood vessels and form beds throughout tissues."
   },
   {
-    "question": "A body moving with constant acceleration travels the distances 3 m and 8 m in 1 s and 2 s respectively. The initial velocity is:",
-    "topic": "Kinematics",
+    "question": "Which of the following statements about arteries is true?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "1 m/s",
-      "B": "2 m/s",
-      "C": "3 m/s",
-      "D": "4 m/s"
+      "A": "All arteries carry oxygenated blood",
+      "B": "Arteries contain valves to prevent backflow",
+      "C": "Arteries have thick elastic walls to withstand high pressure",
+      "D": "Arteries are the site of nutrient exchange"
     },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "correct_option": "C",
+    "explanation": "Arteries have thick tunica media with elastic fibers and smooth muscle to accommodate and maintain high-pressure blood flow from the heart.",
+    "hint": "Pulmonary arteries are an exception to the oxygenation rule."
   },
   {
-    "question": "A motor bike, initially at rest, picks up a velocity of 72 km/h over a distance of 40 m. The acceleration is:",
-    "topic": "Kinematics",
+    "question": "What would most likely happen if the atrioventricular (AV) valves fail to close properly?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "2.5 m/s²",
-      "B": "5 m/s²",
-      "C": "7.5 m/s²",
-      "D": "10 m/s²"
-    },
-    "correct_option": "B",
-    "explanation": "",
-    "hint": ""
-  },
-  {
-    "question": "A bus is moving with uniform velocity. The driver sees a pedestrian crossing the road at a distance of 60 m. He applies brakes with retardation of 25 cm/s² and takes 20 s to stop. The initial velocity of the bus is:",
-    "topic": "Kinematics",
-    "options": {
-      "A": "5 m/s",
-      "B": "10 m/s",
-      "C": "15 m/s",
-      "D": "20 m/s"
+      "A": "Blood would regurgitate into the atria during ventricular contraction",
+      "B": "Blood pressure would drop to zero",
+      "C": "The heart would stop beating",
+      "D": "Pulmonary circulation would increase"
     },
     "correct_option": "A",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Incompetent AV valves allow backflow of blood from ventricles to atria during systole, producing a heart murmur and reducing cardiac efficiency.",
+    "hint": "This causes the 'lub' sound to be followed by a swooshing noise."
   },
   {
-    "question": "A particle is moving such that its displacement s at any time t is given by s = 2t² + 5t + 20. The velocity after 2 seconds is:",
-    "topic": "Kinematics",
+    "question": "Which of the following contributes most to the osmotic pressure in blood plasma?",
+    "topic": "Past Questions ZOO 101",
     "options": {
-      "A": "9 m/s",
-      "B": "13 m/s",
-      "C": "17 m/s",
-      "D": "21 m/s"
+      "A": "Fibrinogen",
+      "B": "Albumin",
+      "C": "Platelets",
+      "D": "Hemoglobin"
     },
     "correct_option": "B",
-    "explanation": "",
-    "hint": ""
+    "explanation": "Albumin is the most abundant plasma protein and is primarily responsible for maintaining colloid osmotic pressure, which keeps fluid within the bloodstream.",
+    "hint": "This protein is produced by the liver and helps prevent edema."
+  },
+  {
+    "question": "The coronary arteries specifically supply blood to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "The lungs",
+      "B": "The heart muscle (myocardium)",
+      "C": "The brain",
+      "D": "The liver"
+    },
+    "correct_option": "B",
+    "explanation": "Coronary arteries branch from the aorta and encircle the heart to deliver oxygenated blood to the myocardium (heart muscle tissue).",
+    "hint": "Blockage of these vessels causes myocardial infarction (heart attack)."
+  },
+  {
+    "question": "Which chamber of the heart receives blood directly from the systemic circulation?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Right atrium",
+      "B": "Left ventricle",
+      "C": "Right ventricle",
+      "D": "Left atrium"
+    },
+    "correct_option": "A",
+    "explanation": "The right atrium receives deoxygenated blood from the systemic circulation via the superior and inferior vena cavae.",
+    "hint": "This chamber receives blood from the body through the largest veins."
+  },
+  {
+    "question": "Which of the following is a defining feature of skeletal muscle tissue?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Involuntary, non-striated, single nucleus",
+      "B": "Involuntary, striated, branched fibers",
+      "C": "Voluntary, striated, multinucleated fibers",
+      "D": "Involuntary, smooth, spindle-shaped cells"
+    },
+    "correct_option": "C",
+    "explanation": "Skeletal muscle is under voluntary control, exhibits striations due to organized sarcomeres, and contains multinucleated fibers formed from myoblast fusion.",
+    "hint": "These muscles attach to bones and are consciously controlled."
+  },
+  {
+    "question": "What structure within skeletal muscle fibers stores calcium ions required for muscle contraction?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Sarcolemma",
+      "B": "Myofibrils",
+      "C": "Sarcoplasmic reticulum",
+      "D": "T-tubules"
+    },
+    "correct_option": "C",
+    "explanation": "The sarcoplasmic reticulum is a specialized endoplasmic reticulum in muscle cells that sequesters and releases calcium ions to regulate contraction.",
+    "hint": "This organelle wraps around each myofibril like a sleeve."
+  },
+  {
+    "question": "Which protein blocks the binding site on actin in resting skeletal muscle?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Myosin",
+      "B": "Dystrophin",
+      "C": "Tropomyosin",
+      "D": "Actinin"
+    },
+    "correct_option": "C",
+    "explanation": "Tropomyosin is a fibrous protein that lies along the actin filament and physically blocks the myosin-binding sites on actin in a relaxed muscle.",
+    "hint": "This protein winds around the actin helix."
+  },
+  {
+    "question": "The sliding filament model of muscle contraction describes the interaction between:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Actin and myosin filaments",
+      "B": "Troponin and tropomyosin",
+      "C": "Sarcolemma and sarcoplasmic reticulum",
+      "D": "T-tubules and mitochondria"
+    },
+    "correct_option": "A",
+    "explanation": "The sliding filament model describes how actin (thin) filaments slide inward over myosin (thick) filaments, shortening the sarcomere without changing filament length.",
+    "hint": "Cross-bridges form between these two filament types."
+  },
+  {
+    "question": "What initiates the exposure of binding sites on actin during muscle contraction?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Breakdown of ATP",
+      "B": "Binding of acetylcholine",
+      "C": "Release of calcium ions from sarcoplasmic reticulum",
+      "D": "Action potential on the sarcolemma"
+    },
+    "correct_option": "C",
+    "explanation": "Calcium ions bind to troponin, causing a conformational change that shifts tropomyosin away from the myosin-binding sites on actin, allowing cross-bridge formation.",
+    "hint": "This ion acts as the key that unlocks the binding sites."
+  },
+  {
+    "question": "Which of the following is not a characteristic of smooth muscle tissue?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Spindle-shaped cells",
+      "B": "Involuntary contractions",
+      "C": "Striations",
+      "D": "Single, central nucleus"
+    },
+    "correct_option": "C",
+    "explanation": "Smooth muscle lacks the organized sarcomere arrangement found in skeletal and cardiac muscle, therefore it does not exhibit striations.",
+    "hint": "This muscle type appears uniform under the microscope."
+  },
+  {
+    "question": "Cardiac muscle differs from skeletal muscle in that it:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Is voluntary and multinucleated",
+      "B": "Contains intercalated discs and is involuntary",
+      "C": "Lacks striations",
+      "D": "Is capable of regeneration"
+    },
+    "correct_option": "B",
+    "explanation": "Cardiac muscle is involuntary and contains intercalated discs with gap junctions for electrical coupling and desmosomes for mechanical attachment between cells.",
+    "hint": "These specialized junctions appear as dark lines between cardiac cells."
+  },
+  {
+    "question": "What is the role of troponin in muscle contraction?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Produces ATP for myosin",
+      "B": "Binds calcium and shifts tropomyosin to expose binding sites",
+      "C": "Anchors the myosin head",
+      "D": "Forms cross-bridges with actin"
+    },
+    "correct_option": "B",
+    "explanation": "Troponin is a complex of three proteins that binds calcium ions, causing a conformational change that moves tropomyosin and exposes actin's myosin-binding sites.",
+    "hint": "This protein is named for its 'turning' action."
+  },
+  {
+    "question": "The connective tissue layer that surrounds individual muscle fibers is called:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Epimysium",
+      "B": "Perimysium",
+      "C": "Endomysium",
+      "D": "Fascia"
+    },
+    "correct_option": "C",
+    "explanation": "Endomysium is the delicate layer of areolar connective tissue that wraps each individual muscle fiber (muscle cell).",
+    "hint": "This layer surrounds the sarcolemma of a single muscle cell."
+  },
+  {
+    "question": "Which type of muscle tissue can contract without neural stimulation?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Skeletal muscle",
+      "B": "Cardiac muscle",
+      "C": "Smooth muscle under somatic control",
+      "D": "Voluntary muscle"
+    },
+    "correct_option": "B",
+    "explanation": "Cardiac muscle exhibits automaticity and autorhythmicity, generating action potentials spontaneously without neural input.",
+    "hint": "The SA node cells are an example of this property."
+  },
+  {
+    "question": "What is a motor unit composed of?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "A sarcomere and a Z-line",
+      "B": "One actin and one myosin filament",
+      "C": "A motor neuron and all the muscle fibers it innervates",
+      "D": "A single muscle fiber and its myofibrils"
+    },
+    "correct_option": "C",
+    "explanation": "A motor unit consists of a single motor neuron and all the skeletal muscle fibers it branches to innervate. Activation of the neuron contracts all fibers in that unit.",
+    "hint": "Smaller units allow fine control (eyes); larger units provide power (thighs)."
+  },
+  {
+    "question": "The energy source for short, immediate muscle contraction is typically:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "ATP stored in the muscle fiber",
+      "B": "Glycogen breakdown",
+      "C": "Lactic acid fermentation",
+      "D": "Oxygen from blood"
+    },
+    "correct_option": "A",
+    "explanation": "Muscle fibers contain a small reserve of ATP that provides immediate energy for the first few seconds of contraction.",
+    "hint": "This supply lasts only 2-3 seconds."
+  },
+  {
+    "question": "Which type of muscle tissue is capable of sustained contraction over a long period without fatigue?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Skeletal muscle",
+      "B": "Smooth muscle",
+      "C": "Cardiac muscle under voluntary control",
+      "D": "Fast-twitch skeletal fibers"
+    },
+    "correct_option": "B",
+    "explanation": "Smooth muscle is adapted for sustained tonic contractions with low energy consumption and is resistant to fatigue, suitable for organs like the digestive tract and blood vessels.",
+    "hint": "This muscle type uses latch-bridge mechanism for prolonged contraction."
+  },
+  {
+    "question": "Intercalated discs in cardiac muscle serve to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Prevent overstretching",
+      "B": "Coordinate contraction through gap junctions and desmosomes",
+      "C": "Anchor actin to the sarcolemma",
+      "D": "Deliver oxygen to the muscle"
+    },
+    "correct_option": "B",
+    "explanation": "Intercalated discs contain gap junctions for electrical and chemical communication between cells and desmosomes for mechanical adhesion, allowing the heart to function as a syncytium.",
+    "hint": "These structures enable the heart to beat as a coordinated unit."
+  },
+  {
+    "question": "Which of the following accurately represents the hierarchy of muscle structure from largest to smallest?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Muscle → fascicle → fiber → myofibril → myofilament",
+      "B": "Fiber → myofilament → myofibril → fascicle → muscle",
+      "C": "Muscle → fiber → fascicle → myofibril → myosin",
+      "D": "Fascicle → muscle → myofibril → fiber → actin"
+    },
+    "correct_option": "A",
+    "explanation": "The correct hierarchy is whole muscle, bundles of fibers (fascicles), individual muscle fibers (cells), myofibrils (organelles), and myofilaments (actin/myosin proteins).",
+    "hint": "Think of a Russian nesting doll: whole to microscopic."
+  },
+  {
+    "question": "Which of the following is the outermost layer of the skin, primarily composed of dead, keratinized cells?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Stratum corneum",
+      "B": "Stratum basale",
+      "C": "Dermis",
+      "D": "Hypodermis"
+    },
+    "correct_option": "A",
+    "explanation": "The stratum corneum is the most superficial layer of the epidermis, consisting of multiple layers of dead, flattened, keratin-filled cells that provide waterproof protection.",
+    "hint": "This layer constantly sheds and is replaced from below."
+  },
+  {
+    "question": "Melanin, the pigment responsible for skin color, is produced by:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Keratinocytes",
+      "B": "Melanocytes",
+      "C": "Merkel cells",
+      "D": "Langerhans cells"
+    },
+    "correct_option": "B",
+    "explanation": "Melanocytes are specialized dendritic cells in the stratum basale that synthesize melanin and transfer it to keratinocytes via melanosomes.",
+    "hint": "These cells protect against UV radiation."
+  },
+  {
+    "question": "Which layer of the skin contains blood vessels, lymphatics, and sensory receptors?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Epidermis",
+      "B": "Dermis",
+      "C": "Stratum lucidum",
+      "D": "Hypodermis"
+    },
+    "correct_option": "B",
+    "explanation": "The dermis is the vascular layer of skin containing blood vessels, lymphatic vessels, nerve endings, hair follicles, and glands. The epidermis is avascular.",
+    "hint": "This layer provides nutritional support to the epidermis above it."
+  },
+  {
+    "question": "Which of the following structures is found in the dermis but not in the epidermis?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Melanocytes",
+      "B": "Keratinocytes",
+      "C": "Blood vessels", 
+      "D": "Stratum granulosum"
+    },
+    "correct_option": "C",
+    "explanation": "The dermis contains blood vessels that supply nutrients and oxygen to the skin, while the epidermis is avascular and relies on diffusion from the dermis.",
+    "hint": "This structure is essential for thermoregulation and nutrient delivery."
+  },
+  {
+    "question": "What role does the stratum basale play in skin regeneration?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "It houses stem cells that divide to replenish the epidermis",
+      "B": "It provides immune defense",
+      "C": "It produces sebum",
+      "D": "It stores adipose tissue"
+    },
+    "correct_option": "A",
+    "explanation": "The stratum basale is the deepest layer of the epidermis and contains mitotically active stem cells that continuously divide, producing keratinocytes that migrate upward to replace shed skin cells.",
+    "hint": "This layer is also called the stratum germinativum."
+  },
+  {
+    "question": "The layer of skin primarily responsible for thermoregulation and insulation is the:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Epidermis",
+      "B": "Dermis",
+      "C": "Hypodermis",
+      "D": "Stratum granulosum"
+    },
+    "correct_option": "C",
+    "explanation": "The hypodermis (subcutaneous layer) contains adipose tissue that provides insulation against heat loss and serves as an energy reserve.",
+    "hint": "This layer is not technically part of the skin but lies beneath it."
+  },
+  {
+    "question": "Sebaceous glands are associated with:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Thermoregulation via evaporation",
+      "B": "Sensory input",
+      "C": "Secretion of sebum into hair follicles",
+      "D": "Immune responses"
+    },
+    "correct_option": "C",
+    "explanation": "Sebaceous glands are holocrine glands that secrete sebum, an oily substance, into hair follicles to lubricate skin and hair and provide antibacterial protection.",
+    "hint": "These glands are absent on the palms and soles."
+  },
+  {
+    "question": "Which skin structure is responsible for detecting light touch and pressure?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Ruffini endings",
+      "B": "Meissner's corpuscles",
+      "C": "Pacinian corpuscles",
+      "D": "Merkel discs"
+    },
+    "correct_option": "B",
+    "explanation": "Meissner's corpuscles are mechanoreceptors located in the dermal papillae that are sensitive to light, discriminative touch and low-frequency vibration.",
+    "hint": "These are abundant in fingertips and lips."
+  },
+  {
+    "question": "Which function of the skin helps in vitamin D synthesis?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Melanin degradation",
+      "B": "Dermal hydration",
+      "C": "Absorption of UVB radiation",
+      "D": "Regulation of sebaceous glands"
+    },
+    "correct_option": "C",
+    "explanation": "UVB radiation penetrates the epidermis and converts 7-dehydrocholesterol to cholecalciferol (vitamin D3), which is then modified by liver and kidneys into active vitamin D.",
+    "hint": "This process requires sunlight exposure."
+  },
+  {
+    "question": "What type of connective tissue primarily composes the dermis?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Dense irregular connective tissue",
+      "B": "Loose areolar connective tissue",
+      "C": "Adipose tissue",
+      "D": "Cartilaginous tissue"
+    },
+    "correct_option": "A",
+    "explanation": "The dermis consists mainly of dense irregular connective tissue containing collagen and elastic fibers arranged in various directions to resist tension from multiple planes.",
+    "hint": "This tissue provides strength and elasticity."
+  },
+  {
+    "question": "The waterproof nature of the epidermis is largely due to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Presence of sweat",
+      "B": "Keratin accumulation in surface cells",
+      "C": "Dense collagen fibers",
+      "D": "Adipose secretions"
+    },
+    "correct_option": "B",
+    "explanation": "Keratin is a tough, insoluble fibrous protein that accumulates in keratinocytes as they differentiate, forming a waterproof barrier at the stratum corneum.",
+    "hint": "This protein also makes up hair and nails."
+  },
+  {
+    "question": "Which layer of the epidermis is responsible for initiating the process of keratinization?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Stratum corneum",
+      "B": "Stratum granulosum",
+      "C": "Stratum spinosum",
+      "D": "Stratum lucidum"
+    },
+    "correct_option": "B",
+    "explanation": "The stratum granulosum contains keratinocytes that accumulate keratohyalin granules and undergo the initial stages of keratinization, leading to cell death and keratin formation.",
+    "hint": "This layer appears grainy under the microscope."
+  },
+  {
+    "question": "Goosebumps are caused by the contraction of which type of muscle?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Arrector pili muscles",
+      "B": "Skeletal muscle",
+      "C": "Circular smooth muscle",
+      "D": "Dermal tendons"
+    },
+    "correct_option": "A",
+    "explanation": "Arrector pili are small smooth muscles attached to hair follicles that contract in response to cold or fear, causing hair to stand erect and producing goosebumps.",
+    "hint": "This is a vestigial pilomotor reflex in humans."
+  },
+  {
+    "question": "Which immune-related cells are located in the epidermis and help defend against pathogens?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Merkel cells",
+      "B": "Fibroblasts",
+      "C": "Langerhans cells",
+      "D": "Melanocytes"
+    },
+    "correct_option": "C",
+    "explanation": "Langerhans cells are dendritic antigen-presenting cells in the epidermis that capture and process microbial antigens and migrate to lymph nodes to activate T-cells.",
+    "hint": "These are also called epidermal dendritic cells."
+  },
+  {
+    "question": "Which of the following best explains the skin's role in excretion?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "It absorbs nutrients",
+      "B": "It releases salts, water, and urea through sweat",
+      "C": "It neutralizes toxins",
+      "D": "It filters blood plasma"
+    },
+    "correct_option": "B",
+    "explanation": "Eccrine sweat glands excrete water, electrolytes (sodium chloride), and small amounts of urea and lactic acid, contributing to waste removal and thermoregulation.",
+    "hint": "This process is primarily for cooling, not primary excretion."
+  },
+  {
+    "question": "Which of the following is a physiological adaptation in mammals living in desert environments?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Long limbs for jumping",
+      "B": "Highly efficient kidneys for water conservation",
+      "C": "Nocturnal vision",
+      "D": "Fur color matching sand"
+    },
+    "correct_option": "B",
+    "explanation": "Desert mammals such as kangaroo rats possess highly efficient kidneys with elongated loops of Henle that produce concentrated urine to minimize water loss.",
+    "hint": "This adaptation conserves water internally."
+  },
+  {
+    "question": "The presence of blubber in marine mammals like whales and seals serves primarily to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Provide buoyancy",
+      "B": "Enhance muscle flexibility",
+      "C": "Insulate against cold temperatures",
+      "D": "Aid in digestion"
+    },
+    "correct_option": "C",
+    "explanation": "Blubber is a thick layer of vascularized adipose tissue that provides thermal insulation in cold water, energy storage, and streamlining.",
+    "hint": "This adaptation is essential for homeothermy in aquatic environments."
+  },
+  {
+    "question": "The ability of Arctic mammals to change coat color with seasons is an example of:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Physiological adaptation",
+      "B": "Structural adaptation",
+      "C": "Genetic drift",
+      "D": "Behavioral adaptation"
+    },
+    "correct_option": "B",
+    "explanation": "Seasonal coat color change (e.g., Arctic hare, ptarmigan) is a structural/morphological adaptation involving fur pigmentation changes for camouflage against snow.",
+    "hint": "This is a physical feature, not a process or behavior."
+  },
+  {
+    "question": "Which mammalian adaptation aids in efficient respiration during high-speed locomotion (e.g., in cheetahs)?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Enlarged teeth",
+      "B": "Large nasal passages and increased lung capacity",
+      "C": "Color vision",
+      "D": "Retractable claws"
+    },
+    "correct_option": "B",
+    "explanation": "Cheetahs have enlarged nasal passages and expanded lungs to maximize oxygen intake during sprinting, supporting high metabolic demand.",
+    "hint": "This adaptation enhances gas exchange capacity."
+  },
+  {
+    "question": "What structural adaptation allows bats to occupy a unique ecological niche among mammals?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Warm-bloodedness",
+      "B": "Modified forelimbs forming wings for flight",
+      "C": "Fur insulation",
+      "D": "Opposite thumbs"
+    },
+    "correct_option": "B",
+    "explanation": "Bats are the only mammals capable of true flight, achieved through modified forelimbs with elongated finger bones supporting a patagium (wing membrane).",
+    "hint": "This adaptation makes them the only flying mammals."
+  },
+  {
+    "question": "Camouflage in mammals like snow leopards is an adaptation that enhances:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Reproductive success",
+      "B": "Predatory stealth and prey evasion",
+      "C": "Water retention",
+      "D": "Vocalization"
+    },
+    "correct_option": "B",
+    "explanation": "Camouflage coloration allows predators like snow leopards to blend with rocky, snowy environments, increasing hunting success and avoiding detection by prey.",
+    "hint": "This is a form of cryptic coloration."
+  },
+  {
+    "question": "Which of the following best describes the dental adaptation in herbivorous mammals?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Long canines for tearing flesh",
+      "B": "Sharp premolars for shearing",
+      "C": "Broad molars for grinding plant material",
+      "D": "Absence of incisors"
+    },
+    "correct_option": "C",
+    "explanation": "Herbivores possess broad, ridged molars and premolars for grinding cellulose-rich plant material. Canines are reduced or absent.",
+    "hint": "These teeth are adapted for crushing and grinding."
+  },
+  {
+    "question": "Mammals such as kangaroo rats exhibit behavioral adaptation by:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Migrating long distances",
+      "B": "Remaining underground during the heat of the day",
+      "C": "Changing color seasonally",
+      "D": "Shedding fur in winter"
+    },
+    "correct_option": "B",
+    "explanation": "Kangaroo rats are nocturnal and remain in cool, humid burrows during the day to avoid desert heat and reduce evaporative water loss.",
+    "hint": "This is an avoidance behavior, not a physical change."
+  },
+  {
+    "question": "The long, sticky tongue of anteaters is an example of adaptation related to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Temperature regulation",
+      "B": "Specialized feeding habits",
+      "C": "Reproductive behavior",
+      "D": "Navigation"
+    },
+    "correct_option": "B",
+    "explanation": "The elongated, vermiform tongue coated with sticky saliva is a specialized feeding adaptation for extracting ants and termites from narrow tunnels.",
+    "hint": "This adaptation targets a specific food source."
+  },
+  {
+    "question": "The presence of sweat glands in mammals is a physiological adaptation primarily for:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Scent marking",
+      "B": "Thermoregulation through evaporative cooling",
+      "C": "Water storage"
+    },
+    "correct_option": "B",
+    "explanation": "Eccrine sweat glands secrete water-based fluid onto skin surface; evaporation of this fluid removes heat, cooling the body.",
+    "hint": "This is a cooling mechanism, not excretion-primary."
+  },
+  {
+    "question": "Mammalian behavioral adaptation for survival during food scarcity may include:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Growth of additional fur",
+      "B": "Hibernation or torpor",
+      "C": "Reduction of heart size",
+      "D": "Elimination of water loss"
+    },
+    "correct_option": "B",
+    "explanation": "Hibernation and torpor are behavioral/physiological states of reduced metabolic rate and body temperature to conserve energy during periods of cold and food scarcity.",
+    "hint": "This is a temporary dormancy, not a permanent change."
+  },
+  {
+    "question": "Webbed limbs in aquatic mammals like otters help primarily with:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Thermoregulation",
+      "B": "Sensory navigation",
+      "C": "Propulsion and maneuvering in water",
+      "D": "Hunting efficiency on land"
+    },
+    "correct_option": "C",
+    "explanation": "Webbed digits increase surface area of the foot, enhancing thrust and maneuverability during swimming.",
+    "hint": "This is a convergent adaptation seen in many aquatic vertebrates."
+  },
+  {
+    "question": "The echolocation system in dolphins is an example of a:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Structural adaptation",
+      "B": "Sensory/behavioral adaptation",
+      "C": "Metabolic adaptation",
+      "D": "Genetic mutation"
+    },
+    "correct_option": "B",
+    "explanation": "Echolocation involves production of high-frequency sounds and interpretation of returning echoes; it is a behavioral use of specialized anatomical structures.",
+    "hint": "This is active biosonar used for navigation and hunting."
+  },
+  {
+    "question": "Which of the following would not be considered an adaptation for cold environments?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Dense fur",
+      "B": "Layer of fat (blubber)",
+      "C": "Large surface area to volume ratio",
+      "D": "Hibernation"
+    },
+    "correct_option": "C",
+    "explanation": "Large surface area to volume ratio increases heat loss, which is disadvantageous in cold environments. Cold-adapted animals typically have compact bodies with low SA:V ratios.",
+    "hint": "Allen's rule describes this principle."
+  },
+  {
+    "question": "Which mammalian feature allows sustained high activity levels compared to reptiles?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Scaly skin",
+      "B": "Three-chambered heart",
+      "C": "Efficient four-chambered heart and endothermy",
+      "D": "Variable body temperature"
+    },
+    "correct_option": "C",
+    "explanation": "Complete separation of oxygenated and deoxygenated blood in a four-chambered heart supports high metabolic rate, while endothermy allows sustained activity independent of environmental temperature.",
+    "hint": "Reptiles have three-chambered hearts and are ectotherms."
+  },
+  {
+    "question": "Which of the following is the main nitrogenous waste excreted by humans?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Ammonia",
+      "B": "Creatinine",
+      "C": "Urea",
+      "D": "Uric acid"
+    },
+    "correct_option": "C",
+    "explanation": "Humans are ureotelic; ammonia is converted to urea in the liver via the ornithine cycle, which is less toxic and requires less water for excretion than ammonia.",
+    "hint": "This waste product is synthesized in the liver and excreted in urine."
+  },
+  {
+    "question": "The functional unit of the kidney responsible for urine formation is the:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Glomerulus",
+      "B": "Nephron",
+      "C": "Loop of Henle",
+      "D": "Collecting duct"
+    },
+    "correct_option": "B",
+    "explanation": "The nephron is the structural and functional unit of the kidney, consisting of renal corpuscle and tubules, performing filtration, reabsorption, secretion, and excretion.",
+    "hint": "Each human kidney contains approximately one million of these units."
+  },
+  {
+    "question": "In the nephron, filtration of blood occurs primarily at the:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Glomerulus",
+      "B": "Proximal convoluted tubule",
+      "C": "Loop of Henle",
+      "D": "Distal convoluted tubule"
+    },
+    "correct_option": "A",
+    "explanation": "Glomerular filtration occurs in the renal corpuscle as blood pressure forces fluid and solutes from the glomerular capillaries through the filtration membrane into Bowman's capsule.",
+    "hint": "This is the first step of urine formation."
+  },
+  {
+    "question": "Which structure collects urine from the nephrons and funnels it into the renal pelvis?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Glomerulus"
+    },
+    "correct_option": "A",
+    "explanation": "The collecting duct receives filtrate from multiple nephrons and transports it through the medulla to the renal pelvis, where urine is funneled to the ureter.",
+    "hint": "This structure is where ADH acts to concentrate urine."
+  },
+  {
+    "question": "Which of the following best describes the role of the Loop of Henle in the kidney?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Filters plasma proteins",
+      "B": "Establishes a concentration gradient in the medulla",
+      "C": "Secretes urea",
+      "D": "Produces hormones"
+    },
+    "correct_option": "B",
+    "explanation": "The countercurrent multiplier mechanism of the Loop of Henle creates a hypertonic interstitial environment in the renal medulla, enabling water reabsorption from the collecting duct.",
+    "hint": "This structure is a hairpin turn between the PCT and DCT."
+  },
+  {
+    "question": "What is the role of antidiuretic hormone (ADH) in urine formation?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Increases glomerular filtration rate",
+      "B": "Increases water reabsorption in the collecting duct",
+      "C": "Promotes sodium excretion",
+      "D": "Stimulates urea production"
+    },
+    "correct_option": "B",
+    "explanation": "ADH increases permeability of collecting duct cells to water by inserting aquaporin channels, increasing water reabsorption and producing concentrated urine.",
+    "hint": "Alcohol inhibits this hormone, causing dilute urine."
+  },
+  {
+    "question": "The process of reabsorption in the nephron allows the body to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Eliminate glucose and amino acids",
+      "B": "Retain useful substances like water and nutrients",
+      "C": "Concentrate waste in the glomerulus",
+      "D": "Lower blood pressure"
+    },
+    "correct_option": "B",
+    "explanation": "Reabsorption returns filtered water, glucose, amino acids, and ions from the tubular fluid to the peritubular capillaries, conserving essential substances.",
+    "hint": "This process moves substances from filtrate to blood."
+  },
+  {
+    "question": "Which blood vessel supplies oxygenated blood to the kidneys?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Renal vein",
+      "B": "Aorta",
+      "C": "Renal artery",
+      "D": "Inferior vena cava"
+    },
+    "correct_option": "C",
+    "explanation": "The renal arteries branch directly from the abdominal aorta and deliver oxygenated blood to the kidneys for filtration.",
+    "hint": "This vessel carries blood toward the kidney, not away."
+  },
+  {
+    "question": "Which component of urine is most influenced by dietary protein intake?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Sodium",
+      "B": "Urea",
+      "C": "Potassium",
+      "D": "Glucose"
+    },
+    "correct_option": "B",
+    "explanation": "Urea is the end product of protein metabolism. High protein intake increases amino acid catabolism and urea production, leading to higher urinary urea excretion.",
+    "hint": "This waste product contains nitrogen from deaminated amino acids."
+  },
+  {
+    "question": "Which excretory organ is primarily responsible for osmoregulation in mammals?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Liver",
+      "B": "Kidney",
+      "C": "Lungs",
+      "D": "Skin"
+    },
+    "correct_option": "B",
+    "explanation": "The kidneys regulate water and electrolyte balance by adjusting urine concentration and volume, maintaining homeostasis of blood osmolarity.",
+    "hint": "This organ filters 180 liters of fluid daily."
+  },
+  {
+    "question": "What is the primary role of the proximal convoluted tubule (PCT)?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Reabsorption of nutrients and ions",
+      "B": "Secretion of ADH",
+      "C": "Formation of glomerular filtrate",
+      "D": "Collection of urine"
+    },
+    "correct_option": "A",
+    "explanation": "The PCT reabsorbs approximately 65% of filtered sodium and water, and nearly all glucose, amino acids, and other organic nutrients via active transport and cotransport.",
+    "hint": "This segment has a brush border to maximize surface area."
+  },
+  {
+    "question": "Which hormone regulates sodium and potassium levels by acting on the distal convoluted tubule?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Aldosterone",
+      "B": "Insulin",
+      "C": "Epinephrine",
+      "D": "Calcitonin"
+    },
+    "correct_option": "A",
+    "explanation": "Aldosterone increases sodium reabsorption and potassium secretion in the DCT and collecting duct, regulating blood pressure and electrolyte balance.",
+    "hint": "This mineralocorticoid is part of the renin-angiotensin system."
+  },
+  {
+    "question": "Which of the following is a byproduct of muscle metabolism found in urine?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Ammonia",
+      "B": "Creatinine",
+      "C": "Bilirubin",
+      "D": "Uric acid"
+    },
+    "correct_option": "B",
+    "explanation": "Creatinine is a waste product of creatine phosphate breakdown in muscle. It is filtered freely and not reabsorbed, making it a useful marker of renal function.",
+    "hint": "This compound is produced at a constant rate proportional to muscle mass."
+  },
+  {
+    "question": "Which part of the nephron is impermeable to water, thereby allowing dilution of tubular fluid?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Descending limb of the loop of Henle",
+      "B": "Ascending limb of the loop of Henle",
+      "C": "Proximal convoluted tubule",
+      "D": "Collecting duct"
+    },
+    "correct_option": "B",
+    "explanation": "The thick ascending limb actively transports sodium, potassium, and chloride out of the tubule but is impermeable to water, producing dilute filtrate and contributing to the medullary osmotic gradient.",
+    "hint": "This segment uses NKCC2 cotransporters."
+  },
+  {
+    "question": "If glucose is found in urine, it most likely indicates:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Kidney stones",
+      "B": "Diabetes mellitus",
+      "C": "UTI",
+      "D": "Dehydration"
+    },
+    "correct_option": "B",
+    "explanation": "Glucosuria occurs when blood glucose exceeds the renal transport maximum (approximately 180 mg/dL), overwhelming the PCT's capacity for glucose reabsorption, typically due to diabetes mellitus.",
+    "hint": "This condition involves high blood sugar levels."
+  },
+  {
+    "question": "Which feature is unique to mammals among vertebrates?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Four-chambered heart",
+      "B": "Presence of mammary glands",
+      "C": "Internal fertilization",
+      "D": "Closed circulatory system"
+    },
+    "correct_option": "B",
+    "explanation": "Mammary glands, which produce milk for nourishing young, are a defining and unique characteristic of mammals not found in any other vertebrate class.",
+    "hint": "Birds and crocodilians also have four-chambered hearts."
+  },
+  {
+    "question": "Which of the following best describes the function of the diaphragm in mammals?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Facilitates negative pressure breathing by separating thoracic and abdominal cavities",
+      "B": "Filters blood in the liver",
+      "C": "Expels urine from the bladder",
+      "D": "Contracts to pump the heart"
+    },
+    "correct_option": "A",
+    "explanation": "The diaphragm is a dome-shaped skeletal muscle that contracts and flattens to increase thoracic volume, decreasing pressure and drawing air into the lungs.",
+    "hint": "This muscle is unique to mammals."
+  },
+  {
+    "question": "The mammalian heart is characterized by:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "A single atrium and a single ventricle",
+      "B": "Complete mixing of oxygenated and deoxygenated blood",
+      "C": "Two atria and two ventricles preventing blood mixing",
+      "D": "One-way flow regulated solely by skeletal muscle"
+    },
+    "correct_option": "C",
+    "explanation": "The mammalian heart has four chambers: two atria and two ventricles, with complete septal division that prevents mixing of oxygenated and deoxygenated blood.",
+    "hint": "This enables efficient separation of pulmonary and systemic circuits."
+  },
+  {
+    "question": "The structure that allows nutrient and gas exchange between mother and embryo in placental mammals is the:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Amniotic sac",
+      "B": "Chorion",
+      "C": "Placenta",
+      "D": "Umbilical artery"
+    },
+    "correct_option": "C",
+    "explanation": "The placenta is a temporary organ connecting the developing fetus to the uterine wall, permitting nutrient uptake, waste elimination, and gas exchange via the mother's blood supply.",
+    "hint": "This structure is expelled as the afterbirth."
+  },
+  {
+    "question": "Which type of epithelium lines the alveoli in mammalian lungs?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Stratified squamous",
+      "B": "Simple squamous",
+      "C": "Cuboidal",
+      "D": "Columnar"
+    },
+    "correct_option": "B",
+    "explanation": "Alveoli are lined by type I pneumocytes, which are simple squamous epithelial cells, providing a thin barrier for efficient gas exchange.",
+    "hint": "This thin, flat cell type minimizes diffusion distance."
+  },
+  {
+    "question": "Which of the following is a key structural difference between arteries and veins?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Arteries have thicker muscular walls",
+      "B": "Veins lack endothelium",
+      "C": "Arteries contain valves",
+      "D": "Veins carry oxygenated blood"
+    },
+    "correct_option": "A",
+    "explanation": "Arteries have thicker tunica media with more smooth muscle and elastic fibers to accommodate high-pressure blood flow; veins have thinner walls and contain valves.",
+    "hint": "Pulmonary veins and arteries are exceptions to the oxygenation rule."
+  },
+  {
+    "question": "In mammals, the cerebrum is primarily responsible for:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Maintaining posture and balance",
+      "B": "Hormonal regulation",
+      "C": "Higher cognitive functions such as reasoning and memory",
+      "D": "Reflex arcs"
+    },
+    "correct_option": "C",
+    "explanation": "The mammalian cerebrum, particularly the cerebral cortex, is highly developed and associated with conscious thought, learning, memory, language, and sensory integration.",
+    "hint": "This structure is enlarged and folded in mammals."
+  },
+  {
+    "question": "Which component of the mammalian digestive system is primarily involved in nutrient absorption?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Stomach",
+      "B": "Small intestine",
+      "C": "Large intestine",
+      "D": "Esophagus"
+    },
+    "correct_option": "B",
+    "explanation": "The small intestine has extensive surface area from villi and microvilli, specialized for absorption of monosaccharides, amino acids, fatty acids, vitamins, minerals, and water.",
+    "hint": "This organ is approximately 6 meters long in humans."
+  },
+  {
+    "question": "The renal cortex of the mammalian kidney is the site of:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Glomerular filtration",
+      "B": "Urine storage",
+      "C": "Water reabsorption",
+      "D": "Urea synthesis"
+    },
+    "correct_option": "A",
+    "explanation": "The renal corpuscles (glomeruli and Bowman's capsules) are located in the renal cortex, making it the primary site of glomerular filtration.",
+    "hint": "This is the outermost region of the kidney."
+  },
+  {
+    "question": "What distinguishes the mammalian integumentary system from that of other vertebrates?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Scaly outer surface",
+      "B": "Presence of hair and sebaceous glands",
+      "C": "Chitinous cuticle",
+      "D": "Mucus-covered skin"
+    },
+    "correct_option": "B",
+    "explanation": "Mammalian skin uniquely features hair follicles and sebaceous (oil) glands. Hair provides insulation, sensation, and protection; sebum lubricates skin and hair.",
+    "hint": "Reptiles have scales; amphibians have moist, glandular skin."
+  },
+  {
+    "question": "Which of the following skeletal features is typical of mammals?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Seven cervical vertebrae",
+      "B": "Fused pelvic and thoracic vertebrae",
+      "C": "Single-boned upper arm",
+      "D": "Multiple jaw bones"
+    },
+    "correct_option": "A",
+    "explanation": "Nearly all mammals, regardless of neck length, have seven cervical vertebrae (exceptions: manatees and sloths). This is a characteristic mammalian feature.",
+    "hint": "Giraffes and mice both have this number of neck bones."
+  },
+  {
+    "question": "In terms of thermoregulation, mammals are considered:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Poikilothermic",
+      "B": "Homeothermic endotherms",
+      "C": "Ectothermic regulators",
+      "D": "Partial regulators"
+    },
+    "correct_option": "B",
+    "explanation": "Mammals are homeotherms (maintain stable internal body temperature) and endotherms (generate heat metabolically), allowing activity across diverse environmental temperatures.",
+    "hint": "This is opposite of being cold-blooded."
+  },
+  {
+    "question": "The presence of heterodont dentition in mammals refers to:",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Different types of teeth specialized for different functions",
+      "B": "All teeth being uniform in shape",
+      "C": "Temporary teeth only",
+      "D": "Teeth that regrow indefinitely"
+    },
+    "correct_option": "A",
+    "explanation": "Heterodont dentition means differentiation of teeth into incisors, canines, premolars, and molars, each specialized for cutting, tearing, crushing, or grinding.",
+    "hint": "Non-mammalian vertebrates often have homodont (uniform) teeth."
+  },
+  {
+    "question": "Which structure in the mammalian brain coordinates movement and maintains balance?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Medulla oblongata",
+      "B": "Cerebrum",
+      "C": "Cerebellum",
+      "D": "Pons"
+    },
+    "correct_option": "C",
+    "explanation": "The cerebellum processes proprioceptive information and coordinates fine motor control, posture, and balance.",
+    "hint": "This structure means 'little brain' in Latin."
+  },
+  {
+    "question": "Which gland in mammals is responsible for regulating metabolic rate?",
+    "topic": "Past Questions ZOO 101",
+    "options": {
+      "A": "Pituitary gland",
+      "B": "Thyroid gland",
+      "C": "Adrenal gland",
+      "D": "Pancreas"
+    },
+    "correct_option": "B",
+    "explanation": "The thyroid gland secretes thyroxine (T4) and triiodothyronine (T3), which increase basal metabolic rate, thermogenesis, and protein synthesis.",
+    "hint": "This gland is located in the neck and requires iodine."
   }
 ]
 }

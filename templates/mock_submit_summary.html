@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Mock Results — Summary — LagSciPrep{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Mock Results — Summary</h2>
+        <p class="text-muted">Your mock has been submitted and scores saved per course.</p>
+      </div>
+
+      {% for item in summary %}
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <strong>{{ item.course.name }}</strong>
+            {% if item.skipped %}
+              <span class="badge bg-warning">Skipped — {{ item.reason }}</span>
+            {% else %}
+              <span class="badge bg-primary">{{ item.score }}/{{ item.total }}</span>
+            {% endif %}
+          </div>
+          <div class="card-body">
+            {% if not item.skipped and item.failed_questions %}
+              <h6>Questions to review ({{ item.failed_questions|length }})</h6>
+              {% for f in item.failed_questions %}
+                <div class="mb-3 p-3 bg-light rounded">
+                  <div class="fw-bold">Question:</div>
+                  <div class="mb-2">{{ f.question.question_text|safe }}</div>
+                  <div><strong>Your:</strong> {{ f.your_answer }} — {{ f.your_answer_text }}</div>
+                  <div><strong>Correct:</strong> {{ f.correct_answer }} — {{ f.correct_answer_text }}</div>
+                </div>
+              {% endfor %}
+            {% elif item.skipped %}
+              <div class="text-muted">This course was skipped because it was already submitted for today.</div>
+            {% else %}
+              <div class="text-success">All answers correct or no questions available.</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+
+      <div class="text-center mt-4">
+        <a href="{% url 'progress' %}" class="btn btn-primary me-2">View Progress / Grades</a>
+        <a href="{% url 'home' %}" class="btn btn-outline-secondary">Return to Dashboard</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

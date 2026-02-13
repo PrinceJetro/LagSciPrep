@@ -42,6 +42,24 @@
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --border-radius: 12px;
             --border-radius-lg: 20px;
+            
+            /* Light mode colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #333333;
+            --text-secondary: #6c757d;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --navbar-bg: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* Dark mode colors */
+        html.dark-mode {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #e8e8e8;
+            --text-secondary: #b0b0b0;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --navbar-bg: rgba(26, 26, 26, 0.95);
         }
         
         * {
@@ -52,17 +70,22 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            color: #333;
+            color: var(--text-primary);
             line-height: 1.7;
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+        
+        html.dark-mode body {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
         }
         
         /* Navbar Styles */
         .navbar-main {
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--navbar-bg);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -71,6 +94,10 @@
             top: 0;
             z-index: 1000;
             transition: var(--transition-smooth);
+        }
+        
+        html.dark-mode .navbar-main {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
         .navbar-main.scrolled {
@@ -140,7 +167,7 @@
         }
         
         .nav-link-custom {
-            color: #495057 !important;
+            color: var(--text-secondary) !important;
             font-weight: 500;
             padding: 0.75rem 1.25rem !important;
             border-radius: var(--border-radius);
@@ -154,6 +181,10 @@
             color: var(--primary-color) !important;
             background: rgba(74, 107, 255, 0.08);
             transform: translateY(-2px);
+        }
+        
+        html.dark-mode .nav-link-custom:hover {
+            background: rgba(74, 107, 255, 0.15);
         }
         
         .nav-link-custom.active {
@@ -197,13 +228,13 @@
         
         .user-name {
             font-weight: 600;
-            color: #212529;
+            color: var(--text-primary);
             font-size: 0.95rem;
         }
         
         .user-role {
             font-size: 0.85rem;
-            color: #6c757d;
+            color: var(--text-secondary);
         }
         
         /* Main Content Area */
@@ -375,9 +406,122 @@
             color: white;
         }
 
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-size: 1.2rem;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(74, 107, 255, 0.1);
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+        
+        .theme-icon {
+            transition: var(--transition-smooth);
+        }
+        
+        .theme-toggle .sun-icon {
+            display: none;
+        }
+        
+        html.dark-mode .theme-toggle .sun-icon {
+            display: inline;
+        }
+        
+        html.dark-mode .theme-toggle .moon-icon {
+            display: none;
+        }
+        
         /* Small utilities */
         .muted-opacity { opacity: 0.85; }
         .muted-opacity-icon { opacity: 0.8; }
+        
+        /* General dark mode text colors */
+        html.dark-mode {
+            color-scheme: dark;
+        }
+        
+        html.dark-mode input,
+        html.dark-mode textarea,
+        html.dark-mode select {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        html.dark-mode .card {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        html.dark-mode .table {
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        html.dark-mode .table thead th {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        html.dark-mode .form-control,
+        html.dark-mode .form-select {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        html.dark-mode .form-control:focus,
+        html.dark-mode .form-select:focus {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(74, 107, 255, 0.25);
+        }
+        
+        html.dark-mode .navbar-collapse {
+            background: var(--bg-secondary);
+        }
+        
+        html.dark-mode .glass-effect {
+            background: rgba(45, 45, 45, 0.9);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        html.dark-mode .alert {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        html.dark-mode .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        html.dark-mode .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
         
         /* Responsive Design */
         @media (max-width: 992px) {
@@ -463,6 +607,12 @@
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
+                
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle me-3" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle dark/light mode">
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                </button>
                 
                 <div class="user-profile">
                     {% if user.is_authenticated %}
@@ -578,6 +728,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
+        // Dark Mode Toggle Functionality
+        (function() {
+            const htmlElement = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const STORAGE_KEY = 'lagSciPrep-theme-preference';
+            
+            // Check for saved theme preference or default to light mode
+            function initTheme() {
+                const savedTheme = localStorage.getItem(STORAGE_KEY);
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                let isDarkMode = false;
+                if (savedTheme !== null) {
+                    isDarkMode = savedTheme === 'dark';
+                } else {
+                    isDarkMode = prefersDark;
+                }
+                
+                applyTheme(isDarkMode);
+            }
+            
+            // Apply theme to document
+            function applyTheme(isDarkMode) {
+                if (isDarkMode) {
+                    htmlElement.classList.add('dark-mode');
+                    localStorage.setItem(STORAGE_KEY, 'dark');
+                } else {
+                    htmlElement.classList.remove('dark-mode');
+                    localStorage.setItem(STORAGE_KEY, 'light');
+                }
+            }
+            
+            // Toggle theme on button click
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    const isDarkMode = htmlElement.classList.contains('dark-mode');
+                    applyTheme(!isDarkMode);
+                });
+            }
+            
+            // Initialize theme on page load
+            initTheme();
+            
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (localStorage.getItem(STORAGE_KEY) === null) {
+                    applyTheme(e.matches);
+                }
+            });
+        })();
+        
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
