@@ -627,10 +627,10 @@ def start_topic_cbt(request, topic_id):
 from django.utils import timezone
 from datetime import time as dtime, datetime
 
-MOCK_START_HOUR = 6
-MOCK_START_MIN = 55
-MOCK_END_HOUR = 7
-MOCK_END_MIN = 10
+MOCK_START_HOUR = 14
+MOCK_START_MIN = 15
+MOCK_END_HOUR = 14
+MOCK_END_MIN = 25
 MOCK_DURATION_SECONDS = (MOCK_END_HOUR * 3600 + MOCK_END_MIN * 60) - (MOCK_START_HOUR * 3600 + MOCK_START_MIN * 60)
 
 def _is_mock_open(now=None):
@@ -650,6 +650,7 @@ def _student_has_mock_result_today(student, course):
     return CBTResult.objects.filter(student=student, course=course, date_taken__range=(start_dt, end_dt)).exists()
 
 
+@login_required
 def start_mock(request):
     """Initialize mock session for a set of courses. GET shows selectable courses; POST creates session state.
 
@@ -660,7 +661,9 @@ def start_mock(request):
 
     The mock is only startable/accessed between 18:00 and 19:40 local time.
     """
-    courses = Course.objects.all().order_by('name')
+    # only get BIO 101, ZOO 101, GST 111 AND COM 101
+
+    courses = Course.objects.filter(name__in=['BIO 101', 'ZOO 101', 'GST 111', 'COM 101']).order_by('name')
         # ---------------------------
     from django.utils import timezone
     from datetime import time as dtime, datetime
