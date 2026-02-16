@@ -1,3 +1,92 @@
 env\scripts\activate
 cd personalprojects/cbt_app/lagsciprep
 python manage.py runserver
+
+
+from django.utils import timezone
+from datetime import datetime
+from collections import defaultdict
+
+from main.models import CBTResult 
+
+# Define time range (Africa/Lagos)
+start_time = timezone.make_aware(datetime(2026, 2, 14, 18, 0, 0))
+end_time = timezone.make_aware(datetime(2026, 2, 14, 19, 42, 0))
+
+# Filter results within time range
+results = CBTResult.objects.filter(
+    date_taken__gte=start_time,
+    date_taken__lte=end_time,
+    course__isnull=False
+).select_related("student", "course")
+
+# Organize results by student
+student_results = defaultdict(dict)
+
+for result in results:
+    student = result.student
+    course = result.course
+    percent = round((result.score / result.total_questions) * 100, 2)
+    full_name = f"{student.user.first_name} {student.user.last_name}"
+    student_results[full_name][course.name] = percent
+
+# Print results
+for student, courses in student_results.items():
+    print(f"\n{student}")
+    for course_name, percent in courses.items():
+        print(f"  {course_name}: {percent}%")
+
+
+
+import csv
+from django.utils import timezone
+from datetime import datetime
+from collections import defaultdict
+from django.db.models import F, Value
+from django.db.models.functions import Concat
+from main.models import CBTResult 
+
+# 1. Setup Time Range
+start_time = timezone.make_aware(datetime(2026, 2, 14, 18, 0, 0))
+end_time = timezone.make_aware(datetime(2026, 2, 14, 19, 40, 0))
+
+# 2. Optimized Query
+# We use annotate to create the full name and grab only necessary fields
+results = CBTResult.objects.filter(
+    date_taken__gte=start_time,
+    date_taken__lte=end_time,
+    course__isnull=False
+).annotate(
+    full_name=Concat(
+        F('student__user__first_name'), Value(' '), F('student__user__last_name')
+    )
+).values_list(
+    'full_name', 'course__name', 'score', 'total_questions'
+)
+
+# 3. Process Data
+student_results = defaultdict(dict)
+all_courses = set()
+
+for full_name, course_name, score, total_q in results:
+    percent = round((score / total_q) * 100, 2) if total_q > 0 else 0
+    student_results[full_name][course_name] = percent
+    all_courses.add(course_name)
+
+# 4. Store in CSV
+course_list = sorted(list(all_courses))
+filename = f"cbt_results_{timezone.now().strftime('%Y%m%d_%H%M')}.csv"
+
+with open(filename, 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    # Header: Name, Course 1, Course 2...
+    writer.writerow(['Student Name'] + course_list)
+    
+    for student, courses in student_results.items():
+        row = [student]
+        for c in course_list:
+            # Gets the score if it exists, otherwise leaves it blank
+            row.append(courses.get(c, 'N/A'))
+        writer.writerow(row)
+
+print(f"Done! Results saved to {filename}")
