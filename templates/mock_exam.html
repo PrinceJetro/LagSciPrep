@@ -38,13 +38,22 @@
   <div class="exam-footer mt-4">
     <div class="card card-custom">
       <div class="card-body py-3 text-center">
-        <button class="btn btn-success" id="submitMockBtn">Submit Mock</button>
+        <button class="btn btn-success" id="submitMockBtn" onclick="confirmSubmit()">Submit Mock</button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
+
+function confirmSubmit(){
+  if (confirm('Are you sure you want to submit? You will not be able to change your answers after submission.')) {
+    submitMock();
+  }
+}
+
+
+
 // Mock front-end logic (mirrors CBT behaviour but supports switching courses)
 let ACTIVE_COURSE_ID = {% if active_course %}{{ active_course.id }}{% else %}null{% endif %};
 let QUESTIONS = [];
@@ -199,7 +208,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // load initial
   if (ACTIVE_COURSE_ID) loadCourse(ACTIVE_COURSE_ID);
   // wire submit mock button
-  document.getElementById('submitMockBtn').addEventListener('click', submitMock);
 });
 </script>
 {% endblock %}

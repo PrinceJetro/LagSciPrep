@@ -627,9 +627,9 @@ def start_topic_cbt(request, topic_id):
 from django.utils import timezone
 from datetime import time as dtime, datetime
 
-MOCK_START_HOUR = 11
+MOCK_START_HOUR = 18
 MOCK_START_MIN = 00
-MOCK_END_HOUR = 12
+MOCK_END_HOUR = 19
 MOCK_END_MIN = 40
 MOCK_DURATION_SECONDS = (MOCK_END_HOUR * 3600 + MOCK_END_MIN * 60) - (MOCK_START_HOUR * 3600 + MOCK_START_MIN * 60)
 
@@ -661,9 +661,9 @@ def start_mock(request):
 
     The mock is only startable/accessed between 18:00 and 19:40 local time.
     """
-    # only get BIO 101, ZOO 101, GST 111 AND COM 101
+    # only get MTH 101, PHY 101 AND CHM 101 for the selection form since those are the only ones with special rules and we want to avoid confusion about which courses are included in the mock session
 
-    courses = Course.objects.filter(name__in=['BIO 101', 'ZOO 101', 'GST 111', 'COM 101']).order_by('name')
+    courses = Course.objects.filter(name__in=['CHM 101', 'PHY 101', 'MTH 101']).order_by('name')
         # ---------------------------
     from django.utils import timezone
     from datetime import time as dtime, datetime
