@@ -461,6 +461,13 @@
                         </a>
                     </li>
                     <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom {% if request.resolver_match.url_name == 'start_mock' %}active{% endif %}" 
+                           href="{% url 'start_mock' %}">
+                            <i class="fas fa-pen-fancy"></i>
+                            <span>Mock Exam</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-custom">
                         <a class="nav-link nav-link-custom {% if request.resolver_match.url_name == 'student_list' %}active{% endif %}" 
                            href="{% url 'student_list' %}">
                             <i class="fas fa-users"></i>

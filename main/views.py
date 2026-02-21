@@ -564,48 +564,11 @@ def start_topic_cbt(request, topic_id):
         # Determine mode: learn_mode True means the user selected Learn Mode
         learn_mode = request.POST.get('learn_mode') == 'on'
 
-        # Practice mode batching: use sliding-window batches of fixed size
-        BATCH_SIZE = 15
-        OVERLAP = 4  # number of questions to repeat between consecutive batches
-
         if learn_mode:
             selected = [q.id for q in questions]
         else:
-            # Ensure deterministic ordering (by id)
-            ordered_questions = list(topic.questions.order_by('id'))
-            total = len(ordered_questions)
-
-            # If not enough questions, return them all
-            if total <= BATCH_SIZE:
-                selected = [q.id for q in ordered_questions]
-            else:
-                step = max(1, BATCH_SIZE - OVERLAP)
-
-                # session key for tracking batch start for this topic
-                batch_key = f'cbt_topic_batch_start_{topic.id}'
-                last_start = request.session.get(batch_key, 0)
-
-                # On first run last_start will be 0 (start at beginning)
-                start = last_start
-
-                # Build window and then advance for next time
-                end = start + BATCH_SIZE
-                if end <= total:
-                    window = ordered_questions[start:end]
-                else:
-                    # If window would overflow, wrap to the end and then pad from start
-                    window = ordered_questions[start:total]
-                    needed = BATCH_SIZE - len(window)
-                    window += ordered_questions[0:needed]
-
-                selected = [q.id for q in window]
-
-                # Advance start for next batch and wrap if necessary
-                new_start = start + step
-                if new_start > total - 1:
-                    # wrap back to 0 once past the last index
-                    new_start = 0
-                request.session[batch_key] = new_start
+            # Practice mode: random selection of 30 questions
+            selected = [q.id for q in random.sample(questions, min(30, len(questions)))]
 
         request.session['cbt_topic_id'] = topic.id
         request.session['cbt_topic_selected_questions'] = selected
@@ -627,10 +590,10 @@ def start_topic_cbt(request, topic_id):
 from django.utils import timezone
 from datetime import time as dtime, datetime
 
-MOCK_START_HOUR = 18
-MOCK_START_MIN = 00
-MOCK_END_HOUR = 19
-MOCK_END_MIN = 40
+MOCK_START_HOUR = 0
+MOCK_START_MIN = 0
+MOCK_END_HOUR = 23
+MOCK_END_MIN = 59
 MOCK_DURATION_SECONDS = (MOCK_END_HOUR * 3600 + MOCK_END_MIN * 60) - (MOCK_START_HOUR * 3600 + MOCK_START_MIN * 60)
 
 def _is_mock_open(now=None):
@@ -645,8 +608,8 @@ def _student_has_mock_result_today(student, course):
     if not student:
         return False
     today = timezone.localtime().date()
-    start_dt = datetime.combine(today, dtime(MOCK_START_HOUR, MOCK_START_MIN))
-    end_dt = datetime.combine(today, dtime(MOCK_END_HOUR, MOCK_END_MIN))
+    start_dt = timezone.make_aware(datetime.combine(today, dtime(MOCK_START_HOUR, MOCK_START_MIN)), timezone.get_current_timezone())
+    end_dt = timezone.make_aware(datetime.combine(today, dtime(MOCK_END_HOUR, MOCK_END_MIN)), timezone.get_current_timezone())
     return CBTResult.objects.filter(student=student, course=course, date_taken__range=(start_dt, end_dt)).exists()
 
 
@@ -663,7 +626,7 @@ def start_mock(request):
     """
     # only get MTH 101, PHY 101 AND CHM 101 for the selection form since those are the only ones with special rules and we want to avoid confusion about which courses are included in the mock session
 
-    courses = Course.objects.filter(name__in=['CHM 101', 'PHY 101', 'MTH 101']).order_by('name')
+    courses = Course.objects.all().order_by('name')
         # ---------------------------
     from django.utils import timezone
     from datetime import time as dtime, datetime
@@ -694,19 +657,13 @@ def start_mock(request):
         # Set mock session window (use today's 18:00..19:40)
         from django.utils import timezone
 
-        today = timezone.localdate()
-
-        start_dt = timezone.make_aware(
-            datetime.combine(today, dtime(MOCK_START_HOUR, MOCK_START_MIN)),
-            timezone.get_current_timezone()
-        )
-
-        end_dt = timezone.make_aware(
-            datetime.combine(today, dtime(MOCK_END_HOUR, MOCK_END_MIN)),
-            timezone.get_current_timezone()
-        )
-        request.session['mock_start_time'] = start_dt.timestamp()
-        request.session['mock_end_time'] = end_dt.timestamp()
+        now = time.time()
+        # 30 minutes per course
+        course_duration = 30 * 60
+        total_duration = course_duration * len(selected_courses)
+        
+        request.session['mock_start_time'] = now
+        request.session['mock_end_time'] = now + total_duration
         request.session['mock_courses'] = [c.id for c in selected_courses]
 
         # For each course prepare 50-question selection according to rules
@@ -716,14 +673,7 @@ def start_mock(request):
                 continue
 
             qs = PastQuestionsObj.objects.filter(course=course)
-            # Default filter: topics with "Past Questions" in the name (case-insensitive)
-            if course.name.strip().upper() == 'MTH 101':
-                pool = list(qs)
-            else:
-                pool = list(qs.filter(topic__name__icontains='Past Questions'))
-                if not pool:
-                    # fallback to whole-course pool if no matching topic exists
-                    pool = list(qs)
+            pool = list(qs)
 
             selected = []
             if pool:
@@ -734,10 +684,11 @@ def start_mock(request):
                 selected_ids = []
 
             # Store per-course mock session data so student can switch courses while preserving progress
+            # Each course gets 30 minutes from the shared total time
             request.session[f'mock_{course.id}_selected_questions'] = selected_ids
             request.session[f'mock_{course.id}_answers'] = {}
             request.session[f'mock_{course.id}_session_key'] = str(uuid.uuid4())
-            request.session[f'mock_{course.id}_end_time'] = end_dt.timestamp()
+            request.session[f'mock_{course.id}_end_time'] = now + total_duration
             request.session[f'mock_{course.id}_completed'] = False
 
         messages.success(request, 'Mock session initialized — good luck!')

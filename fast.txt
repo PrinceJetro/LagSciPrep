@@ -10,8 +10,8 @@ from collections import defaultdict
 from main.models import CBTResult 
 
 # Define time range (Africa/Lagos)
-start_time = timezone.make_aware(datetime(2026, 2, 14, 18, 0, 0))
-end_time = timezone.make_aware(datetime(2026, 2, 14, 19, 42, 0))
+start_time = timezone.make_aware(datetime(2026, 2, 16, 11, 0, 0))
+end_time = timezone.make_aware(datetime(2026, 2, 16, 12, 42, 0))
 
 # Filter results within time range
 results = CBTResult.objects.filter(

@@ -1,2461 +1,641 @@
 {
-  "CHM 101": [
+  "ZOO 101": [
   {
-    "question": "Which of the following correctly explains why increasing temperature generally increases reaction rate?",
-    "topic": "Past Questions CHM 101",
+    "question": "What is the nervous system primarily concerned with?",
+    "topic": "Nervous System",
     "options": {
-      "A": "It decreases the activation energy of the reaction",
-      "B": "It increases the kinetic energy of molecules, increasing the frequency of effective collisions",
-      "C": "It increases the concentration of products",
-      "D": "It alters the stoichiometry of the reaction"
-    },
-    "correct_option": "B",
-    "explanation": "Increasing temperature raises the kinetic energy of molecules. This leads to more frequent collisions and a higher proportion of collisions that have sufficient energy to overcome the activation energy barrier, thus increasing the reaction rate.",
-    "hint": "Think about how temperature affects molecular motion and the energy of collisions."
-  },
-  {
-    "question": "Which statement about catalysts is FALSE?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Catalysts lower the activation energy of a reaction",
-      "B": "Catalysts do not alter the equilibrium position",
-      "C": "Catalysts are consumed during the reaction",
-      "D": "Catalysts increase the rate of both forward and reverse reactions"
+      "A": "Digestion and absorption of food.",
+      "B": "Circulation of blood.",
+      "C": "Action and senses.",
+      "D": "Excretion of metabolic wastes."
     },
     "correct_option": "C",
-    "explanation": "Catalysts provide an alternative reaction pathway with lower activation energy. They are not consumed in the overall reaction and can be used repeatedly. They increase the rates of both the forward and reverse reactions, helping the system reach equilibrium faster without shifting the equilibrium position.",
-    "hint": "Consider whether the catalyst is used up or if it remains unchanged at the end of the reaction."
+    "explanation": "The nervous system is concerned with action and senses, allowing animals to sense their surroundings and react.",
+    "hint": "It handles input from the environment and output responses."
   },
   {
-    "question": "The rate law for a reaction is given by rate = k[A]^a * [B]. What is the order of the reaction?",
-    "topic": "Past Questions CHM 101",
+    "question": "The nervous system senses activities both outside and where else?",
+    "topic": "Nervous System",
     "options": {
-      "A": "First order",
-      "B": "Third order",
-      "C": "Second order",
-      "D": "Zero order"
+      "A": "In the atmosphere.",
+      "B": "Inside the body.",
+      "C": "In other animals.",
+      "D": "Only in the brain."
     },
     "correct_option": "B",
-    "explanation": "The overall order of a reaction is the sum of the exponents in its rate law. Here, the exponent for [A] is 'a' and for [B] is 1. Although 'a' is not a number, the question implicitly uses 'a' as an exponent, but the provided rate law 'rate = k[A]^a * [B]' is likely a typo in the notes. Based on common question patterns, if 'a' is considered to be 2, then the sum of exponents (2 + 1) equals 3, making it third order.",
-    "hint": "Add up all the exponents of the concentration terms in the rate law."
+    "explanation": "The nervous system senses activities both outside the body and inside the body, such as triggering digestion.",
+    "hint": "It monitors internal conditions as well."
   },
   {
-    "question": "In a chemical equilibrium, the concentrations of reactants and products:",
-    "topic": "Past Questions CHM 101",
+    "question": "What are the two main parts of the nervous system?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Are equal",
-      "B": "Are constantly changing",
-      "C": "Remain constant over time",
-      "D": "Reach zero"
+      "A": "The brain and the spinal cord.",
+      "B": "The somatic and autonomic systems.",
+      "C": "The central nervous system and the peripheral nervous system.",
+      "D": "The sympathetic and parasympathetic systems."
     },
     "correct_option": "C",
-    "explanation": "At equilibrium, the forward and reverse reaction rates are equal, so the net change in the concentrations of reactants and products is zero. This means their concentrations become constant, though not necessarily equal to each other.",
-    "hint": "Equilibrium is a state of balance where macroscopic properties do not change."
+    "explanation": "The nervous system of animals consists of two main parts: the central nervous system (CNS) and the peripheral nervous system (PNS).",
+    "hint": "One is the control center, the other is the network of nerves."
   },
   {
-    "question": "Which of the following changes would shift the equilibrium position of the reaction N2 + 3H2 ⇌ 2NH3 to the right?",
-    "topic": "Past Questions CHM 101",
+    "question": "What does the central nervous system (CNS) contain?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Decreasing pressure",
-      "B": "Increasing pressure",
-      "C": "Removing NH3",
-      "D": "Adding a catalyst"
-    },
-    "correct_option": "B",
-    "explanation": "Increasing the pressure favors the side with fewer moles of gas. The left side (N2 + 3H2) has 4 moles of gas, and the right side (2NH3) has 2 moles. Higher pressure will therefore shift the equilibrium to the right, producing more ammonia.",
-    "hint": "Apply Le Chatelier's principle. Consider which side of the reaction has fewer gas molecules."
-  },
-  {
-    "question": "What is the effect of increasing the concentration of a reactant in a system at equilibrium?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "No effect",
-      "B": "Shifts the equilibrium to the product side",
-      "C": "Shifts the equilibrium to the reactant side",
-      "D": "Increases the activation energy"
-    },
-    "correct_option": "B",
-    "explanation": "According to Le Chatelier's principle, if a system at equilibrium is disturbed by increasing the concentration of a reactant, the equilibrium will shift to consume that reactant, favoring the forward reaction and thus shifting to the product side.",
-    "hint": "The system tries to counteract the change by using up the added reactant."
-  },
-  {
-    "question": "The Arrhenius equation expresses the relationship between:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Rate constant and concentration",
-      "B": "Rate constant and temperature",
-      "C": "Temperature and equilibrium constant",
-      "D": "Activation energy and pressure"
-    },
-    "correct_option": "B",
-    "explanation": "The Arrhenius equation, k = Ae^(-Ea/RT), shows how the rate constant (k) is exponentially dependent on the temperature (T) and the activation energy (Ea).",
-    "hint": "Recall the formula k = Ae^(-Ea/RT). Which two variables does it directly link?"
-  },
-  {
-    "question": "Which of these correctly defines the activation energy of a reaction?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Energy required to start any reaction",
-      "B": "Energy needed to break all bonds in the reactants",
-      "C": "Minimum energy needed for a reaction to occur",
-      "D": "Total energy released by the reaction"
+      "A": "Only the brain.",
+      "B": "Only the spinal cord.",
+      "C": "The brain and spinal cord.",
+      "D": "All the nerves in the body."
     },
     "correct_option": "C",
-    "explanation": "Activation energy is the minimum amount of energy that colliding molecules must possess for a reaction to occur. It is the energy barrier that must be overcome for reactants to be converted into products.",
-    "hint": "It is the energy barrier between reactants and products on a reaction profile diagram."
+    "explanation": "The CNS contains the brain and the spinal cord.",
+    "hint": "These are the central processing organs."
   },
   {
-    "question": "If a reaction is exothermic and has a negative ΔH, what will be the effect of increasing temperature?",
-    "topic": "Past Questions CHM 101",
+    "question": "Nerves that exit from the brain are called:",
+    "topic": "Nervous System",
     "options": {
-      "A": "Shifts equilibrium toward products",
-      "B": "No change in equilibrium",
-      "C": "Shifts equilibrium toward reactants",
-      "D": "Increases rate constant"
+      "A": "Spinal nerves",
+      "B": "Cranial nerves",
+      "C": "Peripheral nerves",
+      "D": "Motor nerves"
+    },
+    "correct_option": "B",
+    "explanation": "Nerves that exit from the brain are called cranial nerves.",
+    "hint": "They connect directly to the brain."
+  },
+  {
+    "question": "Nerves that exit from the spinal cord are called:",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Cranial nerves",
+      "B": "Spinal nerves",
+      "C": "Sensory nerves",
+      "D": "Autonomic nerves"
+    },
+    "correct_option": "B",
+    "explanation": "Nerves that exit from the spinal cord are called spinal nerves.",
+    "hint": "They branch off the spinal cord."
+  },
+  {
+    "question": "The CNS is enclosed and protected by a three-layered system of membranes called the:",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Meninges",
+      "B": "Skull",
+      "C": "Vertebrae",
+      "D": "Cerebrospinal fluid"
+    },
+    "correct_option": "A",
+    "explanation": "The CNS is enclosed and protected by the meninges, a three-layered system of membranes.",
+    "hint": "Inflammation of these membranes is called meningitis."
+  },
+  {
+    "question": "What is the tough, leathery outer layer of the meninges called?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Pia mater",
+      "B": "Arachnoid mater",
+      "C": "Dura mater",
+      "D": "Subarachnoid space"
     },
     "correct_option": "C",
-    "explanation": "For an exothermic reaction, heat is a product. Increasing temperature adds heat, which disturbs the equilibrium. According to Le Chatelier's principle, the system will shift to consume the added heat, favoring the endothermic (reverse) reaction, thus shifting the equilibrium toward reactants.",
-    "hint": "Treat heat as a product in an exothermic reaction. Which way will the equilibrium shift if you add a product?"
+    "explanation": "The tough, leathery outer layer of the meninges is called the dura mater.",
+    "hint": "'Dura' means hard or tough."
   },
   {
-    "question": "Which statement about a reversible reaction at equilibrium is true?",
-    "topic": "Past Questions CHM 101",
+    "question": "Besides the meninges, what else protects the brain and spinal cord?",
+    "topic": "Nervous System",
     "options": {
-      "A": "The rate of the forward reaction becomes zero",
-      "B": "All reactants are converted to products",
-      "C": "Products are no longer formed",
-      "D": "Rates of forward and reverse reactions are equal"
+      "A": "Muscles and tendons.",
+      "B": "The skull and vertebrae.",
+      "C": "The skin and fat.",
+      "D": "Ligaments and cartilage."
+    },
+    "correct_option": "B",
+    "explanation": "The brain is protected by the skull, and the spinal cord is protected by the vertebrae.",
+    "hint": "These are bony structures."
+  },
+  {
+    "question": "What is the function of the blood-brain barrier?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "To increase blood flow to the brain.",
+      "B": "To prevent harmful substances in the blood from entering the brain.",
+      "C": "To allow all substances in the blood to enter the brain.",
+      "D": "To produce cerebrospinal fluid."
+    },
+    "correct_option": "B",
+    "explanation": "The blood-brain barrier prevents the brain from being exposed to harmful substances floating in the blood.",
+    "hint": "It acts as a selective filter."
+  },
+  {
+    "question": "What is the purpose of the spinal cord?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "To produce thoughts and emotions.",
+      "B": "To send motor commands from the brain to the body and relay sensory information to the brain.",
+      "C": "To control voluntary muscle movement only.",
+      "D": "To regulate the endocrine system."
+    },
+    "correct_option": "B",
+    "explanation": "The spinal cord's purpose is to send motor commands from the brain to the peripheral body and relay sensory information from the sensory organs to the brain.",
+    "hint": "It is the main communication highway between the brain and the body."
+  },
+  {
+    "question": "What does the peripheral nervous system (PNS) consist mainly of?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The brain and spinal cord.",
+      "B": "Nerves, which are long fibres that branch off the spinal cord.",
+      "C": "Only sensory receptors.",
+      "D": "Cerebrospinal fluid."
+    },
+    "correct_option": "B",
+    "explanation": "The PNS consists mainly of nerves, which are long fibres that branch off the spinal cord and connect the CNS to every other part of the body.",
+    "hint": "These are the 'wires' that extend throughout the body."
+  },
+  {
+    "question": "What is another name for the somatic nervous system (SNS)?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The involuntary nervous system",
+      "B": "The visceral nervous system",
+      "C": "The voluntary nervous system",
+      "D": "The enteric nervous system"
+    },
+    "correct_option": "C",
+    "explanation": "The somatic nervous system is also known as the voluntary nervous system.",
+    "hint": "It controls actions we consciously perform."
+  },
+  {
+    "question": "The somatic nervous system links the brain and spinal cord to which structures?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Smooth muscles and glands.",
+      "B": "Skeletal muscles and sensory receptors in the skin.",
+      "C": "Internal organs like the heart and stomach.",
+      "D": "The digestive system."
+    },
+    "correct_option": "B",
+    "explanation": "The SNS links the brain and spinal cord to skeletal muscles under conscious control, as well as to sensory receptors in the skin.",
+    "hint": "It controls your ability to move and feel touch."
+  },
+  {
+    "question": "What is the function of the autonomic nervous system (ANS)?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "To control voluntary skeletal muscle movement.",
+      "B": "To process sensory information from the skin.",
+      "C": "To operate internal organs, smooth muscle, and glands.",
+      "D": "To control conscious thought."
+    },
+    "correct_option": "C",
+    "explanation": "The autonomic nervous system operates internal organs, smooth muscle, and glands.",
+    "hint": "It regulates involuntary functions like heartbeat and digestion."
+  },
+  {
+    "question": "What are the three subdivisions of the autonomic nervous system?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Somatic, sympathetic, and parasympathetic.",
+      "B": "Sympathetic, parasympathetic, and enteric.",
+      "C": "Central, peripheral, and autonomic.",
+      "D": "Sensory, motor, and interneurons."
+    },
+    "correct_option": "B",
+    "explanation": "The autonomic nervous system is subdivided into the sympathetic, parasympathetic, and enteric nervous systems.",
+    "hint": "One is for 'fight or flight', one for 'rest and digest', and one for the gut."
+  },
+  {
+    "question": "When is the sympathetic nervous system activated?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "During relaxed states.",
+      "B": "During emergencies to mobilize energy.",
+      "C": "While digesting food.",
+      "D": "During sleep."
+    },
+    "correct_option": "B",
+    "explanation": "The sympathetic nervous system is activated in cases of emergencies to mobilize energy, often called the 'fight or flight' response.",
+    "hint": "It prepares the body for intense physical activity."
+  },
+  {
+    "question": "When is the parasympathetic nervous system activated?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "During emergencies.",
+      "B": "When the body is in a relaxed state.",
+      "C": "Only during exercise.",
+      "D": "When sensory information is processed."
+    },
+    "correct_option": "B",
+    "explanation": "The parasympathetic nervous system is activated when organisms are in a relaxed state and regulates involuntary functions like digestion.",
+    "hint": "It is often called the 'rest and digest' system."
+  },
+  {
+    "question": "What is the function of the enteric nervous system?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "To control the skeletal muscles.",
+      "B": "To manage the fight-or-flight response.",
+      "C": "To control the gastrointestinal system.",
+      "D": "To process sensory information from the skin."
+    },
+    "correct_option": "C",
+    "explanation": "The enteric nervous system functions to control the gastrointestinal system.",
+    "hint": "It is sometimes called the 'second brain'."
+  },
+  {
+    "question": "What are nerve cells also called?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Neurons",
+      "B": "Neuroglia",
+      "C": "Synapses",
+      "D": "Axons"
+    },
+    "correct_option": "A",
+    "explanation": "Nerve cells are also called neurons.",
+    "hint": "This is the basic functional unit of the nervous system."
+  },
+  {
+    "question": "Approximately how many neurons does the human brain contain?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "1 million",
+      "B": "100 million",
+      "C": "100 billion",
+      "D": "1 trillion"
+    },
+    "correct_option": "C",
+    "explanation": "The human brain contains about 100 billion neurons.",
+    "hint": "That's a hundred thousand million."
+  },
+  {
+    "question": "What are the special extensions of a neuron that allow it to communicate?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Cell body and nucleus.",
+      "B": "Axons and dendrites.",
+      "C": "Myelin sheath and nodes of Ranvier.",
+      "D": "Synaptic vesicles and neurotransmitters."
+    },
+    "correct_option": "B",
+    "explanation": "A neuron has a cell body and special extensions called axons and dendrites, which allow communication.",
+    "hint": "One usually sends signals, the other receives them."
+  },
+  {
+    "question": "When a neuron sends a message, what travels down the length of its axon?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "A chemical signal",
+      "B": "An electrical signal",
+      "C": "A neurotransmitter",
+      "D": "A hormone"
+    },
+    "correct_option": "B",
+    "explanation": "When a neuron sends a message, it sends an electrical signal down the length of its axon.",
+    "hint": "This is a change in voltage across the cell membrane."
+  },
+  {
+    "question": "What changes at the end of the axon to allow the signal to cross the synapse?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The electrical signal changes to a magnetic signal.",
+      "B": "The electrical signal changes to a chemical signal using neurotransmitters.",
+      "C": "The signal stops and must be regenerated.",
+      "D": "The signal travels through gap junctions."
+    },
+    "correct_option": "B",
+    "explanation": "At the end of the axon, the electrical signal changes to a chemical signal, releasing neurotransmitters into the synapse.",
+    "hint": "Neurotransmitters are the chemical messengers."
+  },
+  {
+    "question": "What is the synapse?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The cell body of a neuron.",
+      "B": "The long fiber of a neuron.",
+      "C": "The space between the end of an axon and the tip of a dendrite.",
+      "D": "The chemical messenger itself."
+    },
+    "correct_option": "C",
+    "explanation": "The synapse is the space between the end of an axon and the tip of a dendrite from another neuron, where neurotransmitters carry the signal across.",
+    "hint": "It's the tiny gap between neurons."
+  },
+  {
+    "question": "Which type of neuron transmits messages from the brain to muscles to generate movement?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Sensory neurons",
+      "B": "Motor neurons",
+      "C": "Interneurons",
+      "D": "Pyramidal neurons"
+    },
+    "correct_option": "B",
+    "explanation": "Motor neurons transmit messages from the brain to the muscles to generate movement.",
+    "hint": "They control effectors like muscles."
+  },
+  {
+    "question": "Which type of neuron detects stimuli like light, sound, and pressure and sends messages about them to the brain?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Motor neurons",
+      "B": "Sensory neurons",
+      "C": "Interneurons",
+      "D": "Association neurons"
+    },
+    "correct_option": "B",
+    "explanation": "Sensory neurons detect light, sound, odor, taste, pressure, and heat and send messages about those things to the brain.",
+    "hint": "They bring information from the senses to the CNS."
+  },
+  {
+    "question": "The brain is divided into which two hemispheres?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Frontal and parietal",
+      "B": "Temporal and occipital",
+      "C": "Left and right",
+      "D": "Anterior and posterior"
+    },
+    "correct_option": "C",
+    "explanation": "The brain is divided into 2 hemispheres, the left and the right.",
+    "hint": "They are connected by the corpus callosum."
+  },
+  {
+    "question": "Which hemisphere of the brain is typically more dominant in language, logic, and math?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The right hemisphere",
+      "B": "The left hemisphere",
+      "C": "The frontal lobe",
+      "D": "The cerebellum"
+    },
+    "correct_option": "B",
+    "explanation": "The left hemisphere is more dominant in language, logic, and math abilities.",
+    "hint": "This is often called the 'logical' hemisphere."
+  },
+  {
+    "question": "Which hemisphere of the brain is typically more creative and dominant in artistic situations and intuition?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The right hemisphere",
+      "B": "The left hemisphere",
+      "C": "The parietal lobe",
+      "D": "The medulla oblongata"
+    },
+    "correct_option": "A",
+    "explanation": "The right hemisphere is more creative and dominant in artistic and musical situations and intuition.",
+    "hint": "This is often called the 'creative' hemisphere."
+  },
+  {
+    "question": "What is the cerebral cortex?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "The inner part of the brain made of white matter.",
+      "B": "The outermost layer of the brain, composed of gray matter.",
+      "C": "The structure that connects the two hemispheres.",
+      "D": "The part of the brainstem that controls breathing."
+    },
+    "correct_option": "B",
+    "explanation": "The cerebral cortex is the outermost layer that surrounds the brain. It is composed of gray matter.",
+    "hint": "It has many folds and grooves to increase surface area."
+  },
+  {
+    "question": "The cerebral cortex is divided into four lobes. What are they?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Frontal, parietal, temporal, and occipital",
+      "B": "Anterior, posterior, dorsal, and ventral",
+      "C": "Cerebral, cerebellar, brainstem, and limbic",
+      "D": "Motor, sensory, visual, and auditory"
+    },
+    "correct_option": "A",
+    "explanation": "The cortex divides into 4 lobes: frontal, parietal, occipital, and temporal.",
+    "hint": "Each lobe has specialized functions."
+  },
+  {
+    "question": "The frontal lobe is responsible for which functions?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Processing sensory information.",
+      "B": "Voluntary motor function, problem-solving, attention, memory, and language.",
+      "C": "Visual processing.",
+      "D": "Processing auditory stimuli."
+    },
+    "correct_option": "B",
+    "explanation": "The frontal lobe is responsible for voluntary motor function, problem-solving, attention, memory, and language.",
+    "hint": "It's located at the front of the brain."
+  },
+  {
+    "question": "Which area in the frontal lobe controls the precise voluntary movements of skeletal muscles?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Broca's area",
+      "B": "Somatosensory cortex",
+      "C": "Motor cortex",
+      "D": "Wernicke's area"
+    },
+    "correct_option": "C",
+    "explanation": "The motor cortex, located in the frontal lobe, allows for the precise voluntary movements of our skeletal muscles.",
+    "hint": "It's mapped to different parts of the body."
+  },
+  {
+    "question": "Which area in the frontal lobe controls motor functions responsible for producing language?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Wernicke's area",
+      "B": "Broca's area",
+      "C": "Motor cortex",
+      "D": "Auditory cortex"
+    },
+    "correct_option": "B",
+    "explanation": "The Broca area, located in the frontal lobe, controls motor functions responsible for producing language.",
+    "hint": "Damage to this area causes expressive aphasia."
+  },
+  {
+    "question": "The parietal lobe is responsible for processing what type of information?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Visual information",
+      "B": "Auditory information",
+      "C": "Sensory information from the body",
+      "D": "Motor commands"
+    },
+    "correct_option": "C",
+    "explanation": "The parietal lobe is responsible for processing sensory information and contains the somatosensory cortex.",
+    "hint": "It helps you sense touch, pressure, and pain."
+  },
+  {
+    "question": "Which lobe of the brain is the visual processing center?",
+    "topic": "Nervous System",
+    "options": {
+      "A": "Frontal lobe",
+      "B": "Parietal lobe",
+      "C": "Temporal lobe",
+      "D": "Occipital lobe"
     },
     "correct_option": "D",
-    "explanation": "At equilibrium, the forward and reverse reactions continue to occur, but at the same rate. This dynamic balance results in no net change in the concentrations of reactants and products.",
-    "hint": "Equilibrium is dynamic, not static. The key is the equality of rates, not concentrations."
+    "explanation": "The occipital lobe, located at the back of the brain, is the visual processing center and contains the visual cortex.",
+    "hint": "Damage to this area can cause blindness."
   },
   {
-    "question": "Which of the following represents a second-order reaction?",
-    "topic": "Past Questions CHM 101",
+    "question": "The temporal lobe contains the auditory cortex. What is its function?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Rate = k",
-      "B": "Rate = k[A]",
-      "C": "Rate = k[A]^2",
-      "D": "Rate = k[A][B]^2"
+      "A": "To process visual stimuli.",
+      "B": "To process auditory stimuli.",
+      "C": "To process sensory touch.",
+      "D": "To control voluntary movement."
     },
-    "correct_option": "C",
-    "explanation": "The overall order of a reaction is the sum of the exponents. For Rate = k[A]^2, the exponent is 2, making it second order. Rate = k[A][B] would also be second order (1+1), but that option is not listed. Option D is third order.",
-    "hint": "A second-order reaction can have a rate proportional to the square of one reactant's concentration."
-  },
-  {
-    "question": "The term 'reaction mechanism' refers to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The balanced chemical equation",
-      "B": "The step-by-step sequence of reactions",
-      "C": "The rate of the overall reaction",
-      "D": "The conditions under which the reaction occurs"
-    },
-    "correct_option": "B",
-    "explanation": "A reaction mechanism is a detailed, step-by-step description of the elementary processes that take place during a chemical reaction, showing the order in which bonds are broken and formed.",
-    "hint": "It breaks down the overall reaction into a series of simpler steps."
-  },
-  {
-    "question": "Which condition favors the formation of more product in an endothermic reversible reaction?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Low pressure and low temperature",
-      "B": "High temperature",
-      "C": "Low temperature",
-      "D": "Adding a catalyst"
-    },
-    "correct_option": "B",
-    "explanation": "In an endothermic reaction, heat is absorbed and can be considered a reactant. Increasing the temperature adds heat, which, according to Le Chatelier's principle, shifts the equilibrium to the right, favoring the formation of more products.",
-    "hint": "Think of heat as a reactant for an endothermic process. What happens if you add more reactant?"
-  },
-  {
-    "question": "If a reaction’s rate law is rate = k[A][B], what will happen to the rate if [A] is doubled and [B] is halved?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "It stays the same",
-      "B": "It remains unchanged",
-      "C": "It doubles",
-      "D": "It is halved"
-    },
-    "correct_option": "A",
-    "explanation": "The rate law is rate = k[A][B]. If [A] becomes 2[A] and [B] becomes (1/2)[B], the new rate is k * (2[A]) * ((1/2)[B]) = k[A][B]. The rate is unchanged.",
-    "hint": "Substitute the changes into the rate law. What is 2 multiplied by 1/2?"
-  },
-  {
-    "question": "For a reaction with a large equilibrium constant (Kc >> 1), it can be concluded that:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The reaction hardly proceeds",
-      "B": "The reactants are favored",
-      "C": "The products are favored",
-      "D": "The rate is very slow"
-    },
-    "correct_option": "C",
-    "explanation": "The equilibrium constant, Kc, is the ratio of product concentrations to reactant concentrations at equilibrium. A large Kc (>>1) means that at equilibrium, the concentration of products is much greater than that of reactants, indicating the products are favored.",
-    "hint": "K = [products]/[reactants]. What does a large value for this fraction tell you?"
-  },
-  {
-    "question": "Which of the following does not affect the equilibrium constant (Kc) of a reaction?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Change in concentration",
-      "B": "Temperature",
-      "C": "Catalysts",
-      "D": "Pressure"
-    },
-    "correct_option": "A",
-    "explanation": "The equilibrium constant, Kc, is only affected by changes in temperature. Changes in concentration, pressure, or the addition of a catalyst can shift the equilibrium position, but they do not change the value of the equilibrium constant itself.",
-    "hint": "Kc is a constant at a given temperature. Which factor changes its value?"
-  },
-  {
-    "question": "The rate-determining step in a reaction mechanism is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The fastest elementary step",
-      "B": "The last step of the mechanism",
-      "C": "The step with the least energy",
-      "D": "The slowest elementary step"
-    },
-    "correct_option": "D",
-    "explanation": "The rate-determining step is the slowest step in a reaction mechanism. It acts as a bottleneck and controls the overall rate of the reaction.",
-    "hint": "Think of a multi-step process. Which step limits the overall speed?"
-  },
-  {
-    "question": "A system at equilibrium is disturbed by increasing the concentration of the products. What occurs?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The reaction stops",
-      "B": "The equilibrium shifts to the left",
-      "C": "The equilibrium shifts to the right",
-      "D": "No change"
-    },
-    "correct_option": "B",
-    "explanation": "Le Chatelier's principle states that if a system at equilibrium is disturbed, it will shift to counteract the disturbance. Increasing product concentration will cause the equilibrium to shift to the left, favoring the reverse reaction to consume the excess products.",
-    "hint": "The system will try to use up the added products. Which direction will achieve that?"
-  },
-  {
-    "question": "A catalyst affects which of the following in a reaction?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔH of the reaction",
-      "B": "Activation energy",
-      "C": "Equilibrium concentrations",
-      "D": "Product enthalpy"
-    },
-    "correct_option": "B",
-    "explanation": "A catalyst works by providing an alternative reaction pathway with a lower activation energy. It does not change the enthalpy change (ΔH), the equilibrium constant, or the equilibrium concentrations.",
-    "hint": "What energy barrier does a catalyst help to overcome?"
-  },
-  {
-    "question": "Which of the following graphical trends best represents a first-order reaction?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "A straight line when plotting concentration vs. time",
-      "B": "A straight line when plotting ln[A] vs. time",
-      "C": "A curved line when plotting 1/[A] vs. time",
-      "D": "A flat line over time"
-    },
-    "correct_option": "B",
-    "explanation": "For a first-order reaction, the integrated rate law is ln[A] = -kt + ln[A]₀. This equation has the form of a straight line (y = mx + b) where y = ln[A], x = time, and the slope (m) is -k. Therefore, a plot of ln[A] versus time yields a straight line.",
-    "hint": "Recall the integrated rate law for a first-order reaction. Which function of [A] is linear with time?"
-  },
-  {
-    "question": "The equilibrium constant for a given reaction is 1 × 10⁻⁵. What does this suggest?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The products dominate",
-      "B": "The reaction goes to completion",
-      "C": "The reactants dominate",
-      "D": "The reaction is spontaneous"
-    },
-    "correct_option": "C",
-    "explanation": "A very small equilibrium constant (K << 1) means that the ratio of products to reactants is very small. This indicates that at equilibrium, the mixture contains mostly reactants, so the reactants dominate.",
-    "hint": "K = [products]/[reactants]. If K is very small, what does that say about the numerator vs. the denominator?"
-  },
-  {
-    "question": "If pressure is increased in a gaseous equilibrium reaction, the equilibrium will:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Shift to the side with more gas molecules",
-      "B": "Stay the same",
-      "C": "Shift to the side with fewer gas molecules",
-      "D": "Be destroyed"
-    },
-    "correct_option": "C",
-    "explanation": "Increasing pressure on a gaseous system favors the side with fewer moles of gas. This shift reduces the pressure by decreasing the total number of gas molecules in the system, counteracting the applied stress.",
-    "hint": "Le Chatelier's principle: the system shifts to relieve the stress of increased pressure by reducing the number of gas particles."
-  },
-  {
-    "question": "In the reaction profile diagram, the peak represents:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The starting material",
-      "B": "The activated complex (transition state)",
-      "C": "The product",
-      "D": "The energy released"
-    },
-    "correct_option": "B",
-    "explanation": "On a reaction profile (potential energy diagram), the highest point on the curve represents the activated complex, or transition state. This is a high-energy, unstable arrangement of atoms that exists at the peak of the activation energy barrier.",
-    "hint": "It is the highest energy point along the reaction coordinate, between reactants and products."
-  },
-  {
-    "question": "A reaction is said to be zero-order in a reactant if:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The rate depends on the square of its concentration",
-      "B": "It doubles when the concentration doubles",
-      "C": "The rate is independent of its concentration",
-      "D": "It is not consumed"
-    },
-    "correct_option": "C",
-    "explanation": "For a zero-order reaction with respect to a reactant, the rate does not change as the concentration of that reactant changes. The rate is independent of its concentration.",
-    "hint": "The exponent for that reactant in the rate law is 0."
-  },
-  {
-    "question": "At equilibrium, the rate of formation of products is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Greater than the rate of decomposition",
-      "B": "Zero",
-      "C": "Less than the reverse rate",
-      "D": "Equal to the rate of formation of reactants"
-    },
-    "correct_option": "D",
-    "explanation": "At equilibrium, the forward reaction rate (formation of products) equals the reverse reaction rate (formation of reactants). This is the defining condition of dynamic chemical equilibrium.",
-    "hint": "The system is in balance. How do the rates of the two opposing processes compare?"
-  },
-  {
-    "question": "Which of the following best explains the increased strength of ionic bonding in magnesium oxide (MgO) compared to sodium chloride (NaCl)?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "MgO has fewer ions than NaCl",
-      "B": "MgO has stronger covalent bonds",
-      "C": "Mg²⁺ and O²⁻ have greater charge, leading to stronger electrostatic attractions",
-      "D": "NaCl contains polar covalent bonds"
-    },
-    "correct_option": "C",
-    "explanation": "Ionic bond strength is directly related to the electrostatic attraction between ions, which depends on ion charge. Mg²⁺ and O²⁻ have charges of +2 and -2, respectively, resulting in a much stronger attraction than the +1 and -1 charges in Na⁺ and Cl⁻.",
-    "hint": "Compare the charges on the ions. How does charge affect the strength of electrostatic force?"
-  },
-  {
-    "question": "Covalent bonds form primarily between atoms with:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Large size differences",
-      "B": "High and low electronegativities",
-      "C": "Similar or identical electronegativities",
-      "D": "Fully filled valence shells"
-    },
-    "correct_option": "C",
-    "explanation": "Covalent bonding involves the sharing of electron pairs between atoms. This type of bonding is most common between nonmetal atoms that have similar electronegativities, as neither atom completely transfers its electrons to the other.",
-    "hint": "Ionic bonds form from large electronegativity differences. What kind of bond forms when the difference is small?"
-  },
-  {
-    "question": "Which of the following statements is true about coordinate (dative) bonds?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "They are formed by ionic interactions",
-      "B": "They require donation of electron pairs by both atoms",
-      "C": "One atom provides both electrons in the shared pair",
-      "D": "They occur only in metals"
-    },
-    "correct_option": "C",
-    "explanation": "A coordinate bond, or dative bond, is a type of covalent bond where both shared electrons come from the same atom. The atom donates a lone pair to another atom that accepts it.",
-    "hint": "It's a covalent bond, but the electron pair is 'donated' by only one of the atoms."
-  },
-  {
-    "question": "Which of the following correctly defines metallic bonding?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Complete transfer of electrons between metals",
-      "B": "Sharing of electron pairs between two nonmetals",
-      "C": "Array of positive ions in a sea of delocalized electrons",
-      "D": "Overlapping of d-orbitals in transition metals only"
-    },
-    "correct_option": "C",
-    "explanation": "Metallic bonding is characterized by a lattice of positive metal ions surrounded by a 'sea' of delocalized valence electrons that are free to move throughout the structure. This electrostatic attraction holds the metal together.",
-    "hint": "Think of the model where electrons are not fixed to specific atoms but are mobile."
-  },
-  {
-    "question": "The high melting point of metals is due to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Presence of ionic bonding",
-      "B": "Weak intermolecular forces",
-      "C": "Need for high energy to overcome metallic attractions",
-      "D": "Inert gas configuration of metal atoms"
-    },
-    "correct_option": "C",
-    "explanation": "Melting a metal requires overcoming the strong metallic bonds that hold the positive ions and the sea of delocalized electrons together. A large amount of energy is needed to break these strong electrostatic attractions.",
-    "hint": "A high melting point indicates strong bonds need to be broken. What type of bond is present in metals?"
-  },
-  {
-    "question": "What property of metals allows them to be drawn into wires?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Ductility",
-      "B": "Malleability",
-      "C": "Conductivity",
-      "D": "Rigidity"
-    },
-    "correct_option": "A",
-    "explanation": "Ductility is the physical property of a material that allows it to be stretched into a thin wire. Metals are ductile because of the non-directional nature of metallic bonding, allowing layers of atoms to slide past one another without breaking.",
-    "hint": "This property is specifically about being drawn out into a wire, not hammered into a sheet."
-  },
-  {
-    "question": "Which of the following best describes sublimation?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Change from liquid to gas",
-      "B": "Change from gas to solid",
-      "C": "Direct change from solid to vapor",
-      "D": "Melting followed by evaporation"
-    },
-    "correct_option": "C",
-    "explanation": "Sublimation is the phase transition in which a substance changes directly from a solid to a gas without passing through the intermediate liquid phase.",
-    "hint": "It's a direct phase change that skips the liquid state."
-  },
-  {
-    "question": "Which gas property explains its ability to fill any container uniformly?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Compressibility",
-      "B": "Low density",
-      "C": "Diffusibility",
-      "D": "Condensation"
-    },
-    "correct_option": "C",
-    "explanation": "Diffusibility, or the tendency of gases to intermingle and spread out, is due to the constant, random motion of their particles. This property causes gases to uniformly fill the entire volume of any container they are in.",
-    "hint": "This is the process where particles spread from an area of high concentration to low concentration until evenly distributed."
-  },
-  {
-    "question": "A molecule that undergoes hydrogen bonding must:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Contain a large electronegative atom only",
-      "B": "Have a polar covalent bond with hydrogen and a small electronegative atom",
-      "C": "Be a nonpolar molecule",
-      "D": "Be ionic in nature"
-    },
-    "correct_option": "B",
-    "explanation": "Hydrogen bonding requires a hydrogen atom covalently bonded to a small, highly electronegative atom (N, O, or F). This creates a strong dipole, allowing the partially positive hydrogen to be attracted to lone pairs on other electronegative atoms.",
-    "hint": "The hydrogen must be bonded to one of three specific small, electronegative atoms: Nitrogen, Oxygen, or Fluorine."
-  },
-  {
-    "question": "The correct increasing order of bond strength among the following is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Covalent > Ionic > Hydrogen > van der Waals",
-      "B": "Ionic > Covalent > Hydrogen > van der Waals",
-      "C": "Hydrogen > Ionic > Covalent > van der Waals",
-      "D": "Covalent > Hydrogen > Ionic > van der Waals"
-    },
-    "correct_option": "A",
-    "explanation": "Bond strengths generally follow the order: covalent and ionic bonds are the strongest primary bonds, with covalent often slightly stronger than ionic. Hydrogen bonds are a strong type of intermolecular force, and van der Waals forces are the weakest intermolecular attractions.",
-    "hint": "Rank from weakest to strongest. Which are intramolecular (primary) and which are intermolecular?"
-  },
-  {
-    "question": "Which hybrid orbital corresponds to a bond angle of 180°?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "sp³",
-      "B": "sp²",
-      "C": "sp",
-      "D": "sp³d"
-    },
-    "correct_option": "C",
-    "explanation": "sp hybridization involves the mixing of one s and one p orbital, resulting in two linear hybrid orbitals oriented 180° apart. This gives a bond angle of 180°.",
-    "hint": "Linear geometry has a bond angle of 180°. Which hybridization is associated with linear molecules?"
-  },
-  {
-    "question": "What is the shape associated with sp³ hybridization?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Linear",
-      "B": "Trigonal planar",
-      "C": "Tetrahedral",
-      "D": "Octahedral"
-    },
-    "correct_option": "C",
-    "explanation": "sp³ hybridization results from the mixing of one s and three p orbitals. This produces four equivalent hybrid orbitals that point towards the corners of a tetrahedron, with bond angles of approximately 109.5°.",
-    "hint": "Methane (CH₄) is the classic example. What is its molecular geometry?"
-  },
-  {
-    "question": "The term valence refers to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The number of bonds an atom can break",
-      "B": "The outermost electron orbital",
-      "C": "The combining capacity of an atom",
-      "D": "The energy required to remove an electron"
-    },
-    "correct_option": "C",
-    "explanation": "Valence is a measure of the combining power of an element, typically represented by the number of hydrogen atoms it can combine with or displace. It is essentially the number of bonds an atom can form.",
-    "hint": "It's about an atom's ability to combine with other atoms, often related to the number of electrons it can gain, lose, or share."
-  },
-  {
-    "question": "Which of the following pairs is incorrect in hybridization and bond angle?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "sp³ – 109.5°",
-      "B": "sp² – 120°",
-      "C": "sp – 180°",
-      "D": "sp³d – 90°"
-    },
-    "correct_option": "D",
-    "explanation": "sp³d hybridization is associated with trigonal bipyramidal geometry, which has bond angles of 90°, 120°, and 180°. While 90° is present, stating the bond angle as solely 90° is incorrect as it doesn't fully describe the geometry. The option pair is incomplete, making it incorrect. The notes likely meant sp³d is not exclusively 90°.",
-    "hint": "sp³d hybridization leads to a trigonal bipyramidal shape, which has more than one bond angle."
-  },
-  {
-    "question": "Which of the following describes the molecular shape based on VSEPR theory?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Based on electronegativity differences",
-      "B": "Based on shared electrons only",
-      "C": "Based on minimizing repulsion between electron pairs",
-      "D": "Based on atomic radii"
-    },
-    "correct_option": "C",
-    "explanation": "The Valence Shell Electron Pair Repulsion (VSEPR) theory is based on the idea that electron pairs around a central atom repel each other. The molecule adopts a shape that minimizes these repulsions, arranging the electron pairs as far apart as possible.",
-    "hint": "The theory's name says it all: Valence Shell Electron Pair *Repulsion*."
-  },
-  {
-    "question": "Which property of gases allows them to be compressed easily?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Low molecular weight",
-      "B": "High density",
-      "C": "Large intermolecular spaces",
-      "D": "Weak hydrogen bonding"
-    },
-    "correct_option": "C",
-    "explanation": "Gases are easily compressed because the particles are very far apart, with large amounts of empty space between them. Applying pressure can significantly reduce this volume by forcing the particles closer together.",
-    "hint": "Think about the volume occupied by the gas particles themselves versus the empty space in the container."
-  },
-  {
-    "question": "The dipole-dipole interaction requires:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Hydrogen bonding only",
-      "B": "Atoms with the same electronegativity",
-      "C": "Ions with full charges",
-      "D": "Partially charged ends on polar molecules"
-    },
-    "correct_option": "D",
-    "explanation": "Dipole-dipole interactions occur between polar molecules. Polar molecules have a permanent separation of charge, creating a partial positive end (δ+) and a partial negative end (δ-). These opposite partial charges attract each other.",
-    "hint": "This force exists between molecules that have a permanent dipole moment."
-  },
-  {
-    "question": "Which property is a direct consequence of hydrogen bonding?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Low boiling point of water",
-      "B": "Complete miscibility with nonpolar solvents",
-      "C": "High boiling point of ethanol",
-      "D": "Linear structure of all molecules"
-    },
-    "correct_option": "C",
-    "explanation": "Hydrogen bonding is a relatively strong intermolecular force. Extra energy is required to overcome these forces during vaporization, leading to higher boiling points for compounds that exhibit hydrogen bonding, such as ethanol and water.",
-    "hint": "Hydrogen bonds are strong intermolecular forces. How would that affect the boiling point?"
-  },
-  {
-    "question": "The diffusion of gases is primarily attributed to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "High pressure",
-      "B": "Large mass",
-      "C": "Constant random motion of particles",
-      "D": "Attraction between particles"
-    },
-    "correct_option": "C",
-    "explanation": "Diffusion is the process by which gases mix and spread out. This occurs because gas particles are in constant, random, straight-line motion until they collide with something, causing them to spread and fill their container.",
-    "hint": "It's a direct result of the kinetic energy and movement of the particles."
-  },
-  {
-    "question": "Which condition increases hydrogen bonding?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Low electronegativity and large atomic size",
-      "B": "High electronegativity and small atomic size",
-      "C": "High mass of atoms",
-      "D": "High pressure"
-    },
-    "correct_option": "B",
-    "explanation": "Effective hydrogen bonding requires hydrogen to be bonded to a small, highly electronegative atom like N, O, or F. High electronegativity creates a strong dipole, and small size allows the hydrogen to approach closely for a strong attraction.",
-    "hint": "What are the characteristics of the atom that hydrogen must be bonded to for hydrogen bonding to occur?"
-  },
-  {
-    "question": "A molecule exhibiting intermolecular hydrogen bonding is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Water",
-      "B": "Acetylene",
-      "C": "Carbon dioxide",
-      "D": "Methane"
-    },
-    "correct_option": "A",
-    "explanation": "Water (H₂O) has hydrogen atoms covalently bonded to a highly electronegative oxygen atom. This allows the hydrogen atoms to form hydrogen bonds with lone pairs on the oxygen atoms of neighboring water molecules.",
-    "hint": "Look for a molecule where H is directly bonded to N, O, or F."
-  },
-  {
-    "question": "Valence forces can be:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Only intramolecular",
-      "B": "Only covalent",
-      "C": "Intermolecular or intramolecular",
-      "D": "Present only in metals"
-    },
-    "correct_option": "C",
-    "explanation": "Valence forces is a broad term that encompasses the forces holding atoms together. This includes intramolecular forces like covalent, ionic, and metallic bonds, as well as intermolecular forces like hydrogen bonding and van der Waals forces.",
-    "hint": "Think of 'valence' as relating to combining power. This can be within a molecule or between molecules."
-  },
-  {
-    "question": "Which gas property is described as applying pressure in all directions?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Compressibility",
-      "B": "Diffusibility",
-      "C": "Pressure exertion",
-      "D": "Ductility"
-    },
-    "correct_option": "C",
-    "explanation": "Gases exert pressure on all surfaces they come into contact with. This pressure is exerted uniformly in all directions within a container due to the constant, random motion of gas particles colliding with the walls.",
-    "hint": "Think about how gas molecules interact with the walls of their container."
-  },
-  {
-    "question": "What orbital hybridization occurs in ethylene (C₂H₄)?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "sp³",
-      "B": "sp²",
-      "C": "sp",
-      "D": "sp³d"
-    },
-    "correct_option": "B",
-    "explanation": "Each carbon atom in ethylene (C₂H₄) is bonded to two hydrogen atoms and double-bonded to the other carbon. This arrangement requires three sigma bonds, which are formed by the hybridization of one s and two p orbitals, resulting in sp² hybridization.",
-    "hint": "Consider the bonding around each carbon atom in C₂H₄. How many regions of electron density are there?"
-  },
-  {
-    "question": "The percentage of s-character in sp² hybridization is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "25%",
-      "B": "33.3%",
-      "C": "50%",
-      "D": "66.6%"
-    },
-    "correct_option": "B",
-    "explanation": "sp² hybridization involves the mixing of one s orbital and two p orbitals. The contribution from the single s orbital is therefore 1 out of the total 3 orbitals, which is approximately 33.3%.",
-    "hint": "Calculate the fraction of s orbitals in the total number of hybrid orbitals."
-  },
-  {
-    "question": "Which of the following best defines spontaneity in thermodynamics?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "A process that occurs slowly over time",
-      "B": "A process that occurs without external influence",
-      "C": "A process that requires continuous energy input",
-      "D": "A process that is fast and exothermic"
-    },
-    "correct_option": "B",
-    "explanation": "In thermodynamics, spontaneity refers to the natural tendency of a process to occur without needing to be driven by an external influence once it has been initiated. It is not related to the speed of the reaction.",
-    "hint": "Focus on the 'driving force' behind the process. Does it need help to happen?"
-  },
-  {
-    "question": "Which of the following must be negative for a reaction to be spontaneous at constant temperature and pressure?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔH",
-      "B": "ΔS",
-      "C": "ΔG",
-      "D": "ΔT"
-    },
-    "correct_option": "C",
-    "explanation": "The Gibbs free energy change (ΔG) determines spontaneity under constant temperature and pressure. A negative ΔG (ΔG < 0) indicates that the process is spontaneous in the forward direction.",
-    "hint": "Which thermodynamic function is specifically used to predict spontaneity at constant T and P?"
-  },
-  {
-    "question": "Which of the following always increases in a spontaneous process in an isolated system?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Enthalpy",
-      "B": "Entropy",
-      "C": "Free energy",
-      "D": "Internal energy"
-    },
-    "correct_option": "B",
-    "explanation": "For an isolated system, there is no exchange of energy or matter with the surroundings. The Second Law of Thermodynamics states that the total entropy of an isolated system always increases for a spontaneous process.",
-    "hint": "This is a direct statement of the Second Law of Thermodynamics for an isolated system."
-  },
-  {
-    "question": "Which of these best explains why ice melts spontaneously at room temperature?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔH is positive",
-      "B": "ΔS is negative",
-      "C": "ΔG is negative due to TΔS being greater than ΔH",
-      "D": "ΔH is negative and drives the process"
-    },
-    "correct_option": "C",
-    "explanation": "Melting ice is endothermic (ΔH > 0) and increases disorder (ΔS > 0). At room temperature, the TΔS term is large enough that ΔG = ΔH - TΔS becomes negative, making the process spontaneous.",
-    "hint": "Use the Gibbs free energy equation. At room temperature, which term dominates for ice melting?"
-  },
-  {
-    "question": "A reaction has ΔH > 0 and ΔS > 0. Under what condition is the reaction spontaneous?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "At low temperature",
-      "B": "At any temperature",
-      "C": "At high temperature",
-      "D": "It is never spontaneous"
-    },
-    "correct_option": "C",
-    "explanation": "Spontaneity is determined by ΔG = ΔH - TΔS. If ΔH is positive and ΔS is positive, the term -TΔS is negative. At sufficiently high temperatures, the magnitude of TΔS will exceed ΔH, making ΔG negative and the reaction spontaneous.",
-    "hint": "Analyze the Gibbs free energy equation. How does the -TΔS term change with temperature?"
-  },
-  {
-    "question": "In thermodynamics, the symbol ΔS represents:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Change in energy",
-      "B": "Change in entropy",
-      "C": "Change in enthalpy",
-      "D": "Change in temperature"
-    },
-    "correct_option": "B",
-    "explanation": "In thermodynamics, the symbol S is used for entropy. Therefore, ΔS represents the change in entropy of a system or process.",
-    "hint": "Recall the standard symbols for thermodynamic quantities. H is enthalpy, G is free energy, and S is entropy."
-  },
-  {
-    "question": "What is the effect of increasing temperature on a reaction where ΔH > 0 and ΔS < 0?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Reaction becomes more spontaneous",
-      "B": "ΔG decreases",
-      "C": "Reaction becomes less spontaneous",
-      "D": "Entropy becomes positive"
-    },
-    "correct_option": "C",
-    "explanation": "For ΔH > 0 and ΔS < 0, the equation ΔG = ΔH - TΔS shows that the -TΔS term is positive (since ΔS is negative). As T increases, this positive term becomes larger, making ΔG more positive and the reaction less spontaneous.",
-    "hint": "Plug the signs into ΔG = ΔH - TΔS. What happens to ΔG as T increases?"
-  },
-  {
-    "question": "Which law states that the entropy of a perfectly ordered crystalline substance at 0 K is zero?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "First Law of Thermodynamics",
-      "B": "Second Law of Thermodynamics",
-      "C": "Zeroth Law of Thermodynamics",
-      "D": "Third Law of Thermodynamics"
-    },
-    "correct_option": "D",
-    "explanation": "The Third Law of Thermodynamics states that the entropy of a perfect crystal at absolute zero (0 Kelvin) is zero. This provides an absolute reference point for determining entropy values.",
-    "hint": "This law deals with entropy at the lowest possible temperature."
-  },
-  {
-    "question": "Which of the following is not a state function?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Entropy",
-      "B": "Enthalpy",
-      "C": "Work",
-      "D": "Free Energy"
-    },
-    "correct_option": "C",
-    "explanation": "A state function depends only on the current state of the system, not on the path taken to reach it. Entropy, enthalpy, and free energy are state functions. Work (and heat) are path functions, as their value depends on how a change occurs.",
-    "hint": "Which of these quantities depends on the pathway, not just the initial and final states?"
-  },
-  {
-    "question": "The Gibbs free energy equation is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔG = ΔH - PΔV",
-      "B": "ΔG = TΔS - ΔH",
-      "C": "ΔG = ΔH - TΔS",
-      "D": "ΔG = ΔE - TΔH"
-    },
-    "correct_option": "C",
-    "explanation": "The fundamental equation defining Gibbs free energy is G = H - TS. For a change at constant temperature, this becomes ΔG = ΔH - TΔS.",
-    "hint": "This is the standard equation relating free energy, enthalpy, temperature, and entropy."
-  },
-  {
-    "question": "For a spontaneous reaction under standard conditions, which of the following is true?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔG > 0",
-      "B": "ΔG < 0",
-      "C": "ΔH = 0",
-      "D": "ΔS < 0"
-    },
-    "correct_option": "B",
-    "explanation": "The sign of the standard Gibbs free energy change (ΔG°) determines spontaneity under standard conditions. A negative ΔG° (ΔG° < 0) indicates the reaction is spontaneous in the forward direction.",
-    "hint": "Spontaneous processes are those that occur without outside intervention. What is the sign of ΔG for such processes?"
-  },
-  {
-    "question": "A reaction has ΔG = 0. What does this signify?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The system is at equilibrium",
-      "B": "The reaction is irreversible",
-      "C": "The system is exothermic",
-      "D": "The entropy change is zero"
-    },
-    "correct_option": "A",
-    "explanation": "When ΔG = 0, the system is at equilibrium. There is no driving force in either direction, and the forward and reverse reaction rates are equal.",
-    "hint": "This is the condition for a system in a state of balance, where no net change occurs."
-  },
-  {
-    "question": "In which of the following processes does entropy decrease?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Ice melting",
-      "B": "Water vapor condensing",
-      "C": "Gas compressing into a smaller volume",
-      "D": "Dissolution of salt in water"
-    },
-    "correct_option": "B",
-    "explanation": "Entropy is a measure of disorder. When water vapor condenses into liquid water, the molecules go from a highly disordered, random gaseous state to a more ordered liquid state, resulting in a decrease in entropy.",
-    "hint": "Which process leads to a more ordered state (less randomness)?"
-  },
-  {
-    "question": "Which process is most likely to be spontaneous at room temperature?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Dissolution of sugar in cold water",
-      "B": "Compression of gas",
-      "C": "Evaporation of water",
-      "D": "Freezing of water"
-    },
-    "correct_option": "C",
-    "explanation": "At room temperature (25°C), which is above the freezing point but below the boiling point of water, the phase equilibrium is dynamic. However, liquid water exposed to air will spontaneously evaporate to form vapor, as this increases entropy and has a favorable ΔG.",
-    "hint": "Consider the phase of water at room temperature and the natural tendency of molecules to escape into the gas phase."
-  },
-  {
-    "question": "What does a negative value of ΔS indicate?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "System becomes more disordered",
-      "B": "System becomes more ordered",
-      "C": "System gains energy",
-      "D": "System is at equilibrium"
-    },
-    "correct_option": "B",
-    "explanation": "ΔS represents the change in entropy, or disorder. A negative ΔS means that the final state of the system has lower entropy (is more ordered) than the initial state.",
-    "hint": "A negative change means the final value is less than the initial value. What does that imply about disorder?"
-  },
-  {
-    "question": "When a reaction is non-spontaneous under standard conditions, what could make it spontaneous?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Decreasing pressure",
-      "B": "Increasing temperature (if ΔS > 0)",
-      "C": "Adding more reactants",
-      "D": "Making ΔH more positive"
-    },
-    "correct_option": "B",
-    "explanation": "From ΔG = ΔH - TΔS, if ΔS is positive, increasing the temperature T increases the magnitude of the -TΔS term. If this term becomes sufficiently large to make the overall ΔG negative, the reaction can become spontaneous.",
-    "hint": "Manipulate the Gibbs free energy equation. Which term is temperature-dependent, and how does its sign affect spontaneity?"
-  },
-  {
-    "question": "Which of the following will increase entropy?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Freezing water",
-      "B": "Condensing gas",
-      "C": "Dissolving salt in water",
-      "D": "Compressing air"
-    },
-    "correct_option": "C",
-    "explanation": "Dissolving salt in water increases entropy because the highly ordered crystal lattice of the salt breaks apart, and its ions become dispersed and randomly mixed with water molecules, leading to a large increase in disorder.",
-    "hint": "Which process creates more disorder: forming a solid from a liquid, or breaking up a solid into dispersed ions?"
-  },
-  {
-    "question": "Which is true for an exergonic process?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔG > 0",
-      "B": "ΔH > 0",
-      "C": "ΔG < 0",
-      "D": "ΔS < 0"
-    },
-    "correct_option": "C",
-    "explanation": "The term 'exergonic' specifically refers to a process that releases free energy. This means the Gibbs free energy change (ΔG) is negative.",
-    "hint": "Match the prefix 'exo-' (releasing) with the correct thermodynamic function, G for Gibbs free energy."
-  },
-  {
-    "question": "In the equation ΔG = ΔH - TΔS, which term reflects the effect of temperature?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔH",
-      "B": "TΔS",
-      "C": "ΔG",
-      "D": "ΔS"
-    },
-    "correct_option": "B",
-    "explanation": "In the equation, temperature (T) is explicitly multiplied by the entropy change (ΔS) to form the term TΔS. This is the term that directly incorporates the effect of temperature on the free energy change.",
-    "hint": "Look for the term in the equation that contains the variable 'T' for temperature."
-  },
-  {
-    "question": "Which of the following reactions shows both positive ΔH and positive ΔS?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Water freezing",
-      "B": "Ice melting",
-      "C": "Ammonium nitrate dissolving in water",
-      "D": "Combustion of methane"
-    },
-    "correct_option": "B",
-    "explanation": "Ice melting requires heat input (endothermic, ΔH > 0). It also involves a transition from a solid crystal to a less ordered liquid, which increases the disorder of the system (ΔS > 0).",
-    "hint": "Consider a process that absorbs heat (endothermic) and also results in greater disorder."
-  },
-  {
-    "question": "If a reaction has ΔH < 0 and ΔS < 0, under what conditions is it spontaneous?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Low temperature",
-      "B": "High temperature",
-      "C": "Only at equilibrium",
-      "D": "Never"
-    },
-    "correct_option": "A",
-    "explanation": "With ΔH negative (favorable) and ΔS negative (unfavorable), spontaneity depends on temperature. The equation ΔG = ΔH - TΔS shows that at low temperatures, the favorable ΔH term dominates, making ΔG negative. At high temperatures, the unfavorable -TΔS term becomes too large.",
-    "hint": "Analyze ΔG = ΔH - TΔS. At low T, the -TΔS term is small; at high T, it is large."
-  },
-  {
-    "question": "A decrease in Gibbs free energy (ΔG < 0) indicates:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "A spontaneous process",
-      "B": "An endothermic reaction",
-      "C": "A decrease in entropy",
-      "D": "A process requiring energy input"
-    },
-    "correct_option": "A",
-    "explanation": "A negative ΔG means the process can occur without external intervention. This is the definition of a spontaneous process under the given conditions of constant temperature and pressure.",
-    "hint": "What is the criterion for spontaneity in terms of Gibbs free energy?"
-  },
-  {
-    "question": "Which of the following is a characteristic of non-spontaneous processes?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Occur without energy input",
-      "B": "Require external energy to proceed",
-      "C": "Have ΔG < 0",
-      "D": "Result in increase in disorder"
-    },
-    "correct_option": "B",
-    "explanation": "By definition, a non-spontaneous process will not occur on its own. It requires a continuous input of energy from an external source to be driven forward.",
-    "hint": "Think of the opposite of spontaneous. What does a process need if it doesn't happen naturally?"
-  },
-  {
-    "question": "A reaction with ΔG = +40 kJ/mol is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Spontaneous",
-      "B": "At equilibrium",
-      "C": "Non-spontaneous",
-      "D": "Exothermic"
-    },
-    "correct_option": "C",
-    "explanation": "A positive value for ΔG (ΔG > 0) indicates that the forward reaction is not spontaneous under the given conditions. The reaction is non-spontaneous as written.",
-    "hint": "What is the sign of ΔG for a spontaneous process?"
-  },
-  {
-    "question": "The term 'entropy' is best described as:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The heat content of a system",
-      "B": "The measure of randomness or disorder",
-      "C": "The energy needed to break bonds",
-      "D": "The work done by a system"
-    },
-    "correct_option": "B",
-    "explanation": "Entropy is a thermodynamic quantity that is a measure of the degree of randomness or disorder in a system. The more disordered a system, the higher its entropy.",
-    "hint": "It quantifies how spread out or chaotic the energy and particles are in a system."
-  },
-  {
-    "question": "Which of the following statements best defines Hess's Law?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The enthalpy of a reaction is independent of the pressure applied.",
-      "B": "The total enthalpy change for a reaction is the same, regardless of the number of steps.",
-      "C": "The enthalpy change depends only on the products formed.",
-      "D": "The enthalpy of a system always increases with temperature."
-    },
-    "correct_option": "B",
-    "explanation": "Hess's Law states that the enthalpy change for a chemical reaction is independent of the pathway taken. It depends only on the initial and final states, meaning the total ΔH is the same whether the reaction occurs in one step or a series of steps.",
-    "hint": "This law is about enthalpy being a state function, so the path doesn't matter, only the start and end."
-  },
-  {
-    "question": "In an exothermic reaction, which of the following is true?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔH is positive.",
-      "B": "The system gains heat.",
-      "C": "The surroundings gain heat.",
-      "D": "The enthalpy of products is higher than reactants."
-    },
-    "correct_option": "C",
-    "explanation": "In an exothermic reaction, heat is released by the system into the surroundings. Therefore, the surroundings gain heat. This corresponds to a negative ΔH, where the enthalpy of the products is lower than that of the reactants.",
-    "hint": "The prefix 'exo-' means outward. Where does the heat go?"
-  },
-  {
-    "question": "What is the standard enthalpy of formation of an element in its most stable form?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Positive and varies with temperature.",
-      "B": "Zero.",
-      "C": "Always negative.",
-      "D": "Equal to its bond dissociation energy."
-    },
-    "correct_option": "B",
-    "explanation": "By definition, the standard enthalpy of formation (ΔH°f) of an element in its most stable form under standard conditions is zero. This sets a reference point for calculating enthalpy changes for compounds.",
-    "hint": "This is a fundamental convention in thermochemistry. What is the reference value for the most stable form of an element?"
-  },
-  {
-    "question": "Which of the following represents a state function?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Work",
-      "B": "Heat",
-      "C": "Internal energy",
-      "D": "Path"
-    },
-    "correct_option": "C",
-    "explanation": "A state function is a property whose value depends only on the current state of the system, not on how it got there. Internal energy (U) is a state function. Heat and work are path functions.",
-    "hint": "Which of these is an intrinsic property of the system itself, independent of the process?"
-  },
-  {
-    "question": "When one mole of a substance burns in excess oxygen, the heat change is called:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Enthalpy of combustion",
-      "B": "Enthalpy of formation",
-      "C": "Enthalpy of fusion",
-      "D": "Enthalpy of vaporization"
-    },
-    "correct_option": "A",
-    "explanation": "The enthalpy of combustion is defined as the enthalpy change when one mole of a substance undergoes complete combustion in excess oxygen under standard conditions.",
-    "hint": "The term 'burns' is the key here. Which enthalpy change is associated with burning?"
-  },
-  {
-    "question": "The enthalpy change when one mole of an ionic compound forms from its gaseous ions is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Bond enthalpy",
-      "B": "Lattice enthalpy",
-      "C": "Heat of neutralization",
-      "D": "Enthalpy of solution"
-    },
-    "correct_option": "B",
-    "explanation": "Lattice enthalpy is defined as the enthalpy change when one mole of an ionic solid is formed from its constituent gaseous ions. It is a measure of the strength of the ionic bonds in the lattice.",
-    "hint": "This process involves bringing gaseous ions together to form a solid crystal lattice."
-  },
-  {
-    "question": "What is the unit of enthalpy change in the SI system?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "cal",
-      "B": "kJ/mol",
-      "C": "eV",
-      "D": "kg·m²/s²"
-    },
-    "correct_option": "B",
-    "explanation": "Enthalpy change (ΔH) is typically reported in energy units per amount of substance. In the SI system, the common unit is kilojoules per mole (kJ/mol).",
-    "hint": "Energy in chemistry is often measured in joules or kilojoules, and for reactions, it's usually per mole."
-  },
-  {
-    "question": "Which condition defines standard state for thermodynamic calculations?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Temperature = 0 °C",
-      "B": "Pressure = 0.5 atm",
-      "C": "1 atm pressure and 298 K temperature",
-      "D": "Absolute zero temperature"
-    },
-    "correct_option": "C",
-    "explanation": "Standard state conditions are conventionally defined as a pressure of 1 atmosphere (atm) and a specified temperature, often 298 K (25°C).",
-    "hint": "These are the common reference conditions used for tabulating thermodynamic data."
-  },
-  {
-    "question": "The heat absorbed or released during a process at constant pressure is called:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Internal energy change",
-      "B": "Enthalpy change",
-      "C": "Work done",
-      "D": "Entropy change"
-    },
-    "correct_option": "B",
-    "explanation": "Enthalpy (H) is a thermodynamic function defined as H = U + PV. The change in enthalpy (ΔH) is equal to the heat transferred at constant pressure, provided only P-V work is done.",
-    "hint": "This is the defining relationship between heat at constant pressure and a state function."
-  },
-  {
-    "question": "Which thermodynamic quantity is path-dependent?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Internal energy",
-      "B": "Heat",
-      "C": "Enthalpy",
-      "D": "Temperature"
-    },
-    "correct_option": "B",
-    "explanation": "Heat (and work) are not state functions; they are path functions. The amount of heat transferred during a process depends on the specific path taken, not just the initial and final states.",
-    "hint": "Think about which quantities are properties of the system itself (state functions) and which describe a change (path functions)."
-  },
-  {
-    "question": "The energy required to break one mole of a bond in a gaseous substance is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Bond enthalpy",
-      "B": "Enthalpy of fusion",
-      "C": "Ionization energy",
-      "D": "Lattice energy"
-    },
-    "correct_option": "A",
-    "explanation": "Bond enthalpy (or bond dissociation energy) is the average energy required to break one mole of a specific type of bond in a gaseous molecule, producing gaseous fragments.",
-    "hint": "This term is specific to breaking covalent bonds in the gas phase."
-  },
-  {
-    "question": "Which of the following processes is endothermic?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Evaporation",
-      "B": "Freezing",
-      "C": "Condensation",
-      "D": "Combustion"
-    },
-    "correct_option": "A",
-    "explanation": "Endothermic processes absorb heat from the surroundings. Evaporation (or vaporization) requires heat input to overcome intermolecular forces and convert a liquid to a gas.",
-    "hint": "Think about which phase change requires energy input to occur."
-  },
-  {
-    "question": "The heat change when one mole of water forms from H₂(g) and O₂(g) is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Enthalpy of solution",
-      "B": "Enthalpy of formation",
-      "C": "Enthalpy of neutralization",
-      "D": "Heat of vaporization"
-    },
-    "correct_option": "B",
-    "explanation": "The standard enthalpy of formation is the enthalpy change when one mole of a compound is formed from its constituent elements in their standard states. Forming water from hydrogen and oxygen gas fits this definition.",
-    "hint": "This process forms a compound directly from its elements."
-  },
-  {
-    "question": "In an adiabatic process, which of the following occurs?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "No heat exchange with surroundings",
-      "B": "Pressure remains constant",
-      "C": "Volume is constant",
-      "D": "Temperature remains constant"
-    },
-    "correct_option": "A",
-    "explanation": "The term 'adiabatic' means that no heat is transferred between the system and its surroundings during the process (Q = 0).",
-    "hint": "What does the prefix 'a-' (without) and 'dia' (through) imply about heat flow?"
-  },
-  {
-    "question": "Which expression correctly represents the First Law of Thermodynamics?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "ΔU = ΔH - PΔV",
-      "B": "Q = W + PΔV",
-      "C": "ΔU = Q - W",
-      "D": "Q = ΔH - ΔU"
-    },
-    "correct_option": "C",
-    "explanation": "The First Law of Thermodynamics is a statement of energy conservation. It states that the change in internal energy (ΔU) of a system is equal to the heat added to the system (Q) minus the work done by the system (W).",
-    "hint": "This is the fundamental equation linking internal energy change to heat and work."
-  },
-  {
-    "question": "Which of the following is not a valid assumption of calorimetry?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "No heat is lost to the surroundings",
-      "B": "Specific heat capacity of water is 4.18 J/g·K",
-      "C": "All reactions go to completion",
-      "D": "The calorimeter does not absorb heat"
-    },
-    "correct_option": "C",
-    "explanation": "Calorimetry experiments measure heat changes. Assumptions often include perfect insulation (no heat loss) and that the calorimeter itself doesn't absorb heat. The specific heat of water is a known constant. However, reactions do not need to go to completion; calorimetry measures the heat for the extent of reaction that occurs.",
-    "hint": "Calorimetry measures the heat released or absorbed for the actual reaction that takes place, not necessarily for a complete reaction."
-  },
-  {
-    "question": "Enthalpy of neutralization for a strong acid and strong base is approximately:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "25.7 kJ/mol",
-      "B": "-57.1 kJ/mol",
-      "C": "100 kJ/mol",
-      "D": "-41.2 kJ/mol"
-    },
-    "correct_option": "B",
-    "explanation": "The neutralization of a strong acid by a strong base is essentially the reaction H⁺(aq) + OH⁻(aq) → H₂O(l). The standard enthalpy change for this reaction is approximately -57.1 kJ per mole of water formed.",
-    "hint": "This is a well-known approximate value for the heat of neutralization of strong acids and bases."
-  },
-  {
-    "question": "The value of enthalpy change for a reaction is affected by:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Catalyst",
-      "B": "Physical states of reactants and products",
-      "C": "Activation energy",
-      "D": "Rate of reaction"
-    },
-    "correct_option": "B",
-    "explanation": "Enthalpy change (ΔH) is a state function and depends on the initial and final states. The physical states (solid, liquid, gas) are part of defining that state, as they have different inherent enthalpies. A catalyst, activation energy, and reaction rate do not affect the overall ΔH.",
-    "hint": "Enthalpy is a state function. What factors define the state of a substance?"
-  },
-  {
-    "question": "If ΔH is positive and ΔS is negative, the reaction is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Always spontaneous",
-      "B": "Never spontaneous",
-      "C": "Spontaneous at low temperatures",
-      "D": "Spontaneous at high temperatures"
-    },
-    "correct_option": "B",
-    "explanation": "From ΔG = ΔH - TΔS, if ΔH > 0 and ΔS < 0, then both terms are positive (ΔH is positive, and -TΔS is positive because ΔS is negative). Therefore, ΔG will be positive at all temperatures, and the reaction is never spontaneous.",
-    "hint": "Analyze the signs in the Gibbs free energy equation. Is it possible for ΔG to be negative?"
-  },
-  {
-    "question": "What does the term 'heat capacity' refer to?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Heat released during condensation",
-      "B": "Energy needed for chemical reaction",
-      "C": "Heat required to raise temperature by 1 K",
-      "D": "Minimum energy to start a reaction"
-    },
-    "correct_option": "C",
-    "explanation": "Heat capacity is an extensive property defined as the amount of heat required to raise the temperature of a substance by one kelvin (or one degree Celsius).",
-    "hint": "It relates heat input to the resulting temperature change."
-  },
-  {
-    "question": "Which of the following is a direct application of Hess's Law?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Predicting boiling point",
-      "B": "Calculating enthalpy change of complex reactions",
-      "C": "Determining rate of reaction",
-      "D": "Measuring bond angles"
-    },
-    "correct_option": "B",
-    "explanation": "Hess's Law is used to calculate the enthalpy change for reactions that are difficult to measure directly. By using known enthalpy changes for other reactions, the target ΔH can be found through algebraic summation.",
-    "hint": "This law allows us to find ΔH for a reaction by combining the ΔH values of other reactions."
-  },
-  {
-    "question": "Which statement is true regarding enthalpy diagrams?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "They show the relative enthalpy levels of reactants and products.",
-      "B": "They show reaction rates.",
-      "C": "They show entropy change.",
-      "D": "They indicate pressure-volume work."
-    },
-    "correct_option": "A",
-    "explanation": "Enthalpy diagrams (or reaction coordinate diagrams) are graphical representations that show the relative enthalpy (potential energy) of the reactants, products, and sometimes the transition state. The difference in height between products and reactants represents ΔH.",
-    "hint": "These diagrams are a visual tool for comparing the energy content of reactants and products."
-  },
-  {
-    "question": "During a chemical reaction, heat is released and the temperature increases. The reaction is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Endothermic and exergonic",
-      "B": "Exothermic",
-      "C": "Endergonic",
-      "D": "Non-spontaneous"
-    },
-    "correct_option": "B",
-    "explanation": "If heat is released during a reaction, it is an exothermic process. The temperature increase of the surroundings is a direct consequence of this heat release.",
-    "hint": "The term for a process that releases heat is 'exothermic'."
-  },
-  {
-    "question": "For which of the following processes is ΔH = 0?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Phase change at constant temperature",
-      "B": "Combustion",
-      "C": "Ionization",
-      "D": "Neutralization"
-    },
-    "correct_option": "A",
-    "explanation": "At the exact temperature of a phase change (e.g., melting point, boiling point), the process occurs at constant temperature. The enthalpy change (ΔH) for the phase change is not zero (it's the latent heat), but the statement as written is ambiguous. In the context of this question, none of the listed processes have ΔH=0. Phase changes have a specific ΔH, combustions, ionizations, and neutralizations all have non-zero enthalpy changes. This question likely has a trick. However, based on common misconceptions, at a phase change temperature, adding heat changes the phase, not the temperature, so ΔT=0, but ΔH is not zero. The question asks for ΔH=0, which is not true for any of these. This is a poorly constructed question from the notes. The provided notes do not contain a correct answer for this. The safest answer based on common knowledge is none, but since one must be chosen, it's likely a trick question. The notes show a tick mark next to A, which is incorrect based on thermodynamic principles. I will provide the answer as per the notes, even though it's factually wrong. This highlights the importance of using only the provided text.",
-    "hint": "This is a tricky question. Phase changes involve a change in enthalpy, so ΔH is not zero. The notes indicate A, but this is scientifically inaccurate."
-  },
-  {
-    "question": "The total enthalpy change in a reaction depends on:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Rate of the reaction",
-      "B": "Path taken by the reaction",
-      "C": "Initial and final states",
-      "D": "Activation energy only"
-    },
-    "correct_option": "C",
-    "explanation": "Enthalpy (H) is a state function. This means that its change (ΔH) for a reaction depends only on the initial state (reactants) and the final state (products), and is independent of the path taken between them.",
-    "hint": "State functions are path-independent. Their change is determined solely by the starting and ending points."
-  },
-  {
-    "question": "What is the main reason why chemical equations must be balanced?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "To avoid formation of unwanted products",
-      "B": "Because atoms must be rearranged randomly",
-      "C": "Because atoms are neither created nor destroyed",
-      "D": "To ensure molecules are properly synthesized"
-    },
-    "correct_option": "C",
-    "explanation": "Balancing chemical equations ensures that the Law of Conservation of Mass is obeyed. This law states that matter cannot be created or destroyed in a chemical reaction, so the number of atoms of each element must be the same on both sides of the equation.",
-    "hint": "This fundamental law of chemistry is the basis for balancing equations."
-  },
-  {
-    "question": "In the equation CH₄ + 2O₂ → CO₂ + 2H₂O, what are CH₄ and O₂ collectively called?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Products",
-      "B": "Catalysts",
-      "C": "Reactants",
-      "D": "Intermediates"
-    },
-    "correct_option": "C",
-    "explanation": "In a chemical equation, the substances written on the left side of the arrow are the starting materials, which are called the reactants.",
-    "hint": "These are the substances that exist before the reaction occurs."
-  },
-  {
-    "question": "Which of the following cannot be changed while balancing a chemical equation?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Coefficients",
-      "B": "States of matter",
-      "C": "Subscripts",
-      "D": "Number of moles"
-    },
-    "correct_option": "C",
-    "explanation": "The subscripts in a chemical formula define the compound's identity (e.g., H₂O vs H₂O₂). Changing them would change the substance itself. To balance an equation, only the coefficients (the numbers in front of formulas) can be adjusted.",
-    "hint": "Changing which part of a formula would alter the chemical itself, not just the quantity?"
-  },
-  {
-    "question": "What is the coefficient of O₂ in the balanced reaction: 2KClO₃ → 2KCl + __ O₂?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "1",
-      "B": "2",
-      "C": "3",
-      "D": "4"
-    },
-    "correct_option": "C",
-    "explanation": "To balance the equation 2KClO₃ → 2KCl + ? O₂, count the oxygen atoms. On the left, 2KClO₃ contains 2 × 3 = 6 oxygen atoms. On the right, to have 6 oxygen atoms as O₂, we need 3 molecules of O₂.",
-    "hint": "Count the number of oxygen atoms on the left side. How many O₂ molecules are needed to have the same number of oxygen atoms?"
-  },
-  {
-    "question": "The primary technique used in balancing chemical equations by inspection involves:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Using logarithmic rules",
-      "B": "Systematic elimination",
-      "C": "Trial and error",
-      "D": "Graphical representation"
-    },
-    "correct_option": "C",
-    "explanation": "Balancing chemical equations by inspection is a method that involves adjusting coefficients through trial and error until the number of atoms of each element is equal on both sides of the equation.",
-    "hint": "This method relies on repeatedly testing different coefficient combinations."
-  },
-  {
-    "question": "In stoichiometric calculations, what must be ensured before proceeding?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Products are known",
-      "B": "Equation is balanced",
-      "C": "Limiting reagent is identified",
-      "D": "Temperature is constant"
-    },
-    "correct_option": "B",
-    "explanation": "A balanced chemical equation is fundamental to stoichiometry. It provides the correct mole ratios between reactants and products, which are essential for all subsequent calculations.",
-    "hint": "The coefficients from a balanced equation are the core of stoichiometric ratios."
-  },
-  {
-    "question": "What mass of O₂ reacts with 96.1 g of propane (C₃H₈) based on the stoichiometry: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "120 g",
-      "B": "160 g",
-      "C": "349 g",
-      "D": "500 g"
-    },
-    "correct_option": "C",
-    "explanation": "Molar mass C₃H₈ = 44.1 g/mol. Moles C₃H₈ = 96.1 g / 44.1 g/mol = 2.18 mol. From equation, 1 mol C₃H₈ reacts with 5 mol O₂, so moles O₂ = 2.18 mol × 5 = 10.9 mol. Mass O₂ = 10.9 mol × 32.0 g/mol = 348.8 g ≈ 349 g.",
-    "hint": "Calculate moles of propane, use the mole ratio to find moles of oxygen, then convert to mass."
-  },
-  {
-    "question": "From the equation 2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O, how many moles of CO₂ are produced from 2.0 x 10¹⁰ mol of C₈H₁₈?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "8.0 x 10⁹",
-      "B": "1.6 x 10¹⁰",
-      "C": "2.5 x 10¹⁰",
-      "D": "3.2 x 10¹⁰"
-    },
-    "correct_option": "B",
-    "explanation": "From the balanced equation, the mole ratio of C₈H₁₈ to CO₂ is 2:16, which simplifies to 1:8. Therefore, moles CO₂ = 2.0 x 10¹⁰ mol C₈H₁₈ × (16/2) = 2.0 x 10¹⁰ × 8 = 1.6 x 10¹⁰ mol.",
-    "hint": "Use the coefficient ratio from the balanced equation to find the relationship between C₈H₁₈ and CO₂."
-  },
-  {
-    "question": "Which compound is the limiting reagent if 35 kg of N₂ reacts with 15 kg of H₂ in the reaction N₂ + 3H₂ → 2NH₃?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "N₂",
-      "B": "H₂",
-      "C": "NH₃",
-      "D": "Both are limiting"
-    },
-    "correct_option": "A",
-    "explanation": "Molar mass N₂ = 28 g/mol, so moles N₂ = 35000 g / 28 g/mol = 1250 mol. Molar mass H₂ = 2 g/mol, so moles H₂ = 15000 g / 2 g/mol = 7500 mol. The required H₂ for 1250 mol N₂ is 1250 × 3 = 3750 mol. Since 7500 mol H₂ is available and only 3750 mol is needed, N₂ is the limiting reagent.",
-    "hint": "Calculate the moles of each reactant and compare the actual mole ratio to the required stoichiometric ratio."
-  },
-  {
-    "question": "In the equation N₂ + 3H₂ → 2NH₃, how many grams of H₂ are needed to react with 28 g of N₂?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "2 g",
-      "B": "3 g",
-      "C": "6 g",
-      "D": "12 g"
-    },
-    "correct_option": "C",
-    "explanation": "Molar mass N₂ = 28 g/mol, so 28 g N₂ = 1 mol N₂. From equation, 1 mol N₂ requires 3 mol H₂. Mass of 3 mol H₂ = 3 mol × 2 g/mol = 6 g.",
-    "hint": "Convert grams of N₂ to moles, use the mole ratio to find moles of H₂, then convert back to grams."
-  },
-  {
-    "question": "Which of the following statements about limiting reagents is true?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "It is always present in excess",
-      "B": "It determines the theoretical yield",
-      "C": "It can be identified after the reaction",
-      "D": "It increases reaction speed"
-    },
-    "correct_option": "B",
-    "explanation": "The limiting reagent is the reactant that is completely consumed first in a chemical reaction. It limits the amount of product that can be formed, thus determining the theoretical yield.",
-    "hint": "Think about which reactant 'runs out' first and stops the reaction from producing more product."
-  },
-  {
-    "question": "What is the theoretical yield of Li₃N when 12.3 g of Li is reacted with excess N₂? (Reaction: 6Li + N₂ → 2Li₃N)",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "10.5 g",
-      "B": "12.3 g",
-      "C": "20.5 g",
-      "D": "70 g"
-    },
-    "correct_option": "A",
-    "explanation": "Molar mass Li = 6.94 g/mol. Moles Li = 12.3 g / 6.94 g/mol = 1.772 mol. From equation, 6 mol Li produce 2 mol Li₃N, so moles Li₃N = (2/6) × 1.772 mol = 0.5907 mol. Molar mass Li₃N = (3×6.94 + 14.01) = 34.83 g/mol. Yield = 0.5907 mol × 34.83 g/mol = 20.57 g. The notes indicate A (10.5g) which is half of this value, suggesting a possible error in the notes or the intended molar mass. Based on standard calculation, it should be ~20.6g, but following the notes' answer.",
-    "hint": "Follow the stoichiometric steps: mass Li → moles Li → moles Li₃N → mass Li₃N."
-  },
-  {
-    "question": "If the actual yield of Li₃N in a reaction is 5.89 g and the theoretical yield is 10.5 g, the percentage yield is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "45.5%",
-      "B": "55.8%",
-      "C": "64.3%",
-      "D": "70.4%"
-    },
-    "correct_option": "B",
-    "explanation": "Percentage yield is calculated as (Actual Yield / Theoretical Yield) × 100. So, (5.89 g / 10.5 g) × 100 = 56.1%. The closest option provided is 55.8%.",
-    "hint": "Divide the actual yield by the theoretical yield and multiply by 100%."
-  },
-  {
-    "question": "According to the balanced reaction: 2NO + O₂ → 2NO₂, how many moles of NO₂ are produced from 0.866 mol NO?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "0.503 mol",
-      "B": "0.433 mol",
-      "C": "0.866 mol",
-      "D": "1.732 mol"
-    },
-    "correct_option": "C",
-    "explanation": "From the balanced equation, the mole ratio of NO to NO₂ is 2:2, which simplifies to 1:1. Therefore, moles of NO₂ produced = moles of NO reacted = 0.866 mol.",
-    "hint": "Examine the coefficients of NO and NO₂ in the balanced equation."
-  },
-  {
-    "question": "The percentage yield is defined as:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Actual yield × Theoretical yield",
-      "B": "(Theoretical yield / Actual yield) × 100",
-      "C": "(Actual yield / Theoretical yield) × 100",
-      "D": "Limiting reagent mass × 100"
-    },
-    "correct_option": "C",
-    "explanation": "Percentage yield is a measure of the efficiency of a reaction. It compares the amount of product actually obtained (actual yield) to the maximum amount that could be obtained (theoretical yield), expressed as a percentage.",
-    "hint": "It's a ratio of what you got to what you could have gotten, times 100%."
-  },
-  {
-    "question": "What is the mass of 1 mole of propane (C₃H₈)?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "30.1 g",
-      "B": "44.1 g",
-      "C": "56.1 g",
-      "D": "72.0 g"
-    },
-    "correct_option": "B",
-    "explanation": "Molar mass of C₃H₈ = (3 × atomic mass of C) + (8 × atomic mass of H) = (3 × 12.01) + (8 × 1.008) = 36.03 + 8.064 = 44.094 g/mol, approximately 44.1 g/mol.",
-    "hint": "Add up the atomic masses of all atoms in the molecule."
-  },
-  {
-    "question": "A reaction involving 2 slices of bread and 1 egg per toast yields 10 toasts with 20 slices of bread and 12 eggs. What is the limiting reagent?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Bread",
-      "B": "Eggs",
-      "C": "Toast",
-      "D": "Oil"
-    },
-    "correct_option": "A",
-    "explanation": "For 1 toast, need 2 bread and 1 egg. With 20 bread, you can make 20/2 = 10 toasts. With 12 eggs, you can make 12/1 = 12 toasts. The bread runs out first, limiting the number of toasts to 10. Therefore, bread is the limiting reagent.",
-    "hint": "Calculate how many toasts can be made from each ingredient separately. The one that makes fewer toasts is the limiting reagent."
-  },
-  {
-    "question": "The term 'yield' in a chemical reaction specifically refers to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Reactant amount",
-      "B": "Amount of catalyst used",
-      "C": "Mass of product formed",
-      "D": "Rate of reaction"
-    },
-    "correct_option": "C",
-    "explanation": "In chemistry, 'yield' quantifies the amount of product obtained from a chemical reaction. It is usually expressed as a mass or a number of moles.",
-    "hint": "It's what you get out of the reaction, not what you put in."
-  },
-  {
-    "question": "In the reaction NaHCO₃ + C₆H₈O₇ → CO₂ + H₂O + Na₃C₆H₅O₇, what is produced along with CO₂?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "HCl",
-      "B": "CH₄",
-      "C": "H₂O",
-      "D": "NH₃"
-    },
-    "correct_option": "C",
-    "explanation": "The products listed in the reaction are CO₂, H₂O, and Na₃C₆H₅O₇. Therefore, along with CO₂, water (H₂O) is also produced.",
-    "hint": "Look at the right side of the equation to see what other substances are listed as products."
-  },
-  {
-    "question": "The balanced chemical equation ensures:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "All compounds have the same mass",
-      "B": "Energy is always conserved",
-      "C": "The same number of atoms on both sides",
-      "D": "Catalysts are present in the reaction"
-    },
-    "correct_option": "C",
-    "explanation": "Balancing a chemical equation ensures that the Law of Conservation of Mass is satisfied. This law requires that the number of atoms of each element is the same on the reactant and product sides of the equation.",
-    "hint": "What fundamental law of nature does balancing an equation satisfy?"
-  },
-  {
-    "question": "From the stoichiometry 1 mole of C₃H₈ reacts with 5 moles of O₂, how many moles of O₂ are needed for 2 moles of propane?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "2",
-      "B": "5",
-      "C": "10",
-      "D": "15"
-    },
-    "correct_option": "C",
-    "explanation": "The mole ratio of C₃H₈ to O₂ is 1:5. Therefore, for 2 moles of C₃H₈, the moles of O₂ required are 2 × 5 = 10 moles.",
-    "hint": "Multiply the number of moles of propane by the stoichiometric ratio (5)."
-  },
-  {
-    "question": "If 1 mole of a compound equals 44.1 g, how many moles are there in 88.2 g of it?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "0.5 mol",
-      "B": "1 mol",
-      "C": "2 mol",
-      "D": "4 mol"
-    },
-    "correct_option": "C",
-    "explanation": "Number of moles = given mass / molar mass = 88.2 g / 44.1 g/mol = 2 mol.",
-    "hint": "Use the formula: moles = mass / molar mass."
-  },
-  {
-    "question": "In stoichiometry, a mole ratio is derived from:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Subscripts of formulas",
-      "B": "Coefficients of balanced equations",
-      "C": "Mass of reactants",
-      "D": "Chemical properties"
-    },
-    "correct_option": "B",
-    "explanation": "The coefficients in a balanced chemical equation represent the relative number of moles of each substance involved in the reaction. These coefficients are used to form the mole ratios for stoichiometric calculations.",
-    "hint": "The numbers in front of the chemical formulas in a balanced equation are key."
-  },
-  {
-    "question": "What type of error occurs due to the limitations of measuring instruments or human reading?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Systematic Error",
-      "B": "Absolute Error",
-      "C": "Theoretical Error",
-      "D": "Experimental Value"
-    },
-    "correct_option": "A",
-    "explanation": "Systematic error is a consistent, repeatable error associated with faulty equipment or a flawed experimental design. It can also arise from consistent human errors like a parallax error in reading an instrument.",
-    "hint": "This error is consistent and reproducible, often caused by a flaw in the measurement system."
-  },
-  {
-    "question": "The absolute error in a measurement is defined as:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The percentage difference between measured and standard value",
-      "B": "The square of the deviation",
-      "C": "The difference between the measured value and true value",
-      "D": "The average of all measurements"
-    },
-    "correct_option": "C",
-    "explanation": "Absolute error is the magnitude of the difference between the measured value and the true or accepted value. It is expressed as a positive number, although the sign is sometimes used to indicate direction.",
-    "hint": "It's simply how far off a measurement is from the actual value, without considering percentage."
-  },
-  {
-    "question": "A student measures a sample's weight as 18.3g, but the true weight is 20.0g. What is the absolute error?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "+1.7g",
-      "B": "-1.7g",
-      "C": "+1.3g",
-      "D": "-2.3g"
-    },
-    "correct_option": "B",
-    "explanation": "Absolute error is calculated as measured value - true value. So, 18.3g - 20.0g = -1.7g. The negative sign indicates the measurement is lower than the true value.",
-    "hint": "Subtract the true value from the measured value."
-  },
-  {
-    "question": "Accuracy in scientific measurements refers to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The number of significant figures",
-      "B": "Repetition of results",
-      "C": "How close a measurement is to the true value",
-      "D": "How fast measurements are taken"
-    },
-    "correct_option": "C",
-    "explanation": "Accuracy describes how well the result of a measurement agrees with the true or accepted value. A measurement is accurate if it is close to the true value.",
-    "hint": "Think of the bullseye on a target. Hitting the center is accurate."
-  },
-  {
-    "question": "Which student is most accurate if the true value is 2.000 g? Student A: 1.964 g, 1.978 g, 1.960 g; Student B: 1.968 g, 1.969 g, 1.973 g; Student C: 2.001 g, 2.002 g, 2.003 g",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Student A",
-      "B": "Student B",
-      "C": "Student C",
-      "D": "All are equally accurate"
-    },
-    "correct_option": "C",
-    "explanation": "Accuracy refers to closeness to the true value (2.000 g). Student C's measurements (2.001, 2.002, 2.003) are all very close to 2.000, making them the most accurate.",
-    "hint": "Compare the average of each student's measurements to the true value of 2.000 g."
-  },
-  {
-    "question": "Precision refers to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Closeness to theoretical value",
-      "B": "Repeatability of results",
-      "C": "Accuracy of results",
-      "D": "Correct application of units"
-    },
-    "correct_option": "B",
-    "explanation": "Precision describes the reproducibility or repeatability of measurements. If multiple measurements of the same quantity are very close to each other, the measurements are said to be precise.",
-    "hint": "Think of a tight cluster of shots on a target, even if they are not in the bullseye."
-  },
-  {
-    "question": "If a student’s measurements are precise but not accurate, it means:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Values are close to true value",
-      "B": "Values are inconsistent",
-      "C": "Values are close to each other but far from true value",
-      "D": "Measurements were not taken properly"
-    },
-    "correct_option": "C",
-    "explanation": "Precision refers to the agreement between repeated measurements. Accuracy refers to agreement with the true value. Precise but inaccurate measurements are tightly clustered together, but that cluster is centered away from the true value.",
-    "hint": "Imagine a tight group of shots that are all in the same spot, but that spot is not the bullseye."
-  },
-  {
-    "question": "What type of error results when a person misreads an instrument due to parallax?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Instrumental error",
-      "B": "Theoretical error",
-      "C": "Personal error",
-      "D": "Statistical error"
-    },
-    "correct_option": "C",
-    "explanation": "Parallax error, where the reading appears different depending on the viewing angle, is a mistake made by the person taking the measurement. This is classified as a personal or observational error.",
-    "hint": "This error originates from the person performing the experiment, not the equipment."
-  },
-  {
-    "question": "Which of the following is both accurate and precise?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Spread out shots around bullseye",
-      "B": "Tight group far from center",
-      "C": "Tight group at center of target",
-      "D": "Random spread of shots"
-    },
-    "correct_option": "C",
-    "explanation": "A tight group at the center of the target represents measurements that are both precise (close to each other) and accurate (close to the true value, the bullseye).",
-    "hint": "Accuracy is the bullseye, precision is a tight cluster. You need both."
-  },
-  {
-    "question": "Stoichiometry is best defined as:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The study of chemical bonding",
-      "B": "The calculation of reactants and products in chemical reactions",
-      "C": "The study of periodic trends",
-      "D": "The measure of pH"
-    },
-    "correct_option": "B",
-    "explanation": "Stoichiometry is the branch of chemistry that deals with the quantitative relationships between reactants and products in a chemical reaction, based on the balanced chemical equation.",
-    "hint": "It involves using balanced equations to calculate amounts of substances consumed or produced."
-  },
-  {
-    "question": "The standard for measuring relative atomic mass is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Oxygen-16",
-      "B": "Hydrogen-1",
-      "C": "Carbon-12",
-      "D": "Nitrogen-14"
-    },
-    "correct_option": "C",
-    "explanation": "The modern standard for atomic mass is the carbon-12 atom. One atom of carbon-12 is assigned a mass of exactly 12 atomic mass units (u), and the masses of all other atoms are relative to this standard.",
-    "hint": "This specific isotope of carbon is the international standard for atomic masses."
-  },
-  {
-    "question": "Why is the atomic mass of carbon 12.01 instead of 12.00?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Presence of electrons",
-      "B": "Existence of isotopes",
-      "C": "Instrument calibration",
-      "D": "Temperature fluctuations"
-    },
-    "correct_option": "B",
-    "explanation": "The atomic mass of carbon is the weighted average of the masses of its naturally occurring isotopes. While carbon-12 is the most abundant, there are small amounts of carbon-13 and carbon-14, which increase the average atomic mass to 12.01.",
-    "hint": "Most elements exist in multiple forms with different numbers of neutrons."
-  },
-  {
-    "question": "Which of the following instruments is used to determine atomic masses?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Electron microscope",
-      "B": "Mass spectrometer",
-      "C": "Colorimeter",
-      "D": "Spectrophotometer"
-    },
-    "correct_option": "B",
-    "explanation": "A mass spectrometer is an analytical instrument that separates ions based on their mass-to-charge ratio. It is used to measure the masses and relative abundances of isotopes, allowing for the precise determination of atomic masses.",
-    "hint": "This instrument 'weighs' atoms and molecules."
-  },
-  {
-    "question": "The average atomic mass takes into account:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Atomic number and mass number",
-      "B": "Relative atomic weights",
-      "C": "Isotopic masses and their abundances",
-      "D": "Valence electrons"
-    },
-    "correct_option": "C",
-    "explanation": "The average atomic mass listed on the periodic table is calculated by taking the weighted average of the masses of all naturally occurring isotopes of an element, where the weight is the relative abundance of each isotope.",
-    "hint": "It's an average that accounts for the different versions of an element and how common each one is."
-  },
-  {
-    "question": "Avogadro’s number represents:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Number of atoms in 12 g of carbon-12",
-      "B": "Number of molecules in 1 g of water",
-      "C": "Number of ions in 100 mL of solution",
-      "D": "Number of protons in a nucleus"
-    },
-    "correct_option": "A",
-    "explanation": "Avogadro's number (6.022 x 10²³) is defined as the number of atoms in exactly 12 grams of pure carbon-12. It is the number of particles (atoms, molecules, ions, etc.) in one mole of a substance.",
-    "hint": "It's the number of particles in one mole, based on the carbon-12 standard."
-  },
-  {
-    "question": "The mole is defined as:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "A mass of 1 gram",
-      "B": "The amount of substance containing Avogadro’s number of particles",
-      "C": "One unit of temperature",
-      "D": "A measurement of density"
-    },
-    "correct_option": "B",
-    "explanation": "The mole is the SI unit for amount of substance. It is defined as the amount of a substance that contains as many elementary entities (e.g., atoms, molecules) as there are atoms in 12 grams of pure carbon-12, which is Avogadro's number.",
-    "hint": "It's a counting unit, like a dozen, but for an extremely large number of particles."
-  },
-  {
-    "question": "How many molecules are in 1 mole of H₂O?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "1.2 x 10²³",
-      "B": "3.6 x 10¹²",
-      "C": "6.023 x 10²³",
-      "D": "2.0 x 10⁶"
-    },
-    "correct_option": "C",
-    "explanation": "One mole of any substance contains Avogadro's number of particles. Therefore, 1 mole of H₂O contains 6.022 x 10²³ molecules of water.",
-    "hint": "Recall Avogadro's number, approximately 6.022 x 10²³."
-  },
-  {
-    "question": "What is the molar mass of methane (CH₄)?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "14.00 g/mol",
-      "B": "15.00 g/mol",
-      "C": "16.04 g/mol",
-      "D": "17.02 g/mol"
-    },
-    "correct_option": "C",
-    "explanation": "Molar mass of CH₄ = atomic mass of C + (4 × atomic mass of H) = 12.01 + (4 × 1.008) = 12.01 + 4.032 = 16.042 g/mol, approximately 16.04 g/mol.",
-    "hint": "Add the atomic mass of carbon to four times the atomic mass of hydrogen."
-  },
-  {
-    "question": "The formula for calculating molar mass includes:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Only molecular weight",
-      "B": "Sum of atomic masses of all atoms in the compound",
-      "C": "Empirical weight",
-      "D": "Volume ratio"
-    },
-    "correct_option": "B",
-    "explanation": "The molar mass of a compound is calculated by summing the atomic masses of all the atoms present in its chemical formula. The atomic masses are taken from the periodic table.",
-    "hint": "It's a sum of the individual atomic masses that make up the compound."
-  },
-  {
-    "question": "What is the molar mass of Na₂CO₃?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "85.0 g/mol",
-      "B": "105.99 g/mol",
-      "C": "58.44 g/mol",
-      "D": "44.01 g/mol"
-    },
-    "correct_option": "B",
-    "explanation": "Molar mass Na₂CO₃ = (2 × atomic mass Na) + atomic mass C + (3 × atomic mass O) = (2 × 22.99) + 12.01 + (3 × 16.00) = 45.98 + 12.01 + 48.00 = 105.99 g/mol.",
-    "hint": "Add the atomic masses of two sodium atoms, one carbon atom, and three oxygen atoms."
-  },
-  {
-    "question": "Which element has the highest percentage composition in KMnO₄?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Potassium",
-      "B": "Oxygen",
-      "C": "Manganese",
-      "D": "All are equal"
-    },
-    "correct_option": "B",
-    "explanation": "Molar mass KMnO₄ = 39.10 + 54.94 + (4 × 16.00) = 158.04 g/mol. Mass of O = 64.00 g. % O = (64.00/158.04) × 100 = 40.5%. Mass of K = 39.10g (24.7%), Mn = 54.94g (34.8%). Oxygen has the highest percentage.",
-    "hint": "Calculate the total mass contributed by each element and compare."
-  },
-  {
-    "question": "If a compound has a molar mass of 100 g/mol and contains 25 g of element A, what is the % composition of A?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "15%",
-      "B": "25%",
-      "C": "40%",
-      "D": "75%"
-    },
-    "correct_option": "B",
-    "explanation": "Percentage composition of A = (mass of A in one mole / molar mass of compound) × 100 = (25 g / 100 g) × 100 = 25%.",
-    "hint": "Divide the mass of the element by the total molar mass and multiply by 100."
-  },
-  {
-    "question": "The formula for percentage composition is:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "(mass of compound / mass of element) × 100",
-      "B": "(mass of element / molar mass of compound) × 100",
-      "C": "(number of atoms / number of molecules) × 100",
-      "D": "None of the above"
-    },
-    "correct_option": "B",
-    "explanation": "The percentage composition of an element in a compound is calculated by dividing the total mass of that element in one mole of the compound by the molar mass of the compound, then multiplying by 100%.",
-    "hint": "It's a ratio of the element's contribution to the total mass."
-  },
-  {
-    "question": "Which of the following has a molar mass closest to 97.99 g/mol?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "H₃PO₄",
-      "B": "H₂SO₄",
-      "C": "NaCl",
-      "D": "NH₃"
-    },
-    "correct_option": "A",
-    "explanation": "Molar mass H₃PO₄ = (3×1.01) + 30.97 + (4×16.00) = 3.03 + 30.97 + 64.00 = 98.00 g/mol. H₂SO₄ = 98.09 g/mol, NaCl = 58.44 g/mol, NH₃ = 17.03 g/mol. H₃PO₄ is closest to 97.99.",
-    "hint": "Calculate the molar mass for each compound and compare to the given value."
-  },
-  {
-    "question": "The molar mass of ethanol (C₂H₅OH) is approximately:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "34.0 g/mol",
-      "B": "46.07 g/mol",
-      "C": "50.1 g/mol",
-      "D": "60.0 g/mol"
-    },
-    "correct_option": "B",
-    "explanation": "Ethanol formula is C₂H₆O. Molar mass = (2×12.01) + (6×1.008) + 16.00 = 24.02 + 6.048 + 16.00 = 46.068 g/mol, approximately 46.07 g/mol.",
-    "hint": "Add the atomic masses for two carbons, six hydrogens, and one oxygen."
-  },
-  {
-    "question": "What is the primary reason for the decrease in atomic radius across a period?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Increase in shielding effect",
-      "B": "Increase in nuclear charge",
-      "C": "Decrease in number of electrons",
-      "D": "Increase in atomic number"
-    },
     "correct_option": "B",
-    "explanation": "Across a period, electrons are added to the same principal energy level. The increasing nuclear charge (more protons) pulls the electron cloud closer to the nucleus, resulting in a smaller atomic radius.",
-    "hint": "The positive charge in the nucleus increases, pulling the electrons in more strongly."
-  },
-  {
-    "question": "Which of the following elements has the highest first ionization energy?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Lithium (Li)",
-      "B": "Fluorine (F)",
-      "C": "Helium (He)",
-      "D": "Neon (Ne)"
-    },
-    "correct_option": "C",
-    "explanation": "Ionization energy generally increases across a period and decreases down a group. Helium, being at the top right of the periodic table (excluding noble gases), has a very stable full electron shell and the highest first ionization energy of all elements.",
-    "hint": "Elements with full valence shells, especially small ones, are very hard to ionize."
+    "explanation": "The temporal lobe processes auditory stimuli through the auditory cortex.",
+    "hint": "It helps you hear and understand sounds."
   },
   {
-    "question": "Electronegativity increases across a period because:",
-    "topic": "Past Questions CHM 101",
+    "question": "Which area in the temporal lobe is responsible for speech comprehension?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Electron shielding increases",
-      "B": "Atomic number decreases",
-      "C": "Atomic size decreases and nuclear attraction increases",
-      "D": "Electrons are added to inner shells"
+      "A": "Broca's area",
+      "B": "Motor cortex",
+      "C": "Wernicke's area",
+      "D": "Somatosensory cortex"
     },
     "correct_option": "C",
-    "explanation": "Across a period, atomic radius decreases. This means the valence electrons are closer to the nucleus. The increasing nuclear charge and decreasing distance result in a stronger attraction between the nucleus and bonding electrons, increasing electronegativity.",
-    "hint": "A smaller atom with more protons can attract bonding electrons more effectively."
+    "explanation": "The Wernicke area is located in the temporal lobe and functions in speech comprehension.",
+    "hint": "Damage to this area causes receptive aphasia."
   },
   {
-    "question": "Which element is expected to have the lowest electronegativity?",
-    "topic": "Past Questions CHM 101",
+    "question": "What is the function of the thalamus?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Oxygen",
-      "B": "Cesium",
-      "C": "Chlorine",
-      "D": "Nitrogen"
+      "A": "To maintain homeostasis and connect to the pituitary gland.",
+      "B": "To act as the brain's relay center, processing and distributing sensory information.",
+      "C": "To coordinate smooth, voluntary movements.",
+      "D": "To control autonomic functions like breathing and heart rate."
     },
     "correct_option": "B",
-    "explanation": "Electronegativity decreases down a group and increases across a period. Cesium (Cs) is located at the bottom left of the periodic table, far from fluorine, the most electronegative element. It has a very low electronegativity.",
-    "hint": "Think about the element farthest from fluorine in the top right corner."
-  },
-  {
-    "question": "Why do elements in the same group of the periodic table exhibit similar chemical properties?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "They have the same number of valence electrons",
-      "B": "They have the same atomic masses",
-      "C": "They have the same ionization energies",
-      "D": "They have the same atomic radii"
-    },
-    "correct_option": "A",
-    "explanation": "Chemical properties are primarily determined by the number and arrangement of valence electrons. Elements in the same group have the same number of valence electrons, leading to similar bonding behavior and reactivity.",
-    "hint": "It's the electrons in the outermost shell that participate in chemical reactions."
-  },
-  {
-    "question": "What happens to the ionization energy as atomic radius increases?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "It decreases",
-      "B": "It increases",
-      "C": "It remains the same",
-      "D": "It fluctuates"
-    },
-    "correct_option": "A",
-    "explanation": "As atomic radius increases, the valence electrons are farther from the nucleus and are more shielded by inner electrons. This reduces the electrostatic attraction between the nucleus and the outer electron, making it easier to remove, thus ionization energy decreases.",
-    "hint": "Think about the distance and shielding. A larger atom holds its outer electrons less tightly."
+    "explanation": "The thalamus is the brain's relay center. It receives afferent impulses from sensory receptors and processes the information for distribution to the appropriate cortical area.",
+    "hint": "It's like a central switching station."
   },
   {
-    "question": "Which of the following elements is least likely to form a cation?",
-    "topic": "Past Questions CHM 101",
+    "question": "The hypothalamus is vital for maintaining:",
+    "topic": "Nervous System",
     "options": {
-      "A": "Sodium",
-      "B": "Magnesium",
-      "C": "Fluorine",
-      "D": "Potassium"
+      "A": "Language and logic",
+      "B": "Visual processing",
+      "C": "Homeostasis",
+      "D": "Fine motor coordination"
     },
     "correct_option": "C",
-    "explanation": "Cations are positively charged ions formed by losing electrons. Fluorine is a nonmetal with very high electronegativity and ionization energy. It is much more likely to gain an electron to form an anion (F⁻) than to lose electrons to form a cation.",
-    "hint": "Which element is a nonmetal that tends to gain electrons, not lose them?"
-  },
-  {
-    "question": "Why does atomic radius increase down a group?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Increase in nuclear charge",
-      "B": "Addition of new electron shells",
-      "C": "Stronger attraction of electrons",
-      "D": "Decrease in electron shielding"
-    },
-    "correct_option": "B",
-    "explanation": "As you move down a group in the periodic table, each element has an additional principal energy level (electron shell) compared to the one above it. This new, larger shell makes the atom significantly larger.",
-    "hint": "The number of electron shells increases as you go down."
-  },
-  {
-    "question": "What explains the higher ionization energy of nitrogen compared to oxygen?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Stability of half-filled p-orbitals",
-      "B": "Higher atomic number",
-      "C": "Larger size",
-      "D": "Greater shielding"
-    },
-    "correct_option": "A",
-    "explanation": "Nitrogen has an electron configuration of 1s² 2s² 2p³. The p-orbitals are exactly half-filled, which is a particularly stable configuration. Removing an electron from this stable arrangement requires more energy than removing one from oxygen, which has a 2p⁴ configuration where an electron is paired and easier to remove.",
-    "hint": "Consider the electron configuration and the special stability of half-filled subshells."
-  },
-  {
-    "question": "Which set shows correct trend of increasing electronegativity?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Na < K < Li",
-      "B": "K < Na < Li",
-      "C": "Li < K < Na",
-      "D": "Na < Li < K"
-    },
-    "correct_option": "B",
-    "explanation": "Electronegativity generally decreases down a group. For Group 1 elements (alkali metals), electronegativity decreases from top to bottom: Li has the highest, then Na, then K. Therefore, the increasing order is K < Na < Li.",
-    "hint": "Recall the trend in electronegativity down a group. Which element at the top is most electronegative?"
-  },
-  {
-    "question": "Which element in Period 3 has the lowest ionization energy?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Silicon",
-      "B": "Sodium",
-      "C": "Chlorine",
-      "D": "Magnesium"
-    },
-    "correct_option": "B",
-    "explanation": "Ionization energy generally increases across a period from left to right. Period 3 begins with sodium (Na) on the far left, which has the lowest ionization energy in the period because it has only one valence electron that is easily removed.",
-    "hint": "Think about the periodic trend. Which element is farthest to the left in Period 3?"
-  },
-  {
-    "question": "Which orbital configuration leads to a relatively higher ionization energy?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "3s1",
-      "B": "2p3",
-      "C": "4s1",
-      "D": "3p2"
-    },
-    "correct_option": "B",
-    "explanation": "The 2p³ configuration represents a half-filled p-subshell (like in nitrogen). Half-filled and fully filled subshells have extra stability, which makes removing an electron more difficult and thus leads to a relatively higher ionization energy compared to neighboring configurations.",
-    "hint": "Look for a configuration that represents a particularly stable electron arrangement."
-  },
-  {
-    "question": "What kind of bonding results from similar electronegativities between atoms?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Ionic",
-      "B": "Covalent",
-      "C": "Metallic",
-      "D": "Coordinate"
-    },
-    "correct_option": "B",
-    "explanation": "When atoms have similar electronegativities, neither atom strongly attracts the bonding electrons away from the other. This leads to the sharing of electrons, which is the basis of covalent bonding.",
-    "hint": "A small difference in electronegativity leads to sharing; a large difference leads to transfer."
+    "explanation": "The hypothalamus is vital to maintaining homeostasis.",
+    "hint": "It regulates things like body temperature, hunger, and thirst."
   },
   {
-    "question": "Ionization energy is always:",
-    "topic": "Past Questions CHM 101",
+    "question": "The hypothalamus connects the central nervous system to which other system?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Exothermic",
-      "B": "Endothermic or exothermic",
-      "C": "Endothermic",
-      "D": "None of the above"
+      "A": "The skeletal system",
+      "B": "The muscular system",
+      "C": "The endocrine system",
+      "D": "The lymphatic system"
     },
     "correct_option": "C",
-    "explanation": "Ionization energy is the energy required to remove an electron from a gaseous atom. Removing an electron always requires an input of energy to overcome the attractive force of the nucleus, making the process endothermic.",
-    "hint": "Does removing an electron from an atom release energy or require energy?"
-  },
-  {
-    "question": "The shielding effect has what kind of influence on ionization energy?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Increases it",
-      "B": "Decreases it",
-      "C": "No effect",
-      "D": "Increases nuclear charge"
-    },
-    "correct_option": "B",
-    "explanation": "The shielding effect occurs when inner electrons repel and block the full pull of the nucleus on outer electrons. This weaker attraction makes the outer electrons easier to remove, thus decreasing the ionization energy.",
-    "hint": "Inner electrons 'shield' the outer electrons from the full force of the nucleus."
-  },
-  {
-    "question": "What determines the position of an element in the periodic table?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Mass number",
-      "B": "Atomic number",
-      "C": "Density",
-      "D": "Number of neutrons"
-    },
-    "correct_option": "B",
-    "explanation": "The periodic table is arranged in order of increasing atomic number (the number of protons). An element's position in the table is uniquely determined by its atomic number.",
-    "hint": "This is the fundamental property that defines an element."
-  },
-  {
-    "question": "What trend is observed in electronegativity across a period?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Decreases",
-      "B": "Increases",
-      "C": "Remains constant",
-      "D": "Decreases and then increases"
-    },
-    "correct_option": "B",
-    "explanation": "As you move from left to right across a period, the atomic radius decreases and the nuclear charge increases. This stronger pull on bonding electrons causes electronegativity to increase.",
-    "hint": "Atoms on the right side of a period (excluding noble gases) are more electronegative than those on the left."
-  },
-  {
-    "question": "Which element would have the highest second ionization energy?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Sodium (Na)",
-      "B": "Magnesium (Mg)",
-      "C": "Aluminum (Al)",
-      "D": "Potassium (K)"
-    },
-    "correct_option": "A",
-    "explanation": "Second ionization energy is the energy to remove a second electron. Sodium (Na) has an electron configuration of [Ne]3s¹. After removing the first electron, it achieves the stable, full-shell configuration of neon ([Ne]). Removing a second electron from this very stable configuration requires a huge amount of energy, giving sodium a very high second ionization energy.",
-    "hint": "Consider which element, after losing one electron, achieves a very stable noble gas configuration."
-  },
-  {
-    "question": "Which property generally decreases across a period?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Ionization energy",
-      "B": "Atomic radius",
-      "C": "Electronegativity",
-      "D": "Effective nuclear charge"
-    },
-    "correct_option": "B",
-    "explanation": "Atomic radius decreases across a period. This is because the increasing nuclear charge pulls the electron cloud closer to the nucleus, making the atom smaller.",
-    "hint": "Think about the size of atoms. Atoms get smaller from left to right."
+    "explanation": "The hypothalamus connects the CNS to the endocrine system, primarily through its communication with the pituitary gland.",
+    "hint": "It controls hormone release."
   },
   {
-    "question": "Why is fluorine the most electronegative element?",
-    "topic": "Past Questions CHM 101",
+    "question": "Which part of the brainstem is responsible for autonomic functions like regulating breathing, blood pressure, and heart rate?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Small size and high nuclear charge",
-      "B": "High ionization energy and large atomic radius",
-      "C": "High nuclear charge and small atomic radius",
-      "D": "Large shielding effect"
+      "A": "Pons",
+      "B": "Midbrain",
+      "C": "Medulla oblongata",
+      "D": "Cerebellum"
     },
     "correct_option": "C",
-    "explanation": "Fluorine has a very high nuclear charge (+9) but its valence electrons are in the second shell, very close to the nucleus. This combination of high nuclear charge and small atomic radius results in an extremely strong attraction for bonding electrons, making it the most electronegative element.",
-    "hint": "It's a combination of a strong pull from the nucleus and a very short distance to the bonding electrons."
-  },
-  {
-    "question": "The f-block elements are usually:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Lanthanides and actinides",
-      "B": "Halogens and noble gases",
-      "C": "Alkali and alkaline earth metals",
-      "D": "Nonmetals"
-    },
-    "correct_option": "A",
-    "explanation": "The f-block of the periodic table consists of two series: the lanthanides (elements 58-71) and the actinides (elements 90-103). They are also known as inner transition metals.",
-    "hint": "These are the two rows that are typically placed below the main body of the periodic table."
+    "explanation": "The medulla oblongata is responsible for crucial autonomic functions including monitoring the respiratory system, regulating blood pressure, and controlling cardiac contractions.",
+    "hint": "It's located at the very bottom of the brainstem."
   },
   {
-    "question": "Which statement best explains why O₂ is not considered a compound?",
-    "topic": "Past Questions CHM 101",
+    "question": "What is the function of the pons?",
+    "topic": "Nervous System",
     "options": {
-      "A": "It does not consist of atoms.",
-      "B": "It does not contain different types of atoms.",
-      "C": "It cannot undergo a chemical reaction.",
-      "D": "It is a gas at room temperature."
+      "A": "To coordinate voluntary movements and balance.",
+      "B": "To act as a relay station, connecting the medulla to the thalamus and relaying motor impulses.",
+      "C": "To process visual information.",
+      "D": "To regulate body temperature."
     },
     "correct_option": "B",
-    "explanation": "A compound is a substance formed from two or more different chemical elements that are chemically bonded. O₂ is a molecule composed of two atoms of the same element (oxygen), so it is an element, not a compound.",
-    "hint": "What is the definition of a compound in terms of the types of atoms it contains?"
+    "explanation": "The pons, found in the brainstem, comprises tracts responsible for relaying impulses from the motor cortex to the cerebellum, medulla, and thalamus.",
+    "hint": "Its name means 'bridge' in Latin."
   },
   {
-    "question": "According to John Dalton's atomic theory, which of the following is not true?",
-    "topic": "Past Questions CHM 101",
+    "question": "The cerebellum, known as the 'little brain', is responsible for what function?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Atoms cannot be created or destroyed.",
-      "B": "Atoms of the same element are identical.",
-      "C": "Atoms are composed of protons, neutrons, and electrons.",
-      "D": "Atoms combine in simple whole-number ratios to form compounds."
+      "A": "Conscious thought and reasoning.",
+      "B": "Processing sensory information from the skin.",
+      "C": "Smooth, coordinated voluntary movements, balance, and posture.",
+      "D": "Regulating the sleep-wake cycle."
     },
     "correct_option": "C",
-    "explanation": "Dalton's theory proposed that atoms were indivisible and indestructible particles. It did not account for subatomic particles like protons, neutrons, and electrons, which were discovered later.",
-    "hint": "Dalton's model was a solid sphere. Which statement describes something smaller than an atom?"
+    "explanation": "The cerebellum is responsible for smooth, coordinated voluntary movements, maintaining balance, and posture.",
+    "hint": "It's involved in motor learning and coordination."
   },
   {
-    "question": "Which scientist first proposed the idea that atoms are indivisible and cannot be cut further?",
-    "topic": "Past Questions CHM 101",
+    "question": "Damage to the cerebellum would most likely result in problems with:",
+    "topic": "Nervous System",
     "options": {
-      "A": "Aristotle",
-      "B": "John Dalton",
-      "C": "Democritus",
-      "D": "J.J. Thomson"
+      "A": "Speech production.",
+      "B": "Understanding language.",
+      "C": "Coordination and balance.",
+      "D": "Vision."
     },
     "correct_option": "C",
-    "explanation": "The ancient Greek philosopher Democritus first proposed the concept of 'atomos,' meaning indivisible, as the fundamental building blocks of matter.",
-    "hint": "This idea dates back to ancient Greece, long before modern chemistry."
+    "explanation": "Damage to the cerebellum would most likely result in problems with coordination, balance, and smooth voluntary movements (ataxia).",
+    "hint": "It fine-tunes movements."
   },
   {
-    "question": "What discovery led to the rejection of Dalton’s solid sphere model of the atom?",
-    "topic": "Past Questions CHM 101",
+    "question": "What is a stroke?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Behavior of gases",
-      "B": "Existence of molecules",
-      "C": "Discovery of isotopes",
-      "D": "Discovery of subatomic particles"
+      "A": "A tumor in the brain tissue.",
+      "B": "An infection of the meninges.",
+      "C": "An interruption of blood supply to the brain, causing tissue death.",
+      "D": "A degenerative disease of the dopamine-producing cells."
     },
-    "correct_option": "D",
-    "explanation": "Dalton's model proposed that atoms were indivisible. The discovery of subatomic particles like the electron, proton, and neutron showed that atoms are, in fact, divisible and have an internal structure, leading to the rejection of the solid sphere model.",
-    "hint": "What was found to be inside the atom, proving it was not solid and indivisible?"
-  },
-  {
-    "question": "Which of the following statements correctly describes a cation and an anion?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "A cation gains electrons; an anion loses electrons.",
-      "B": "A cation loses electrons and is negatively charged; an anion gains electrons and is positively charged.",
-      "C": "A cation is negatively charged; an anion is positively charged.",
-      "D": "A cation loses electrons and is positively charged; an anion gains electrons and is negatively charged."
-    },
-    "correct_option": "D",
-    "explanation": "A cation is formed when an atom loses one or more electrons, resulting in a net positive charge. An anion is formed when an atom gains one or more electrons, resulting in a net negative charge.",
-    "hint": "Remember: 'cation' has a 't' like 'plus' (+), and 'anion' has an 'n' like 'negative'."
-  },
-  {
-    "question": "What was the major conclusion from Rutherford’s gold foil experiment?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Atoms are indivisible.",
-      "B": "Electrons are spread uniformly throughout an atom.",
-      "C": "Most of an atom is empty space with a dense nucleus.",
-      "D": "Electrons orbit the nucleus in fixed paths."
-    },
-    "correct_option": "C",
-    "explanation": "Rutherford's experiment showed that most alpha particles passed straight through the gold foil (empty space), but a few were deflected at large angles, indicating a small, dense, positively charged nucleus at the center.",
-    "hint": "The fact that some particles bounced back suggested a very small, massive core."
-  },
-  {
-    "question": "Which scientist’s model of the atom resembled “plums in pudding”?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Ernest Rutherford",
-      "B": "Michael Faraday",
-      "C": "Niels Bohr",
-      "D": "J.J. Thomson"
-    },
-    "correct_option": "D",
-    "explanation": "J.J. Thomson proposed the 'plum pudding' model, where the atom was a sphere of positive charge with negatively charged electrons embedded within it, like plums in a pudding.",
-    "hint": "This model came after the discovery of the electron but before the discovery of the nucleus."
-  },
-  {
-    "question": "Which of the following best describes Bohr’s model of the atom?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Electrons are embedded in a sphere of positive charge.",
-      "B": "Electrons move randomly around the nucleus.",
-      "C": "Electrons orbit the nucleus in fixed energy levels.",
-      "D": "Atoms are solid and indivisible."
-    },
-    "correct_option": "C",
-    "explanation": "Niels Bohr's model proposed that electrons travel in specific, fixed circular paths or orbits (energy levels) around the nucleus, and they can only gain or lose energy by jumping between these levels.",
-    "hint": "This model introduced the idea of quantized energy levels for electrons."
-  },
-  {
-    "question": "Which of the following best differentiates isotopes from one another?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Number of protons",
-      "B": "Number of electrons",
-      "C": "Number of neutrons",
-      "D": "Atomic number"
-    },
-    "correct_option": "C",
-    "explanation": "Isotopes are atoms of the same element (same number of protons) that have different numbers of neutrons. This difference in neutron number gives them different mass numbers.",
-    "hint": "They are the same element, so the proton count is identical. What else in the nucleus can vary?"
-  },
-  {
-    "question": "What observation in the gold foil experiment indicated the existence of a dense nucleus?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Particles all passed through the foil",
-      "B": "Particles deflected at wide angles",
-      "C": "Electrons scattered uniformly",
-      "D": "The foil melted under the beam"
-    },
-    "correct_option": "B",
-    "explanation": "The fact that a small fraction of alpha particles were deflected at large angles (some even bouncing back) indicated that they had collided with a very small, dense, and positively charged region within the atom, which Rutherford called the nucleus.",
-    "hint": "A head-on collision with something massive and dense would cause a particle to bounce back."
-  },
-  {
-    "question": "Which of these best defines relative atomic mass?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "The mass of one atom in grams",
-      "B": "The mass of an atom compared to an electron",
-      "C": "The weighted average mass of the isotopes of an element relative to 1/12 of a carbon-12 atom",
-      "D": "The exact number of neutrons in the nucleus"
-    },
     "correct_option": "C",
-    "explanation": "Relative atomic mass is a dimensionless quantity. It is the weighted average of the masses of an element's naturally occurring isotopes, compared to 1/12th the mass of an atom of carbon-12.",
-    "hint": "It's an average value on a scale where one specific atom is the standard."
+    "explanation": "A stroke is an interruption of blood supply to the brain; the resulting lack of oxygen causes tissue to die in the affected area.",
+    "hint": "It is a 'brain attack'."
   },
   {
-    "question": "The mass number of an atom is the sum of:",
-    "topic": "Past Questions CHM 101",
+    "question": "Parkinson's disease is an example of a CNS disorder caused by:",
+    "topic": "Nervous System",
     "options": {
-      "A": "Electrons and protons",
-      "B": "Protons and neutrons",
-      "C": "Neutrons and electrons",
-      "D": "Only protons"
+      "A": "Infection",
+      "B": "Trauma",
+      "C": "Degeneration of dopamine-producing cells",
+      "D": "Tumor"
     },
-    "correct_option": "B",
-    "explanation": "The mass number (A) represents the total number of nucleons in an atom's nucleus. It is calculated by adding the number of protons (Z) and the number of neutrons (N).",
-    "hint": "Which subatomic particles contribute significantly to the mass of an atom?"
-  },
-  {
-    "question": "Which pair represents isotopes of the same element?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "¹²C and ¹⁴N",
-      "B": "¹²C and ²⁴Mg",
-      "C": "¹²C and ¹³C",
-      "D": "¹H and ⁴He"
-    },
-    "correct_option": "C",
-    "explanation": "Isotopes are atoms with the same number of protons (same element) but different numbers of neutrons. ¹²C and ¹³C both have 6 protons, so they are isotopes of carbon. The other pairs are different elements.",
-    "hint": "Look for two symbols with the same element letter (e.g., both 'C' for carbon)."
-  },
-  {
-    "question": "The number of protons in an atom determines its:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Mass number",
-      "B": "Atomic number",
-      "C": "Isotopic mass",
-      "D": "Energy level"
-    },
-    "correct_option": "B",
-    "explanation": "The atomic number (Z) is defined as the number of protons in the nucleus of an atom. It uniquely identifies a chemical element.",
-    "hint": "This is the fundamental 'identity card' of an element."
-  },
-  {
-    "question": "The term 'mole' in chemistry refers to:",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "1000 atoms",
-      "B": "6.02 × 10²² molecules",
-      "C": "6.02 × 10²³ entities",
-      "D": "One gram of any element"
-    },
     "correct_option": "C",
-    "explanation": "A mole is the SI base unit for amount of substance. It is defined as the amount containing exactly 6.02214076 × 10²³ elementary entities (atoms, molecules, ions, etc.), which is Avogadro's number.",
-    "hint": "It's a counting unit, like a dozen, but for a very specific, large number."
-  },
-  {
-    "question": "Which unit is commonly used to express molar mass?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "g/mol",
-      "B": "kg",
-      "C": "mol",
-      "D": "amu"
-    },
-    "correct_option": "A",
-    "explanation": "Molar mass is defined as the mass of one mole of a substance. Its common unit in chemistry is grams per mole (g/mol).",
-    "hint": "It combines the unit for mass (grams) with the unit for amount of substance (moles)."
-  },
-  {
-    "question": "What is the molar volume of an ideal gas at STP (Standard Temperature and Pressure)?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "11.2 dm³",
-      "B": "22.4 dm³",
-      "C": "12.4 dm³",
-      "D": "1 dm³"
-    },
-    "correct_option": "B",
-    "explanation": "At Standard Temperature and Pressure (0°C and 1 atm), one mole of any ideal gas occupies approximately 22.4 liters (or 22.4 dm³). This is known as the molar volume.",
-    "hint": "This is a standard value to remember for gas calculations."
+    "explanation": "Parkinson's disease involves the gradual degeneration of dopamine-producing cells in the basal ganglia.",
+    "hint": "It affects movement, causing tremors and stiffness."
   },
   {
-    "question": "Which of these statements is true about chemical symbols?",
-    "topic": "Past Questions CHM 101",
+    "question": "An autoimmune disorder like acute disseminated encephalomyelitis attacks which part of the nerve cells?",
+    "topic": "Nervous System",
     "options": {
-      "A": "Each symbol must have two letters.",
-      "B": "The first letter is always capitalized.",
-      "C": "Symbols are always written in lowercase.",
-      "D": "Symbols are based on the element's name in English only."
+      "A": "The cell body.",
+      "B": "The axon's myelin sheath (the nerves' insulation).",
+      "C": "The dendrites.",
+      "D": "The synaptic terminals."
     },
     "correct_option": "B",
-    "explanation": "In chemical notation, the first letter of an element's symbol is always capitalized. If the symbol has two letters, the second letter is always lowercase (e.g., Co for cobalt, CO for carbon monoxide).",
-    "hint": "This is a standard rule for writing element symbols."
-  },
-  {
-    "question": "Which of the following subatomic particles is negatively charged?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "Proton",
-      "B": "Neutron",
-      "C": "Electron",
-      "D": "Positron"
-    },
-    "correct_option": "C",
-    "explanation": "Among the common subatomic particles, protons have a positive charge, neutrons have no charge, and electrons have a negative charge.",
-    "hint": "This particle is found orbiting the nucleus."
-  },
-  {
-    "question": "How many protons, neutrons, and electrons are present in the isotope ³⁹₁₉K?",
-    "topic": "Past Questions CHM 101",
-    "options": {
-      "A": "19 protons, 20 neutrons, 19 electrons",
-      "B": "19 protons, 19 neutrons, 20 electrons",
-      "C": "20 protons, 19 neutrons, 20 electrons",
-      "D": "19 protons, 19 neutrons, 18 electrons"
-    },
-    "correct_option": "A",
-    "explanation": "In the notation ³⁹₁₉K, the subscript (19) is the atomic number, which equals the number of protons (19). In a neutral atom, the number of electrons also equals the number of protons, so electrons = 19. The superscript (39) is the mass number (protons + neutrons). Therefore, neutrons = 39 - 19 = 20.",
-    "hint": "Atomic number (Z) = protons = electrons. Mass number (A) = protons + neutrons."
+    "explanation": "Acute disseminated encephalomyelitis is characterized by an immune response against the brain and spinal cord, attacking myelin (the nerves' insulation).",
+    "hint": "This destroys the white matter."
   }
 ]
 }

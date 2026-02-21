@@ -63,13 +63,11 @@ let seconds = 0;
 let SESSION_KEY = null;
 let mockSubmitted = false;
 
-// Server-provided end time (UNIX seconds). Use this to initialise display only —
-// authoritative remaining time comes from `mock_data` responses.
-const SERVER_END_TIME = {{ end_time|default:0 }};
-if (typeof SERVER_END_TIME === 'number' && SERVER_END_TIME > 0) {
-  const now = Math.floor(Date.now() / 1000);
-  seconds = Math.max(0, SERVER_END_TIME - now);
-}
+// Calculate time: 30 minutes per course
+document.addEventListener('DOMContentLoaded', ()=>{
+  const numCourses = document.querySelectorAll('.course-switch').length;
+  seconds = 30 * 60 * numCourses;  // 30 minutes per course
+});
 
 function fetchCourseData(courseId) {
   return fetch(`{% url 'mock_data' %}?course_id=${courseId}`)
@@ -93,10 +91,6 @@ function loadCourse(courseId) {
     QUESTIONS.forEach(q => { if (q.your_answer) answers[q.id] = q.your_answer; });
     index = 0;
     SESSION_KEY = data.session_key;
-    // only override seconds if server returned a positive remaining value
-    if (typeof data.remaining === 'number' && data.remaining > 0) {
-      seconds = data.remaining;
-    }
     renderQuestion();
     startTimer();
   }).catch(err => {
