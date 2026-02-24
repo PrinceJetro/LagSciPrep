@@ -1,641 +1,940 @@
 {
-  "ZOO 101": [
+  "CHM 101": [
   {
-    "question": "What is the nervous system primarily concerned with?",
-    "topic": "Nervous System",
+    "question": "What does the First Law of Thermodynamics state?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Digestion and absorption of food.",
-      "B": "Circulation of blood.",
-      "C": "Action and senses.",
-      "D": "Excretion of metabolic wastes."
-    },
-    "correct_option": "C",
-    "explanation": "The nervous system is concerned with action and senses, allowing animals to sense their surroundings and react.",
-    "hint": "It handles input from the environment and output responses."
-  },
-  {
-    "question": "The nervous system senses activities both outside and where else?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "In the atmosphere.",
-      "B": "Inside the body.",
-      "C": "In other animals.",
-      "D": "Only in the brain."
+      "A": "Energy can be created but not destroyed",
+      "B": "Energy cannot be created or destroyed; the total energy of the universe is constant",
+      "C": "Energy can be destroyed but not created",
+      "D": "Energy is constantly increasing in the universe"
     },
     "correct_option": "B",
-    "explanation": "The nervous system senses activities both outside the body and inside the body, such as triggering digestion.",
-    "hint": "It monitors internal conditions as well."
+    "explanation": "From the first law, energy cannot be created or destroyed. Therefore, the total energy of the universe is a constant.",
+    "hint": "The notes state this as the first law."
   },
   {
-    "question": "What are the two main parts of the nervous system?",
-    "topic": "Nervous System",
+    "question": "What is a spontaneous process?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "The brain and the spinal cord.",
-      "B": "The somatic and autonomic systems.",
-      "C": "The central nervous system and the peripheral nervous system.",
-      "D": "The sympathetic and parasympathetic systems."
-    },
-    "correct_option": "C",
-    "explanation": "The nervous system of animals consists of two main parts: the central nervous system (CNS) and the peripheral nervous system (PNS).",
-    "hint": "One is the control center, the other is the network of nerves."
-  },
-  {
-    "question": "What does the central nervous system (CNS) contain?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Only the brain.",
-      "B": "Only the spinal cord.",
-      "C": "The brain and spinal cord.",
-      "D": "All the nerves in the body."
-    },
-    "correct_option": "C",
-    "explanation": "The CNS contains the brain and the spinal cord.",
-    "hint": "These are the central processing organs."
-  },
-  {
-    "question": "Nerves that exit from the brain are called:",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Spinal nerves",
-      "B": "Cranial nerves",
-      "C": "Peripheral nerves",
-      "D": "Motor nerves"
+      "A": "A process that requires continuous energy input",
+      "B": "A process that occurs naturally and without the need for continuous input of external energy once it has started",
+      "C": "A process that only occurs at high temperatures",
+      "D": "A process that is always exothermic"
     },
     "correct_option": "B",
-    "explanation": "Nerves that exit from the brain are called cranial nerves.",
-    "hint": "They connect directly to the brain."
+    "explanation": "A spontaneous process is a process that occurs naturally and without the need for continuous input of external energy once it has started.",
+    "hint": "The notes define spontaneous process."
   },
   {
-    "question": "Nerves that exit from the spinal cord are called:",
-    "topic": "Nervous System",
+    "question": "Which of the following is an example of a spontaneous process?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Cranial nerves",
-      "B": "Spinal nerves",
-      "C": "Sensory nerves",
-      "D": "Autonomic nerves"
+      "A": "Water decomposing into hydrogen and oxygen",
+      "B": "Gas expanding into a vacuum",
+      "C": "Iron oxide changing back to iron metal",
+      "D": "Heat flowing from cold to hot"
     },
     "correct_option": "B",
-    "explanation": "Nerves that exit from the spinal cord are called spinal nerves.",
-    "hint": "They branch off the spinal cord."
+    "explanation": "Examples of spontaneous processes include gas expanding into a vacuum, a book falling, a ball rolling downhill, and iron rusting in air.",
+    "hint": "The notes list these examples."
   },
   {
-    "question": "The CNS is enclosed and protected by a three-layered system of membranes called the:",
-    "topic": "Nervous System",
+    "question": "Does spontaneity indicate the speed of a reaction?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Meninges",
-      "B": "Skull",
-      "C": "Vertebrae",
-      "D": "Cerebrospinal fluid"
+      "A": "Yes, spontaneous reactions are always fast",
+      "B": "No, spontaneity does not indicate speed; a reaction can be spontaneous but slow",
+      "C": "Only exothermic reactions are fast",
+      "D": "Only endothermic reactions are slow"
+    },
+    "correct_option": "B",
+    "explanation": "Spontaneity does not indicate speed; a reaction can be spontaneous but slow, like the conversion of diamond to graphite.",
+    "hint": "The notes emphasize this distinction."
+  },
+  {
+    "question": "What is the relationship between diamond and graphite in terms of spontaneity?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Diamond is more stable than graphite",
+      "B": "Diamond to graphite is thermodynamically spontaneous (graphite is more stable) but kinetically extremely slow",
+      "C": "Graphite to diamond is spontaneous at room temperature",
+      "D": "Both are equally stable"
+    },
+    "correct_option": "B",
+    "explanation": "Diamond to graphite is thermodynamically spontaneous because graphite is more stable, but it is kinetically extremely slow, so diamonds don't turn into graphite.",
+    "hint": "The notes provide this example."
+  },
+  {
+    "question": "Can a catalyst make a nonspontaneous process spontaneous?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Yes, catalysts can make any reaction spontaneous",
+      "B": "No, a catalyst cannot make a nonspontaneous process spontaneous; it only speeds up reactions",
+      "C": "Catalysts always make reactions endothermic",
+      "D": "Catalysts change the thermodynamics of reactions"
+    },
+    "correct_option": "B",
+    "explanation": "Catalysts speed up reactions, but a catalyst cannot make a nonspontaneous process spontaneous.",
+    "hint": "The notes explicitly state this."
+  },
+  {
+    "question": "What is a nonspontaneous process?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "A process that occurs naturally",
+      "B": "A process that does not occur on its own and requires an input of energy or coupling to another process",
+      "C": "A process that is always exothermic",
+      "D": "A process that is always fast"
+    },
+    "correct_option": "B",
+    "explanation": "A nonspontaneous process does not occur on its own and requires an input of energy or coupling to another process, like extracting iron from iron ore.",
+    "hint": "The notes define nonspontaneous process."
+  },
+  {
+    "question": "What happens to processes that are spontaneous in one direction?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "They are spontaneous in both directions",
+      "B": "They are nonspontaneous in the opposite direction",
+      "C": "They are at equilibrium",
+      "D": "They require catalysts in both directions"
+    },
+    "correct_option": "B",
+    "explanation": "Processes that are spontaneous in one direction are nonspontaneous in the opposite direction.",
+    "hint": "The notes state this relationship."
+  },
+  {
+    "question": "At temperatures below 0°C, what happens to water spontaneously?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Water spontaneously melts",
+      "B": "Water spontaneously freezes",
+      "C": "Water spontaneously evaporates",
+      "D": "Water spontaneously decomposes"
+    },
+    "correct_option": "B",
+    "explanation": "At temperatures below 0°C, water spontaneously freezes, and at temperatures above 0°C, ice spontaneously melts.",
+    "hint": "The notes describe these phase changes."
+  },
+  {
+    "question": "At temperatures above 0°C, what happens to ice spontaneously?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Ice spontaneously freezes further",
+      "B": "Ice spontaneously melts",
+      "C": "Ice spontaneously sublimes",
+      "D": "Ice remains unchanged"
+    },
+    "correct_option": "B",
+    "explanation": "At temperatures above 0°C, ice spontaneously melts, and at temperatures below 0°C, water spontaneously freezes.",
+    "hint": "The notes describe these phase changes."
+  },
+  {
+    "question": "Is exothermicity always the key to spontaneity?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Yes, all exothermic processes are spontaneous",
+      "B": "No, some spontaneous processes are endothermic, like ice melting above 0°C",
+      "C": "Only endothermic processes are spontaneous",
+      "D": "Exothermicity has no relationship to spontaneity"
+    },
+    "correct_option": "B",
+    "explanation": "Exothermicity is not always the key. Some spontaneous processes absorb energy (endothermic), for example, ice melting at T > 0°C is endothermic but still spontaneous.",
+    "hint": "The notes provide this counterexample."
+  },
+  {
+    "question": "What common theme underlies spontaneous processes?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "They are always exothermic",
+      "B": "They always involve randomness or disorderliness",
+      "C": "They always occur at high temperature",
+      "D": "They always involve gases"
+    },
+    "correct_option": "B",
+    "explanation": "The common theme in spontaneous processes is randomness or disorderliness. There must be another factor besides energy release that determines whether a process is spontaneous, leading to the concept of entropy.",
+    "hint": "The notes identify this common theme."
+  },
+  {
+    "question": "What is a reversible process?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "A process that can be reversed spontaneously",
+      "B": "A process that can be reversed to restore both the system and its surroundings to the exact original state, requiring infinitesimal changes and occurring infinitely slowly",
+      "C": "Any process that occurs in nature",
+      "D": "A process that is always exothermic"
+    },
+    "correct_option": "B",
+    "explanation": "A reversible process is a process that can be reversed to restore both the system and its surroundings to the exact original state. It requires infinitesimal changes and occurs infinitely slowly.",
+    "hint": "The notes define reversible process."
+  },
+  {
+    "question": "What is an irreversible process?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "A process that can be reversed without any change",
+      "B": "A process that cannot be reversed without leaving a change in the surroundings",
+      "C": "A process that is always endothermic",
+      "D": "A process that occurs at equilibrium"
+    },
+    "correct_option": "B",
+    "explanation": "An irreversible process is a process that cannot be reversed without leaving a change in the surroundings. Example: heat flows spontaneously from hot to cold, and gas expands into a vacuum.",
+    "hint": "The notes define irreversible process."
+  },
+  {
+    "question": "Are all real processes reversible or irreversible?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "All real processes are reversible",
+      "B": "All real processes are irreversible; reversible processes are ideal",
+      "C": "Real processes can be either, depending on conditions",
+      "D": "Only chemical reactions are irreversible"
+    },
+    "correct_option": "B",
+    "explanation": "All real processes are irreversible. Reversible processes are ideal and spontaneous processes are always irreversible.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What is entropy (S)?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "A measure of the total energy in a system",
+      "B": "A measure of the amount of disorder or randomness in a system; it indicates how energy is dispersed in a system at a specific temperature",
+      "C": "The heat content of a system",
+      "D": "The temperature of a system"
+    },
+    "correct_option": "B",
+    "explanation": "Entropy (symbol S) is a measure of the amount of disorder or randomness in a system. It indicates how energy is dispersed in a system at a specific temperature.",
+    "hint": "The notes define entropy."
+  },
+  {
+    "question": "Who coined the term entropy?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Ludwig Boltzmann",
+      "B": "Rudolph Clausius",
+      "C": "J. Willard Gibbs",
+      "D": "Hermann von Helmholtz"
+    },
+    "correct_option": "B",
+    "explanation": "The term entropy was coined by Rudolph Clausius in the nineteenth century.",
+    "hint": "The notes credit Clausius."
+  },
+  {
+    "question": "Is entropy a state function?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "No, entropy depends on the path",
+      "B": "Yes, entropy is a state function; ΔS = S_final - S_initial depends only on initial and final states",
+      "C": "Only at constant temperature",
+      "D": "Only for ideal gases"
+    },
+    "correct_option": "B",
+    "explanation": "Entropy is a state function. ΔS = S_final - S_initial depends only on initial and final states, not the path.",
+    "hint": "The notes state this property."
+  },
+  {
+    "question": "For an isothermal process, how is entropy change calculated?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS = q × T",
+      "B": "ΔS = q_rev / T",
+      "C": "ΔS = ΔH / T",
+      "D": "ΔS = ΔU / T"
+    },
+    "correct_option": "B",
+    "explanation": "For an isothermal process (constant temperature), the change in entropy is equal to the heat that would be transferred if the process were reversible divided by the temperature: ΔS = q_rev / T.",
+    "hint": "The notes provide this formula."
+  },
+  {
+    "question": "What are spontaneous processes driven by?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Decrease in enthalpy",
+      "B": "Increase in the entropy of the universe",
+      "C": "Decrease in temperature",
+      "D": "Increase in pressure"
+    },
+    "correct_option": "B",
+    "explanation": "Spontaneous processes are driven by an increase in the entropy of the universe.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What is a microstate?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "A macroscopic property of a system",
+      "B": "A specific arrangement or configuration of particles in a system, including their positions and energy levels at a given instant",
+      "C": "The total energy of a system",
+      "D": "The temperature of a system"
+    },
+    "correct_option": "B",
+    "explanation": "A microstate refers to a specific arrangement or configuration of particles in a system, including their positions and energy levels at a given instant.",
+    "hint": "The notes define microstate."
+  },
+  {
+    "question": "What is Boltzmann's equation for entropy?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "S = kT",
+      "B": "S = k ln W",
+      "C": "S = k/W",
+      "D": "S = kT ln W"
+    },
+    "correct_option": "B",
+    "explanation": "Ludwig Boltzmann's mathematical formulation of entropy is S = k ln W, where k is the Boltzmann constant (1.38 × 10⁻²³ J K⁻¹) and W is the number of microstates.",
+    "hint": "The notes provide this equation."
+  },
+  {
+    "question": "What is the change in entropy for a process in terms of microstates?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS = k ln(W_final - W_initial)",
+      "B": "ΔS = k ln(W_final / W_initial)",
+      "C": "ΔS = k (W_final - W_initial)",
+      "D": "ΔS = k (W_final / W_initial)"
+    },
+    "correct_option": "B",
+    "explanation": "The change in entropy for a process is ΔS = k ln W_final - k ln W_initial = k ln (W_final / W_initial).",
+    "hint": "The notes provide this formula."
+  },
+  {
+    "question": "What types of motion do molecules exhibit?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Only translational motion",
+      "B": "Translational, vibrational, and rotational motion",
+      "C": "Only vibrational motion",
+      "D": "Only rotational motion"
+    },
+    "correct_option": "B",
+    "explanation": "Molecules exhibit several types of motion: translational (movement of the entire molecule), vibrational (periodic motion of atoms within a molecule), and rotational (rotation of the molecule about an axis).",
+    "hint": "The notes list these three types."
+  },
+  {
+    "question": "What is the trend for entropy among the states of matter?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "S_gas < S_liquid < S_solid",
+      "B": "S_solid < S_liquid < S_gas",
+      "C": "S_liquid < S_solid < S_gas",
+      "D": "All states have equal entropy"
+    },
+    "correct_option": "B",
+    "explanation": "The trend for states of matter is S_solid < S_liquid < S_gas. Solids have low entropy, liquids have higher entropy, and gases have the highest entropy.",
+    "hint": "The notes provide this trend."
+  },
+  {
+    "question": "Why do solids have low entropy?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Molecules move freely in all directions",
+      "B": "Molecules are tightly packed, leading to few positions and low entropy",
+      "C": "Molecules have high kinetic energy",
+      "D": "Molecules are widely spaced"
+    },
+    "correct_option": "B",
+    "explanation": "Solids: Molecules are tightly packed → few positions → low entropy.",
+    "hint": "The notes explain this."
+  },
+  {
+    "question": "Why do gases have high entropy?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Molecules are tightly packed",
+      "B": "Molecules move freely and have many positions available, leading to high entropy",
+      "C": "Molecules have low kinetic energy",
+      "D": "Molecules are arranged in an orderly pattern"
+    },
+    "correct_option": "B",
+    "explanation": "Gases: Molecules move freely → many positions → highest entropy.",
+    "hint": "The notes explain this."
+  },
+  {
+    "question": "What factors cause entropy to increase?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Decrease in temperature, decrease in volume",
+      "B": "Increase in temperature, increase in volume, increase in number of independently moving molecules, and molecular complexity",
+      "C": "Decrease in pressure, decrease in molecular complexity",
+      "D": "Constant temperature and pressure"
+    },
+    "correct_option": "B",
+    "explanation": "Entropy increases when temperature increases (more microstates), volume increases (more space to move), number of independently moving molecules increases, and molecular complexity increases (more vibrational and rotational modes).",
+    "hint": "The notes list these factors."
+  },
+  {
+    "question": "What does the Second Law of Thermodynamics state?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "The energy of the universe is constant",
+      "B": "In any spontaneous process, the entropy of the universe increases",
+      "C": "Entropy decreases over time",
+      "D": "The entropy of a perfect crystal at 0 K is zero"
+    },
+    "correct_option": "B",
+    "explanation": "The Second Law states that in any spontaneous process, the entropy of the universe increases. For a spontaneous process, ΔS_univ = ΔS_sys + ΔS_surr > 0.",
+    "hint": "The notes provide this statement."
+  },
+  {
+    "question": "For a reversible process, what is ΔS_univ?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS_univ > 0",
+      "B": "ΔS_univ < 0",
+      "C": "ΔS_univ = 0",
+      "D": "ΔS_univ is undefined"
+    },
+    "correct_option": "C",
+    "explanation": "For a reversible process, ΔS_univ = 0. The entropy of the universe does not change for reversible processes.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What is the equation for ΔS_surr at constant temperature and pressure?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS_surr = ΔH_sys / T",
+      "B": "ΔS_surr = -ΔH_sys / T",
+      "C": "ΔS_surr = T / ΔH_sys",
+      "D": "ΔS_surr = -T / ΔH_sys"
+    },
+    "correct_option": "B",
+    "explanation": "At constant temperature and pressure, ΔS_surr = -ΔH_sys / T. The sign depends on direction of heat flow and magnitude depends on temperature.",
+    "hint": "The notes provide this equation."
+  },
+  {
+    "question": "How does temperature affect ΔS_surr for the same heat release?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Higher temperature makes ΔS_surr larger",
+      "B": "Higher temperature makes ΔS_surr smaller",
+      "C": "Temperature has no effect on ΔS_surr",
+      "D": "ΔS_surr is independent of temperature"
+    },
+    "correct_option": "B",
+    "explanation": "If T is high, ΔS_surr is small, and system's entropy ΔS_sys dominates. If T is low, ΔS_surr is large, and exothermicity strongly drives spontaneity.",
+    "hint": "The notes explain this relationship."
+  },
+  {
+    "question": "What is Gibbs Free Energy (G)?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "G = U + PV",
+      "B": "G = H - TS",
+      "C": "G = H + TS",
+      "D": "G = U - TS"
+    },
+    "correct_option": "B",
+    "explanation": "Gibbs Free Energy is defined as G = H - TS. It is the energy available to do useful work at constant temperature and pressure.",
+    "hint": "The notes provide this definition."
+  },
+  {
+    "question": "What is the change in Gibbs Free Energy equation?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG = ΔH + TΔS",
+      "B": "ΔG = ΔH - TΔS",
+      "C": "ΔG = ΔU - TΔS",
+      "D": "ΔG = ΔH + ΔS"
+    },
+    "correct_option": "B",
+    "explanation": "The change in Gibbs Free Energy is given by ΔG = ΔH - TΔS.",
+    "hint": "The notes provide this equation."
+  },
+  {
+    "question": "How is ΔG related to ΔS_universe?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG = TΔS_universe",
+      "B": "ΔG = -TΔS_universe",
+      "C": "ΔG = ΔS_universe / T",
+      "D": "ΔG = -ΔS_universe / T"
+    },
+    "correct_option": "B",
+    "explanation": "ΔG is proportional to the negative of ΔS_universe: ΔG = -TΔS_universe. Since ΔS_univ > 0 defines spontaneity, we can use ΔG to determine spontaneity using system properties only.",
+    "hint": "The notes provide this relationship."
+  },
+  {
+    "question": "What does ΔG < 0 indicate?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS_univ < 0, process is nonspontaneous",
+      "B": "ΔS_univ > 0, process is spontaneous",
+      "C": "System is at equilibrium",
+      "D": "Process is reversible"
+    },
+    "correct_option": "B",
+    "explanation": "If ΔG < 0, then ΔS_univ > 0, and the process is spontaneous.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What does ΔG > 0 indicate?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS_univ > 0, process is spontaneous",
+      "B": "ΔS_univ < 0, process is nonspontaneous",
+      "C": "System is at equilibrium",
+      "D": "Process is reversible"
+    },
+    "correct_option": "B",
+    "explanation": "If ΔG > 0, then ΔS_univ < 0, and the process is nonspontaneous.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What does ΔG = 0 indicate?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Process is spontaneous",
+      "B": "Process is nonspontaneous",
+      "C": "System is at equilibrium",
+      "D": "Process is impossible"
+    },
+    "correct_option": "C",
+    "explanation": "If ΔG = 0, then ΔS_univ = 0, and the system is at equilibrium.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What is the equation relating ΔG, ΔG°, and the reaction quotient Q?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG = ΔG° - RT ln Q",
+      "B": "ΔG = ΔG° + RT ln Q",
+      "C": "ΔG = ΔG° × RT ln Q",
+      "D": "ΔG = ΔG° / RT ln Q"
+    },
+    "correct_option": "B",
+    "explanation": "The Gibbs free energy change under nonstandard conditions is given by ΔG = ΔG° + RT ln Q, where R = 8.314 J mol⁻¹ K⁻¹, T is absolute temperature, and Q is the reaction quotient.",
+    "hint": "The notes provide this equation."
+  },
+  {
+    "question": "If Q < K, what is the sign of ΔG and which direction is spontaneous?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG > 0, reverse reaction is spontaneous",
+      "B": "ΔG < 0, forward reaction is spontaneous",
+      "C": "ΔG = 0, system at equilibrium",
+      "D": "ΔG cannot be determined"
+    },
+    "correct_option": "B",
+    "explanation": "If Q < K, ln(Q/K) < 0, so ΔG < 0, and the forward reaction is spontaneous. The reaction proceeds toward products.",
+    "hint": "The notes explain this case."
+  },
+  {
+    "question": "If Q > K, what is the sign of ΔG and which direction is spontaneous?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG < 0, forward reaction is spontaneous",
+      "B": "ΔG > 0, forward reaction is nonspontaneous, so reverse reaction is spontaneous",
+      "C": "ΔG = 0, system at equilibrium",
+      "D": "ΔG cannot be determined"
+    },
+    "correct_option": "B",
+    "explanation": "If Q > K, ln(Q/K) > 0, so ΔG > 0, and the forward reaction is nonspontaneous. The reaction proceeds in reverse (toward reactants).",
+    "hint": "The notes explain this case."
+  },
+  {
+    "question": "If Q = K, what is ΔG?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG < 0",
+      "B": "ΔG > 0",
+      "C": "ΔG = 0",
+      "D": "ΔG is undefined"
+    },
+    "correct_option": "C",
+    "explanation": "If Q = K, the system is already at equilibrium, ln(Q/K) = 0, so ΔG = 0, and no net change occurs.",
+    "hint": "The notes explain this case."
+  },
+  {
+    "question": "What does the Third Law of Thermodynamics state?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "The entropy of the universe increases",
+      "B": "The energy of the universe is constant",
+      "C": "The entropy of a pure, perfect crystalline substance at absolute zero is zero",
+      "D": "Entropy decreases with temperature"
+    },
+    "correct_option": "C",
+    "explanation": "The Third Law states that the entropy of a pure, perfect crystalline substance at absolute zero is zero. S(0 K) = 0.",
+    "hint": "The notes provide this statement."
+  },
+  {
+    "question": "At 0 K, a perfect crystal has how many microstates?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "W = 0",
+      "B": "W = 1",
+      "C": "W = infinity",
+      "D": "W is undefined"
+    },
+    "correct_option": "B",
+    "explanation": "At 0 K, a perfect crystal has no thermal motion and only one possible arrangement of its particles, so the number of microstates W = 1.",
+    "hint": "The notes explain this."
+  },
+  {
+    "question": "Using Boltzmann's equation, what is the entropy of a perfect crystal at 0 K?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "S = k",
+      "B": "S = k ln 1 = 0",
+      "C": "S = k ln 0 = undefined",
+      "D": "S = 1"
+    },
+    "correct_option": "B",
+    "explanation": "From Boltzmann's equation, S = k ln W = k ln 1 = 0, providing an absolute reference point for all entropy measurements.",
+    "hint": "The notes provide this calculation."
+  },
+  {
+    "question": "What is standard molar entropy (S°)?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "The entropy of 1 mole of a substance at absolute zero",
+      "B": "The entropy of 1 mole of a substance in its standard state at a specified temperature (usually 298 K)",
+      "C": "The entropy change during a reaction",
+      "D": "The entropy of formation"
+    },
+    "correct_option": "B",
+    "explanation": "Standard molar entropy (S°) is the entropy of 1 mole of a substance in its standard state at a specified temperature (usually 298 K). Units: J·mol⁻¹·K⁻¹.",
+    "hint": "The notes define S°."
+  },
+  {
+    "question": "What are the units of standard molar entropy?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "kJ/mol",
+      "B": "J·mol⁻¹·K⁻¹",
+      "C": "J/K",
+      "D": "cal/mol"
+    },
+    "correct_option": "B",
+    "explanation": "Standard molar entropy has units of J·mol⁻¹·K⁻¹.",
+    "hint": "The notes specify these units."
+  },
+  {
+    "question": "Do elements in their standard states have zero S° at 298 K?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Yes, like enthalpy of formation",
+      "B": "No, unlike enthalpy, elements in their standard states have nonzero S° values at 298 K because the reference for entropy is 0 K",
+      "C": "Only gases have nonzero S°",
+      "D": "Only solids have zero S°"
+    },
+    "correct_option": "B",
+    "explanation": "Unlike enthalpy, elements in their standard states have nonzero S° values at 298 K because the reference for entropy is 0 K, not the standard state. Values are tabulated relative to S = 0 at 0 K.",
+    "hint": "The notes explain this distinction."
+  },
+  {
+    "question": "What is the trend in standard molar entropy with molar mass for similar substances?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Entropy decreases with molar mass",
+      "B": "Entropy increases with molar mass because heavier molecules can store more energy in motions, leading to more microstates",
+      "C": "Entropy is independent of molar mass",
+      "D": "Entropy only depends on temperature"
+    },
+    "correct_option": "B",
+    "explanation": "Entropy increases with molar mass because heavier molecules can store more energy in motions, leading to more microstates.",
+    "hint": "The notes state this observation."
+  },
+  {
+    "question": "How does molecular complexity affect entropy?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "More complex molecules have lower entropy",
+      "B": "More complex molecules have higher entropy because they have more vibrational and rotational modes, providing more microstates",
+      "C": "Complexity has no effect on entropy",
+      "D": "Only atomic size affects entropy"
+    },
+    "correct_option": "B",
+    "explanation": "Entropy increases with the number of atoms in a molecule. Larger and more complex molecules have greater entropies because more atoms provide more vibrational and rotational modes, creating more microstates.",
+    "hint": "The notes explain this."
+  },
+  {
+    "question": "What happens to entropy during phase transitions like melting and boiling?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Entropy decreases sharply",
+      "B": "Entropy increases sharply because heat is absorbed at constant temperature and molecules gain freedom of motion",
+      "C": "Entropy remains constant",
+      "D": "Entropy becomes zero"
+    },
+    "correct_option": "B",
+    "explanation": "Melting (solid → liquid) and boiling (liquid → gas) involve vertical jumps in entropy vs. temperature plots. Heat is absorbed at constant temperature (latent heat) and molecules gain freedom of motion, so entropy increases sharply.",
+    "hint": "The notes describe these jumps."
+  },
+  {
+    "question": "What is the formula for calculating standard entropy change for a reaction?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔS°_rxn = Σ S°_reactants - Σ S°_products",
+      "B": "ΔS°_rxn = Σ S°_products - Σ S°_reactants",
+      "C": "ΔS°_rxn = Σ S°_products + Σ S°_reactants",
+      "D": "ΔS°_rxn = (Σ S°_products) / (Σ S°_reactants)"
+    },
+    "correct_option": "B",
+    "explanation": "For a reaction, the standard entropy change is ΔS°_rxn = Σ n_i S°_products - Σ n_j S°_reactants, where n are stoichiometric coefficients and S° are standard molar entropies.",
+    "hint": "The notes provide this formula."
+  },
+  {
+    "question": "Calculate ΔS° for the reaction N₂(g) + 3H₂(g) → 2NH₃(g) using S°(NH₃) = 192.5, S°(N₂) = 191.5, S°(H₂) = 130.6 J/mol·K.",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "+198.3 J/mol·K",
+      "B": "-198.3 J/mol·K",
+      "C": "+385.0 J/mol·K",
+      "D": "-385.0 J/mol·K"
+    },
+    "correct_option": "B",
+    "explanation": "ΔS° = 2(192.5) - [191.5 + 3(130.6)] = 385.0 - [191.5 + 391.8] = 385.0 - 583.3 = -198.3 J/mol·K.",
+    "hint": "The notes provide this exact calculation."
+  },
+  {
+    "question": "Calculate ΔS° for the combustion of isooctane: C₈H₁₈(l) + ²⁵/₂ O₂(g) → 8CO₂(g) + 9H₂O(g) using S° values: C₈H₁₈ = 329.3, O₂ = 205.14, CO₂ = 213.74, H₂O = 188.83 J/mol·K.",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "-515.3 J/mol·K",
+      "B": "+515.3 J/mol·K",
+      "C": "-3409.6 J/mol·K",
+      "D": "+3409.6 J/mol·K"
+    },
+    "correct_option": "B",
+    "explanation": "ΔS° = [8(213.74) + 9(188.83)] - [329.3 + 12.5(205.14)] = [1709.92 + 1699.47] - [329.3 + 2564.25] = 3409.39 - 2893.55 = 515.8 J/mol·K (approximately 515.3 from the notes).",
+    "hint": "The notes provide this calculation with answer 515.3 J/mol·K."
+  },
+  {
+    "question": "What is the standard free energy of formation, ΔG_f°?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "The free-energy change when a compound decomposes",
+      "B": "The free-energy change when 1 mole of a compound forms from its constituent elements in their standard states under standard conditions",
+      "C": "The free energy of reaction",
+      "D": "The entropy of formation"
+    },
+    "correct_option": "B",
+    "explanation": "The standard free energy of formation, ΔG_f°, is the free-energy change when 1 mole of a compound forms from its constituent elements in their standard states under standard conditions.",
+    "hint": "The notes define ΔG_f°."
+  },
+  {
+    "question": "What is ΔG_f° for elements in their standard states?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Always positive",
+      "B": "Always negative",
+      "C": "ΔG_f° = 0 for elements in their standard states",
+      "D": "Varies with temperature"
+    },
+    "correct_option": "C",
+    "explanation": "For elements in their standard states, ΔG_f° = 0.",
+    "hint": "The notes state this."
+  },
+  {
+    "question": "What is the formula for calculating standard free energy change for a reaction?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔG° = Σ ΔG_f°(reactants) - Σ ΔG_f°(products)",
+      "B": "ΔG° = Σ ΔG_f°(products) - Σ ΔG_f°(reactants)",
+      "C": "ΔG° = Σ ΔG_f°(products) + Σ ΔG_f°(reactants)",
+      "D": "ΔG° = (Σ ΔG_f°(products)) / (Σ ΔG_f°(reactants))"
+    },
+    "correct_option": "B",
+    "explanation": "For a reaction, ΔG° = Σ n ΔG_f°(products) - Σ m ΔG_f°(reactants).",
+    "hint": "The notes provide this formula."
+  },
+  {
+    "question": "How does temperature affect spontaneity based on the signs of ΔH and ΔS?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "ΔH negative, ΔS positive: spontaneous at all temperatures",
+      "B": "ΔH positive, ΔS negative: spontaneous at all temperatures",
+      "C": "ΔH negative, ΔS negative: spontaneous only at high temperatures",
+      "D": "ΔH positive, ΔS positive: spontaneous only at low temperatures"
     },
     "correct_option": "A",
-    "explanation": "The CNS is enclosed and protected by the meninges, a three-layered system of membranes.",
-    "hint": "Inflammation of these membranes is called meningitis."
+    "explanation": "When ΔH is negative and ΔS is positive, ΔG = ΔH - TΔS is always negative, so the reaction is spontaneous at all temperatures.",
+    "hint": "The notes provide a table summarizing these relationships."
   },
   {
-    "question": "What is the tough, leathery outer layer of the meninges called?",
-    "topic": "Nervous System",
+    "question": "When ΔH is positive and ΔS is positive, when is the reaction spontaneous?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Pia mater",
-      "B": "Arachnoid mater",
-      "C": "Dura mater",
-      "D": "Subarachnoid space"
+      "A": "Spontaneous at all temperatures",
+      "B": "Spontaneous only at high temperatures",
+      "C": "Spontaneous only at low temperatures",
+      "D": "Nonspontaneous at all temperatures"
+    },
+    "correct_option": "B",
+    "explanation": "When ΔH is positive and ΔS is positive, ΔG = ΔH - TΔS becomes negative only at high temperatures where the TΔS term dominates. Thus, the reaction is spontaneous at high temperatures.",
+    "hint": "The notes provide a table summarizing these relationships."
+  },
+  {
+    "question": "When ΔH is negative and ΔS is negative, when is the reaction spontaneous?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Spontaneous at all temperatures",
+      "B": "Spontaneous only at high temperatures",
+      "C": "Spontaneous only at low temperatures",
+      "D": "Nonspontaneous at all temperatures"
     },
     "correct_option": "C",
-    "explanation": "The tough, leathery outer layer of the meninges is called the dura mater.",
-    "hint": "'Dura' means hard or tough."
+    "explanation": "When ΔH is negative and ΔS is negative, ΔG = ΔH - TΔS becomes negative only at low temperatures where the TΔS term is small. Thus, the reaction is spontaneous at low temperatures.",
+    "hint": "The notes provide a table summarizing these relationships."
   },
   {
-    "question": "Besides the meninges, what else protects the brain and spinal cord?",
-    "topic": "Nervous System",
+    "question": "When ΔH is positive and ΔS is negative, what is the spontaneity?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Muscles and tendons.",
-      "B": "The skull and vertebrae.",
-      "C": "The skin and fat.",
-      "D": "Ligaments and cartilage."
-    },
-    "correct_option": "B",
-    "explanation": "The brain is protected by the skull, and the spinal cord is protected by the vertebrae.",
-    "hint": "These are bony structures."
-  },
-  {
-    "question": "What is the function of the blood-brain barrier?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "To increase blood flow to the brain.",
-      "B": "To prevent harmful substances in the blood from entering the brain.",
-      "C": "To allow all substances in the blood to enter the brain.",
-      "D": "To produce cerebrospinal fluid."
-    },
-    "correct_option": "B",
-    "explanation": "The blood-brain barrier prevents the brain from being exposed to harmful substances floating in the blood.",
-    "hint": "It acts as a selective filter."
-  },
-  {
-    "question": "What is the purpose of the spinal cord?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "To produce thoughts and emotions.",
-      "B": "To send motor commands from the brain to the body and relay sensory information to the brain.",
-      "C": "To control voluntary muscle movement only.",
-      "D": "To regulate the endocrine system."
-    },
-    "correct_option": "B",
-    "explanation": "The spinal cord's purpose is to send motor commands from the brain to the peripheral body and relay sensory information from the sensory organs to the brain.",
-    "hint": "It is the main communication highway between the brain and the body."
-  },
-  {
-    "question": "What does the peripheral nervous system (PNS) consist mainly of?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The brain and spinal cord.",
-      "B": "Nerves, which are long fibres that branch off the spinal cord.",
-      "C": "Only sensory receptors.",
-      "D": "Cerebrospinal fluid."
-    },
-    "correct_option": "B",
-    "explanation": "The PNS consists mainly of nerves, which are long fibres that branch off the spinal cord and connect the CNS to every other part of the body.",
-    "hint": "These are the 'wires' that extend throughout the body."
-  },
-  {
-    "question": "What is another name for the somatic nervous system (SNS)?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The involuntary nervous system",
-      "B": "The visceral nervous system",
-      "C": "The voluntary nervous system",
-      "D": "The enteric nervous system"
-    },
-    "correct_option": "C",
-    "explanation": "The somatic nervous system is also known as the voluntary nervous system.",
-    "hint": "It controls actions we consciously perform."
-  },
-  {
-    "question": "The somatic nervous system links the brain and spinal cord to which structures?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Smooth muscles and glands.",
-      "B": "Skeletal muscles and sensory receptors in the skin.",
-      "C": "Internal organs like the heart and stomach.",
-      "D": "The digestive system."
-    },
-    "correct_option": "B",
-    "explanation": "The SNS links the brain and spinal cord to skeletal muscles under conscious control, as well as to sensory receptors in the skin.",
-    "hint": "It controls your ability to move and feel touch."
-  },
-  {
-    "question": "What is the function of the autonomic nervous system (ANS)?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "To control voluntary skeletal muscle movement.",
-      "B": "To process sensory information from the skin.",
-      "C": "To operate internal organs, smooth muscle, and glands.",
-      "D": "To control conscious thought."
-    },
-    "correct_option": "C",
-    "explanation": "The autonomic nervous system operates internal organs, smooth muscle, and glands.",
-    "hint": "It regulates involuntary functions like heartbeat and digestion."
-  },
-  {
-    "question": "What are the three subdivisions of the autonomic nervous system?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Somatic, sympathetic, and parasympathetic.",
-      "B": "Sympathetic, parasympathetic, and enteric.",
-      "C": "Central, peripheral, and autonomic.",
-      "D": "Sensory, motor, and interneurons."
-    },
-    "correct_option": "B",
-    "explanation": "The autonomic nervous system is subdivided into the sympathetic, parasympathetic, and enteric nervous systems.",
-    "hint": "One is for 'fight or flight', one for 'rest and digest', and one for the gut."
-  },
-  {
-    "question": "When is the sympathetic nervous system activated?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "During relaxed states.",
-      "B": "During emergencies to mobilize energy.",
-      "C": "While digesting food.",
-      "D": "During sleep."
-    },
-    "correct_option": "B",
-    "explanation": "The sympathetic nervous system is activated in cases of emergencies to mobilize energy, often called the 'fight or flight' response.",
-    "hint": "It prepares the body for intense physical activity."
-  },
-  {
-    "question": "When is the parasympathetic nervous system activated?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "During emergencies.",
-      "B": "When the body is in a relaxed state.",
-      "C": "Only during exercise.",
-      "D": "When sensory information is processed."
-    },
-    "correct_option": "B",
-    "explanation": "The parasympathetic nervous system is activated when organisms are in a relaxed state and regulates involuntary functions like digestion.",
-    "hint": "It is often called the 'rest and digest' system."
-  },
-  {
-    "question": "What is the function of the enteric nervous system?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "To control the skeletal muscles.",
-      "B": "To manage the fight-or-flight response.",
-      "C": "To control the gastrointestinal system.",
-      "D": "To process sensory information from the skin."
-    },
-    "correct_option": "C",
-    "explanation": "The enteric nervous system functions to control the gastrointestinal system.",
-    "hint": "It is sometimes called the 'second brain'."
-  },
-  {
-    "question": "What are nerve cells also called?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Neurons",
-      "B": "Neuroglia",
-      "C": "Synapses",
-      "D": "Axons"
-    },
-    "correct_option": "A",
-    "explanation": "Nerve cells are also called neurons.",
-    "hint": "This is the basic functional unit of the nervous system."
-  },
-  {
-    "question": "Approximately how many neurons does the human brain contain?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "1 million",
-      "B": "100 million",
-      "C": "100 billion",
-      "D": "1 trillion"
-    },
-    "correct_option": "C",
-    "explanation": "The human brain contains about 100 billion neurons.",
-    "hint": "That's a hundred thousand million."
-  },
-  {
-    "question": "What are the special extensions of a neuron that allow it to communicate?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Cell body and nucleus.",
-      "B": "Axons and dendrites.",
-      "C": "Myelin sheath and nodes of Ranvier.",
-      "D": "Synaptic vesicles and neurotransmitters."
-    },
-    "correct_option": "B",
-    "explanation": "A neuron has a cell body and special extensions called axons and dendrites, which allow communication.",
-    "hint": "One usually sends signals, the other receives them."
-  },
-  {
-    "question": "When a neuron sends a message, what travels down the length of its axon?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "A chemical signal",
-      "B": "An electrical signal",
-      "C": "A neurotransmitter",
-      "D": "A hormone"
-    },
-    "correct_option": "B",
-    "explanation": "When a neuron sends a message, it sends an electrical signal down the length of its axon.",
-    "hint": "This is a change in voltage across the cell membrane."
-  },
-  {
-    "question": "What changes at the end of the axon to allow the signal to cross the synapse?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The electrical signal changes to a magnetic signal.",
-      "B": "The electrical signal changes to a chemical signal using neurotransmitters.",
-      "C": "The signal stops and must be regenerated.",
-      "D": "The signal travels through gap junctions."
-    },
-    "correct_option": "B",
-    "explanation": "At the end of the axon, the electrical signal changes to a chemical signal, releasing neurotransmitters into the synapse.",
-    "hint": "Neurotransmitters are the chemical messengers."
-  },
-  {
-    "question": "What is the synapse?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The cell body of a neuron.",
-      "B": "The long fiber of a neuron.",
-      "C": "The space between the end of an axon and the tip of a dendrite.",
-      "D": "The chemical messenger itself."
-    },
-    "correct_option": "C",
-    "explanation": "The synapse is the space between the end of an axon and the tip of a dendrite from another neuron, where neurotransmitters carry the signal across.",
-    "hint": "It's the tiny gap between neurons."
-  },
-  {
-    "question": "Which type of neuron transmits messages from the brain to muscles to generate movement?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Sensory neurons",
-      "B": "Motor neurons",
-      "C": "Interneurons",
-      "D": "Pyramidal neurons"
-    },
-    "correct_option": "B",
-    "explanation": "Motor neurons transmit messages from the brain to the muscles to generate movement.",
-    "hint": "They control effectors like muscles."
-  },
-  {
-    "question": "Which type of neuron detects stimuli like light, sound, and pressure and sends messages about them to the brain?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Motor neurons",
-      "B": "Sensory neurons",
-      "C": "Interneurons",
-      "D": "Association neurons"
-    },
-    "correct_option": "B",
-    "explanation": "Sensory neurons detect light, sound, odor, taste, pressure, and heat and send messages about those things to the brain.",
-    "hint": "They bring information from the senses to the CNS."
-  },
-  {
-    "question": "The brain is divided into which two hemispheres?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Frontal and parietal",
-      "B": "Temporal and occipital",
-      "C": "Left and right",
-      "D": "Anterior and posterior"
-    },
-    "correct_option": "C",
-    "explanation": "The brain is divided into 2 hemispheres, the left and the right.",
-    "hint": "They are connected by the corpus callosum."
-  },
-  {
-    "question": "Which hemisphere of the brain is typically more dominant in language, logic, and math?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The right hemisphere",
-      "B": "The left hemisphere",
-      "C": "The frontal lobe",
-      "D": "The cerebellum"
-    },
-    "correct_option": "B",
-    "explanation": "The left hemisphere is more dominant in language, logic, and math abilities.",
-    "hint": "This is often called the 'logical' hemisphere."
-  },
-  {
-    "question": "Which hemisphere of the brain is typically more creative and dominant in artistic situations and intuition?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The right hemisphere",
-      "B": "The left hemisphere",
-      "C": "The parietal lobe",
-      "D": "The medulla oblongata"
-    },
-    "correct_option": "A",
-    "explanation": "The right hemisphere is more creative and dominant in artistic and musical situations and intuition.",
-    "hint": "This is often called the 'creative' hemisphere."
-  },
-  {
-    "question": "What is the cerebral cortex?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The inner part of the brain made of white matter.",
-      "B": "The outermost layer of the brain, composed of gray matter.",
-      "C": "The structure that connects the two hemispheres.",
-      "D": "The part of the brainstem that controls breathing."
-    },
-    "correct_option": "B",
-    "explanation": "The cerebral cortex is the outermost layer that surrounds the brain. It is composed of gray matter.",
-    "hint": "It has many folds and grooves to increase surface area."
-  },
-  {
-    "question": "The cerebral cortex is divided into four lobes. What are they?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Frontal, parietal, temporal, and occipital",
-      "B": "Anterior, posterior, dorsal, and ventral",
-      "C": "Cerebral, cerebellar, brainstem, and limbic",
-      "D": "Motor, sensory, visual, and auditory"
-    },
-    "correct_option": "A",
-    "explanation": "The cortex divides into 4 lobes: frontal, parietal, occipital, and temporal.",
-    "hint": "Each lobe has specialized functions."
-  },
-  {
-    "question": "The frontal lobe is responsible for which functions?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Processing sensory information.",
-      "B": "Voluntary motor function, problem-solving, attention, memory, and language.",
-      "C": "Visual processing.",
-      "D": "Processing auditory stimuli."
-    },
-    "correct_option": "B",
-    "explanation": "The frontal lobe is responsible for voluntary motor function, problem-solving, attention, memory, and language.",
-    "hint": "It's located at the front of the brain."
-  },
-  {
-    "question": "Which area in the frontal lobe controls the precise voluntary movements of skeletal muscles?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Broca's area",
-      "B": "Somatosensory cortex",
-      "C": "Motor cortex",
-      "D": "Wernicke's area"
-    },
-    "correct_option": "C",
-    "explanation": "The motor cortex, located in the frontal lobe, allows for the precise voluntary movements of our skeletal muscles.",
-    "hint": "It's mapped to different parts of the body."
-  },
-  {
-    "question": "Which area in the frontal lobe controls motor functions responsible for producing language?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Wernicke's area",
-      "B": "Broca's area",
-      "C": "Motor cortex",
-      "D": "Auditory cortex"
-    },
-    "correct_option": "B",
-    "explanation": "The Broca area, located in the frontal lobe, controls motor functions responsible for producing language.",
-    "hint": "Damage to this area causes expressive aphasia."
-  },
-  {
-    "question": "The parietal lobe is responsible for processing what type of information?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Visual information",
-      "B": "Auditory information",
-      "C": "Sensory information from the body",
-      "D": "Motor commands"
-    },
-    "correct_option": "C",
-    "explanation": "The parietal lobe is responsible for processing sensory information and contains the somatosensory cortex.",
-    "hint": "It helps you sense touch, pressure, and pain."
-  },
-  {
-    "question": "Which lobe of the brain is the visual processing center?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Frontal lobe",
-      "B": "Parietal lobe",
-      "C": "Temporal lobe",
-      "D": "Occipital lobe"
+      "A": "Spontaneous at all temperatures",
+      "B": "Spontaneous at high temperatures",
+      "C": "Spontaneous at low temperatures",
+      "D": "Nonspontaneous at all temperatures"
     },
     "correct_option": "D",
-    "explanation": "The occipital lobe, located at the back of the brain, is the visual processing center and contains the visual cortex.",
-    "hint": "Damage to this area can cause blindness."
+    "explanation": "When ΔH is positive and ΔS is negative, ΔG = ΔH - TΔS is always positive because both terms are positive. Thus, the reaction is nonspontaneous at all temperatures.",
+    "hint": "The notes provide a table summarizing these relationships."
   },
   {
-    "question": "The temporal lobe contains the auditory cortex. What is its function?",
-    "topic": "Nervous System",
+    "question": "What is the equation relating ΔG° and the equilibrium constant K?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "To process visual stimuli.",
-      "B": "To process auditory stimuli.",
-      "C": "To process sensory touch.",
-      "D": "To control voluntary movement."
+      "A": "ΔG° = RT ln K",
+      "B": "ΔG° = -RT ln K",
+      "C": "ΔG° = -RT / ln K",
+      "D": "ΔG° = RT / ln K"
     },
     "correct_option": "B",
-    "explanation": "The temporal lobe processes auditory stimuli through the auditory cortex.",
-    "hint": "It helps you hear and understand sounds."
+    "explanation": "At equilibrium, ΔG = 0, so ΔG° = -RT ln K. This relates standard free energy to the equilibrium constant.",
+    "hint": "The notes provide this equation."
   },
   {
-    "question": "Which area in the temporal lobe is responsible for speech comprehension?",
-    "topic": "Nervous System",
+    "question": "In the Haber process example at 25°C, ΔG° was calculated as -32.8 kJ. What does this indicate?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Broca's area",
-      "B": "Motor cortex",
-      "C": "Wernicke's area",
-      "D": "Somatosensory cortex"
-    },
-    "correct_option": "C",
-    "explanation": "The Wernicke area is located in the temporal lobe and functions in speech comprehension.",
-    "hint": "Damage to this area causes receptive aphasia."
-  },
-  {
-    "question": "What is the function of the thalamus?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "To maintain homeostasis and connect to the pituitary gland.",
-      "B": "To act as the brain's relay center, processing and distributing sensory information.",
-      "C": "To coordinate smooth, voluntary movements.",
-      "D": "To control autonomic functions like breathing and heart rate."
+      "A": "The reaction is nonspontaneous at 25°C",
+      "B": "The reaction is spontaneous at 25°C",
+      "C": "The reaction is at equilibrium",
+      "D": "The reaction is endothermic"
     },
     "correct_option": "B",
-    "explanation": "The thalamus is the brain's relay center. It receives afferent impulses from sensory receptors and processes the information for distribution to the appropriate cortical area.",
-    "hint": "It's like a central switching station."
+    "explanation": "ΔG° = -32.8 kJ at 25°C indicates the reaction is spontaneous under standard conditions at that temperature.",
+    "hint": "The notes interpret this result."
   },
   {
-    "question": "The hypothalamus is vital for maintaining:",
-    "topic": "Nervous System",
+    "question": "In the Haber process example at 300°C (573 K), ΔG was calculated as +21.7 kJ. What does this indicate?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Language and logic",
-      "B": "Visual processing",
-      "C": "Homeostasis",
-      "D": "Fine motor coordination"
-    },
-    "correct_option": "C",
-    "explanation": "The hypothalamus is vital to maintaining homeostasis.",
-    "hint": "It regulates things like body temperature, hunger, and thirst."
-  },
-  {
-    "question": "The hypothalamus connects the central nervous system to which other system?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The skeletal system",
-      "B": "The muscular system",
-      "C": "The endocrine system",
-      "D": "The lymphatic system"
-    },
-    "correct_option": "C",
-    "explanation": "The hypothalamus connects the CNS to the endocrine system, primarily through its communication with the pituitary gland.",
-    "hint": "It controls hormone release."
-  },
-  {
-    "question": "Which part of the brainstem is responsible for autonomic functions like regulating breathing, blood pressure, and heart rate?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Pons",
-      "B": "Midbrain",
-      "C": "Medulla oblongata",
-      "D": "Cerebellum"
-    },
-    "correct_option": "C",
-    "explanation": "The medulla oblongata is responsible for crucial autonomic functions including monitoring the respiratory system, regulating blood pressure, and controlling cardiac contractions.",
-    "hint": "It's located at the very bottom of the brainstem."
-  },
-  {
-    "question": "What is the function of the pons?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "To coordinate voluntary movements and balance.",
-      "B": "To act as a relay station, connecting the medulla to the thalamus and relaying motor impulses.",
-      "C": "To process visual information.",
-      "D": "To regulate body temperature."
+      "A": "The reaction becomes more spontaneous at high temperature",
+      "B": "The reaction becomes nonspontaneous at high temperature",
+      "C": "The reaction is at equilibrium",
+      "D": "The reaction is exothermic"
     },
     "correct_option": "B",
-    "explanation": "The pons, found in the brainstem, comprises tracts responsible for relaying impulses from the motor cortex to the cerebellum, medulla, and thalamus.",
-    "hint": "Its name means 'bridge' in Latin."
+    "explanation": "ΔG = +21.7 kJ at 573 K indicates the reaction is nonspontaneous at high temperature. This exothermic reaction with ΔS < 0 is favored at low temperatures.",
+    "hint": "The notes provide this interpretation."
   },
   {
-    "question": "The cerebellum, known as the 'little brain', is responsible for what function?",
-    "topic": "Nervous System",
+    "question": "For the synthesis of ammonia at 100°C with given nonstandard pressures, ΔG was calculated as -77 kJ/mol. What does this indicate?",
+    "topic": "Chemical Thermodynamics",
     "options": {
-      "A": "Conscious thought and reasoning.",
-      "B": "Processing sensory information from the skin.",
-      "C": "Smooth, coordinated voluntary movements, balance, and posture.",
-      "D": "Regulating the sleep-wake cycle."
-    },
-    "correct_option": "C",
-    "explanation": "The cerebellum is responsible for smooth, coordinated voluntary movements, maintaining balance, and posture.",
-    "hint": "It's involved in motor learning and coordination."
-  },
-  {
-    "question": "Damage to the cerebellum would most likely result in problems with:",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Speech production.",
-      "B": "Understanding language.",
-      "C": "Coordination and balance.",
-      "D": "Vision."
-    },
-    "correct_option": "C",
-    "explanation": "Damage to the cerebellum would most likely result in problems with coordination, balance, and smooth voluntary movements (ataxia).",
-    "hint": "It fine-tunes movements."
-  },
-  {
-    "question": "What is a stroke?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "A tumor in the brain tissue.",
-      "B": "An infection of the meninges.",
-      "C": "An interruption of blood supply to the brain, causing tissue death.",
-      "D": "A degenerative disease of the dopamine-producing cells."
-    },
-    "correct_option": "C",
-    "explanation": "A stroke is an interruption of blood supply to the brain; the resulting lack of oxygen causes tissue to die in the affected area.",
-    "hint": "It is a 'brain attack'."
-  },
-  {
-    "question": "Parkinson's disease is an example of a CNS disorder caused by:",
-    "topic": "Nervous System",
-    "options": {
-      "A": "Infection",
-      "B": "Trauma",
-      "C": "Degeneration of dopamine-producing cells",
-      "D": "Tumor"
-    },
-    "correct_option": "C",
-    "explanation": "Parkinson's disease involves the gradual degeneration of dopamine-producing cells in the basal ganglia.",
-    "hint": "It affects movement, causing tremors and stiffness."
-  },
-  {
-    "question": "An autoimmune disorder like acute disseminated encephalomyelitis attacks which part of the nerve cells?",
-    "topic": "Nervous System",
-    "options": {
-      "A": "The cell body.",
-      "B": "The axon's myelin sheath (the nerves' insulation).",
-      "C": "The dendrites.",
-      "D": "The synaptic terminals."
+      "A": "The reaction is nonspontaneous under these nonstandard conditions",
+      "B": "The reaction is spontaneous under these nonstandard conditions",
+      "C": "The reaction is at equilibrium",
+      "D": "The reaction quotient Q = K"
     },
     "correct_option": "B",
-    "explanation": "Acute disseminated encephalomyelitis is characterized by an immune response against the brain and spinal cord, attacking myelin (the nerves' insulation).",
-    "hint": "This destroys the white matter."
+    "explanation": "ΔG ≈ -77 kJ/mol under the given nonstandard conditions (P_N₂ = 2.00 atm, P_H₂ = 7.00 atm, P_NH₃ = 0.021 atm) indicates the reaction is spontaneous forward under these conditions.",
+    "hint": "The notes provide this calculation and interpretation."
+  },
+  {
+    "question": "Between 1 mol NH₃(g) and 1 mol He(g) at 25°C, which has higher entropy and why?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "He(g) has higher entropy because it is lighter",
+      "B": "NH₃(g) has higher entropy because it is a polyatomic molecule with translational, rotational, and vibrational motions, leading to more microstates",
+      "C": "Both have equal entropy because they are gases",
+      "D": "He(g) has higher entropy because it is monatomic"
+    },
+    "correct_option": "B",
+    "explanation": "NH₃(g) has higher entropy. Even though He is lighter, NH₃ is a polyatomic molecule with translational + rotational + vibrational motions, which greatly increases the number of microstates and therefore entropy.",
+    "hint": "The notes provide this comparison."
+  },
+  {
+    "question": "Between 1 mol Pb(s) at 25°C and 1 mol Pb(l) at 800°C, which has higher entropy and why?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Pb(s) at 25°C has higher entropy because solids are more ordered",
+      "B": "Pb(l) at 800°C has higher entropy because it is a liquid at much higher temperature, with atoms able to translate and rearrange, and greater kinetic energy",
+      "C": "Both have equal entropy",
+      "D": "Pb(s) at 25°C has higher entropy because it is at lower temperature"
+    },
+    "correct_option": "B",
+    "explanation": "Pb(l) at 800°C has higher entropy. Entropy increases with phase change (solid → liquid) and increasing temperature. Both factors strongly favor higher entropy for liquid Pb at 800°C.",
+    "hint": "The notes provide this comparison."
+  },
+  {
+    "question": "A system in State A has 4 microstates and in State B has 16 microstates. What is the entropy change for A → B? (k = 1.38 × 10⁻²³ J K⁻¹)",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "1.91 × 10⁻²³ J K⁻¹",
+      "B": "-1.91 × 10⁻²³ J K⁻¹",
+      "C": "2.77 × 10⁻²³ J K⁻¹",
+      "D": "0 J K⁻¹"
+    },
+    "correct_option": "A",
+    "explanation": "ΔS = k ln(W_B/W_A) = (1.38 × 10⁻²³) ln(16/4) = (1.38 × 10⁻²³) ln(4) = (1.38 × 10⁻²³)(1.386) = 1.91 × 10⁻²³ J K⁻¹.",
+    "hint": "The notes provide this exact calculation."
+  },
+  {
+    "question": "A sample of water at 40°C has a piece of metal at 150°C placed into it. Is this process spontaneous?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "No, because heat flows from cold to hot",
+      "B": "Yes, because heat always flows from higher temperature to lower temperature, increasing entropy of the universe",
+      "C": "No, because it requires external energy",
+      "D": "It depends on the specific heat capacities"
+    },
+    "correct_option": "B",
+    "explanation": "This process is spontaneous as described. Heat always flows from higher temperature (150°C metal) to lower temperature (40°C water), raising the water's temperature and increasing the entropy of the universe due to energy dispersion.",
+    "hint": "The notes provide this reasoning."
+  },
+  {
+    "question": "Is the decomposition of liquid water at room temperature into H₂(g) and O₂(g) spontaneous?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Yes, because it increases entropy",
+      "B": "No, the reaction is spontaneous in the reverse direction; water is very stable and decomposition requires electrical energy",
+      "C": "Yes, because it is endothermic",
+      "D": "It is at equilibrium"
+    },
+    "correct_option": "B",
+    "explanation": "The reaction is spontaneous in the reverse direction. Liquid water is very stable; decomposition requires electrical energy (electrolysis). It is highly endothermic, and ΔG > 0 at room temperature. The reverse reaction (formation of water from H₂ and O₂) is spontaneous and strongly exothermic.",
+    "hint": "The notes provide this reasoning."
+  },
+  {
+    "question": "At its normal boiling point of 80.1°C and 101.3 kPa pressure, benzene vapor condensing to liquid benzene is:",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "Spontaneous forward",
+      "B": "Spontaneous in reverse",
+      "C": "At equilibrium",
+      "D": "Nonspontaneous in both directions"
+    },
+    "correct_option": "C",
+    "explanation": "At the normal boiling point and 1 atm pressure, vapor and liquid are in equilibrium. The rates of evaporation and condensation are equal, and ΔG = 0, so neither condensation nor vaporization is favored.",
+    "hint": "The notes provide this reasoning."
+  },
+  {
+    "question": "For the formation of H₂O₂(l) from H₂(g) and O₂(g), ΔH° = -187.78 kJ/mol and ΔS° = -226.3 J/mol·K. What is ΔG° at 298 K?",
+    "topic": "Chemical Thermodynamics",
+    "options": {
+      "A": "-120.4 kJ/mol",
+      "B": "+120.4 kJ/mol",
+      "C": "-187.8 kJ/mol",
+      "D": "-226.3 kJ/mol"
+    },
+    "correct_option": "A",
+    "explanation": "ΔG° = ΔH° - TΔS° = -187.78 - (298)(-0.2263) = -187.78 + 67.4 = -120.4 kJ/mol. The negative value indicates the reaction is spontaneous under standard conditions.",
+    "hint": "The notes provide this exact calculation."
   }
 ]
 }

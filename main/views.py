@@ -402,7 +402,7 @@ def course_list(request):
 
 def course_detail(request, course_id):
     course = get_object_or_404(Course, id=course_id)
-    topics = course.topics.all()
+    topics = course.topics.all().order_by('name')
     obj_questions_count = course.objective_questions.count()
     
     # Enrich topics with practice stats
