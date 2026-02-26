@@ -116,7 +116,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import Course, PastQuestionsObj
 
-
+@login_required
 def start_cbt(request, course_id):
     if request.method == 'POST':
         course = get_object_or_404(Course, id=course_id)
@@ -135,7 +135,7 @@ def start_cbt(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     return render(request, 'cbt_mode_select.html', {'course': course})
 
-
+@login_required
 def cbt_exam(request):
     """Serves the CBT page (HTML only)"""
     course_id = request.session.get('cbt_course_id')
@@ -168,7 +168,7 @@ def cbt_exam(request):
 
     return render(request, 'cbt_exam.html', {'course': course, 'topic_docs': topic_docs})
 
-
+@login_required
 def cbt_data(request):
     """Returns ALL questions ONCE"""
     course_id = request.session.get('cbt_course_id')
@@ -282,7 +282,7 @@ def get_option_text(question, option_letter):
     }
     return option_map.get(option_letter)
 
-
+@login_required
 def cbt_submit(request):
     course_id = request.session.get('cbt_course_id')
     # Prevent submission when in learn mode
@@ -351,6 +351,8 @@ def cbt_submit(request):
         'failed_questions': failed
     })
 
+
+@login_required
 def home(request):
     courses = Course.objects.all()
     context = {"courses": courses}
@@ -396,10 +398,12 @@ def home(request):
 
     return render(request, "home.html", context)
 
+@login_required
 def course_list(request):
     courses = Course.objects.all()
     return render(request, "course_list.html", {"courses": courses})
 
+@login_required
 def course_detail(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     topics = course.topics.all().order_by('name')
@@ -445,7 +449,7 @@ def course_detail(request, course_id):
         "obj_questions_count": obj_questions_count,
     })
 
-
+@login_required
 def get_obj_questions(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     obj_questions = course.objective_questions.all()
@@ -453,7 +457,7 @@ def get_obj_questions(request, course_id):
         "obj_questions": obj_questions,
     })
 
-
+@login_required
 def course_obj_questions(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     obj_questions = course.objective_questions.all()
@@ -462,7 +466,7 @@ def course_obj_questions(request, course_id):
         "obj_questions": obj_questions,
     })
 
-
+@login_required
 def get_topic_obj_questions(request, topic_id):
     topic = get_object_or_404(Topic, id=topic_id)
     obj_questions = topic.course.objective_questions.all()
@@ -470,7 +474,7 @@ def get_topic_obj_questions(request, topic_id):
         "obj_questions": obj_questions,
     })
 
-
+@login_required
 def topic_obj_questions(request, topic_id):
     topic = get_object_or_404(Topic, id=topic_id)
     course = topic.course
@@ -502,7 +506,7 @@ def topic_obj_questions(request, topic_id):
         "question_nav": question_nav,
     })
 
-
+@login_required
 def topic_detail(request, topic_id):
     topic = get_object_or_404(Topic, id=topic_id)
     course = topic.course
@@ -519,7 +523,7 @@ def topic_detail(request, topic_id):
         "embed_url": embed_url,
     })
 
-
+@login_required
 def obj_question_detail(request, question_id):
     question = get_object_or_404(PastQuestionsObj, id=question_id)
     if question.explanation:
@@ -551,7 +555,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 from .models import Topic, PastQuestionsObj
 
-
+@login_required
 def start_topic_cbt(request, topic_id):
     if request.method == 'POST':
         topic = get_object_or_404(Topic, id=topic_id)
@@ -980,7 +984,7 @@ def mock_submit_all(request):
     return render(request, 'mock_submit_summary.html', {'summary': summary})
 
 
-
+@login_required
 def topic_cbt_exam(request):
     topic_id = request.session.get('cbt_topic_id')
     if not topic_id:
@@ -994,7 +998,7 @@ def topic_cbt_exam(request):
         embed_url = None
     return render(request, 'topic_cbt_exam.html', {'topic': topic, 'embed_url': embed_url})
 
-
+@login_required
 def topic_cbt_data(request):
     topic_id = request.session.get('cbt_topic_id')
     ids = request.session.get('cbt_topic_selected_questions', [])
@@ -1045,7 +1049,7 @@ def topic_cbt_submit_answers(request):
 
     return JsonResponse({'status': 'ok'})
 
-
+@login_required
 def topic_cbt_submit(request):
     topic_id = request.session.get('cbt_topic_id')
     # Prevent submission when in learn mode for topic CBT
