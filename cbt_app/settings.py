@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'ckeditor',
     'markdownify',
+    'pwa'
 ]
 
 MIDDLEWARE = [
@@ -150,3 +151,39 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = '/login/'
+
+
+
+
+PWA_APP_NAME = 'LagSciPrep'
+PWA_APP_DESCRIPTION = "Your Go to App for Science CBT Practice"
+PWA_APP_THEME_COLOR = '#000000'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'portrait'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': 'https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscipreplogo-192.png',
+        'sizes': '192x192'
+    },
+    {
+        'src': 'https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscipreplogo-512.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': 'https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscipreplogo-192.png',
+        'sizes': '192x192'
+    },
+    {
+        'src': 'https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscipreplogo-512.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+

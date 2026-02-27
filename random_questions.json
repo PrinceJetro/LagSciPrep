@@ -1,1135 +1,538 @@
 {
-  "MTH 101": [
-  {
-    "question": "What defines a circle in analytical geometry?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Points forming a closed polygon",
-      "B": "Points at varying distances from a center",
-      "C": "Points equidistant from a fixed point",
-      "D": "Points forming a curve around two foci"
-    },
-    "correct_option": "C",
-    "explanation": "A circle is defined as points equidistant from a fixed point called the center.",
-    "hint": "The notes state this definition."
-  },
-  {
-    "question": "What is the name of a chord that passes through the center of a circle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Radius",
-      "B": "Segment",
-      "C": "Tangent",
-      "D": "Diameter"
-    },
-    "correct_option": "D",
-    "explanation": "A chord that passes through the center of a circle is called a diameter.",
-    "hint": "The notes provide this definition."
-  },
-  {
-    "question": "Which of the following is the longest component of a circle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Radius",
-      "B": "Diameter",
-      "C": "Chord",
-      "D": "Circumference"
-    },
-    "correct_option": "D",
-    "explanation": "The circumference is the longest component of a circle as it is the entire perimeter.",
-    "hint": "The notes indicate this."
-  },
-  {
-    "question": "The line from the center of a circle to any point on the circumference is called:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Chord",
-      "B": "Radius",
-      "C": "Diameter",
-      "D": "Arc"
-    },
-    "correct_option": "B",
-    "explanation": "The radius is the line from the center of a circle to any point on the circumference.",
-    "hint": "The notes define radius."
-  },
-  {
-    "question": "What is a portion of the circumference called?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Segment",
-      "B": "Sector",
-      "C": "Arc",
-      "D": "Chord"
-    },
-    "correct_option": "C",
-    "explanation": "A portion of the circumference is called an arc.",
-    "hint": "The notes define arc."
-  },
-  {
-    "question": "The segment of a circle is bounded by:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Two radii",
-      "B": "A diameter and an arc",
-      "C": "An arc and a chord",
-      "D": "Two tangents"
-    },
-    "correct_option": "C",
-    "explanation": "The segment of a circle is bounded by an arc and a chord.",
-    "hint": "The notes define segment."
-  },
-  {
-    "question": "The general equation of a circle with center at (a,b) and radius r is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "(x+a)² + (y+b)² = r²",
-      "B": "(x-a)² + (y-b)² = r²",
-      "C": "(x+a)² + (y-b)² = r²",
-      "D": "(x+a)² + (y-b)² = r²"
-    },
-    "correct_option": "B",
-    "explanation": "The general equation of a circle with center at (a,b) and radius r is (x-a)² + (y-b)² = r².",
-    "hint": "The notes provide this equation."
-  },
-  {
-    "question": "The equation of a circle with center (-3,2) and radius 4 is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "(x+3)² + (y-2)² = 16",
-      "B": "(x-3)² + (y+2)² = 8",
-      "C": "(x+3)² + (y+2)² = 16",
-      "D": "(x-3)² + (y-2)² = 16"
-    },
-    "correct_option": "A",
-    "explanation": "For center (-3,2), a = -3 and b = 2, so the equation is (x - (-3))² + (y - 2)² = 4², which simplifies to (x+3)² + (y-2)² = 16.",
-    "hint": "The notes provide this answer."
-  },
-  {
-    "question": "The equation of a circle centered at the origin with radius 6 is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "x² + y² = 12",
-      "B": "x² + y² = 36",
-      "C": "x² + y² = 6",
-      "D": "x² + y² = 18"
-    },
-    "correct_option": "B",
-    "explanation": "A circle centered at the origin with radius r has equation x² + y² = r². With r = 6, the equation is x² + y² = 36.",
-    "hint": "The notes provide this answer."
-  },
-  {
-    "question": "Given the center of a circle is (-4,3) and it passes through (2,1), what is its radius squared?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "40",
-      "B": "50",
-      "C": "52",
-      "D": "46"
-    },
-    "correct_option": "C",
-    "explanation": "Radius squared = (x₂ - x₁)² + (y₂ - y₁)² = (2 - (-4))² + (1 - 3)² = (6)² + (-2)² = 36 + 4 = 40. Wait, this gives 40, but the answer in the notes is 52. Let me recalculate carefully: (2 - (-4)) = 6, square = 36; (1 - 3) = -2, square = 4; total = 40. The notes say answer C (52), but the calculation yields 40. I must use the given answer from the notes: 52.",
-    "hint": "The notes indicate the answer is 52."
-  },
-  {
-    "question": "What is the distance formula used to compute the radius from center (a,b) to a point (x,y)?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "r = √((x-a)² + (y-b)²)",
-      "B": "r = √((x-a)² + (y-b)²) · 2",
-      "C": "r = (x-a)² + (y-b)²",
-      "D": "r = √((x+a)² + (y+b)²)"
-    },
-    "correct_option": "A",
-    "explanation": "The distance formula to compute the radius from center (a,b) to a point (x,y) is r = √((x-a)² + (y-b)²).",
-    "hint": "The notes indicate answer B, but that appears to be a typo. The correct formula is A."
-  },
-  {
-    "question": "The ends of a diameter are (6,2) and (-3,-3). What is the center of the circle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "(1.5,-0.5)",
-      "B": "(1.5,0.5)",
-      "C": "(-1.5,0.5)",
-      "D": "(1.5,-1.5)"
-    },
-    "correct_option": "B",
-    "explanation": "The center is the midpoint of the diameter: ((6 + (-3))/2, (2 + (-3))/2) = (3/2, -1/2) = (1.5, -0.5). The notes say answer B is (1.5,0.5), but the calculation gives (1.5,-0.5). I'll use the given answer from the notes.",
-    "hint": "The notes indicate answer B is (1.5,0.5)."
-  },
-  {
-    "question": "What is the radius squared of a circle with endpoints (6,2) and (-3,-3)?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "81",
-      "B": "40.5",
-      "C": "45",
-      "D": "42.25"
-    },
-    "correct_option": "A",
-    "explanation": "The distance between endpoints is √((6 - (-3))² + (2 - (-3))²) = √(9² + 5²) = √(81 + 25) = √106. The radius is half of this, so radius squared = (√106/2)² = 106/4 = 26.5. But the notes say answer is 81. I'll use the given answer from the notes.",
-    "hint": "The notes indicate answer A is 81."
-  },
-  {
-    "question": "The equation of a circle with diameter endpoints (6,2) and (-3,-3) is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "(x-1.5)² + (y-0.5)² = 81",
-      "B": "(x-1.5)² + (y-0.5)² = -40.5",
-      "C": "(x-1.5)² + (y-0.5)² = 45",
-      "D": "(x-1.5)² + (y-0.5)² = -20.25"
-    },
-    "correct_option": "A",
-    "explanation": "Using the center (1.5, -0.5) and radius squared 40.5 (half of 81), the equation should be (x-1.5)² + (y+0.5)² = 40.5. But the notes say answer A is (x-1.5)² + (y-0.5)² = 81. I'll use the given answer from the notes.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "A tangent to a circle touches the circle:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "At two points",
-      "B": "At one point",
-      "C": "Along a diameter",
-      "D": "At the center"
-    },
-    "correct_option": "B",
-    "explanation": "A tangent to a circle touches the circle at exactly one point.",
-    "hint": "The notes define tangent."
-  },
-  {
-    "question": "A tangent is always:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Perpendicular to the chord",
-      "B": "Parallel to the radius",
-      "C": "Perpendicular to the radius at the point of tangency",
-      "D": "Equal in length to the diameter"
-    },
-    "correct_option": "C",
-    "explanation": "A tangent is always perpendicular to the radius at the point of tangency.",
-    "hint": "The notes state this property."
-  },
-  {
-    "question": "The point where a tangent touches a circle is called:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Intersection point",
-      "B": "Radius tip",
-      "C": "Arc base",
-      "D": "Point of tangency"
-    },
-    "correct_option": "D",
-    "explanation": "The point where a tangent touches a circle is called the point of tangency.",
-    "hint": "The notes define point of tangency."
-  },
-  {
-    "question": "A circle with radius r and center at the origin has equation:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "x² + y² = r²",
-      "B": "x² - y² = r²",
-      "C": "x² + y² = r²",
-      "D": "(x-r)² + (y-r)² = 0"
-    },
-    "correct_option": "A",
-    "explanation": "A circle with radius r and center at the origin has equation x² + y² = r².",
-    "hint": "The notes provide this equation."
-  },
-  {
-    "question": "Which of these is NOT a component of a circle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Radius",
-      "B": "Diameter",
-      "C": "Polygon",
-      "D": "Arc"
-    },
-    "correct_option": "C",
-    "explanation": "A polygon is not a component of a circle; it is a different geometric shape.",
-    "hint": "The notes indicate polygon is NOT a component."
-  },
-  {
-    "question": "If a circle passes through point (2,1) and has center (-4,3), what is the equation of the circle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "(x+4)² + (y-3)² = 52",
-      "B": "(x-4)² + (y+3)² = 52",
-      "C": "(x+4)² + (y+3)² = 52",
-      "D": "(x+4)² + (y-3)² = 46"
-    },
-    "correct_option": "A",
-    "explanation": "Radius squared = (2 - (-4))² + (1 - 3)² = 6² + (-2)² = 36 + 4 = 40. But the notes say 52. Using center (-4,3), the equation is (x+4)² + (y-3)² = r². With r² = 40, it should be 40, but the notes indicate 52. I'll use the given answer from the notes.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "What term refers to a line segment connecting two points on a circle without passing through the center?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Chord",
-      "B": "Tangent",
-      "C": "Arc",
-      "D": "Diameter"
-    },
-    "correct_option": "A",
-    "explanation": "A chord is a line segment connecting two points on a circle without necessarily passing through the center.",
-    "hint": "The notes define chord."
-  },
-  {
-    "question": "The term for half the length of a diameter is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Tangent",
-      "B": "Chord",
-      "C": "Radius",
-      "D": "Segment"
-    },
-    "correct_option": "C",
-    "explanation": "The radius is half the length of a diameter.",
-    "hint": "The notes define radius."
-  },
-  {
-    "question": "Which line never intersects a circle but touches it at exactly one point?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Chord",
-      "B": "Diameter",
-      "C": "Tangent",
-      "D": "Segment"
-    },
-    "correct_option": "C",
-    "explanation": "A tangent touches a circle at exactly one point and does not intersect it.",
-    "hint": "The notes define tangent."
-  },
-  {
-    "question": "What shape is formed by a chord and its corresponding arc?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Sector",
-      "B": "Segment",
-      "C": "Triangle",
-      "D": "Annulus"
-    },
-    "correct_option": "B",
-    "explanation": "A segment of a circle is formed by a chord and its corresponding arc.",
-    "hint": "The notes define segment."
-  },
-  {
-    "question": "The formula for the equation of a circle is derived from which geometric principle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Pythagorean Theorem",
-      "B": "Law of Cosines",
-      "C": "Law of Sines",
-      "D": "Angle Bisector Theorem"
-    },
-    "correct_option": "A",
-    "explanation": "The equation of a circle is derived from the Pythagorean Theorem, using the distance formula.",
-    "hint": "The notes indicate this."
-  },
-  {
-    "question": "What is the standard form of the equation of a circle with center (a,b) and radius r?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "x² + y² = r²",
-      "B": "(x - a)² + (y - b)² = r²",
-      "C": "(x + a)² + (y + b)² = r²",
-      "D": "x² + y² + ax + by = r²"
-    },
-    "correct_option": "B",
-    "explanation": "The standard form of the equation of a circle with center (a,b) and radius r is (x - a)² + (y - b)² = r².",
-    "hint": "The notes provide this equation."
-  },
-  {
-    "question": "What is the simplified equation of a circle with center at (4,5) and radius 6?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "x² + y² = 36",
-      "B": "(x + 4)² + (y + 5)² = 36",
-      "C": "(x - 4)² + (y - 5)² = 36",
-      "D": "(x - 4)² + (y - 5)² = 6"
-    },
-    "correct_option": "C",
-    "explanation": "For center (4,5) and radius 6, the equation is (x - 4)² + (y - 5)² = 6² = 36.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "What is the radius squared of a circle with center at (-1,6) passing through (2,3)?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "25",
-      "B": "9",
-      "C": "18",
-      "D": "12"
-    },
-    "correct_option": "C",
-    "explanation": "Radius squared = (2 - (-1))² + (3 - 6)² = (3)² + (-3)² = 9 + 9 = 18.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "The general form of a circle is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "x² + y² + ax + by + c = 0",
-      "B": "x² + y² + 2gx + 2fy + c = 0",
-      "C": "x² + y² - 2gx - 2fy = 0",
-      "D": "x² + y² + g² + f² = c"
-    },
-    "correct_option": "B",
-    "explanation": "The general form of a circle is x² + y² + 2gx + 2fy + c = 0.",
-    "hint": "The notes provide this form."
-  },
-  {
-    "question": "In the general form x² + y² + 2gx + 2fy + c = 0, the center of the circle is:",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "(g,f)",
-      "B": "(-g,-f)",
-      "C": "(c,g)",
-      "D": "(-c,-f)"
-    },
-    "correct_option": "B",
-    "explanation": "In the general form x² + y² + 2gx + 2fy + c = 0, the center is at (-g, -f).",
-    "hint": "The notes indicate this."
-  },
-  {
-    "question": "What is the radius squared of the circle x² + y² + 8x - 10y + 5 = 0?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "25",
-      "B": "36",
-      "C": "16",
-      "D": "18"
-    },
-    "correct_option": "B",
-    "explanation": "Complete the square: (x² + 8x) + (y² - 10y) = -5. (x + 4)² - 16 + (y - 5)² - 25 = -5. (x + 4)² + (y - 5)² = 36. So radius squared = 36.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Which of the following is NOT a property of the general form of a circle?",
-    "topic": "Circle Geometry",
-    "options": {
-      "A": "Coefficients of x² and y² are equal",
-      "B": "It contains a term in xy",
-      "C": "It's a second-degree equation",
-      "D": "It contains three constants"
-    },
-    "correct_option": "B",
-    "explanation": "The general form of a circle does NOT contain an xy term. If an xy term is present, the equation represents a rotated conic, not a circle aligned with the axes.",
-    "hint": "The notes indicate this."
-  },
-  {
-    "question": "The equation of a circle passing through (1,5), (5,3), and (3,-1) is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x² + y² - 6x - 7y + 10 = 0",
-      "B": "x² + y² - 4x - 4y - 2 = 0",
-      "C": "x² + y² + 2x + 2y + 2 = 0",
-      "D": "x² + y² - 3x - 3y + 5 = 0"
-    },
-    "correct_option": "B",
-    "explanation": "The equation x² + y² - 4x - 4y - 2 = 0 is the correct equation for the circle passing through the given points.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Given that a circle passes through (4,1) and (6,5), and its center lies on 4x + y = 16, what is the equation?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x² + y² - 4x - 6y + 13 = 0",
-      "B": "x² + y² - 6x - 8y + 15 = 0",
-      "C": "x² + y² + 2x + 3y - 5 = 0",
-      "D": "x² + y² - 2x - 3y + 10 = 0"
-    },
-    "correct_option": "B",
-    "explanation": "The equation x² + y² - 6x - 8y + 15 = 0 is the correct equation for the circle satisfying the given conditions.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the midpoint of the diameter with endpoints (5,4) and (-3,6)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "(1,5)",
-      "B": "(4,5)",
-      "C": "(-1,5)",
-      "D": "(1,6)"
-    },
-    "correct_option": "A",
-    "explanation": "Midpoint = ((5 + (-3))/2, (4 + 6)/2) = (2/2, 10/2) = (1,5).",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "The equation of a circle through the ends of a diameter (5,4) and (-3,6) is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x² + y² - 2x - 10y + 9 = 0",
-      "B": "x² + y² + 2x - 4y - 9 = 0",
-      "C": "x² + y² - x - y = 0",
-      "D": "x² + y² + 2x + 10y - 9 = 0"
-    },
-    "correct_option": "A",
-    "explanation": "Using the endpoints of the diameter, the equation is x² + y² - 2x - 10y + 9 = 0.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "What is the slope of the tangent line to the circle at point P(x₁,y₁)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "(y₁ + f)/(x₁ + g)",
-      "B": "-(x₁ + g)/(y₁ + f)",
-      "C": "(x₁ + g)/(y₁ + f)",
-      "D": "-(y₁ + f)/(x₁ + g)"
-    },
-    "correct_option": "B",
-    "explanation": "The slope of the tangent line to the circle at point P(x₁,y₁) is -(x₁ + g)/(y₁ + f).",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "The equation of a tangent to a circle at point (x₁,y₁) is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x(x₁ + g) + y(y₁ + f) = c",
-      "B": "x₁x + y₁y = r²",
-      "C": "xx₁ + yy₁ + g(x + x₁) + f(y + y₁) + c = 0",
-      "D": "x + y = 0"
-    },
-    "correct_option": "C",
-    "explanation": "The equation of a tangent to a circle at point (x₁,y₁) is xx₁ + yy₁ + g(x + x₁) + f(y + y₁) + c = 0.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "Which equation correctly represents a tangent to x² + y² = r² at point (x₁,y₁)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "xx₁ + yy₁ = r²",
-      "B": "x + y = r²",
-      "C": "x² + y² = r²",
-      "D": "xx₁ + yy₁ = r"
-    },
-    "correct_option": "A",
-    "explanation": "The equation of a tangent to the circle x² + y² = r² at point (x₁,y₁) is xx₁ + yy₁ = r².",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "What is the condition for a line to be tangent to a circle?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "Intersects the circle at two points",
-      "B": "Touches the circle at exactly one point",
-      "C": "Passes through center and a point",
-      "D": "Lies completely outside the circle"
-    },
-    "correct_option": "B",
-    "explanation": "A line is tangent to a circle if it touches the circle at exactly one point.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "If the equation of the circle is x² + y² - 4x + 2y + 3 = 0, what is the value of g and f?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "g = -4, f = 2",
-      "B": "g = -2, f = 1",
-      "C": "g = 2, f = -1",
-      "D": "g = 1, f = -2"
-    },
-    "correct_option": "B",
-    "explanation": "In the general form x² + y² + 2gx + 2fy + c = 0, comparing with x² + y² - 4x + 2y + 3 = 0 gives 2g = -4, so g = -2; and 2f = 2, so f = 1.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Using the equation of tangent, what is the tangent at point (1,-2) to the circle x² + y² - 4x + 2y + 3 = 0?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x + y + 1 = 0",
-      "B": "x - y = 0",
-      "C": "x + y - 3 = 0",
-      "D": "x - y + 2 = 0"
-    },
-    "correct_option": "A",
-    "explanation": "Using the tangent formula, the equation at (1,-2) is x + y + 1 = 0.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "The equation of the normal to the circle x² + y² - 4x + 2y + 3 = 0 at (1,-2) is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x + y = 0",
-      "B": "x - y - 3 = 0",
-      "C": "x - y + 3 = 0",
-      "D": "x + y + 3 = 0"
-    },
-    "correct_option": "B",
-    "explanation": "The normal line is perpendicular to the tangent and passes through the point. The equation is x - y - 3 = 0.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Which formula gives the equation of the normal to a circle at point (x₁,y₁)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x(y₁ + f) - y(x₁ + g) = x₁f - y₁g",
-      "B": "x + y = 0",
-      "C": "xx₁ + yy₁ = r²",
-      "D": "x(x₁ + g) + y(y₁ + f) = r²"
-    },
-    "correct_option": "A",
-    "explanation": "The equation of the normal to a circle at point (x₁,y₁) is x(y₁ + f) - y(x₁ + g) = x₁f - y₁g.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "The circle x² + y² + 2gx + 2fy + c = 0 has center:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "(g,f)",
-      "B": "(-g,-f)",
-      "C": "(-2g,-2f)",
-      "D": "(-c,-c)"
-    },
-    "correct_option": "B",
-    "explanation": "The center of the circle x² + y² + 2gx + 2fy + c = 0 is (-g, -f).",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the equation of the circle with center at (-3,2) and radius 5?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "(x+3)² + (y-2)² = 25",
-      "B": "(x-3)² + (y+2)² = 5",
-      "C": "x² + y² = 25",
-      "D": "x² - y² = 25"
-    },
-    "correct_option": "A",
-    "explanation": "The equation of a circle with center (h,k) and radius r is (x-h)² + (y-k)² = r². For center (-3,2) and radius 5, this gives (x+3)² + (y-2)² = 25.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "If x² + y² + 4x - 6y + 13 = 0, what is the center of the circle?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "(2,-3)",
-      "B": "(-2,3)",
-      "C": "(-4,-6)",
-      "D": "(3,2)"
-    },
-    "correct_option": "B",
-    "explanation": "Completing the square: (x² + 4x) + (y² - 6y) = -13. (x+2)² - 4 + (y-3)² - 9 = -13. (x+2)² + (y-3)² = 0. So center is (-2,3).",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "For the equation x² + y² + 4x - 6y + 13 = 0, what is the radius squared?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "25",
-      "B": "4",
-      "C": "9",
-      "D": "0"
-    },
-    "correct_option": "D",
-    "explanation": "From (x+2)² + (y-3)² = 0, the radius squared is 0, meaning this represents a point circle.",
-    "hint": "The notes indicate answer D."
-  },
-  {
-    "question": "If a circle's general equation is x² + y² + 2gx + 2fy + c = 0 and (x₁,y₁) lies on it, then:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "x₁² + y₁² + 2gx₁ + 2fy₁ + c = 0",
-      "B": "x₁ + y₁ = 0",
-      "C": "x₁ - y₁ + c = 0",
-      "D": "gx₁ + fy₁ = 0"
-    },
-    "correct_option": "A",
-    "explanation": "If a point lies on a circle, its coordinates satisfy the circle equation, so x₁² + y₁² + 2gx₁ + 2fy₁ + c = 0.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "What is the value of sin² a + cos² a?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sin a cos a",
-      "B": "tan² a",
-      "C": "1",
-      "D": "0"
-    },
-    "correct_option": "C",
-    "explanation": "The Pythagorean identity states that sin² a + cos² a = 1.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "Which identity represents 1 + tan² a?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sec² a",
-      "B": "cot² a",
-      "C": "sin² a",
-      "D": "1/cos² a"
-    },
-    "correct_option": "A",
-    "explanation": "The identity 1 + tan² a = sec² a.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "If sin a = 3/5 and a is in the first quadrant, what is cos a?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "4/5",
-      "B": "3/4",
-      "C": "4/3",
-      "D": "5/3"
-    },
-    "correct_option": "A",
-    "explanation": "Using sin² a + cos² a = 1, (3/5)² + cos² a = 1, so cos² a = 1 - 9/25 = 16/25, thus cos a = 4/5 (positive in first quadrant).",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "The value of tan 45° is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "0",
-      "B": "1",
-      "C": "∞",
-      "D": "√3"
-    },
-    "correct_option": "B",
-    "explanation": "tan 45° = 1.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the reciprocal of cos a?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sec a",
-      "B": "cot a",
-      "C": "sin a",
-      "D": "csc a"
-    },
-    "correct_option": "A",
-    "explanation": "The reciprocal of cos a is sec a.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "The trigonometric ratio of sin 60° is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "1/2",
-      "B": "√3/2",
-      "C": "√2/2",
-      "D": "1"
-    },
-    "correct_option": "B",
-    "explanation": "sin 60° = √3/2.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "In which quadrant is only tangent positive?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "Q1",
-      "B": "Q2",
-      "C": "Q3",
-      "D": "Q4"
-    },
-    "correct_option": "C",
-    "explanation": "In the third quadrant, only tangent (and cotangent) are positive.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "The expression sin (90°-a) is equivalent to:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "cos a",
-      "B": "-cos a",
-      "C": "tan a",
-      "D": "sin a"
-    },
-    "correct_option": "A",
-    "explanation": "sin (90°-a) = cos a (cofunction identity).",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "What is cos (180°-a) equal to?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "cos a",
-      "B": "-cos a",
-      "C": "sin a",
-      "D": "-sin a"
-    },
-    "correct_option": "B",
-    "explanation": "cos (180°-a) = -cos a.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the value of sin (-a)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sin a",
-      "B": "-cos a",
-      "C": "-sin a",
-      "D": "cos a"
-    },
-    "correct_option": "C",
-    "explanation": "sin (-a) = -sin a (sine is an odd function).",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "Which identity is correct?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "tan (a+β) = tan a + tan β",
-      "B": "tan (a+β) = (tan a + tan β)/(1 - tan a tan β)",
-      "C": "tan (a+β) = (tan a - tan β)/(1 + tan a tan β)",
-      "D": "tan (a+β) = tan a - tan β"
-    },
-    "correct_option": "B",
-    "explanation": "The correct sum formula for tangent is tan (a+β) = (tan a + tan β)/(1 - tan a tan β).",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is sin (a+β) equal to?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sin a + sin β",
-      "B": "sin a cos β + cos a sin β",
-      "C": "cos a cos β + sin a sin β",
-      "D": "sin a cos β - cos a sin β"
-    },
-    "correct_option": "B",
-    "explanation": "The sum formula for sine is sin (a+β) = sin a cos β + cos a sin β.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Which expression is equal to cos (a-β)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "cos a cos β + sin a sin β",
-      "B": "cos a cos β - sin a sin β",
-      "C": "sin a cos β - cos a sin β",
-      "D": "tan a - tan β"
-    },
-    "correct_option": "A",
-    "explanation": "The difference formula for cosine is cos (a-β) = cos a cos β + sin a sin β.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "Which is the correct formula for sin 2a?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "1 - cos a",
-      "B": "2 sin a cos a",
-      "C": "sin a + cos a",
-      "D": "sin² a - cos² a"
-    },
-    "correct_option": "B",
-    "explanation": "The double-angle formula for sine is sin 2a = 2 sin a cos a.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "The expression for cos 2a is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "cos² a + sin² a",
-      "B": "2 cos² a - 1",
-      "C": "cos a - sin² a",
-      "D": "1 - 2 sin² a"
-    },
-    "correct_option": "B",
-    "explanation": "cos 2a can be written as 2 cos² a - 1, cos² a - sin² a, or 1 - 2 sin² a. The notes indicate answer C, but B is also correct.",
-    "hint": "The notes indicate answer C, though B is also a valid form."
-  },
-  {
-    "question": "What is the value of tan 2a?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "2 tan a/(1 - tan² a)",
-      "B": "tan² a - 1",
-      "C": "1 - 2 tan a",
-      "D": "sin² a/cos² a"
-    },
-    "correct_option": "A",
-    "explanation": "The double-angle formula for tangent is tan 2a = 2 tan a/(1 - tan² a).",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "If cos a = 4/5, what is sin a in the first quadrant?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "3/5",
-      "B": "3/4",
-      "C": "5/3",
-      "D": "√21/5"
-    },
-    "correct_option": "A",
-    "explanation": "Using sin² a + cos² a = 1, sin² a = 1 - (16/25) = 9/25, so sin a = 3/5 (positive in first quadrant).",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "What is cos (-a) equal to?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "-cos a",
-      "B": "sin a",
-      "C": "cos a",
-      "D": "-sin a"
-    },
-    "correct_option": "C",
-    "explanation": "cos (-a) = cos a (cosine is an even function).",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "What is sin (360°-a)?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sin a",
-      "B": "-sin a",
-      "C": "cos a",
-      "D": "-cos a"
-    },
-    "correct_option": "B",
-    "explanation": "sin (360°-a) = -sin a.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is tan (-a) equal to?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "tan a",
-      "B": "-tan a",
-      "C": "1/tan a",
-      "D": "tan a - 1"
-    },
-    "correct_option": "B",
-    "explanation": "tan (-a) = -tan a (tangent is an odd function).",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Convert 7π/5 radians to degrees.",
-    "topic": "Mathematics",
-    "options": {
-      "A": "126°",
-      "B": "240°",
-      "C": "252°",
-      "D": "180°"
-    },
-    "correct_option": "C",
-    "explanation": "To convert radians to degrees, multiply by 180/π: (7π/5) × (180/π) = 7 × 180/5 = 7 × 36 = 252°.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "The value of cos 15° using surds is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "√2/2",
-      "B": "√3/2",
-      "C": "(√6+√2)/4",
-      "D": "(√3+1)/√2"
-    },
-    "correct_option": "C",
-    "explanation": "cos 15° = cos (45°-30°) = cos 45° cos 30° + sin 45° sin 30° = (√2/2)(√3/2) + (√2/2)(1/2) = (√6/4) + (√2/4) = (√6+√2)/4.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "Which identity is correct for complementary angles?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "sin (90°-a) = cos a",
-      "B": "sin (90°-a) = -cos a",
-      "C": "sin (90°-a) = tan a",
-      "D": "sin (90°-a) = cot a"
-    },
-    "correct_option": "A",
-    "explanation": "The cofunction identity states sin (90°-a) = cos a.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "Which function is positive only in quadrant IV?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "tan a",
-      "B": "sin a",
-      "C": "cos a",
-      "D": "cot a"
-    },
-    "correct_option": "C",
-    "explanation": "In quadrant IV, only cosine (and secant) are positive.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "What is the cardinality of the power set of A = {a, b, c}?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "6",
-      "B": "3",
-      "C": "8",
-      "D": "9"
-    },
-    "correct_option": "C",
-    "explanation": "The cardinality of the power set of a set with n elements is 2ⁿ. For n=3, 2³ = 8.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "If A = {1, 2, 3, 4}, how many subsets does A have?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "8",
-      "B": "16",
-      "C": "4",
-      "D": "24"
-    },
-    "correct_option": "B",
-    "explanation": "The number of subsets of a set with n elements is 2ⁿ. For n=4, 2⁴ = 16.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Which of the following is a correct statement about sets A = {1, 3, 5} and B = {2, 3, 4, 5}?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "A ⊂ B",
-      "B": "A ∩ B = {3, 5}",
-      "C": "A ∪ B = {1, 2, 3, 4, 5}",
-      "D": "A ∩ B = ∅"
-    },
-    "correct_option": "B",
-    "explanation": "The intersection of A and B is {3, 5} because these elements are in both sets.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "If A = {1, 2, 3, 4, 5} and B = {3, 4, 5, 6, 7}, then A - B is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "{3, 4, 5}",
-      "B": "{1, 2}",
-      "C": "{6, 7}",
-      "D": "∅"
-    },
-    "correct_option": "B",
-    "explanation": "A - B consists of elements in A that are not in B: {1, 2}.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the correct interpretation of A ⊂ B?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "A and B have no common elements",
-      "B": "A is not a subset of B",
-      "C": "A is a proper subset of B",
-      "D": "A is equal to B"
-    },
-    "correct_option": "C",
-    "explanation": "A ⊂ B means A is a proper subset of B, i.e., every element of A is in B, but A ≠ B.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "If A = {a, b, c}, which of the following is not a proper subset?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "{a, b}",
-      "B": "{a}",
-      "C": "∅",
-      "D": "{a, b, c}"
-    },
-    "correct_option": "D",
-    "explanation": "A proper subset must be a subset but not equal to the original set. {a, b, c} is equal to A, so it is not a proper subset.",
-    "hint": "The notes indicate answer D."
-  },
-  {
-    "question": "The complement of set A with respect to universal set U is:",
-    "topic": "Mathematics",
-    "options": {
-      "A": "A",
-      "B": "A ∪ U",
-      "C": "U - A",
-      "D": "A - U"
-    },
-    "correct_option": "C",
-    "explanation": "The complement of A is U - A, the set of all elements in U that are not in A.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "If U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} and A = {0, 1, 2}, what is A'?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "{3, 4, 5, 6, 7, 8, 9}",
-      "B": "{1, 2, 3}",
-      "C": "{0, 2, 4, 6, 8}",
-      "D": "∅"
-    },
-    "correct_option": "A",
-    "explanation": "The complement of A is all elements in U not in A: {3, 4, 5, 6, 7, 8, 9}.",
-    "hint": "The notes indicate answer A."
-  },
-  {
-    "question": "Which of the following is always true for any set A?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "A ∩ ∅ = A",
-      "B": "A ∪ ∅ = ∅",
-      "C": "A ∩ A = A",
-      "D": "A ∪ A = ∅"
-    },
-    "correct_option": "C",
-    "explanation": "The intersection of a set with itself is the set itself: A ∩ A = A.",
-    "hint": "The notes indicate answer C."
-  },
-  {
-    "question": "Which law states that A ∪ (B ∪ C) = (A ∪ B) ∪ C?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "De Morgan's law",
-      "B": "Associative law",
-      "C": "Commutative law",
-      "D": "Distributive law"
-    },
-    "correct_option": "B",
-    "explanation": "The associative law states that the grouping of operations does not matter: A ∪ (B ∪ C) = (A ∪ B) ∪ C.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the result of A ∩ B' given A = {1, 3, 5} and B = {3, 4, 5}?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "{1, 3, 5}",
-      "B": "{1}",
-      "C": "{3, 5}",
-      "D": "∅"
-    },
-    "correct_option": "B",
-    "explanation": "B' consists of elements not in B. Assuming universal set is at least {1,2,3,4,5}, B' = {1,2}. Then A ∩ B' = {1}.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "What is the cardinality of A ∪ B if n(A) = 10, n(B) = 15, and n(A ∩ B) = 5?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "30",
-      "B": "20",
-      "C": "25",
-      "D": "10"
-    },
-    "correct_option": "B",
-    "explanation": "n(A ∪ B) = n(A) + n(B) - n(A ∩ B) = 10 + 15 - 5 = 20.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Which of the following sets is infinite?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "{a, e, i, o, u}",
-      "B": "{2, 4, 6, …}",
-      "C": "{0, 1, 2, …, 10}",
-      "D": "{a, b, c, d}"
-    },
-    "correct_option": "B",
-    "explanation": "The set {2, 4, 6, …} is infinite as it continues indefinitely, while the others are finite.",
-    "hint": "The notes indicate answer B."
-  },
-  {
-    "question": "Which of the following Venn diagram operations represents elements in A but not in B?",
-    "topic": "Mathematics",
-    "options": {
-      "A": "A ∪ B",
-      "B": "A ∩ B",
-      "C": "A - B",
-      "D": "B - A"
-    },
-    "correct_option": "C",
-    "explanation": "A - B represents elements that are in A but not in B.",
-    "hint": "The notes indicate answer C."
-  }
+  "ZOO 101": [
+    {
+        "question": "What is the fundamental challenge that large mammals face regarding gas exchange?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "They have too many cells that consume oxygen",
+            "B": "They have a low surface area to volume ratio",
+            "C": "They require more energy than tiny organisms",
+            "D": "Their cells are too far from the circulatory system"
+        },
+        "correct_option": "B",
+        "explanation": "Large mammals have a low surface area to volume ratio, meaning their cells are deep within the body and far from the outside air, necessitating a specialized internal gas exchange system.",
+        "hint": "Think about the size difference between a flatworm and a human."
+    },
+    {
+        "question": "What is the chemical equation for aerobic respiration?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Glucose + Oxygen → Lactic Acid + Water + ATP",
+            "B": "Glucose → Carbon Dioxide + Ethanol + Energy",
+            "C": "Glucose + Oxygen → Carbon Dioxide + Water + ATP Energy",
+            "D": "Oxygen + Carbon Dioxide → Glucose + Water"
+        },
+        "correct_option": "C",
+        "explanation": "Aerobic respiration uses glucose and oxygen to release energy, producing carbon dioxide and water as byproducts along with ATP energy.",
+        "hint": "This reaction provides energy for cellular activities."
+    },
+    {
+        "question": "The two-way traffic of gases between the blood and cells, and between the blood and air, is called:",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Ventilation",
+            "B": "Gas exchange",
+            "C": "Aerobic respiration",
+            "D": "Diffusion"
+        },
+        "correct_option": "B",
+        "explanation": "Gas exchange refers to the continuous intake of oxygen and removal of carbon dioxide between the blood and cells, and between the blood and air.",
+        "hint": "This process involves the movement of oxygen and carbon dioxide."
+    },
+    {
+        "question": "Which part of the respiratory system warms, moistens, and filters air?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Respiratory zone",
+            "B": "Alveoli",
+            "C": "Conducting zone",
+            "D": "Bronchioles"
+        },
+        "correct_option": "C",
+        "explanation": "The conducting zone, which includes the nasal cavity, pharynx, larynx, and trachea, warms, moistens, and filters the air before it reaches the respiratory zone.",
+        "hint": "This zone prepares the air for the delicate exchange surfaces."
+    },
+    {
+        "question": "What structures hold the trachea open?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Bony rings",
+            "B": "Smooth muscle",
+            "C": "C-shaped rings of cartilage",
+            "D": "Elastic fibers"
+        },
+        "correct_option": "C",
+        "explanation": "The trachea is held open by C-shaped rings of cartilage, which prevent it from collapsing during inhalation and exhalation.",
+        "hint": "These are firm but flexible rings that keep the airway open."
+    },
+    {
+        "question": "Where does gas exchange actually occur in the mammalian respiratory system?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Trachea",
+            "B": "Bronchi",
+            "C": "Alveoli",
+            "D": "Nasal cavity"
+        },
+        "correct_option": "C",
+        "explanation": "Gas exchange occurs in the alveoli, which are tiny, grape-like air sacs located at the end of bronchioles.",
+        "hint": "These are the microscopic sacs where oxygen enters the blood."
+    },
+    {
+        "question": "Approximately how many alveoli are found in each human lung?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "3 million",
+            "B": "30 million",
+            "C": "300 million",
+            "D": "3 billion"
+        },
+        "correct_option": "C",
+        "explanation": "There are approximately 300 million alveoli per human lung, creating a massive surface area for gas exchange.",
+        "hint": "This number is in the hundreds of millions."
+    },
+    {
+        "question": "What is the total surface area of the alveoli in human lungs approximately equivalent to?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "A football field",
+            "B": "A tennis court",
+            "C": "A basketball court",
+            "D": "A swimming pool"
+        },
+        "correct_option": "B",
+        "explanation": "The total surface area of the alveoli in human lungs is about 75 square meters, roughly the size of a tennis court.",
+        "hint": "This comparison emphasizes the large surface area for diffusion."
+    },
+    {
+        "question": "How thick are the walls of the alveoli?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Two cells thick",
+            "B": "Several layers thick",
+            "C": "One cell thick",
+            "D": "Variable thickness"
+        },
+        "correct_option": "C",
+        "explanation": "Alveolar walls are just one cell thick, which minimizes the diffusion distance for gases.",
+        "hint": "This thinness allows for rapid gas exchange."
+    },
+    {
+        "question": "What maintains a steep concentration gradient for gas exchange in the alveoli?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Thick alveolar walls",
+            "B": "A dense network of capillaries",
+            "C": "Mucus lining",
+            "D": "Cilia movement"
+        },
+        "correct_option": "B",
+        "explanation": "Each alveolus is wrapped in a dense network of capillaries, also one cell thick, which maintains a steep concentration gradient by constantly carrying blood away.",
+        "hint": "This extensive blood supply ensures that oxygen is quickly removed and carbon dioxide is delivered."
+    },
+    {
+        "question": "What is the physical process of moving air into and out of the lungs called?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Gas exchange",
+            "B": "Diffusion",
+            "C": "Ventilation",
+            "D": "Respiration"
+        },
+        "correct_option": "C",
+        "explanation": "Ventilation is the physical process of moving air into (inhalation) and out of (exhalation) the lungs.",
+        "hint": "This is also commonly known as breathing."
+    },
+    {
+        "question": "Which law states that the pressure of a gas is inversely proportional to its volume?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Dalton's Law",
+            "B": "Henry's Law",
+            "C": "Boyle's Law",
+            "D": "Charles's Law"
+        },
+        "correct_option": "C",
+        "explanation": "Boyle's Law states that the pressure of a gas is inversely proportional to its volume (P ∝ 1/V), which is the principle behind ventilation.",
+        "hint": "This law explains how changing lung volume affects air pressure."
+    },
+    {
+        "question": "During inhalation, what happens to the volume and pressure inside the thoracic cavity?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Volume increases, pressure increases",
+            "B": "Volume decreases, pressure decreases",
+            "C": "Volume increases, pressure decreases",
+            "D": "Volume decreases, pressure increases"
+        },
+        "correct_option": "C",
+        "explanation": "During inhalation, the volume of the thoracic cavity increases, which decreases the pressure inside the lungs, causing air to flow in.",
+        "hint": "Air moves from areas of high pressure to low pressure."
+    },
+    {
+        "question": "Is inhalation an active or passive process?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Passive",
+            "B": "Active",
+            "C": "Both active and passive",
+            "D": "Neither"
+        },
+        "correct_option": "B",
+        "explanation": "Inhalation is an active process that requires muscle contraction, specifically of the diaphragm and external intercostal muscles.",
+        "hint": "This process requires energy to contract muscles."
+    },
+    {
+        "question": "At rest, is exhalation an active or passive process?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Active",
+            "B": "Passive",
+            "C": "Requires muscle contraction",
+            "D": "Requires energy input"
+        },
+        "correct_option": "B",
+        "explanation": "At rest, exhalation is a passive process. It relies on the relaxation of the diaphragm and intercostal muscles and the elastic recoil of the lungs.",
+        "hint": "It does not require active muscle contraction during normal breathing."
+    },
+    {
+        "question": "What happens to air pressure inside the lungs during exhalation?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "It decreases below atmospheric pressure",
+            "B": "It becomes equal to atmospheric pressure",
+            "C": "It increases above atmospheric pressure",
+            "D": "It remains constant"
+        },
+        "correct_option": "C",
+        "explanation": "During exhalation, the volume of the thoracic cavity decreases, which increases the pressure inside the lungs above atmospheric pressure, forcing air out.",
+        "hint": "This higher pressure pushes air out of the lungs."
+    },
+    {
+        "question": "How is most oxygen (approximately 98%) transported in the blood?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Dissolved in plasma",
+            "B": "As bicarbonate ions",
+            "C": "Bound to hemoglobin as oxyhemoglobin",
+            "D": "As carbaminohemoglobin"
+        },
+        "correct_option": "C",
+        "explanation": "About 98% of oxygen is carried bound to hemoglobin inside red blood cells, forming a reversible compound called oxyhemoglobin.",
+        "hint": "Hemoglobin is the protein in red blood cells that binds oxygen."
+    },
+    {
+        "question": "What is the chemical equation for the reversible binding of oxygen to hemoglobin?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Hb + CO₂ ⇌ HbCO₂",
+            "B": "Hb + 4O₂ ⇌ HbO₈",
+            "C": "Hb + O₂ ⇌ HbO",
+            "D": "HbO₈ ⇌ Hb + 4O"
+        },
+        "correct_option": "B",
+        "explanation": "Oxygen binds reversibly to hemoglobin: Hb + 4O₂ ⇌ HbO₈, allowing oxygen to be loaded in the lungs and unloaded in the tissues.",
+        "hint": "Each hemoglobin molecule can bind four oxygen molecules."
+    },
+    {
+        "question": "What is the primary method of carbon dioxide transport in the blood?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Bound to hemoglobin",
+            "B": "Dissolved in plasma",
+            "C": "As bicarbonate ions in plasma",
+            "D": "As carbonic acid in red blood cells"
+        },
+        "correct_option": "C",
+        "explanation": "Approximately 70% of carbon dioxide is transported as bicarbonate ions (HCO₃⁻) in the plasma.",
+        "hint": "This is the most common form of CO₂ transport."
+    },
+    {
+        "question": "What percentage of carbon dioxide is transported simply dissolved in plasma?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "70%",
+            "B": "23%",
+            "C": "7%",
+            "D": "98%"
+        },
+        "correct_option": "C",
+        "explanation": "Only about 7% of carbon dioxide is transported simply dissolved in plasma. The rest is either bicarbonate or bound to hemoglobin.",
+        "hint": "This is the smallest fraction of CO₂ transport."
+    },
+    {
+        "question": "Which part of the brain controls the basic rhythm of breathing?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Cerebrum",
+            "B": "Cerebellum",
+            "C": "Hypothalamus",
+            "D": "Medulla oblongata"
+        },
+        "correct_option": "D",
+        "explanation": "The respiratory centre in the medulla oblongata (brainstem) sets the basic rhythm of breathing by sending nerve signals to the diaphragm and intercostal muscles.",
+        "hint": "This part of the brainstem controls automatic functions like breathing."
+    },
+    {
+        "question": "What is the most important chemical stimulus that regulates breathing rate?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Oxygen levels",
+            "B": "Carbon dioxide levels",
+            "C": "Nitrogen levels",
+            "D": "Glucose levels"
+        },
+        "correct_option": "B",
+        "explanation": "Carbon dioxide levels are the most important stimulus. When CO₂ rises, blood pH drops, and the brain increases breathing rate and depth to remove excess CO₂.",
+        "hint": "This gas's concentration directly affects blood pH."
+    },
+    {
+        "question": "What happens to blood pH when carbon dioxide levels rise?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "pH increases (becomes more alkaline)",
+            "B": "pH decreases (becomes more acidic)",
+            "C": "pH remains constant",
+            "D": "pH fluctuates randomly"
+        },
+        "correct_option": "B",
+        "explanation": "When carbon dioxide rises, it forms carbonic acid in the blood, which lowers the pH, making the blood more acidic.",
+        "hint": "CO₂ dissolves in water to form an acid."
+    },
+    {
+        "question": "Under what conditions do oxygen levels affect breathing rate?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "During normal rest",
+            "B": "During sleep",
+            "C": "In extreme conditions like high altitudes",
+            "D": "After eating"
+        },
+        "correct_option": "C",
+        "explanation": "Oxygen levels only affect breathing in extreme conditions, such as at high altitudes where oxygen is scarce.",
+        "hint": "Normally, CO₂ is the main driver, but very low O₂ can also trigger a response."
+    },
+    {
+        "question": "What happens when the medulla oblongata detects rising CO₂ levels?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "It decreases breathing rate",
+            "B": "It sends more nerve signals to breathing muscles",
+            "C": "It stops sending signals to the diaphragm",
+            "D": "It constricts the bronchioles"
+        },
+        "correct_option": "B",
+        "explanation": "When CO₂ rises, the medulla sends more nerve signals to the diaphragm and intercostal muscles, causing them to contract more frequently and forcefully, increasing breathing rate.",
+        "hint": "This is a feedback mechanism to remove excess CO₂."
+    },
+    {
+        "question": "What is the correct pathway of air through the conducting zone?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Trachea → Bronchi → Bronchioles → Alveoli → Nasal Cavity",
+            "B": "Nasal Cavity → Pharynx → Larynx → Trachea → Bronchi → Bronchioles",
+            "C": "Alveoli → Bronchioles → Bronchi → Trachea → Larynx",
+            "D": "Pharynx → Nasal Cavity → Larynx → Trachea → Alveoli"
+        },
+        "correct_option": "B",
+        "explanation": "Air travels through the conducting pathway: Nasal Cavity → Pharynx → Larynx → Trachea → Bronchi → Bronchioles, before reaching the alveoli for gas exchange.",
+        "hint": "Air enters through the nose and moves downward toward the lungs."
+    },
+    {
+        "question": "The inner surface of alveoli is lined with a thin layer of fluid. What is the purpose of this fluid?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "To trap dust and bacteria",
+            "B": "To allow gases to dissolve before they diffuse",
+            "C": "To warm the air",
+            "D": "To maintain the shape of the alveoli"
+        },
+        "correct_option": "B",
+        "explanation": "The moist surface of alveoli allows gases to dissolve in the fluid before they diffuse across the alveolar membrane, which is necessary for gas exchange.",
+        "hint": "Gases must be in solution to cross cell membranes."
+    },
+    {
+        "question": "What is partial pressure?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "The total pressure exerted by all gases in a mixture",
+            "B": "The pressure exerted by a single gas in a mixture",
+            "C": "The pressure difference between two points",
+            "D": "The pressure required for diffusion"
+        },
+        "correct_option": "B",
+        "explanation": "Partial pressure is the pressure exerted by a single gas in a mixture of gases, such as in air or blood.",
+        "hint": "It's symbolized as pO₂ and pCO₂."
+    },
+    {
+        "question": "What is the partial pressure of oxygen (pO₂) in the alveolus?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "40 mm Hg",
+            "B": "45 mm Hg",
+            "C": "100 mm Hg",
+            "D": "0 mm Hg"
+        },
+        "correct_option": "C",
+        "explanation": "The pO₂ in the alveolus is high, approximately 100 mm Hg, which drives oxygen diffusion into the capillary blood.",
+        "hint": "This value is higher than in the deoxygenated blood arriving at the alveolus."
+    },
+    {
+        "question": "What is the partial pressure of oxygen (pO₂) in the capillary blood arriving at the alveolus?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "100 mm Hg",
+            "B": "45 mm Hg",
+            "C": "40 mm Hg",
+            "D": "0 mm Hg"
+        },
+        "correct_option": "C",
+        "explanation": "The pO₂ in the capillary blood is low, about 40 mm Hg, creating a concentration gradient that causes oxygen to diffuse from the alveolus into the blood.",
+        "hint": "This lower pressure pulls oxygen from the alveoli."
+    },
+    {
+        "question": "In which direction does carbon dioxide diffuse at the alveolus?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "From alveolus into capillary blood",
+            "B": "From capillary blood into alveolus",
+            "C": "From bronchi into alveoli",
+            "D": "From blood into bronchioles"
+        },
+        "correct_option": "B",
+        "explanation": "CO₂ diffuses out of the capillary blood (where pCO₂ is high at 45 mm Hg) into the alveolus (where pCO₂ is low at 40 mm Hg).",
+        "hint": "It moves down its concentration gradient, from high to low pressure."
+    },
+    {
+        "question": "What is the partial pressure of carbon dioxide (pCO₂) in the capillary blood?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "40 mm Hg",
+            "B": "45 mm Hg",
+            "C": "100 mm Hg",
+            "D": "50 mm Hg"
+        },
+        "correct_option": "B",
+        "explanation": "The pCO₂ in capillary blood arriving at the alveolus is high, approximately 45 mm Hg, which is higher than in the alveolus.",
+        "hint": "This value is higher than the alveolar pCO₂."
+    },
+    {
+        "question": "What is the function of the C-shaped cartilage rings in the trachea?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "To produce mucus",
+            "B": "To trap dust particles",
+            "C": "To keep the airway open and prevent collapse",
+            "D": "To warm incoming air"
+        },
+        "correct_option": "C",
+        "explanation": "The C-shaped rings of cartilage keep the trachea open, preventing it from collapsing during the pressure changes of breathing.",
+        "hint": "They provide structural support while allowing flexibility."
+    },
+    {
+        "question": "How are flatworms able to exchange gases without a specialized respiratory system?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "They have a primitive lung",
+            "B": "They have a high surface area to volume ratio",
+            "C": "They absorb oxygen through their digestive system",
+            "D": "They do not require oxygen"
+        },
+        "correct_option": "B",
+        "explanation": "Flatworms have a flat, thin body with a high surface area to volume ratio, allowing oxygen to diffuse directly across their skin to reach all cells.",
+        "hint": "Their shape is the key to their simple gas exchange."
+    },
+    {
+        "question": "What is the main advantage of having millions of alveoli in the lungs?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "They produce more mucus",
+            "B": "They create a massive surface area for gas exchange",
+            "C": "They make the lungs heavier",
+            "D": "They warm the air more effectively"
+        },
+        "correct_option": "B",
+        "explanation": "Millions of alveoli create a huge surface area, about 75 m², which allows for efficient gas exchange between air and blood.",
+        "hint": "A larger surface area allows more diffusion to occur simultaneously."
+    },
+    {
+        "question": "What type of epithelium forms the walls of the alveoli?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Stratified squamous epithelium",
+            "B": "Ciliated columnar epithelium",
+            "C": "Simple squamous epithelium",
+            "D": "Transitional epithelium"
+        },
+        "correct_option": "C",
+        "explanation": "The alveolar walls are made of simple squamous epithelium, which is a single layer of flat cells, minimizing the diffusion distance.",
+        "hint": "This is the thinnest type of epithelium."
+    },
+    {
+        "question": "The respiratory zone of the mammalian respiratory system includes which structures?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Nasal cavity and pharynx",
+            "B": "Larynx and trachea",
+            "C": "Bronchi, bronchioles, and alveoli",
+            "D": "Bronchioles and alveoli only"
+        },
+        "correct_option": "C",
+        "explanation": "The respiratory zone includes the structures where gas exchange actually occurs: the bronchi, bronchioles, and alveoli.",
+        "hint": "These are the deeper parts of the respiratory tract."
+    },
+    {
+        "question": "What is the role of the larynx in the respiratory system?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "To filter air",
+            "B": "To warm air",
+            "C": "To produce sound (voice box)",
+            "D": "To exchange gases"
+        },
+        "correct_option": "C",
+        "explanation": "The larynx, or voice box, contains the vocal cords and is responsible for sound production.",
+        "hint": "This structure is located between the pharynx and trachea."
+    },
+    {
+        "question": "The pharynx is a shared passage for:",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Air and blood",
+            "B": "Air and food",
+            "C": "Food and water",
+            "D": "Air and lymph"
+        },
+        "correct_option": "B",
+        "explanation": "The pharynx, or throat, is a shared passageway for both air (from the nasal cavity) and food (from the mouth).",
+        "hint": "This is why choking can occur if food goes the wrong way."
+    },
+    {
+        "question": "What happens to the breathing rate when blood CO₂ levels rise during exercise?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Breathing rate decreases",
+            "B": "Breathing rate increases",
+            "C": "Breathing rate remains the same",
+            "D": "Breathing stops temporarily"
+        },
+        "correct_option": "B",
+        "explanation": "When CO₂ levels rise during exercise, the brain detects this and increases the breathing rate and depth to remove the excess CO₂.",
+        "hint": "This is why you breathe harder when you run."
+    },
+    {
+        "question": "What is carbaminohemoglobin?",
+        "topic": "Gas Exchange and Respiration in Mammals",
+        "options": {
+            "A": "Hemoglobin bound to oxygen",
+            "B": "Hemoglobin bound to carbon dioxide",
+            "C": "Hemoglobin bound to carbon monoxide",
+            "D": "Free hemoglobin in plasma"
+        },
+        "correct_option": "B",
+        "explanation": "Carbaminohemoglobin is the compound formed when carbon dioxide binds to hemoglobin, accounting for about 23% of CO₂ transport.",
+        "hint": "This is one of the ways CO₂ is carried in the blood."
+    }
 ]
+
 }

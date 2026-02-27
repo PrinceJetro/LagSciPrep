@@ -1,0 +1,34 @@
+{
+  "name": "LagSciPrep",
+  "short_name": "LagSciPrep",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "orientation": "portrait",
+  "description": "LagSciPrep is a comprehensive educational platform designed to help students prepare for their exams effectively. With a wide range of study materials, practice tests, and interactive learning tools, LagSciPrep aims to enhance the learning experience and boost students' confidence in their academic pursuits.",
+  "icons": [
+    {
+      "src": "https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscripreplogo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscripreplogo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://suuzqweiijplovliqlfy.supabase.co/storage/v1/object/public/Education/diagrams/lagscripreplogo.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "wide"
+    }
+  ],
+  "id": "./",
+  "dir": "ltr",
+  "lang": "en-US"
+}
