@@ -121,7 +121,7 @@ def start_cbt(request, course_id):
     if request.method == 'POST':
         course = get_object_or_404(Course, id=course_id)
         questions = list(course.objective_questions.all())
-        selected = random.sample(questions, min(15, len(questions)))
+        selected = random.sample(questions, min(30, len(questions)))
 
         request.session['cbt_course_id'] = course.id
         request.session['cbt_selected_questions'] = [q.id for q in selected]
@@ -1564,22 +1564,216 @@ def student_list(request):
     students = Student.objects.select_related('user').order_by('user__username').all()
     return render(request, 'student_list.html', {'students': students})
 
+"""
+Role
+You are a senior subject-matter expert, standardized test constructor, and instructional design specialist with extensive experience creating high-stakes examination questions for professional certification and academic assessments.
 
+🎯 Primary Objective
+Generate a comprehensive bank of multiple-choice questions (target: up to 100 questions) derived strictly and exclusively from the provided lecture material. Each question must meet professional examination standards for clarity, validity, and discrimination.
 
-# Act as an expert educator and instructional designer. I am going to provide you with lecture notes from a PowerPoint presentation. Your task is to generate as many multiple-choice questions as possible (aiming for 100) based strictly and exclusively on the content of the provided text.
+🔒 Mandatory Global Constraints
+Single Topic Rule (Non-Negotiable)
+Topic Selection: Analyze the provided lecture text and select ONE cohesive topic that can support multiple high-quality, non-repetitive questions.
 
-# Requirements:
+Topic Consistency: The identical topic string must appear in the "topic" field for every generated question.
 
-# Source Material: Do not use outside knowledge. Use only the provided notes.
+Prohibited Actions:
 
-# Output Format: You must output the response as a JSON array of objects following this exact schema: { "question": "string", "topic": "string", "options": { "A": "string", "B": "string", "C": "string", "D": "string" }, "correct_option": "char", "explanation": "string", "hint": "string" },
+Do NOT mix multiple topics
 
-# Tone & Style: In the explanation and hint fields, do not use phrases like 'according to the text,' 'as mentioned in the notes,' or 'the text states.' Write the explanations and hints as objective facts.
+Do NOT rotate between subtopics
 
-# Volume: Generate as many unique questions as the text allows, up to 100. If the text is exhausted before 100, provide as many as are logically possible.
+Do NOT vary topic wording across questions
 
-# Here is the lecture text: 
+Do NOT create questions that drift from the selected topic
 
+Selection Criteria: If multiple themes exist, choose the topic that maximizes meaningful question generation without forcing artificial distinctions.
+
+📘 Content Fidelity Requirements
+Source Material Adherence
+Base questions exclusively on the provided lecture material
+
+Extract concepts, principles, formulas, and applications directly from the source
+
+Do NOT introduce external knowledge, assumptions, examples, or expansions
+
+Do NOT infer beyond what the lecture logically supports
+
+Transform lecture content into exam-standard questions without adding new theory
+
+🧱 Question Construction Standards
+Self-Containment Mandate
+Each question must be completely standalone. DO NOT reference or imply:
+
+❌ lecture ❌ notes ❌ slide ❌ text
+❌ passage ❌ material ❌ source ❌ problem
+❌ example ❌ chapter ❌ figure ❌ page
+❌ above ❌ below ❌ previous ❌ section
+
+If the lecture presents a scenario or calculation: Restate all variables, values, conditions, and context directly within the question. The question must be comprehensible to someone who has never seen the source material.
+
+🚫 Meta-Reference Prohibition (Strict Enforcement)
+Explanation & Hint Field Restrictions
+Under no circumstances may explanations or hints contain any reference to:
+
+Where information originated (lecture, notes, slides, etc.)
+
+The source material's structure or organization
+
+Previous questions or parts of the assessment
+
+Page numbers, section headings, or visual elements
+
+Rewrite Protocol
+If any prohibited word appears during drafting, internally rewrite before producing the final output. The final text must read as if written for an independent standardized examination.
+
+🧠 Explanation & Hint Quality Standards
+Explanations Must:
+State principles as objective academic facts
+
+Begin with the governing concept, law, or formula
+
+Justify why the correct answer is correct with clear reasoning
+
+Explain why alternatives are incorrect when diagnostically valuable
+
+Use precise, discipline-appropriate terminology
+
+Maintain a professional, authoritative tone
+
+✅ Acceptable: "According to Ohm's law, current is directly proportional to voltage when resistance remains constant."
+❌ Unacceptable: "The lecture states that current is directly proportional to voltage..."
+
+Hints Must:
+Guide reasoning without revealing the answer directly
+
+Focus on the governing principle, formula, or approach
+
+Remain neutral and objective (avoid phrasing like "Think about..." or "Remember that...")
+
+Provide just enough direction to activate prior knowledge
+
+✅ Acceptable: "Consider the relationship between force, mass, and acceleration."
+❌ Unacceptable: "The formula F=ma from the notes would help here."
+
+🎲 Answer Distribution Protocol
+Distribute correct answers evenly across A, B, C, and D options
+
+Avoid predictable patterns (e.g., alternating, repeating sequences)
+
+Prevent clustering of the same correct option in consecutive questions
+
+Ensure distribution appears random while maintaining balance
+
+For partial banks, maintain proportional distribution as much as possible
+
+🧮 Question Quality Requirements
+Question Type Mix
+Include a strategic blend of:
+
+Conceptual questions (definitions, principles, relationships)
+
+Application questions (applying concepts to new situations)
+
+Analytical reasoning questions (comparing, contrasting, evaluating)
+
+Calculation-based questions (quantitative problem-solving, if applicable)
+
+Prohibited Practices
+Do NOT repeat the same idea with minor wording changes
+
+Do NOT inflate quantity by rephrasing identical concepts
+
+Do NOT create questions that test trivial or peripheral details
+
+Do NOT fabricate content to reach 100 questions
+
+Stopping Rule: If the material is legitimately exhausted before reaching 100 questions, stop. Quality trumps quantity.
+
+📦 JSON Output Specifications (Zero Tolerance)
+Format Requirements
+Return ONLY a valid JSON array:
+
+No markdown formatting (```json, etc.)
+
+No commentary before or after the array
+
+No trailing commas
+
+No syntax errors of any kind
+
+Special Character Escaping
+Internal quotes must use: \"
+
+Backslashes must use: \\
+
+No unescaped newlines inside string values
+
+Required Object Schema
+Each question object must strictly follow this exact structure:
+
+json
+{
+  "question": "Complete question text with all necessary context and details.",
+  "topic": "Identical topic string for ALL questions",
+  "options": {
+    "A": "First option text",
+    "B": "Second option text", 
+    "C": "Third option text",
+    "D": "Fourth option text"
+  },
+  "correct_option": "A",
+  "explanation": "Comprehensive explanation following all standards above.",
+  "hint": "Brief, principle-focused hint without revealing the answer."
+}
+🔍 Mandatory Self-Validation Checklist
+Before producing final output, verify:
+
+Content Validation
+All questions derived exclusively from lecture material?
+
+No external knowledge introduced?
+
+Each question fully self-contained (no meta references)?
+
+No concept repetition or near-duplicate questions?
+
+Topic Compliance
+Single topic selected and consistently applied?
+
+Topic field identical across all objects?
+
+Topic appropriately narrow for meaningful questions?
+
+Meta-Reference Check
+All explanation fields free of banned words?
+
+All hint fields free of banned words?
+
+No implicit references to source material?
+
+Structural Integrity
+JSON syntax valid (brackets, commas, quotes)?
+
+All special characters properly escaped?
+
+No trailing commas?
+
+No text outside the JSON array?
+
+Quality Assurance
+Answer distribution balanced (±10% variance acceptable)?
+
+Mix of question types present?
+
+Explanations justify correctness?
+
+Hints guide without revealing?
+
+Questions appropriately challenging for high-stakes exam?
+
+📚 Source Lecture Material
+"""
 
 
 # Act as a specialized tutor. I am going to provide you with slides from my class. Your goal is to create a comprehensive Gap-Fill (Fill-in-the-blanks) study guide that covers every single fact, term, and definition found on these slides.
@@ -1599,3 +1793,12 @@ def student_list(request):
 # Please process these slides now
 
 
+
+# script to delete any topic with past questions count less than 10
+# from main.models import Topic
+# topics = Topic.objects.all()
+# for topic in topics:
+#     question_count = topic.questions.count()
+#     if question_count < 10:
+#         print(f"Deleting topic '{topic.name}' with only {question_count} questions.")
+#         topic.delete()
