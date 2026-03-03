@@ -170,6 +170,24 @@
     </div>
 </div>
 
+<!-- Streak milestone modal -->
+<div class="modal fade" id="streakModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Streak Milestone!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- changed dynamically -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Keep going!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- JavaScript with all your original functionality + styling -->
 <script>
 // Global variables (keeping your original variables)
@@ -181,11 +199,15 @@ let answers = {};
 let index = 0;
 let learnMode = false;
 let seconds = 0;
+// streak counter only used in learn mode
+let currentStreak = 0;  // number of consecutive correct answers
 
 function saveState() {
     try {
         if (!SESSION_KEY || seconds <= 0 || !STORAGE_KEY) return;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify({answers, index, saved_at: Date.now()}));
+        const payload = {answers, index, saved_at: Date.now()};
+        if (learnMode) payload.streak = currentStreak;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
     } catch (e) { console.warn('Failed to save state', e); }
 } 
 function loadState() {
@@ -196,9 +218,15 @@ function loadState() {
         const state = JSON.parse(raw);
         if (state.answers) answers = state.answers;
         if (typeof state.index === 'number' && state.index >= 0 && state.index < QUESTIONS.length) index = state.index;
+        if (learnMode && typeof state.streak === 'number') {
+            currentStreak = state.streak;
+        }
     } catch (e) { console.warn('Failed to load state', e); }
 } 
-function clearState() { try { localStorage.removeItem(STORAGE_KEY); } catch (e) {} }
+function clearState() { try { localStorage.removeItem(STORAGE_KEY); } catch (e) {} 
+    currentStreak = 0;
+    updateStreakBadge();
+}
 window.addEventListener('beforeunload', (e) => {
     if (!SESSION_KEY || seconds <= 0) {
         clearState();
@@ -229,6 +257,9 @@ fetch("{% url 'topic_cbt_data' %}")
 
     // Render first (or restored) question
     render();
+
+    // ensure streak badge correct (render already places value but this is safe)
+    updateStreakBadge();
 
     // Start timer
     startTimer();
@@ -284,6 +315,7 @@ function render() {
                     <span class="badge bg-success">
                         <i class="fas fa-graduation-cap me-1"></i>Learn Mode
                     </span>
+                    <span id="streakBadge" class="badge bg-info text-dark">Streak: ${currentStreak}</span>
                     ` : ''}
                     <span class="badge bg-warning text-dark">Topic CBT</span>
                     <span class="badge bg-light text-dark">${Math.round(((index + 1) / QUESTIONS.length) * 100)}% Complete</span>
@@ -404,10 +436,25 @@ function selectAnswer(qid, value) {
     // Update progress
     updateProgress();
     
-    // In learn mode, show immediate feedback if answer is wrong
     if (learnMode) {
         const q = QUESTIONS.find(q => q.id == qid);
-        if (q && value !== q.correct) {
+        if (q && value === q.correct) {
+            // correct answer
+            currentStreak++;
+            updateStreakBadge();
+            // show milestone every 5
+            if (currentStreak % 5 === 0) {
+                showStreakModal(currentStreak);
+            }
+
+            // hide any feedback
+            const feedbackArea = document.getElementById(`feedbackArea_${qid}`);
+            if (feedbackArea) feedbackArea.style.display = 'none';
+        } else if (q && value !== q.correct) {
+            // wrong answer resets streak
+            currentStreak = 0;
+            updateStreakBadge();
+
             // Show feedback in the feedback area
             const feedbackArea = document.getElementById(`feedbackArea_${qid}`);
             if (feedbackArea) {
@@ -430,16 +477,34 @@ function selectAnswer(qid, value) {
                 `;
                 
                 // Show alert as in original code
-                alert("Wrong ❌\n\n" + q.explanation);
-            }
-        } else if (q && value === q.correct) {
-            // Hide feedback if answer is correct
-            const feedbackArea = document.getElementById(`feedbackArea_${qid}`);
-            if (feedbackArea) {
-                feedbackArea.style.display = 'none';
+                let alertMsg = "Wrong ❌\n\n" + q.explanation;
+                if (currentStreak === 0) {
+                    alertMsg += "\n\nYour correct-answer streak has been reset.";
+                }
+                alert(alertMsg);
             }
         }
     }
+}
+
+// helper to update the visible streak badge (learn mode only)
+function updateStreakBadge() {
+    const badge = document.getElementById('streakBadge');
+    if (badge) {
+        badge.textContent = `Streak: ${currentStreak}`;
+    }
+}
+
+// show a modal to notify user of milestone
+function showStreakModal(count) {
+    const modalEl = document.getElementById('streakModal');
+    if (!modalEl) return;
+    const body = modalEl.querySelector('.modal-body');
+    if (body) {
+        body.textContent = `Great job! You're on a ${count}-question correct streak!`;
+    }
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.show();
 }
 
 function next() {
