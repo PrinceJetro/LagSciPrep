@@ -1,387 +1,418 @@
-{% extends 'base.html' %}
-{% block title %}Login - LagSciPrep{% endblock %}
-{% block og_title %}Login - LagSciPrep{% endblock %}
-{% block og_description %}Login to your LagSciPrep account to access CBT practice and exam preparation{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance in progress</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-{% block content %}
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-            <!-- Login Card -->
-            <div class="card login-card border-0 shadow-lg overflow-hidden">
-                <!-- Card Header with Gradient -->
-                <div class="card-header-gradient py-4">
-                    <div class="text-center">
-                        <div class="login-icon-wrapper mx-auto mb-3">
-                            <i class="fas fa-user-graduate text-white fa-2x"></i>
-                        </div>
-                        <h1 class="h3 fw-bold text-white mb-0">Welcome Back!</h1>
-                        <p class="text-white-50 mb-0">Sign in to continue your science journey</p>
-                    </div>
-                </div>
-                
-                <!-- Card Body -->
-                <div class="card-body p-4 p-md-5">
-                    <!-- Messages -->
-                    {% if messages %}
-                    <div class="messages-container mb-4">
-                        {% for message in messages %}
-                        <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show d-flex align-items-center" role="alert">
-                            <i class="fas 
-                                {% if message.tags == 'success' %}fa-check-circle
-                                {% elif message.tags == 'error' or message.tags == 'danger' %}fa-exclamation-circle
-                                {% elif message.tags == 'warning' %}fa-exclamation-triangle
-                                {% else %}fa-info-circle
-                                {% endif %}
-                                me-2"></i>
-                            <div>{{ message }}</div>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
+    body {
+      background: linear-gradient(145deg, #0b1a2e 0%, #1b2f45 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 1.5rem;
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-                    <!-- Login Form -->
-                    <form method="post" class="needs-validation" novalidate>
-                        {% csrf_token %}
-                        
-                        <!-- Username/Email Field -->
-                        <div class="form-group mb-4">
-                            <label for="username" class="form-label fw-bold text-dark mb-2">
-                                <i class="fas fa-user text-primary me-2"></i>Username or Email
-                            </label>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-text bg-light border-end-0">
-                                    <i class="fas fa-at text-muted"></i>
-                                </span>
-                                <input type="text" 
-                                       name="username" 
-                                       id="username" 
-                                       class="form-control border-start-0 ps-0" 
-                                       placeholder="Enter your username or email"
-                                       required
-                                       autofocus>
-                                <div class="invalid-feedback">
-                                    Please enter your username or email.
-                                </div>
-                            </div>
-                            <small class="text-muted mt-1 d-block">
-                                <i class="fas fa-info-circle me-1"></i>Use your registered email or username
-                            </small>
-                        </div>
+    /* subtle animated gear background (pure css) */
+    body::before {
+      content: '';
+      position: absolute;
+      width: 180%;
+      height: 180%;
+      top: -40%;
+      left: -40%;
+      background: radial-gradient(circle at 30% 40%, rgba(100, 180, 255, 0.03) 0%, transparent 30%),
+                  radial-gradient(circle at 70% 80%, rgba(200, 230, 255, 0.04) 0%, transparent 35%),
+                  repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 2px, transparent 2px, transparent 8px);
+      animation: slowDrift 42s infinite alternate ease-in-out;
+      z-index: 0;
+      pointer-events: none;
+    }
 
-                        <!-- Password Field -->
-                        <div class="form-group mb-4">
-                            <label for="password" class="form-label fw-bold text-dark mb-2">
-                                <i class="fas fa-lock text-primary me-2"></i>Password
-                            </label>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-text bg-light border-end-0">
-                                    <i class="fas fa-key text-muted"></i>
-                                </span>
-                                <input type="password" 
-                                       name="password" 
-                                       id="password" 
-                                       class="form-control border-start-0 ps-0" 
-                                       placeholder="Enter your password"
-                                       required>
-                                <button class="btn btn-outline-secondary border-start-0" type="button" id="togglePassword">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-                                <div class="invalid-feedback">
-                                    Please enter your password.
-                                </div>
-                            </div>
-                            <small class="text-muted mt-1 d-block">
-                                <i class="fas fa-shield-alt me-1"></i>Your password is securely encrypted
-                            </small>
-                        </div>
+    @keyframes slowDrift {
+      0% { transform: rotate(0deg) scale(1); }
+      100% { transform: rotate(3deg) scale(1.05); }
+    }
 
-                        <!-- Remember Me & Forgot Password -->
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="rememberMe">
-                                <label class="form-check-label text-muted" for="rememberMe">
-                                    Remember me
-                                </label>
-                            </div>
-                            <a href="#" class="text-decoration-none text-primary fw-semibold">
-                                <i class="fas fa-key me-1"></i>Forgot Password?
-                            </a>
-                        </div>
+    .card {
+      background: rgba(18, 28, 40, 0.75);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border: 1px solid rgba(90, 150, 220, 0.25);
+      border-radius: 3.5rem;
+      padding: 3rem 2.5rem 3.2rem;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 35px 75px rgba(0, 10, 25, 0.6), 0 0 0 1px rgba(160, 210, 255, 0.1) inset;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      transition: transform 0.3s ease;
+    }
 
-                        <!-- Submit Button -->
-                        <div class="d-grid mb-4">
-                            <button type="submit" class="btn btn-primary-gradient btn-lg fw-bold">
-                                <i class="fas fa-sign-in-alt me-2"></i>Sign In to Your Account
-                            </button>
-                        </div>
-                    </form>
+    .card:hover {
+      transform: scale(1.01);
+    }
 
-                    <!-- Registration Link -->
-                    <div class="text-center pt-4 border-top">
-                        <p class="text-muted mb-0">
-                            New to LagSciPrep?
-                            <a href="{% url 'register' %}" class="text-primary fw-bold text-decoration-none ms-1">
-                                Create an Account
-                                <i class="fas fa-arrow-right ms-1"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Card Footer -->
-                <div class="card-footer bg-light text-center py-3">
-                    <small class="text-muted">
-                        <i class="fas fa-shield-alt me-1"></i>
-                        Your data is protected with 256-bit SSL encryption
-                    </small>
-                </div>
-            </div>
+    /* icon / js animated spinner */
+    .gear-wrapper {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      align-items: center;
+    }
 
-            <!-- Features List -->
-            <div class="row mt-4">
-                <div class="col-md-4 text-center mb-3">
-                    <div class="feature-item p-3 rounded-3 bg-light">
-                        <i class="fas fa-flask text-primary fa-lg mb-2"></i>
-                        <h6 class="fw-bold mb-1">Science CBTs</h6>
-                        <small class="text-muted">Interactive practice tests</small>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center mb-3">
-                    <div class="feature-item p-3 rounded-3 bg-light">
-                        <i class="fas fa-chart-line text-success fa-lg mb-2"></i>
-                        <h6 class="fw-bold mb-1">Progress Tracking</h6>
-                        <small class="text-muted">Monitor your improvement</small>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center mb-3">
-                    <div class="feature-item p-3 rounded-3 bg-light">
-                        <i class="fas fa-award text-warning fa-lg mb-2"></i>
-                        <h6 class="fw-bold mb-1">Expert Content</h6>
-                        <small class="text-muted">Curated by science educators</small>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .gear-icon {
+      font-size: 5rem;
+      line-height: 1;
+      display: inline-block;
+      filter: drop-shadow(0 8px 15px rgba(0,30,50,0.7));
+      animation: rotateGear 4s infinite linear;
+      transform-origin: 50% 52%; /* fine-tuned for emoji center */
+    }
+
+    .gear-icon:nth-child(2) {
+      font-size: 3.8rem;
+      animation-duration: 5.2s;
+      animation-direction: reverse;
+      opacity: 0.9;
+    }
+
+    .gear-icon:nth-child(3) {
+      font-size: 4.3rem;
+      animation-duration: 3.4s;
+      opacity: 0.8;
+    }
+
+    @keyframes rotateGear {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 8vw, 4.2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      background: linear-gradient(130deg, #e1efff, #b3d9ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.65rem;
+      text-shadow: 0 2px 10px rgba(0,160,255,0.2);
+      line-height: 1.2;
+    }
+
+    .message {
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-weight: 360;
+      color: rgba(210, 235, 255, 0.9);
+      margin-bottom: 2.5rem;
+      border-bottom: 1px dashed rgba(120, 180, 255, 0.4);
+      padding-bottom: 1.2rem;
+      display: inline-block;
+      backdrop-filter: blur(5px);
+    }
+
+    .progress-indicator {
+      background: rgba(0, 20, 40, 0.6);
+      border-radius: 100px;
+      padding: 0.8rem 2rem;
+      margin: 1.8rem 0 2.2rem;
+      border: 1px solid rgba(70, 150, 240, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .dot-pulse {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #5bb4ff;
+      box-shadow: 0 0 15px #5bb4ff;
+      animation: pulseDot 1.6s infinite ease-in-out both;
+    }
+
+    .dot:nth-child(1) { animation-delay: -0.4s; background: #7ac7ff; }
+    .dot:nth-child(2) { animation-delay: -0.2s; background: #50aeff; }
+    .dot:nth-child(3) { animation-delay: 0s; background: #2f9eff; }
+
+    @keyframes pulseDot {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+      40% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 25px currentColor; }
+    }
+
+    .eta-text {
+      color: #b6d9ff;
+      font-weight: 350;
+      letter-spacing: 0.5px;
+      font-size: 1.2rem;
+    }
+
+    .eta-text span {
+      font-weight: 500;
+      color: white;
+      background: rgba(0, 100, 200, 0.3);
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      margin-left: 0.4rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .countdown-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      color: #c1dfff;
+      margin: 2rem 0 1rem;
+      font-size: 1.3rem;
+      background: rgba(0, 30, 50, 0.4);
+      padding: 0.8rem 1.8rem;
+      border-radius: 70px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(80, 160, 255, 0.3);
+    }
+
+    #timer {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 2rem;
+      font-weight: 500;
+      background: #0d1f30;
+      padding: 0.2rem 1.1rem;
+      border-radius: 60px;
+      color: #b0e0ff;
+      letter-spacing: 3px;
+      text-shadow: 0 0 8px #0055ff80;
+      border: 1px solid #3a6a9f;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .refresh-note {
+      margin-top: 2.5rem;
+      font-size: 1.1rem;
+      color: #7d9ec0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      border: 1px solid #1e405e;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .refresh-note:hover {
+      background: rgba(20, 60, 100, 0.5);
+      border-color: #3f8bcb;
+      color: #d5edff;
+    }
+
+    .refresh-note:active {
+      transform: scale(0.97);
+    }
+
+    .refresh-note span {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #34648b;
+    }
+
+    /* small gear rotation speed variation via js (optional) */
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-labelledby="maintenance-title">
+    <div class="gear-wrapper">
+      <span class="gear-icon" aria-hidden="true">⚙️</span>
+      <span class="gear-icon" aria-hidden="true">⚙️</span>
+      <span class="gear-icon" aria-hidden="true">⚙️</span>
     </div>
-</div>
 
-<!-- Add Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <h1 id="maintenance-title">website maintenance</h1>
+    <div class="message">in progress · check back later</div>
 
-<style>
-    .login-card {
-        border-radius: 20px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
+    <!-- live progress pulse -->
+    <div class="progress-indicator">
+      <div class="dot-pulse" aria-label="system update in progress">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="eta-text">
+        estimating <span>~ 24 hrs</span> until 6 PM March 7
+      </div>
+    </div>
 
-    .login-card:hover {
-        transform: translateY(-5px);
-    }
+    <!-- dynamic countdown / last checked timer (js animated) -->
+    <div class="countdown-box">
+      <span style="opacity:0.9;">🔄</span>
+      <span id="timer-label">check back by 6 PM tomorrow</span>
+      <span id="timer">04:59</span>
+    </div>
 
-    .card-header-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        position: relative;
-        overflow: hidden;
-    }
+    <!-- clickable refresh hint (soft refresh) -->
+    <div class="refresh-note" id="refreshTrigger" tabindex="0" role="button" aria-label="simulate refresh attempt">
+      <span>🔁</span> click to retry connection
+      <span style="font-size:1.1rem; opacity:0.7;">↻</span>
+    </div>
 
-    .card-header-gradient::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-        animation: shine 3s infinite;
-    }
+    <footer>
+      ⚡ our team is working · thanks for your patience
+    </footer>
+  </div>
 
-    .login-icon-wrapper {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .btn-primary-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border: none;
-        padding: 12px 24px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-
-    .btn-primary-gradient:hover {
-        background: linear-gradient(135deg, #5a6fd8 0%, #6a4196 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    }
-
-    .form-group .input-group {
-        border: 2px solid #e9ecef;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
-
-    .form-group .input-group:focus-within {
-        border-color: #667eea;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-    }
-
-    .form-group .input-group-text {
-        background: #f8f9fa;
-        border: none;
-    }
-
-    .form-group .form-control {
-        border: none;
-        background: transparent;
-        padding: 12px 0;
-    }
-
-    .form-group .form-control:focus {
-        box-shadow: none;
-    }
-
-    #togglePassword {
-        background: #f8f9fa;
-        border-left: none;
-    }
-
-    .divider {
-        color: #6c757d;
-    }
-
-    .divider::before,
-    .divider::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px solid #dee2e6;
-    }
-
-    .divider:not(:empty)::before {
-        margin-right: .5em;
-    }
-
-    .divider:not(:empty)::after {
-        margin-left: .5em;
-    }
-
-    .feature-item {
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
-    }
-
-    .feature-item:hover {
-        border-color: #667eea;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .messages-container .alert {
-        border-radius: 12px;
-        border: none;
-        padding: 16px;
-    }
-
-    .alert-success {
-        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-        color: #155724;
-    }
-
-    .alert-danger, .alert-error {
-        background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-        color: #721c24;
-    }
-
-    .alert-warning {
-        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-        color: #856404;
-    }
-
-    .alert-info {
-        background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
-        color: #0c5460;
-    }
-
-    @keyframes shine {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
-    }
-
-    /* Form validation styles */
-    .form-control:invalid {
-        border: 2px solid #dc3545;
-    }
-
-    .form-control:valid {
-        border: 2px solid #28a745;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .card-body {
-            padding: 2rem !important;
-        }
-        
-        .input-group-lg {
-            height: 48px;
-        }
-        
-        .btn-lg {
-            padding: 12px;
-        }
-    }
-</style>
-
-<script>
-    // Toggle password visibility
-    document.getElementById('togglePassword').addEventListener('click', function() {
-        const passwordInput = document.getElementById('password');
-        const icon = this.querySelector('i');
-        
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            icon.classList.remove('fa-eye');
-            icon.classList.add('fa-eye-slash');
-            this.setAttribute('aria-label', 'Hide password');
-        } else {
-            passwordInput.type = 'password';
-            icon.classList.remove('fa-eye-slash');
-            icon.classList.add('fa-eye');
-            this.setAttribute('aria-label', 'Show password');
-        }
-    });
-
-    // Form validation
+  <script>
     (function() {
-        'use strict';
-        const forms = document.querySelectorAll('.needs-validation');
-        
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    })();
+      // ---- countdown timer to next 6pm (approx. 24 hrs) ----
+      const timerElement = document.getElementById('timer');
+      const refreshTrigger = document.getElementById('refreshTrigger');
 
-    // Auto-focus username field
-    document.addEventListener('DOMContentLoaded', function() {
-        const usernameField = document.getElementById('username');
-        if (usernameField) {
-            usernameField.focus();
+      // compute seconds until the *next* 18:00 (6 PM) local time
+      function computeTimeLeft() {
+        const now = new Date();
+        let target = new Date(now);
+        // if it's already past 6pm, schedule for tomorrow
+        if (now.getHours() >= 18) {
+          target.setDate(now.getDate() + 1);
         }
-    });
-</script>
-{% endblock %}
+        target.setHours(18, 0, 0, 0);
+        const diff = Math.floor((target - now) / 1000);
+        return diff > 0 ? diff : 0;
+      }
+
+      // format hh:mm:ss (always two digits)
+      function formatTime(seconds) {
+        const hrs = Math.floor(seconds / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${hrs.toString().padStart(2, '0')}:
+               ${mins.toString().padStart(2, '0')}:
+               ${secs.toString().padStart(2, '0')}`.replace(/\s+/g, '');
+      }
+
+      // initial update using real time
+      let timeLeft = computeTimeLeft();
+      timerElement.textContent = formatTime(timeLeft);
+
+      // update timer every second until zero (no automatic reset)
+      const countdownInterval = setInterval(() => {
+        timeLeft = computeTimeLeft();
+        timerElement.textContent = formatTime(timeLeft);
+        if (timeLeft <= 0) {
+          clearInterval(countdownInterval);
+          // optional visual cue when target reached
+          timerElement.textContent = '00:00:00';
+        }
+      }, 1000);
+
+      // ---- click on "refresh note" simulates checking back (with user feedback) ----
+      refreshTrigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        // Provide immediate feedback: change cursor, animate
+        refreshTrigger.style.pointerEvents = 'none'; // disable double-click spam
+        
+        // Save original text to restore later
+        const originalHTML = refreshTrigger.innerHTML;
+        refreshTrigger.innerHTML = `<span>⏳</span> checking for updates... <span> </span>`;
+        
+        // after a short delay, show "still in maintenance" message and revert
+        setTimeout(() => {
+          refreshTrigger.innerHTML = `<span>🔔</span> still in maintenance · try again later <span>↻</span>`;
+          
+          // flash the timer background to indicate check
+          timerElement.style.transition = 'background 0.2s, box-shadow 0.2s';
+          timerElement.style.background = '#194b66';
+          timerElement.style.boxShadow = '0 0 20px #0077ff';
+          setTimeout(() => {
+            timerElement.style.background = '#0d1f30';
+            timerElement.style.boxShadow = 'inset 0 2px 8px rgba(0,0,0,0.6)';
+          }, 300);
+          
+          // after 2 more seconds revert the refresh button text to original but keep the message friendly
+          setTimeout(() => {
+            refreshTrigger.innerHTML = originalHTML; // original with arrow etc.
+            refreshTrigger.style.pointerEvents = 'auto';
+          }, 2000);
+        }, 800);
+      });
+
+      // also allow keyboard "Enter" on the pseudo-button for accessibility
+      refreshTrigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          refreshTrigger.click();
+        }
+      });
+
+      // tiny random gear speed factor (just for fun via CSS variable not needed; but we can tweak animation durations slightly)
+      const gearIcons = document.querySelectorAll('.gear-icon');
+      if (gearIcons.length >= 3) {
+        // make each gear spin with slightly different random durations (between 2.8s and 6s)
+        // but keep base rotation direction as defined. We override inline style.
+        gearIcons.forEach((gear, index) => {
+          const duration = (Math.random() * 3.2 + 2.8).toFixed(2); // between 2.8 and 6.0 sec
+          gear.style.animationDuration = `${duration}s`;
+          // randomly reverse one of them already reversed? but keep css rules basically
+          if (index === 1) {
+            // second gear is reversed in CSS, keep reversed but adjust speed again
+            gear.style.animationDuration = `${(Math.random() * 3.5 + 3.8).toFixed(2)}s`;
+          }
+          if (index === 2) {
+            gear.style.animationDuration = `${(Math.random() * 2.5 + 2.9).toFixed(2)}s`;
+          }
+        });
+      }
+
+      // small detail: update the "estimating" text every 30 seconds? not needed, but keep lively.
+      const etaSpan = document.querySelector('.eta-text span');
+      const etaMessages = ['~ 24 hrs', '~ 20 hrs', '~ 18 hrs', '~ 12 hrs', '~ 6 hrs', '~ 3 hrs', '~ 1 hr'];
+      let msgIndex = 0;
+      setInterval(() => {
+        // slowly cycle through ETA to give dynamic feeling
+        msgIndex = (msgIndex + 1) % etaMessages.length;
+        if (etaSpan) {
+          etaSpan.style.transition = 'opacity 0.3s';
+          etaSpan.style.opacity = '0.6';
+          setTimeout(() => {
+            if (etaSpan) {
+              etaSpan.textContent = etaMessages[msgIndex];
+              etaSpan.style.opacity = '1';
+            }
+          }, 150);
+        }
+      }, 7000); // every 7 seconds
+    })();
+  </script>
+</body>
+</html>
