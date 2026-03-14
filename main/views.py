@@ -630,7 +630,7 @@ def start_mock(request):
     """
     # only get MTH 101, PHY 101 AND CHM 101 for the selection form since those are the only ones with special rules and we want to avoid confusion about which courses are included in the mock session
 
-    courses = Course.objects.all().order_by('name')
+    courses = Course.objects.filter(name="PHY 101")
         # ---------------------------
     from django.utils import timezone
     from datetime import time as dtime, datetime
@@ -677,6 +677,8 @@ def start_mock(request):
                 continue
 
             qs = PastQuestionsObj.objects.filter(course=course)
+            # only the courses with a topic that has "past questions"
+            qs = qs.filter(topic__name__icontains="Past Questions")
             pool = list(qs)
 
             selected = []
