@@ -594,10 +594,10 @@ def start_topic_cbt(request, topic_id):
 from django.utils import timezone
 from datetime import time as dtime, datetime
 
-MOCK_START_HOUR = 0
-MOCK_START_MIN = 0
-MOCK_END_HOUR = 23
-MOCK_END_MIN = 59
+MOCK_START_HOUR = 19
+MOCK_START_MIN = 30
+MOCK_END_HOUR = 22
+MOCK_END_MIN = 00
 MOCK_DURATION_SECONDS = (MOCK_END_HOUR * 3600 + MOCK_END_MIN * 60) - (MOCK_START_HOUR * 3600 + MOCK_START_MIN * 60)
 
 def _is_mock_open(now=None):
